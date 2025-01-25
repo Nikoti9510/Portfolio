@@ -111,7 +111,7 @@ img {
 }
 
 .home-nav,
-.nav-rs {
+.rs-nav {
     & ul {
         height: 100%;
         display: flex;
