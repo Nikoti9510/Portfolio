@@ -1,8 +1,6 @@
 {{ define "main" }}
     <h1>Antoine Moreau</h1>
     <img src="/images/home/portrait.jpg" alt="Ma tête">
-    <section>
-        {{ partial "nav.html" . }}
-    </section>
+    {{ partial "nav.html" . }}
     {{ .Content }}
 {{ end }}
