@@ -74,7 +74,6 @@ body {
 
     border: solid 1px gray;
     margin: 2rem;
-    padding: 2rem;
     font-size: 1.2rem;
 }
 
@@ -83,8 +82,13 @@ h1 {
     line-height: .8;
     font-size: 15rem;
     transition: ease 1s;
+    padding: 2rem;
 
     &:hover {
         --ft-weight: 700;
     }
+}
+
+img {
+    padding: 2rem;
 }
