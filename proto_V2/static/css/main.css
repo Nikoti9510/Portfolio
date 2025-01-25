@@ -71,7 +71,7 @@ body {
     display: grid;
     grid-template-columns: 3.5fr 1fr 3.5fr 1fr;
     grid-template-rows: 2fr 1fr 2fr;
-    gap: 2rem;
+    gap: 1rem;
 
     border: solid 1px gray;
     margin: 2rem;
@@ -81,8 +81,9 @@ body {
 h1 {
     --ft-width: 1000;
     line-height: .8;
-    font-size: 5rem;
+    font-size: 7rem;
     transition: ease 1s;
+    align-self: end;
 
     grid-row: 3;
     grid-column: 1;
