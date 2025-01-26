@@ -4,7 +4,13 @@
   <url>
     <loc>http://localhost:1313/</loc>
   </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projets/</loc>
+  </url><url>
+    <loc>http://localhost:1313/sandbox/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>
