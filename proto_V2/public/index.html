@@ -1,23 +1,12 @@
 <html lang="en">
-
-<head>
+    <head>
 	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-
-<body>
-    
-    <main class="home">
-        <style>:root{--direction: 1;}</style>
-        <section>
-            <p>Développeur front-end</p>
-            <p>Accessiblité et UX</p>
-            <p>Procrastination</p>
-        </section>
-        <img src="/images/home/portrait.jpg" alt="Ma tête">
-        <button class="switch-color">Thème</button>
-        <h1><span>Antoine</span><span>Moreau</span></h1>    
-        <nav class="home-nav">
+        <link rel="stylesheet" href="/css/main.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav class="home-nav">
     <ul>
         
         <li>
@@ -34,22 +23,23 @@
         
     </ul>
 </nav>
-        <nav class="rs-nav">
-    <ul>
-        <li>
-            <a href="#" target="_blank">LinkedIn</a>
-        </li>
-        <li>
-            <a href="#" target="_blank">Bluesky</a>
-        </li>
-        <li>
-            <a href="#" target="_blank">Mail</a>
-        </li> 
-    </ul>
-</nav>
+        </header>
+        
+    <main class="home">
+        <style>:root{--direction: 1;}</style>
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+              }
+            }
+          </script>
+          <script type="module" src="/js/threeJs.js"></script>
+        
+        
         
     </main>
 
-</body>
-
+    </body>
 </html>

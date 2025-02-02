@@ -1,16 +1,26 @@
 {{ define "main" }}
     <main class="home">
         <style>:root{--direction: 1;}</style>
-        <section>
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+              }
+            }
+          </script>
+          <script type="module" src="/js/threeJs.js"></script>
+        
+        
+        <!-- <section>
             <p>Développeur front-end</p>
             <p>Accessiblité et UX</p>
             <p>Procrastination</p>
         </section>
         <img src="/images/home/portrait.jpg" alt="Ma tête">
         <button class="switch-color">Thème</button>
-        <h1><span>Antoine</span><span>Moreau</span></h1>    
-        {{ partial "nav.html" . }}
+        <h1><span>Antoine</span><span>Moreau</span></h1>
         {{ partial "rs.html" . }}
-        {{ .Content }}
+        {{ .Content }} -->
     </main>
 {{ end }}

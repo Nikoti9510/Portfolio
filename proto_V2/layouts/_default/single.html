@@ -1,9 +1,7 @@
 {{ define "main" }}
-<main class="single">
-    <style>:root{--direction: -1;}</style>
-    <header>
+    <main class="single">
+        <style>:root{--direction: -1;}</style>
         {{ partial "back.html" . }}
-    </header>
-    {{ .Content }}
-</main>
+        {{ .Content }}
+    </main>
 {{ end }}

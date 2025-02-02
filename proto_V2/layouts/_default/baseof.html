@@ -1,11 +1,12 @@
 <html lang="{{ site.Language }}">
-
-<head>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-
-<body>
-    {{ block "main" . }}{{ end }}
-</body>
-
+    <head>
+        <link rel="stylesheet" href="/css/main.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+        {{ block "main" . }}{{ end }}
+    </body>
 </html>
