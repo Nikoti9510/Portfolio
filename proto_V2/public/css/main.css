@@ -1,4 +1,6 @@
+/*---------------------------------------------------------------------*/
 /*------------------------------- RESET -------------------------------*/
+/*---------------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,82 +43,138 @@ table {
 	border-spacing: 0;
 }
 
+
+
 /*---------------------------------------------------------------------*/
+/*------------------------ LAYER DEFINITION ---------------------------*/
+/*---------------------------------------------------------------------*/
+@layer Defaults, Pages, Posts, Projets, Transitions;
 
-@font-face {
-    font-family: 'Bandeins-Strange';
-    src: url('/font/Bandeins-Strange.woff2') format('woff2');
-    font-weight: 300 700;
+
+
+/*---------------------------------------------------------------------*/
+/*------------------------ LAYER - Defaults ---------------------------*/
+/*---------------------------------------------------------------------*/
+@layer Defaults {
+    :root {
+        --ft-width: 100;
+        --ft-weight: 300;
+    }
+
+    @font-face {
+        font-family: 'Bandeins-Strange';
+        src: url('/font/Bandeins-Strange.woff2') format('woff2');
+        font-weight: 300 700;
+    }
+
+    * {
+        font-variation-settings:
+            "wdth" var(--ft-width),
+            "wght" var(--ft-weight);
+        font-family: 'Bandeins-Strange', system-ui, sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        font-style: italic;
+    }
+    
 }
 
-:root {
-    --ft-width: 100;
-    --ft-weight: 300;
-}
 
-* {
-    font-variation-settings:
-        "wdth" var(--ft-width),
-        "wght" var(--ft-weight);
-    font-family: 'Bandeins-Strange', system-ui, sans-serif;
-}
 
-body {
-    height: calc(100vh - 4rem);
-    width: calc(100vw - 4rem);
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 1rem;
+/*---------------------------------------------------------------------*/
+/*--------------------------- LAYER - Pages ---------------------------*/
+/*---------------------------------------------------------------------*/
+@layer Pages {
+    main {
+        height: calc(100vh - 4rem);
+        width: calc(100vw - 4rem);
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 1rem;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24px, 1fr)); /*repeat(16, minmax(16px, 1fr))*/ 
-    grid-template-rows: repeat(6, minmax(24px, 1fr)); 
-    gap: .5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        grid-template-rows: repeat(6, minmax(24px, 1fr)); 
+        gap: .5rem; 
 
-    border: solid 1px gray;
-    margin: 2rem;
-    font-size: 1.2rem;
-}
+        border: solid 1px gray;
+        margin: 2rem;
+        font-size: 1.2rem;
+    }
 
-body > * {
-    max-width: 100%;
-}
+    main > * {
+        max-width: 100%;
+    }
 
-h1 {
-    --ft-width: 1000;
-    line-height: .8;
-    font-size: 7rem;
-    transition: ease 1s;
-    align-self: end;
+    h1 {
+        --ft-width: 1000;
+        line-height: .8;
+        font-size: 7rem;
+        transition: ease 1s;
+        align-self: end;
 
-    & > span {
-        display: block;
+        grid-column: 1;
+        grid-row: 6;
+
+        & > span {
+            display: block;
+        }
+    }
+
+    .home-nav,
+    .rs-nav {
+        & ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
     }
 }
 
-button.switch-color {
 
-}
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    box-sizing: border-box;
-}
-
-.home-nav,
-.rs-nav {
-    & ul {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-end;
+/*---------------------------------------------------------------------*/
+/*------------------------- LAYER - Transitions -----------------------*/
+/*---------------------------------------------------------------------*/
+@layer Transitions {
+    @view-transition {
+        navigation: auto;
     }
-}
 
-.home-nav {
+    main {
+        view-transition-name: content;
+    }
 
+    ::view-transition-old(content) {
+        animation: slide-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    }
+    ::view-transition-new(content) {
+        animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    }
+
+    @keyframes slide-out {
+        0% {
+        transform: translateX(0%);
+        }
+        100% {
+        opacity: 0;
+        transform: translateX(calc(50% * var(--direction)));
+        }
+    }
+
+    @keyframes slide-in {
+        0% {
+        opacity: 0;
+        transform: translateX(calc(-50% * var(--direction)));
+        }
+        100% {
+        transform: translateX(0%);
+        }
+    }
 }

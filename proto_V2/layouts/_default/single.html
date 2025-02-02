@@ -1,6 +1,9 @@
 {{ define "main" }}
-  <header>
-    {{ partial "back.html" . }}
-  </header>
+<main class="single">
+    <style>:root{--direction: -1;}</style>
+    <header>
+        {{ partial "back.html" . }}
+    </header>
     {{ .Content }}
+</main>
 {{ end }}

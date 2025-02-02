@@ -1,13 +1,16 @@
 {{ define "main" }}
-    <section>
-        <p>Développeur front-end</p>
-        <p>Accessiblité et UX</p>
-        <p>Procrastination</p>
-    </section>
-    <img src="/images/home/portrait.jpg" alt="Ma tête">
-    <button class="switch-color">Thème</button>
-    <h1><span>Antoine</span><span>Moreau</span></h1>    
-    {{ partial "nav.html" . }}
-    {{ partial "rs.html" . }}
-    {{ .Content }}
+    <main class="home">
+        <style>:root{--direction: 1;}</style>
+        <section>
+            <p>Développeur front-end</p>
+            <p>Accessiblité et UX</p>
+            <p>Procrastination</p>
+        </section>
+        <img src="/images/home/portrait.jpg" alt="Ma tête">
+        <button class="switch-color">Thème</button>
+        <h1><span>Antoine</span><span>Moreau</span></h1>    
+        {{ partial "nav.html" . }}
+        {{ partial "rs.html" . }}
+        {{ .Content }}
+    </main>
 {{ end }}
