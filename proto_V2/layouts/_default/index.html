@@ -1,7 +1,11 @@
 {{ define "main" }}
-    <main class="home">
-        <style>:root{--direction: 1;}</style>
-        <script type="importmap">
+<main class="home">
+  <style>
+    :root {
+      --direction: 1;
+    }
+  </style>
+  <script type="importmap">
             {
               "imports": {
                 "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
@@ -9,10 +13,10 @@
               }
             }
           </script>
-          <script type="module" src="/js/threeJs.js"></script>
-        
-        
-        <!-- <section>
+  <script type="module" src="/js/model.js"></script>
+  <section id="canvas"></section>
+
+  <!-- <section>
             <p>Développeur front-end</p>
             <p>Accessiblité et UX</p>
             <p>Procrastination</p>
@@ -22,5 +26,5 @@
         <h1><span>Antoine</span><span>Moreau</span></h1>
         {{ partial "rs.html" . }}
         {{ .Content }} -->
-    </main>
+</main>
 {{ end }}

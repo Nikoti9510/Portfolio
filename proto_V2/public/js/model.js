@@ -4,7 +4,14 @@ import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
+// import Stats from 'three/addons/libs/stats.module.js';
 
+// /* stats */
+// const stats = new Stats()
+// document.body.appendChild(stats.dom)
+
+/* vars */
 let camera, scene, renderer;
 
 /* appel des fonctions */
@@ -16,10 +23,10 @@ function init() {
     /* renderer */
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( window.innerWidth / 2, window.innerHeight / 2);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
-    document.body.appendChild( renderer.domElement );
+    document.getElementById("canvas").appendChild( renderer.domElement );
 
     /* camera */
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 2000 );
@@ -35,19 +42,12 @@ function init() {
     scene.environment = pmremGenerator.fromScene( environment ).texture;
     environment.dispose();
 
-    /* grid */
-    const grid = new THREE.GridHelper( 500, 10, 0xffffff, 0xffffff );
-    grid.material.opacity = 0.5;
-    grid.material.depthWrite = false;
-    grid.material.transparent = true;
-    scene.add( grid );
-
     /* load model */
-    const loader = new GLTFLoader().setPath( '/' );
-    loader.load( '3d_files/avatar_1.glb', function ( gltf ) {
-        gltf.scene.position.y = 0;
-        gltf.scene.scale.set(100,100,100)
-        scene.add( gltf.scene );
+    const modelLoader = new GLTFLoader().setPath('/3d_files/');
+    modelLoader.load( 'avatar_1.glb', function (model) {
+        model.scene.position.y = 0;
+        model.scene.scale.set(100,100,100);
+        scene.add(model.scene);        
         render();
     } );
 
@@ -61,6 +61,8 @@ function init() {
     window.addEventListener( 'resize', onWindowResize );
 }
 
+
+
 /* window resize */
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -69,7 +71,10 @@ function onWindowResize() {
     render();
 }
 
+
+
 /* render */
 function render() {
     renderer.render( scene, camera );
+    // stats.update()
 }
