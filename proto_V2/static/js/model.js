@@ -38,7 +38,7 @@ function init() {
 
     /* scene */
     scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0xbbbbbb );
+    scene.background = new THREE.Color( 0xffffff );
     scene.environment = pmremGenerator.fromScene( environment ).texture;
     environment.dispose();
 

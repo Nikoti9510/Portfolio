@@ -69,21 +69,44 @@
         --ft-weight: 300;
     }
 
-    @font-face {
+    /* @font-face {
         font-family: 'Bandeins-Strange';
         src: url('/font/Bandeins-Strange.woff2') format('woff2');
         font-weight: 300 700;
+    } */
+
+    @font-face {
+        font-family: 'Switzer-Regular';
+        src: url('/font/Switzer-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Switzer-Bold';
+        src: url('/font/Switzer-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
     }
 
     * {
         font-variation-settings:
             "wdth" var(--ft-width),
             "wght" var(--ft-weight);
-        font-family: 'Bandeins-Strange', system-ui, sans-serif;
+        font-family: 'Switzer-Regular', system-ui, sans-serif;
+    }
+
+    h1 {
+        font-family: 'Switzer-Bold', system-ui, sans-serif;
+        font-size: 10rem;
     }
 
     body {
         padding: 2rem;
+        display: grid;
+        grid-template-rows: 1fr 6fr 1fr;
     }
 }
 
@@ -93,6 +116,15 @@
 /*--------------------------- LAYER - Pages ---------------------------*/
 /*---------------------------------------------------------------------*/
 @layer Pages {
+    #main-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+    }
+
     /* main {
         height: calc(100vh - 4rem);
         width: calc(100vw - 4rem);
@@ -189,5 +221,11 @@
 /*----------------------------- LAYER - 3D ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer ThreeD {
-
+    canvas {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
 }
