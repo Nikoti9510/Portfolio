@@ -1,12 +1,29 @@
 <html lang="{{ site.Language }}">
-    <head>
-        <link rel="stylesheet" href="/css/main.css">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
-    <body>
-        <header>
-            {{ partial "nav.html" . }}
-        </header>
-        {{ block "main" . }}{{ end }}
-    </body>
+
+<head>
+  <link rel="stylesheet" href="/css/main.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <style>
+    :root {
+      --direction: 1;
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                  "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="/js/model.js"></script>
+</head>
+
+<body>
+  <!-- <header>
+    {{ partial "nav.html" . }}
+  </header> -->
+  {{ block "main" . }}{{ end }}
+</body>
+
 </html>

@@ -100,77 +100,63 @@
 
     h1 {
         font-family: 'Switzer-Bold', system-ui, sans-serif;
-        font-size: 10rem;
     }
 
     body {
-        padding: 2rem;
-        display: grid;
-        grid-template-rows: 1fr 6fr 1fr;
+        padding: 1rem;
     }
 }
 
 
 
 /*---------------------------------------------------------------------*/
-/*--------------------------- LAYER - Pages ---------------------------*/
+/*--------------------------- LAYER - Home ----------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Pages {
-    #main-grid {
-        position: relative;
-        z-index: 1;
+@layer Home {
+    #home {
         display: grid;
-        align-content: center;
-        justify-content: center;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        gap: .5rem;
         height: 100%;
     }
 
-    /* main {
-        height: calc(100vh - 4rem);
-        width: calc(100vw - 4rem);
-        overflow: hidden;
-        box-sizing: border-box;
-        padding: 1rem;
-
+    #nom {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-        grid-template-rows: repeat(6, minmax(24px, 1fr)); 
-        gap: .5rem; 
+        grid-template-rows: subgrid;
+        grid-template-columns: subgrid;
+        grid-column: 3 / span 4;
+        grid-row: 4 / span 4;
+        z-index: 100;
+        pointer-events: none;
 
-        border: solid 1px gray;
-        margin: 2rem;
-        font-size: 1.2rem;
-    }
-
-    main > * {
-        max-width: 100%;
-    }
-
-    h1 {
-        --ft-width: 1000;
-        line-height: .8;
-        font-size: 7rem;
-        transition: ease 1s;
-        align-self: end;
-
-        grid-column: 1;
-        grid-row: 6;
-
-        & > span {
-            display: block;
-        }
-    }
-
-    .home-nav,
-    .rs-nav {
-        & ul {
+        h1 {
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: flex-end;
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            font-size: 10rem;
+            line-height: 0.8;
+
+            span {
+                display: block;
+                text-align: center;
+                align-self: end;
+            }
+
+            span:first-child {
+                grid-row: 1 / span 2;
+                grid-column: 1 / span 3;
+            }
+
+            span:last-child {
+                grid-column: 2 / span 3;
+                grid-row: 3 / span 2;
+            }
         }
-    } */
+    }
 }
 
 
@@ -221,11 +207,9 @@
 /*----------------------------- LAYER - 3D ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer ThreeD {
-    canvas {
+    #canvas {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
+        top: 0;
+        left: 0;
     }
 }

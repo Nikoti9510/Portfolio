@@ -1,22 +1,11 @@
 {{ define "main" }}
-<main class="home">
-  <style>
-    :root {
-      --direction: 1;
-    }
-  </style>
-  <script type="importmap">
-            {
-              "imports": {
-                "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
-                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
-              }
-            }
-  </script>
-  <script type="module" src="/js/model.js"></script>
+<main id="home">
   <section id="canvas"></section>
-  <section id="main-grid">
-    <h1>ANTOINE MOREAU</h1>
+  <section id="nom">
+    <h1>
+      <span>ANTOINE</span>
+      <span>MOREAU</span>
+    </h1>
   </section>
 </main>
 {{ end }}

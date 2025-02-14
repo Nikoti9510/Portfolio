@@ -23,13 +23,13 @@ function init() {
     /* renderer */
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth / 2, window.innerHeight / 2);
+    renderer.setSize( window.innerWidth, window.innerHeight);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
     document.getElementById("canvas").appendChild( renderer.domElement );
 
     /* camera */
-    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 2000 );
+    camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 1, 2000 );
     camera.position.set( 0, 200, 200 );
 
     /* environement */
