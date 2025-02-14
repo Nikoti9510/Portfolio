@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------ LAYER DEFINITION ---------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Reset, Defaults, Pages, Posts, Projets, Transitions, ThreeD;
+@layer Reset, Defaults, Home, Posts, Projets, Transitions, ThreeD;
 
 
 
