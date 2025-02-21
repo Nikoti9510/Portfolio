@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------ LAYER DEFINITION ---------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Reset, Defaults, Pages, Posts, Projets, Transitions, ThreeD;
+@layer Reset, Defaults, Home, Posts, Projets, Transitions, ThreeD;
 
 
 
@@ -9,47 +9,136 @@
 /*-------------------------- Layer - Reset ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer Defaults {
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
         margin: 0;
         padding: 0;
         border: 0;
         vertical-align: baseline;
     }
+
     /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, 
-    footer, header, hgroup, menu, nav, section {
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
         display: block;
     }
+
     body {
         line-height: 1;
     }
-    ol, ul {
+
+    ol,
+    ul {
         list-style: none;
     }
-    blockquote, q {
+
+    blockquote,
+    q {
         quotes: none;
     }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
         content: '';
         content: none;
     }
+
     table {
         border-collapse: collapse;
         border-spacing: 0;
     }
+
     img {
         max-width: 100%;
         height: auto;
@@ -101,10 +190,6 @@
     h1 {
         font-family: 'Switzer-Bold', system-ui, sans-serif;
     }
-
-    body {
-        padding: 1rem;
-    }
 }
 
 
@@ -115,18 +200,62 @@
 @layer Home {
     #home {
         display: grid;
-        grid-template-rows: repeat(10, 1fr);
-        grid-template-columns: repeat(8, 1fr);
-        gap: .5rem;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
         height: 100%;
+
+        & > * {
+            position: relative;
+        }
+    }
+
+    #nav {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        grid-template-rows: subgrid;
+        grid-template-columns: subgrid;
+        display: grid;
+        pointer-events: none;
+
+        & :nth-child(1) {
+            grid-row: 1;
+            grid-column: 4;
+        }
+
+        & :nth-child(2) {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        & :nth-child(3) {
+            grid-row: 3;
+            grid-column: 7;
+        }
+
+        & :nth-child(4) {
+            grid-row: 4;
+            grid-column: 4;
+        }
+
+        & > * {
+            background: firebrick;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: all;
+        }
     }
 
     #nom {
         display: grid;
         grid-template-rows: subgrid;
         grid-template-columns: subgrid;
-        grid-column: 3 / span 4;
-        grid-row: 4 / span 4;
+        grid-column: 2 / span 5;
+        grid-row: 2 / span 2;
         z-index: 100;
         pointer-events: none;
 
@@ -142,18 +271,20 @@
 
             span {
                 display: block;
-                text-align: center;
                 align-self: end;
             }
 
             span:first-child {
-                grid-row: 1 / span 2;
-                grid-column: 1 / span 3;
+                grid-row: 1;
+                grid-column: 2 / span 2;
+                text-align: start;
             }
 
             span:last-child {
-                grid-column: 2 / span 3;
-                grid-row: 3 / span 2;
+                grid-column: 3 / span 2;
+                grid-row: 2;
+                text-align: end;
+                align-self: start;
             }
         }
     }
@@ -165,7 +296,7 @@
 /*------------------------- LAYER - Transitions -----------------------*/
 /*---------------------------------------------------------------------*/
 @layer Transitions {
-    @view-transition {
+    /* @view-transition {
         navigation: auto;
     }
 
@@ -176,29 +307,32 @@
     ::view-transition-old(content) {
         animation: slide-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     }
+
     ::view-transition-new(content) {
         animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     }
 
     @keyframes slide-out {
         0% {
-        transform: translateX(0%);
+            transform: translateX(0%);
         }
+
         100% {
-        opacity: 0;
-        transform: translateX(calc(50% * var(--direction)));
+            opacity: 0;
+            transform: translateX(calc(50% * var(--direction)));
         }
     }
 
     @keyframes slide-in {
         0% {
-        opacity: 0;
-        transform: translateX(calc(-50% * var(--direction)));
+            opacity: 0;
+            transform: translateX(calc(-50% * var(--direction)));
         }
+
         100% {
-        transform: translateX(0%);
+            transform: translateX(0%);
         }
-    }
+    } */
 }
 
 

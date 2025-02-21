@@ -1,29 +1,26 @@
 <html lang="en">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-        <link rel="stylesheet" href="/css/main.css">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <nav class="home-nav">
-    <ul>
-        
-        <li>
-            <a href="/blog">Blog</a>
-        </li>
-        
-        <li>
-            <a href="/projets">Projets</a>
-        </li>
-        
-        <li>
-            <a href="/sandbox">Sandbox</a>
-        </li>
-        
-    </ul>
-</nav>
-        </header>
-        
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <style>
+    :root {
+      --direction: 1;
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                  "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="/js/model.js"></script>
+</head>
+
+<body>
+  
     <main class="single">
         <style>:root{--direction: -1;}</style>
         <a href="/"><i>←</i>Retour</a>
@@ -31,5 +28,6 @@
 
     </main>
 
-    </body>
+</body>
+
 </html>

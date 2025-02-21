@@ -15,6 +15,13 @@
       <description>&lt;h1 id=&#34;coming-soon&#34;&gt;coming soon&lt;/h1&gt;</description>
     </item>
     <item>
+      <title>Info</title>
+      <link>http://localhost:1313/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/info/</guid>
+      <description>&lt;h1 id=&#34;coming-soon&#34;&gt;coming soon&lt;/h1&gt;</description>
+    </item>
+    <item>
       <title>Projets</title>
       <link>http://localhost:1313/projets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -15,3 +15,7 @@ title = 'My New Hugo Site'
     name = 'Sandbox'
     url = '/sandbox'
     weight = 30
+  [[menus.header]]
+    name = 'Info'
+    url = '/info'
+    weight = 40
