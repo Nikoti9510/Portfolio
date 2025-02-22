@@ -296,7 +296,7 @@
 /*------------------------- LAYER - Transitions -----------------------*/
 /*---------------------------------------------------------------------*/
 @layer Transitions {
-    /* @view-transition {
+    @view-transition {
         navigation: auto;
     }
 
@@ -332,7 +332,7 @@
         100% {
             transform: translateX(0%);
         }
-    } */
+    }
 }
 
 
