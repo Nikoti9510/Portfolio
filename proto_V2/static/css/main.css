@@ -322,17 +322,6 @@
             transform: translateX(calc(50% * var(--direction)));
         }
     }
-
-    @keyframes slide-in {
-        0% {
-            opacity: 0;
-            transform: translateX(calc(-50% * var(--direction)));
-        }
-
-        100% {
-            transform: translateX(0%);
-        }
-    }
 }
 
 
