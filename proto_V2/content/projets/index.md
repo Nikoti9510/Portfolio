@@ -1,7 +1,7 @@
 ---
 title: "Projets"
 url: "/projets/"
-layout: projets
+layout: "projets"
 draft: false
 ---
 

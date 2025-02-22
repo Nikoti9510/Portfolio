@@ -1,7 +1,7 @@
 ---
 title: "Sandbox"
 url: "/sandbox/"
-layout: sandbox
+layout: "sandbox"
 draft: false
 ---
 

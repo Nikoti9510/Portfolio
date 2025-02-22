@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 url: "/blog/"
-layout: blog
+layout: "blog"
 draft: false
 ---
 

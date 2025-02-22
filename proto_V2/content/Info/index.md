@@ -1,7 +1,7 @@
 ---
 title: "Info"
 url: "/info/"
-layout: info
+layout: "info"
 draft: false
 ---
 
