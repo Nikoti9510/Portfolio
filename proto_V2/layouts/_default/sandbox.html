@@ -1,19 +1,5 @@
 {{ define "main" }}
 {{ partial "back.html" . }}
-<style>
-    :root {
-        --direction: -1;
-    }
-    @keyframes slide-in {
-        0% {
-            opacity: 0;
-            transform: translateY(calc(-50% * var(--direction)));
-        }
-
-        100% {
-            transform: translateY(0%);
-        }
-    }
-</style>
+<style>:root {--direction: -1;}</style>
 {{ .Content }}
 {{ end }}
