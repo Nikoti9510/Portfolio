@@ -1,80 +1,99 @@
 /* imports */
 import * as THREE from 'three';
-
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
-// import Stats from 'three/addons/libs/stats.module.js';
 
-// /* stats */
-// const stats = new Stats()
-// document.body.appendChild(stats.dom)
+// chargement du modèle une fois la page chargé
+window.onload = () => loadModel();
 
-/* vars */
-let camera, scene, renderer;
+// Gestion du chargement du modèle et des erreurs
+function loadModel() {
+    const loader = new GLTFLoader();
+    loader.load('3d_files/model_animated.glb',
+        (gltf) => {
+            // loaded
+            setupScene(gltf);
+        }, 
+        (xhr) => {
+            // progress
+            const loadPercent = Math.round((xhr.loaded / xhr.total) * 100);
+            console.log(`Chargement... ${loadPercent}%`);
+        }, 
+        (error) => {
+            // error
+            console.log(error);
+        }
+    );
+}
 
-/* appel des fonctions */
-init();
-render();
+// Fonction pour la création de la scène 3D 
+function setupScene(gltf) {
+    const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true
+    });
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-/* init */
-function init() {
-    /* renderer */
-    renderer = new THREE.WebGLRenderer( { antialias: true } );
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight);
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1;
-    document.getElementById("canvas").appendChild( renderer.domElement );
+    const container = document.getElementById('canvas');
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
-    /* camera */
-    camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 1, 2000 );
-    camera.position.set( 0, 200, 200 );
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-    /* environement */
-    const environment = new RoomEnvironment();
-    const pmremGenerator = new THREE.PMREMGenerator( renderer );
+    container.appendChild(renderer.domElement);
 
-    /* scene */
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0xffffff );
-    scene.environment = pmremGenerator.fromScene( environment ).texture;
-    environment.dispose();
+    // camera 
+    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight);
+    camera.position.set(5, 0.8, 1);
 
-    /* load model */
-    const modelLoader = new GLTFLoader().setPath('/3d_files/');
-    modelLoader.load( 'avatar_1.glb', function (model) {
-        model.scene.position.y = 0;
-        model.scene.scale.set(100,100,100);
-        scene.add(model.scene);        
-        render();
-    } );
-
-    /* controls */
-    const controls = new OrbitControls( camera, renderer.domElement );
-    controls.addEventListener( 'change', render ); // use if there is no animation loop
-    controls.minDistance = 10;
-    controls.maxDistance = 1000;
-    controls.target.set( 10, 90, - 16 );
+    // controls 
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.enableZoom = false;
+    controls.minDistance = 3;
+    controls.minPolarAngle = 1.4;
+    controls.maxPolarAngle = 1.4;
+    controls.target = new THREE.Vector3(0, .9, 0);
     controls.update();
-    window.addEventListener( 'resize', onWindowResize );
-}
 
+    // scene 
+    const scene = new THREE.Scene();
 
+    // light
+    scene.add(new THREE.AmbientLight());
+    const spotlight = new THREE.SpotLight(0xffffff, 20, 8, 1);
+    spotlight.penumbra = 0.5;
+    spotlight.position.set(0, 4, 2);
+    spotlight.castShadow = true;
+    scene.add(spotlight);
 
-/* window resize */
-function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    render();
-}
+    // ajoute du model 
+    const model = gltf.scene;
+    model.traverse((child) => {
+        if (child.isMesh) {
+            child.castShadow = true;
+            child.receiveShadow = true;
+        }
+    });
+    scene.add(model);
 
+    // chargement des animations
+    const mixer = new THREE.AnimationMixer(model);
+    const clips = gltf.animations;
+    const idleClip = THREE.AnimationClip.findByName(clips, 'idle');
+    const look_aroundClip = THREE.AnimationClip.findByName(clips, 'look_around');
+    const idleAction = mixer.clipAction(idleClip);
+    const look_aroundAction = mixer.clipAction(look_aroundClip);
 
+    const clock = new THREE.Clock();
+    function animate() {
+        requestAnimationFrame(animate);
+        mixer.update(clock.getDelta());
+        renderer.render(scene, camera);
+    }
 
-/* render */
-function render() {
-    renderer.render( scene, camera );
-    // stats.update()
+    animate();
+    look_aroundAction.play();
 }

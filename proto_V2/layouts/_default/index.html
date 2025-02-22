@@ -1,4 +1,16 @@
 {{ define "main" }}
+<!-- Model -->
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+    }
+  }
+</script>
+<script type="module" src="/js/model.js"></script>
+
+<!-- Content -->
 <main id="home">
   <section id="canvas"></section>
   <section id="nom">
