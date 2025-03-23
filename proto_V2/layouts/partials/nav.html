@@ -1,8 +1,8 @@
-<nav class="home-nav">
-    <ul>
+<nav class="nav__container">
+    <ul class="nav__list">
         {{ range .Site.Menus.header }}
-        <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+        <li class="nav__item">
+            <a class="nav__item--link" href="{{ .URL }}">{{ .Name }}</a>
         </li>
         {{ end }}
     </ul>

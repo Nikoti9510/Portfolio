@@ -1,7 +1,8 @@
 {{ define "main" }}
     <main class="single">
-        <style>:root{--direction: -1;}</style>
         {{ partial "back.html" . }}
-        {{ .Content }}
+        <section class="single-content">
+            {{ .Content }}
+        </section>
     </main>
 {{ end }}

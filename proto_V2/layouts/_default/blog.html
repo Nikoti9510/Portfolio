@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main class="blog">
+    {{ partial "back.html" . }}
+    <section class="blog-posts">
+        {{ .Content }}
+        {{ range where .Site.RegularPages "Type" "blog" }}
+        <article class="post">
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ end }}
+        </article>
+    </section>
+</main>
+{{ end }}

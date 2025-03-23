@@ -1,7 +1,3 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-
 [menus]
   [[menus.header]]
     name = 'Blog'
@@ -19,3 +15,13 @@ title = 'My New Hugo Site'
     name = 'Info'
     url = '/info'
     weight = 40
+
+defaultContentLanguage = 'fr'
+
+disableKinds = ['taxonomy', 'term']
+
+[markup.goldmark.renderHooks.image]
+enableDefault = true
+
+[markup.goldmark.renderHooks.link]
+enableDefault = true
