@@ -402,6 +402,7 @@
 /*------------------------- LAYER - Transitions -----------------------*/
 /*---------------------------------------------------------------------*/
 @layer Transitions {
+<<<<<<< HEAD
 
     /* :root {
         --transfromStartSlideIn: translateY(-100%); 
@@ -411,6 +412,8 @@
         --transfromEndSlideOut: translateY(100%);
     } 
 
+=======
+>>>>>>> dd02e3903a89ed79e5d7d18b0bf31efba6bbf550
     @view-transition {
         navigation: auto;
     }
@@ -433,6 +436,7 @@
         100% {
             transform: var(--transfromEndSlideOut);
         }
+<<<<<<< HEAD
     } */
 
 
@@ -453,6 +457,10 @@
         animation: slide-in 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     }*/
 } 
+=======
+    }
+}
+>>>>>>> dd02e3903a89ed79e5d7d18b0bf31efba6bbf550
 
 
 

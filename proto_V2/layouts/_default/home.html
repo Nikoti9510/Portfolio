@@ -4,12 +4,17 @@
   {
     "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+<<<<<<< HEAD
                 "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+=======
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+>>>>>>> dd02e3903a89ed79e5d7d18b0bf31efba6bbf550
     }
   }
 </script>
 <script type="module" src="/js/model.js"></script>
 
+<<<<<<< HEAD
 <!-- Contenu -->
 <main id="home">
   <section id="canvas"></section>
@@ -29,5 +34,23 @@
   <section id="nav">
     {{ partial "nav.html" . }}
   </section>
+=======
+<!-- Content -->
+<style>:root {--direction: 1;}</style>
+<main id="home">
+  <section id="canvas"></section>
+  <section id="nom">
+    <h1>
+      <span>Antoine</span>
+      <span>Moreau</span>
+    </h1>
+  </section>
+  <nav id="nav">
+    <a href="/sandbox">Sandbox</a>
+    <a href="/projets">Projets</a>
+    <a href="/blog">Blog</a>
+    <a href="/info">Info</a>
+  </nav>
+>>>>>>> dd02e3903a89ed79e5d7d18b0bf31efba6bbf550
 </main>
 {{ end }}
