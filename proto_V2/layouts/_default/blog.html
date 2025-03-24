@@ -5,10 +5,14 @@
         {{ .Content }}
         {{ range where .Site.RegularPages "Type" "blog" }}
         <article class="post">
-            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-            <span class="post--tags"> {{ range .Params.tags }} {{ . }} {{end}}</span>
-        {{ end }}
+            <a href="{{ .RelPermalink }}">
+                <h2>{{ .LinkTitle }}</h2>
+                <div>{{ .Params.description }}</div>
+                <span class="post--tags">{{ range .Params.tags }} {{ . }} {{end}}</span>
+                <span class="post--date">{{ .Params.date }}</span>
+            </a>
         </article>
+        {{ end }}
     </section>
 </main>
 {{ end }}

@@ -22,6 +22,13 @@
       <description></description>
     </item>
     <item>
+      <title>Tags/Test</title>
+      <link>//localhost:1313/tags/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Tags/Web</title>
       <link>//localhost:1313/tags/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

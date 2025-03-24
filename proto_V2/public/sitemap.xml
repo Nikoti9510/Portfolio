@@ -32,6 +32,8 @@
   </url><url>
     <loc>//localhost:1313/tags/meta/</loc>
   </url><url>
+    <loc>//localhost:1313/tags/test/</loc>
+  </url><url>
     <loc>//localhost:1313/tags/web/</loc>
   </url><url>
     <loc>//localhost:1313/blog/tutoriel-hugo/</loc>

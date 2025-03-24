@@ -1,4 +1,12 @@
-<h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
-  {{ .Text }}
-  <a href="#{{ .Anchor | urlize }}">#</a>
-</h{{ .Level }}>
+{{ if eq .Page.Params.type "blog" }}
+  {{ if eq .Level 1 }}
+    <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+      {{ .Text }}
+    </h{{ .Level }}>
+  {{ else }}
+    <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+      <a href="#{{ .Anchor | urlize }}">#</a>
+      {{ .Text }}
+    </h{{ .Level }}>
+  {{ end }}
+{{ end }}
