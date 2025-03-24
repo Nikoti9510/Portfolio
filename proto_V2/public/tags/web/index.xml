@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags/Web on </title>
+    <link>//localhost:1313/tags/web/</link>
+    <description>Recent content in Tags/Web on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutoriel Hugo</title>
+      <link>//localhost:1313/blog/tutoriel-hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/tutoriel-hugo/</guid>
+      <description>&lt;h1 id=&#34;création-dun-portfolio-simple-en-prenant-avantage-de-la-jamstack&#34;&gt;&#xD;&#xA;  Création d&amp;rsquo;un portfolio simple en prenant avantage de la JamStack.&#xD;&#xA;  &lt;a href=&#34;#cr%25C3%25A9ation-dun-portfolio-simple-en-prenant-avantage-de-la-jamstack&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&lt;p&gt;Avant de rentrer dans le vif du sujet, on présente rapidement le principe, les outils et la méthodologie.&lt;/p&gt;&#xA;&lt;p&gt;On parle de JamStack pour décrire un site créé en prenant avantage de plusieurs outils mis à disposition (gratuits, en libres de droits, payants, avec abonnement, etc..) et en les assemblant afin de bénéficier de leurs avantages (et ne pas réinventer la roue à chaque contrainte). Par exemple, plutôt que de gérer manuellement l&amp;rsquo;hébergement de notre site, on utilise un outil comme Netlify qui le fait pour nous. L&amp;rsquo;idée, c&amp;rsquo;est de ne pas perdre de temps sur des fonctionnalités déjà existantes, et de se concentrer sur le design et le contenu de notre site.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

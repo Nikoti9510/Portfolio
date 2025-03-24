@@ -10,15 +10,17 @@
   </url><url>
     <loc>//localhost:1313/blog/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
-  </url><url>
     <loc>//localhost:1313/blog/death-in-space-anarchy-program/</loc>
   </url><url>
     <loc>//localhost:1313/blog/degenesis-stele-echo/</loc>
   </url><url>
     <loc>//localhost:1313/blog/enquete-new-elness/</loc>
   </url><url>
+    <loc>//localhost:1313/fr/</loc>
+  </url><url>
     <loc>//localhost:1313/info/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/jdr/</loc>
   </url><url>
     <loc>//localhost:1313/blog/pourquoi-ecrire-un-blog/</loc>
   </url><url>
@@ -27,6 +29,10 @@
     <loc>//localhost:1313/sandbox/</loc>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/meta/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/web/</loc>
   </url><url>
     <loc>//localhost:1313/blog/tutoriel-hugo/</loc>
   </url>

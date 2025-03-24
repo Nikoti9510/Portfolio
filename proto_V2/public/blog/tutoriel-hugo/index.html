@@ -18,7 +18,7 @@
         <section class="single-content">
             <h1 id="création-dun-portfolio-simple-en-prenant-avantage-de-la-jamstack">
   Création d&rsquo;un portfolio simple en prenant avantage de la JamStack.
-  <a href="#cr%c3%a9ation-dun-portfolio-simple-en-prenant-avantage-de-la-jamstack">#</a>
+  <a href="#cr%25C3%25A9ation-dun-portfolio-simple-en-prenant-avantage-de-la-jamstack">#</a>
 </h1><p>Avant de rentrer dans le vif du sujet, on présente rapidement le principe, les outils et la méthodologie.</p>
 <p>On parle de JamStack pour décrire un site créé en prenant avantage de plusieurs outils mis à disposition (gratuits, en libres de droits, payants, avec abonnement, etc..) et en les assemblant afin de bénéficier de leurs avantages (et ne pas réinventer la roue à chaque contrainte). Par exemple, plutôt que de gérer manuellement l&rsquo;hébergement de notre site, on utilise un outil comme Netlify qui le fait pour nous. L&rsquo;idée, c&rsquo;est de ne pas perdre de temps sur des fonctionnalités déjà existantes, et de se concentrer sur le design et le contenu de notre site.</p>
 <p>Dans ce tutoriel, on va créer un site en utilisant les outils suivants :</p>
@@ -72,7 +72,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <hr>
 <h2 id="création-du-site-avec-hugo">
   Création du site avec Hugo
-  <a href="#cr%c3%a9ation-du-site-avec-hugo">#</a>
+  <a href="#cr%25C3%25A9ation-du-site-avec-hugo">#</a>
 </h2><p>Une fois que l&rsquo;installation est terminé, vous êtes prêt à créer votre site ! Pour ça, réouvrez GitHub Desktop et votre projet dans Visual Studio Code. Une fois dans VScode, on va dans <code>Terminal &gt; New Terminal</code>.</p>
 <p><img src="/blog/tutoriel-hugo/terminal.png" alt="Ouvrir un terminal dans Visual Studio Code" title="Ouvrir un terminal dans Visual Studio Code"></p>
 <p>Dans le terminal qui s&rsquo;est ouvert en bas de l&rsquo;éditeur, vous pouvez maintenant générer votre site avec Hugo. Pour cela, rien de plus simple, il suffit de taper la ligne de commande suivante :</p>
@@ -83,7 +83,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <hr>
 <h2 id="installer-un-thème">
   Installer un thème
-  <a href="#installer-un-th%c3%a8me">#</a>
+  <a href="#installer-un-th%25C3%25A8me">#</a>
 </h2><p>Hugo propose une <a href="https://themes.gohugo.io/">collection de thème gratuit sur son site</a>, et il est également possible d&rsquo;en trouver des plus complets sur d&rsquo;autres sites, comme par exemple <a href="https://gethugothemes.com/products">gethugothemes.com</a> ou <a href="https://anvodstudio.com/hugo-themes/">anvodstudio.com</a>. Pour l&rsquo;exemple, j&rsquo;ai choisi le thème <a href="https://themes.gohugo.io/themes/hugo-papermod/">PaperMod</a>. Pour l&rsquo;installer, rien de compliqué, il suffit de se rendre sur le page Github du thème (en cliquant sur le bouton &ldquo;Download&rdquo; dans la page du thème) et de copier la commande pour installer le submodule dans le terminal de VScode. Pour PaperMod, voilà la commande :</p>
 <p><code>git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod</code></p>
 <blockquote>
@@ -285,7 +285,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <hr>
 <h2 id="créer-un-menu-de-navigation">
   Créer un menu de navigation
-  <a href="#cr%c3%a9er-un-menu-de-navigation">#</a>
+  <a href="#cr%25C3%25A9er-un-menu-de-navigation">#</a>
 </h2><p>Maintenant que le site possède une structure (certes basique), on va pouvoir générer un menu de navigation. Pour cela, rendez-vous dans votre fichier de configuration <code>hugo.toml</code>(ou <code>config.toml</code>). En effet, c&rsquo;est dans ce fichier que l&rsquo;on définit tout les paramètres communs à l&rsquo;ensemble du site. La syntaxe est très simple et se présente comme suit :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">menus</span>]
 </span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">header</span>]]
@@ -339,7 +339,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <hr>
 <h2 id="créer-une-liste-de-projet">
   Créer une liste de projet
-  <a href="#cr%c3%a9er-une-liste-de-projet">#</a>
+  <a href="#cr%25C3%25A9er-une-liste-de-projet">#</a>
 </h2><p>Pour commencer, il faut créer les projets. Pour cela, allez dans le dossier <code>content</code>, et ajoutez un dossier avec le nom de notre choix, pour le tutoriel, j&rsquo;ai choisi <code>projets</code>. Ce nom sera celui utilisé par Hugo pour déterminer le <code>type</code> de ces projets. On ajoute dans ce dossier un fichier <code>_index.md</code> afin de pouvoir passer des informations générales. Pour le moment, il peut simplement comprendre le titre de la page :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Mes projets&#34;

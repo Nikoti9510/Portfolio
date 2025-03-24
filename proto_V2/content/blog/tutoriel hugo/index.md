@@ -3,6 +3,8 @@ title: "Tutoriel Hugo"
 date: 
 description: "Un tutoriel complet pour créer de A à Z un site statique avec Hugo"
 type: blog
+tags:
+- Web
 ---
 
 # Création d'un portfolio simple en prenant avantage de la JamStack.

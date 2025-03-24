@@ -6,6 +6,7 @@
         {{ range where .Site.RegularPages "Type" "blog" }}
         <article class="post">
             <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            <span class="post--tags"> {{ range .Params.tags }} {{ . }} {{end}}</span>
         {{ end }}
         </article>
     </section>

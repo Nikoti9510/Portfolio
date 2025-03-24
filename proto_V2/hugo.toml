@@ -1,3 +1,4 @@
+# Menu du site
 [menus]
   [[menus.header]]
     name = 'Blog'
@@ -16,12 +17,22 @@
     url = '/info'
     weight = 40
 
+# Tags blog
+[taxonomies]
+  tag = 'tags'
+
+# Langue par defaut du site
 defaultContentLanguage = 'fr'
 
+# Désactive les générations de termes dans le site
 disableKinds = ['taxonomy', 'term']
 
+# je sais plus
 [markup.goldmark.renderHooks.image]
 enableDefault = true
-
 [markup.goldmark.renderHooks.link]
 enableDefault = true
+
+# Active l'HTML dans les fichiers markdown
+[markup.goldmark.renderer]
+  unsafe = true 

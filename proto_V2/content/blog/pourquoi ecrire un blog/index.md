@@ -3,6 +3,8 @@ title: Pourquoi écrire (un blog) ?
 date: 
 description: C'est bien beau de faire un blog, mais pour quoi faire ? Eh bien c'est une excellente question, mais ne suis pas sûr qu'elle soit vite répondue.
 type: blog
+tags:
+- Meta
 ---
 
 # Pourquoi écrire (un blog) ?
