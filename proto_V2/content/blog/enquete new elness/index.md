@@ -402,42 +402,18 @@ L’idée de mener une enquête en amoureux avec Betty est plaisante, mais il fa
 
 ## Annexes
 
-<figure>
-![Plan de la mine](/assets/img/uploads/mine-plan.jpg "Carte de la mine")
-<figcaption>Carte de la mine</figcaption>
-</figure>
+![Plan de la mine](/mine-plan.jpg "Carte de la mine")
 
-<figure>
-![Carte de la mine avec indication de Wayne Richardson](/assets/img/uploads/map-indication.png "Carte de la mine avec indication de Wayne Richardson")
-<figcaption>Carte de la mine avec indication de Wayne Richhardson</figcaption>
-</figure>
+![Carte de la mine avec indication de Wayne Richardson](/map-indication.png "Carte de la mine avec indication de Wayne Richardson")
 
-<figure>
-![Télégraphe d'un expéditeur inconnu](/assets/img/uploads/télégraphe.png "Télégraphe d'un expéditeur inconnu")
-<figcaption>Télégraphe d'un expéditeur inconnu</figcaption>
-</figure>
+![Télégraphe d'un expéditeur inconnu](/telegraphe.png "Télégraphe d'un expéditeur inconnu")
 
-<figure>
-![Liste des décès durant l'exploitation de la mine](/assets/img/uploads/liste-décès.png "Liste des décès durant l'exploitation de la mine")
-<figcaption>Liste des décès durant l'exploitation de la mine</figcaption>
-</figure>
+![Liste des décès durant l'exploitation de la mine](/liste-deces.png "Liste des décès durant l'exploitation de la mine")
 
-<figure>
-![Le rituel non traduit](/assets/img/uploads/rituel-de-la-mère.jpg "Le rituel non traduit")
-<figcaption>Le rituel non traduit</figcaption>
-</figure>
+![Le rituel non traduit](/rituel-de-la-mere.jpg "Le rituel non traduit")
 
-<figure>
-![Traduction du rituel](/assets/img/uploads/rituel_maj.png "Traduction du rituel")
-<figcaption>Traduction du rituel</figcaption>
-</figure>
+![Traduction du rituel](/rituel_maj.png "Traduction du rituel")
 
-<figure>
-![Inversion du rituel](/assets/img/uploads/anti-rituel_maj.png "Inversion du rituel")
-<figcaption>Inversion du rituel</figcaption>
-</figure>
+![Inversion du rituel](/anti-rituel_maj.png "Inversion du rituel")
 
-<figure>
-![Lettre de Harvey](/assets/img/uploads/lettre-harvey.png "Lettre de Harvey")
-<figcaption>Lettre de harvey</figcaption>
-</figure>
+![Lettre de Harvey](/lettre-harvey.png "Lettre de Harvey")

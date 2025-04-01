@@ -18,10 +18,7 @@ J'avais envie d'écrire un peu pour le jeu <a href="https://degenesis.com/" targ
 ## Le lien
 Le tonnerre gronde au loin, les nuages sombres roulent sur les flancs de basaltes abrupts. Les grosses gouttes humidifient les étranges stèles d'échos qui percent les escarpements, entre les saillies rocheuses et les conifères. L'eau ruisselle et de curieux reflets apparaissent sur les faces encore illuminées par les derniers rayons de soleil. La brume déjà lourde nappe le fond de la vallée, et les stèles la transpercent, comme de multiples ailerons de squales, tournant autour du champ de spore mère caché sous les nappes de brouillards.
 
-<figure class="breakout">
-![Un champ de spore dans les balkans, par sixmorevodka.](/assets/img/uploads/balkhan-spore-field.jpg "Un champ de sport dans les balkans, par sixmorevodka.")
-<figcaption class="flow-space__small">Un champ de spore dans les balkans, par sixmorevodka.</figcaption>
-</figure>
+![Un champ de spore dans les balkans, par sixmorevodka.](/degenesis-steles_echos.jpg "Un champ de sport dans les balkans, par sixmorevodka.")
 
 ## Les antagonistes
 Trois Dushani, des Lesnje, protègent le champ de spore. Ils sont entièrement nus, leurs peaux sont pâles et sales. Leurs pieds et mains griffus sont contusionnés et couverts d'hématomes. Leurs visages sont masqués sous des scaphandres de métal noir, d'où dépassent des dents pointues et luisantes. Les casques sont posés sur leurs épaules, et des dizaines de câbles et tuyaux en sortent, dansant comme les membres indépendants d'un céphalopode. L'un est assis au centre du champ de spore, ses mains ondulent au-dessus de sa tête. Les deux autres marchent entre les stèles autour du cratère, formant volutes et tourbillons dans les brumes à leurs passages.  
@@ -37,29 +34,30 @@ Trois Dushani, des Lesnje, protègent le champ de spore. Ils sont entièrement n
   Épée préservalis en avant, Benedikt transperce la brume dans un silence de mort. Elman et Mara sont sur l'autre versant. Il enjambe les obstacles avec une précision chirurgicale. Les premiers filaments de mycélium s'accrochent à ses bottes. Le talc sur son crâne chauve vibre et ondule. Un Lesnje s'est retourné, la diversion a fait son œuvre, à lui de faire le sien. Il lui reste encore trente mètres, il accélère. Les premiers mots tribaux atteignent son esprit, les enseignements de Krangler retentissent dans son esprit. Il avance, inflexible. 
 
 ## Compétences et statistiques
-<u>***Lesnje***</u> : \
+***Lesnje*** : \
 *Veux :* Protéger le champ de spore mère et l'harmonie de la matrice sonore. \
 *Rage :* Bruits dissonants\
 *Peur :* Perdre son masque
 
 <table class="flow-space__small"><thead><tr><th>Compétence</th><th>Valeur</th></tr></thead><tbody><tr><td>Instinct</td><td>8d</td></tr><tr><td>Psyché</td><td>6d</td></tr><tr><td>Agilité</td><td>5d</td></tr><tr><td>Physique</td><td>7d</td></tr><tr><td>Intellect</td><td>4d</td></tr><tr><td>Charisme</td><td>4d</td></tr><tr><td>Défense passive</td><td>3d</td></tr></tbody></table>
 
-<div class="no-bullet">
-* <u>**Scaphandre**</u> : *(25HP | 3 Armures)* \
+
+* **Scaphandre** : *(25HP | 3 Armures)* \
   Ajoute +4d pour percevoir l'environnement dans un rayon de 100 mètres autour du Lesnje
   * 👁️ *Jet d'encre :*\
     Les câbles du scaphandre projettent un écran d'encre qui flotte dans l'air vibrant et obscurcit la vision. +2d à la défense passive pour 1 tour.
   * 🤎 *Parasite : (10HP)*\
     Le kraken a percé le crâne de son hôte, il frémit sous la lumière du jour, et la peur se lit dans ses yeux brillants et noirs.
-* <u>**Stèles d'échos**</u> : *(50HP | 4 Armures)* 
+* **Stèles d'échos** : *(50HP | 4 Armures)* 
   * ⚡ *Résonance : (tant que les stèles sont intactes)*\
     Tant que les stèles sont debout, elles amplifient la matrice sonore et appliquent un malus de -2D aux attaquants. 
   * 🏹⚡ *Onde sonore : (au moins 2 Lesnjes encore en vie)*\
     Les Lesnjes harmonisent leurs chants pour former une onde sonore infligeant 1d6+2 traumatismes. 
-* <u>**Cisailles**</u> : *(8HP | 1 Armures)* \
+* **Cisailles** : *(8HP | 1 Armures)* \
   Le Lesnje porte à la main une cisaille rouillée mais particulièrement menaçante. Elle est fixée à sa main par un assemblage de cordes et de câbles. 
   * *🗡️Empalement :* Inflige 1d6+2 blessures superficielles.
-</div>
+
+--- 
 
 > 🤎 : Point vital de l'adversaire, c'est lui qui doit être détruit pour vaincre l'adversaire. \
 > 👁️ : Cet élément n'est pas visible. Les joueurs peuvent apprendre son existence en se renseignant à l'avance, ou à leur dépens pendant l'affrontement.\
