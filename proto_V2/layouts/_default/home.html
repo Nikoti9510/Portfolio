@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!-- Model -->
-<script type="importmap">
+<!-- <script type="importmap">
   {
     "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
@@ -8,16 +8,11 @@
     }
   }
 </script>
-<script type="module" src="/js/model.js"></script>
+<script type="module" src="/js/model.js"></script> -->
 
 <!-- Contenu -->
 <main id="home">
-  <section id="canvas"></section>
-
-  <div id="bg-text">
-    <strong>Webdesigner</strong>
-  </div>
-
+  <!-- <section id="canvas"></section> -->
   <section id="home-content">   
     <div class="home-content__name">
       <h1 class="home-content__name--title"><span class="home-content__name--prenom">Antoine</span><span class="home-content__name--bracket margin-inline-start-s0">(</span><span class="home-content__name--nom">Moreau</span><span class="home-content__name--bracket">)</span>
@@ -25,7 +20,6 @@
     </div> 
     <p class="home-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum ultrices sagittis.</p>
   </section>
-
   <section id="nav">
     {{ partial "nav.html" . }}
   </section>
