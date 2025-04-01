@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="blog">
     {{ partial "back.html" . }}
-    <section class="blog-posts">
+    <section class="blog-posts stack-s3">
         {{ .Content }}
         {{ range where .Site.RegularPages "Type" "blog" }}
         <article class="post">
