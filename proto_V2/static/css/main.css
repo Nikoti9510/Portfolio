@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------ LAYER DEFINITION ---------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Reset, Defaults, Home, Single, Transitions, ThreeD;
+@layer Reset, Defaults, Home, Single, Blog, Transitions, ThreeD;
 
 
 
@@ -220,6 +220,10 @@
         width: 100%;
     }
 
+    .grid-area--text {
+        grid-column: text;
+    }
+
     /* Classes générales */
     .stack-s0 > * + * {
         margin-block-start: var(--s0);
@@ -243,10 +247,6 @@
     #home {
         overflow: hidden;
 
-        & #home-content {
-            grid-column: text;
-        }
-
         & #nav {
             grid-column: right-gutter;
         }
@@ -256,9 +256,23 @@
 
 
 /*---------------------------------------------------------------------*/
+/*---------------------------- LAYER - Blog -------------------------*/
+/*---------------------------------------------------------------------*/
+@layer Blog {
+    .post img {
+        max-height: 333px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+
+/*---------------------------------------------------------------------*/
 /*---------------------------- LAYER - Single -------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Transitions {
+@layer Single {
     p {
         max-inline-size: 75ch;
     }

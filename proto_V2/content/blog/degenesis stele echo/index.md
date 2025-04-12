@@ -2,6 +2,7 @@
 title: Degenesis - stèles d'échos
 date: 
 description: "Expérimentation autour de l'article de Mindstorm : NESTED MONSTER HIT DICE, appliqué à Degenesis."
+banner: banner.jpg
 type: blog
 tags:
 - JDR

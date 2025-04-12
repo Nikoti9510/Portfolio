@@ -1,8 +1,6 @@
 ---
 title: "Info"
 url: "/info/"
-layout: "info"
+layout: "Info"
 draft: false
 ---
-
-# coming soon

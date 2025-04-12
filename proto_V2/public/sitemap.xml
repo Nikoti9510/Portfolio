@@ -2,8 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
-  </url><url>
     <loc>//localhost:1313/blog/500-objets-post-apo/</loc>
   </url><url>
     <loc>//localhost:1313/blog/black-sword-hack-archipel-or/</loc>
@@ -17,6 +15,8 @@
     <loc>//localhost:1313/blog/enquete-new-elness/</loc>
   </url><url>
     <loc>//localhost:1313/fr/</loc>
+  </url><url>
+    <loc>//localhost:1313/</loc>
   </url><url>
     <loc>//localhost:1313/info/</loc>
   </url><url>

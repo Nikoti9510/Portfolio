@@ -1,11 +1,15 @@
 {{ define "main" }}
 <main class="blog">
     {{ partial "back.html" . }}
-    <section class="blog-posts stack-s3">
+    <section class="blog-posts stack-s3 grid-area--text">
         {{ .Content }}
+        <h1>Mes articles</h1>
         {{ range where .Site.RegularPages "Type" "blog" }}
         <article class="post">
             <a href="{{ .RelPermalink }}">
+                {{ with .Resources.GetMatch "banner.jpg" }}
+                    <img src="{{ .RelPermalink }}">
+                {{ end }}
                 <h2>{{ .LinkTitle }}</h2>
                 <div>{{ .Params.description }}</div>
                 <span class="post--tags">{{ range .Params.tags }} {{ . }} {{end}}</span>
