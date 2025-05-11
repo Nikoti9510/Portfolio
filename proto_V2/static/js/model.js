@@ -2,6 +2,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { DotScreenPass } from 'three/addons/postprocessing/DotScreenPass.js';
+import { ColorifyShader } from 'three/addons/shaders/ColorifyShader.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     // chargement du modèle une fois la page chargé
@@ -10,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Gestion du chargement du modèle et des erreurs
     function loadModel() {
         const loader = new GLTFLoader();
-        loader.load('3d_files/model_animated.glb',
+        loader.load('3d_files/model_animated_notexture.glb',
             (gltf) => {
                 // loaded
                 setupScene(gltf);
@@ -45,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(renderer.domElement);
 
         // camera 
-        const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight);
-        camera.position.set(6, 6, 0);
+        const camera = new THREE.PerspectiveCamera(10, container.clientWidth / container.clientHeight);
+        camera.position.set(0, 10, 0);
 
         // controls 
         const controls = new OrbitControls(camera, renderer.domElement);
@@ -64,20 +70,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // light
         scene.add(new THREE.AmbientLight());
-        const spotlight = new THREE.SpotLight(0xffffff, 20, 8, 1);
-        spotlight.penumbra = 0.5;
-        spotlight.position.set(0, 4, 2);
-        spotlight.castShadow = true;
-        scene.add(spotlight);
+        const spotlight_1 = new THREE.SpotLight(0xffffff, 20, 8, 1);
+        spotlight_1.penumbra = 0.5;
+        spotlight_1.position.set(0, 4, 2);
+        spotlight_1.castShadow = true;
+        scene.add(spotlight_1);
+
+        const spotlight_2 = new THREE.SpotLight(0xffffff, 20, 8, 1);
+        spotlight_2.penumbra = 0.5;
+        spotlight_2.position.set(-4, 1, 2);
+        spotlight_2.castShadow = true;
+        scene.add(spotlight_2);
 
         // ajoute du model 
         const model = gltf.scene;
         model.traverse((child) => {
             if (child.isMesh) {
-                // child.castShadow = true;
-                // child.receiveShadow = true;
+                child.castShadow = true;
+                child.receiveShadow = true;
             }
         });
+
+        // position du model
+        model.position.y = -.6;
+        model.rotation.y = .55;
 
         // ajout du model dans la scene
         scene.add(model);
@@ -95,9 +111,27 @@ document.addEventListener("DOMContentLoaded", () => {
             requestAnimationFrame(animate);
             mixer.update(clock.getDelta());
             renderer.render(scene, camera);
+            composer.render();      
         }
 
-        animate();
+        // Passe de Post process
+        const composer = new EffectComposer( renderer );
+                //*--- Color
+                const effectColorify = new ShaderPass( ColorifyShader );
+                effectColorify.uniforms[ 'color' ] = new THREE.Uniform( new THREE.Color( 1, 1, 1 ) );
+        //*--- Ajout initial de la scene dans le composer
+        const renderPass = new RenderPass( scene, camera );
+        composer.addPass( renderPass );
+        //*--- DotScreen
+        const DotScreen = new DotScreenPass( new THREE.Vector2( 0, 0 ), 0.5, 0.8);
+        composer.addPass( DotScreen );
+
+        //*--- Ajout du outpupass dans le composer pour finaliser la phase de postprocess et générer la scene finale
+        const outputPass = new OutputPass();
+        composer.addPass( outputPass );
+
+        // init
+        animate();  
         look_aroundAction.play();
     }
 }); 

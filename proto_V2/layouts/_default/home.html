@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!-- Model -->
-<!-- <script type="importmap">
+<script type="importmap">
   {
     "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
@@ -8,12 +8,13 @@
     }
   }
 </script>
-<script type="module" src="/js/model.js"></script> -->
+<script type="module" src="/js/model.js"></script>
+<script type="text/javascript" src="/js/draggable.js"></script>
 
 <!-- Contenu -->
 <main id="home">
   {{ .Content }}
-  <!-- <section id="canvas"></section> -->
+  <section id="canvas" class="draggable"></section>
   <section id="home-content" class="stack-s0 grid-area--text">   
     <div class="home-content__name">
       <h1 class="home-content__name--title">

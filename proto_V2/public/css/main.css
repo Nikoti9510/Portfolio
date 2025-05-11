@@ -201,6 +201,7 @@
         background-color: var(--white);
         padding: var(--s0);
         font-size: 16px;
+        margin: 0;
     }
 
     /* Liens */
@@ -222,6 +223,36 @@
 
     .grid-area--text {
         grid-column: text;
+    }
+
+    /* Elements deplacables */
+    *:has(> .draggable) {
+        position: relative;
+    }
+    .draggable {
+        position: absolute;
+        display: block;
+        user-select: none;
+        cursor: move;
+
+        & > * {
+            pointer-events: none;
+        }
+
+        &::before {
+            content: url(/icons/move.svg);
+            display: block;
+            position: absolute;
+            right: 4px;
+            top: -14px;
+            background: var(--gray-1);
+            border: solid 1px var(--gray-3);
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
     /* Classes générales */
@@ -246,6 +277,9 @@
 @layer Home {
     #home {
         overflow: hidden;
+        background-image: radial-gradient(var(--gray-2) 1px, transparent 0);
+        background-size: 16px 16px !important;
+        background-repeat: repeat !important;
 
         & #nav {
             grid-column: right-gutter;
@@ -352,6 +386,10 @@
 /*---------------------------------------------------------------------*/
 @layer ThreeD {
     #canvas {
-        background-color: var(--gray-1);
+        background-color: var(--alert);
+        border: solid 1px var(--gray-4);
+        bottom: 0;
+        height: 66vh;
+        width: 33vw;
     }
 }
