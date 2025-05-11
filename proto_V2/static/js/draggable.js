@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         y: 0
     }
 
-    console.log(draggableElements);
-
     draggableElements.forEach(function (element) {
         element.onmousedown = event => {
             position.x = event.clientX;

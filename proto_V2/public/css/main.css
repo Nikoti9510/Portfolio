@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------ LAYER DEFINITION ---------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Reset, Defaults, Home, Single, Blog, Transitions, ThreeD;
+@layer Reset, Defaults, Home, Single, Blog, Transitions;
 
 
 
@@ -123,13 +123,11 @@
 @layer Defaults {
     :root {
         /* Fonts */
-        --font-size__small: 0.75rem;
+        --font-size__small: 0.8rem;
         --font-size__body: 1rem;
-        --font-size__big: 1.5rem;
-        --font-size__h1: 5.61rem;
-        --font-size__h2: 4.209rem;
-        --font-size__h3: 3.157rem;
-        --font-size__h4: 2.369rem;
+        --font-size__h1: 3.815rem;
+        --font-size__h2: 2.441rem;
+        --font-size__h3: 1.563rem;
         --line-height__body: 1.6;
         --line-height__title: 1.1;
         --letter-spacing__body: -0.02em;
@@ -138,25 +136,21 @@
 
         /* Colors */
         --white: #ffffff;
-        --gray-1: #f8f9fa;
-        --gray-2: #eaeced;
-        --gray-3: #868e96;
-        --gray-4: #49505d;
-        --gray-5: #212529;
-        --acent-light: #96f2d7;
-        --accent: #0ca678;
-        --accent-dark: #087f5b;
-        --succes: #37b24d;
-        --alert: #f78507;
-        --error: #f03e3e;
+        --gray-1: #F3F3F3;
+        --gray-2: #E1E1E1;
+        --gray-3: #4E4747;
+        --gray-4: #171616;
+        --acent-light: #FEC999;
+        --accent: #F94402;
+        --accent-dark: #900900;
 
         /* spacing */
-        --ratio: var(--line-height__body);
+        --ratio: 1.25;
         --s-4: calc(var(--s-3) / var(--ratio));
         --s-3: calc(var(--s-2) / var(--ratio));
         --s-2: calc(var(--s-1) / var(--ratio));
         --s-1: calc(var(--s0) / var(--ratio));
-        --s0: 1rem;
+        --s0: 32px;
         --s1: calc(var(--s0) * var(--ratio));
         --s2: calc(var(--s1) * var(--ratio));
         --s3: calc(var(--s2) * var(--ratio));
@@ -180,27 +174,23 @@
     h1 {
         font-size: var(--font-size__h1);
     }
-
     h2 {
         font-size: var(--font-size__h2);
     }
-
     h3 {
         font-size: var(--font-size__h3);
     }
-
     h4 {
         font-size: var(--font-size__h4);
     }
     :is(h1, h2, h3, h4, h5, h6) {
-        color: var(--gray-5);
+        color: var(--gray-4);
     }
 
     /* Body */
     body {
         background-color: var(--white);
         padding: var(--s0);
-        font-size: 16px;
         margin: 0;
     }
 
@@ -221,21 +211,16 @@
         width: 100%;
     }
 
-    .grid-area--text {
-        grid-column: text;
-    }
-
     /* Elements deplacables */
-    *:has(> .draggable) {
+    *:has(>.draggable) {
         position: relative;
     }
     .draggable {
         position: absolute;
-        display: block;
         user-select: none;
         cursor: move;
 
-        & > * {
+        &>* {
             pointer-events: none;
         }
 
@@ -243,30 +228,16 @@
             content: url(/icons/move.svg);
             display: block;
             position: absolute;
-            right: 4px;
-            top: -14px;
+            right: var(--s-4);
+            top: calc(-1 * var(--s-4));
             background: var(--gray-1);
-            border: solid 1px var(--gray-3);
+            border: solid 1px var(--gray-2);
             height: 26px;
             width: 26px;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
         }
-    }
-
-    /* Classes générales */
-    .stack-s0 > * + * {
-        margin-block-start: var(--s0);
-    }
-    .stack-s1 > * + * {
-        margin-block-start: var(--s1);
-    }
-    .stack-s2 > * + * {
-        margin-block-start: var(--s2);
-    }
-    .stack-s3 > * + * {
-        margin-block-start: var(--s3);
     }
 }
 
@@ -275,14 +246,59 @@
 /*--------------------------- LAYER - Home ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer Home {
-    #home {
+    body:has(#home) {
         overflow: hidden;
-        background-image: radial-gradient(var(--gray-2) 1px, transparent 0);
-        background-size: 16px 16px !important;
+    }
+
+    #home {
+        background-image: radial-gradient(var(--gray-1) 1px, transparent 0);
+        background-size: var(--s-2) var(--s-2) !important;
         background-repeat: repeat !important;
+        border: solid 1px var(--gray-2);
 
         & #nav {
-            grid-column: right-gutter;
+            grid-column: text;
+            grid-row: 2;
+            position: relative;
+            z-index: 2;
+            width: fit-content;
+            height: fit-content;
+
+            & * {
+                width: fit-content;
+            }
+
+            & .nav__list {
+                list-style: none;
+                display: flex;
+                gap: var(--s0);
+                padding-inline-start: var(--s-2);
+                margin: 0;
+            }
+        }
+
+        & #home-content {
+            grid-column: text;
+            grid-row: 3;
+            position: relative;
+            z-index: 2;
+            background-color: var(--white);
+            padding: var(--s-2);
+            width: fit-content;
+
+            & > * {
+                max-inline-size: 66ch;
+            }
+        }
+
+        & #canvas {
+            background-color: var(--accent);
+            border: solid 1px var(--gray-3);
+            bottom: var(--s4);
+            left: var(--s4);
+            height: 66vh;
+            width: 25vw;
+            z-index: 1;
         }
     }
 }
@@ -294,7 +310,7 @@
 /*---------------------------------------------------------------------*/
 @layer Blog {
     .post img {
-        max-height: 333px;
+        max-height: var(--s4);
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -307,7 +323,7 @@
 /*---------------------------- LAYER - Single -------------------------*/
 /*---------------------------------------------------------------------*/
 @layer Single {
-    p {
+    .single-content p {
         max-inline-size: 75ch;
     }
     
@@ -327,7 +343,6 @@
 /*------------------------- LAYER - Transitions -----------------------*/
 /*---------------------------------------------------------------------*/
 @layer Transitions {
-
     /* :root {
         --transfromStartSlideIn: translateY(-100%); 
         --transfromEndSlideIn: translateY(0%);
@@ -377,19 +392,4 @@
     ::view-transition-new(root) {
         animation: slide-in 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     }*/
-}
-
-
-
-/*---------------------------------------------------------------------*/
-/*----------------------------- LAYER - 3D ----------------------------*/
-/*---------------------------------------------------------------------*/
-@layer ThreeD {
-    #canvas {
-        background-color: var(--alert);
-        border: solid 1px var(--gray-4);
-        bottom: 0;
-        height: 66vh;
-        width: 33vw;
-    }
 }

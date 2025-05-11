@@ -4,9 +4,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { DotScreenPass } from 'three/addons/postprocessing/DotScreenPass.js';
-import { ColorifyShader } from 'three/addons/shaders/ColorifyShader.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -82,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         spotlight_2.castShadow = true;
         scene.add(spotlight_2);
 
-        // ajoute du model 
+        // ajout du model 
         const model = gltf.scene;
         model.traverse((child) => {
             if (child.isMesh) {
@@ -101,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // chargement des animations
         const mixer = new THREE.AnimationMixer(model);
         const clips = gltf.animations;
-        const idleClip = THREE.AnimationClip.findByName(clips, 'idle');
+        // const idleClip = THREE.AnimationClip.findByName(clips, 'idle');
         const look_aroundClip = THREE.AnimationClip.findByName(clips, 'look_around');
-        const idleAction = mixer.clipAction(idleClip);
+        // const idleAction = mixer.clipAction(idleClip);
         const look_aroundAction = mixer.clipAction(look_aroundClip);
 
         const clock = new THREE.Clock();
@@ -111,22 +109,18 @@ document.addEventListener("DOMContentLoaded", () => {
             requestAnimationFrame(animate);
             mixer.update(clock.getDelta());
             renderer.render(scene, camera);
-            composer.render();      
+            composer.render();
         }
 
-        // Passe de Post process
+        // Pass de Post process
         const composer = new EffectComposer( renderer );
-                //*--- Color
-                const effectColorify = new ShaderPass( ColorifyShader );
-                effectColorify.uniforms[ 'color' ] = new THREE.Uniform( new THREE.Color( 1, 1, 1 ) );
         //*--- Ajout initial de la scene dans le composer
         const renderPass = new RenderPass( scene, camera );
         composer.addPass( renderPass );
         //*--- DotScreen
-        const DotScreen = new DotScreenPass( new THREE.Vector2( 0, 0 ), 0.5, 0.8);
+        const DotScreen = new DotScreenPass( new THREE.Vector2( 0, 0 ), 0.5, 0.8 );
         composer.addPass( DotScreen );
-
-        //*--- Ajout du outpupass dans le composer pour finaliser la phase de postprocess et générer la scene finale
+        //*--- Ajout du outputpass dans le composer pour finaliser la phase de postprocess et générer la scene finale
         const outputPass = new OutputPass();
         composer.addPass( outputPass );
 
