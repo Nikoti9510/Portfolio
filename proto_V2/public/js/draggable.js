@@ -1,6 +1,7 @@
-// Source : http://webtips.dev/draggable-html-elements
+// Inspiré de : http://webtips.dev/draggable-html-elements
 document.addEventListener("DOMContentLoaded", () => {
     const draggableElements = document.querySelectorAll('.draggable');
+
     const position = {
         x: 0,
         y: 0
@@ -18,8 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 position.x = documentEvent.clientX;
                 position.y = documentEvent.clientY;
         
-                element.style.top = element.offsetTop - y + 'px';
-                element.style.left = element.offsetLeft - x + 'px';
+                let newTop = element.offsetTop - y + 'px';
+                let newLeft = element.offsetLeft - x + 'px'
+                element.style = `grid-area: initial; top: ${newTop}; left: ${newLeft};` ;
             }
         
             document.onmouseup = () => {

@@ -137,7 +137,7 @@
         /* Colors */
         --white: #ffffff;
         --gray-1: #F3F3F3;
-        --gray-2: #E1E1E1;
+        --gray-2: #e9e7e7;
         --gray-3: #4E4747;
         --gray-4: #171616;
         --acent-light: #FEC999;
@@ -190,7 +190,7 @@
     /* Body */
     body {
         background-color: var(--white);
-        padding: var(--s0);
+        padding: var(--s4);
         margin: 0;
     }
 
@@ -203,7 +203,7 @@
     main {
         display: grid;
         grid-template-rows:
-            [first] 1fr [second] 1fr [third] 1fr [last] 1fr;
+            [top-gutter] 1fr [content] 8fr [bottom-gutter] 1fr;
         grid-template-columns:
             [left-gutter] 5rem [aside] 35rem [text-overflow] 15rem [text] 2fr [right-gutter] 10rem;
         gap: var(--s0);
@@ -219,6 +219,7 @@
         position: absolute;
         user-select: none;
         cursor: move;
+        border: solid 1px var(--gray-3);
 
         &>* {
             pointer-events: none;
@@ -251,18 +252,16 @@
     }
 
     #home {
-        background-image: radial-gradient(var(--gray-1) 1px, transparent 0);
-        background-size: var(--s-2) var(--s-2) !important;
+        background-image: radial-gradient(var(--gray-2) 1px, transparent 0);
+        background-size: var(--s-1) var(--s-1) !important;
         background-repeat: repeat !important;
         border: solid 1px var(--gray-2);
 
-        & #nav {
-            grid-column: text;
-            grid-row: 2;
+        & .nav__container {
             position: relative;
-            z-index: 2;
-            width: fit-content;
-            height: fit-content;
+            z-index: 3;
+            display: block;
+            width: 100%;
 
             & * {
                 width: fit-content;
@@ -272,33 +271,57 @@
                 list-style: none;
                 display: flex;
                 gap: var(--s0);
-                padding-inline-start: var(--s-2);
                 margin: 0;
+                padding: 0;
             }
         }
 
         & #home-content {
-            grid-column: text;
-            grid-row: 3;
-            position: relative;
             z-index: 2;
-            background-color: var(--white);
-            padding: var(--s-2);
-            width: fit-content;
+            padding-inline: var(--s4);
+            grid-column: text-overflow / span 2;
+            grid-row: content;
 
-            & > * {
-                max-inline-size: 66ch;
+            & > * + * {
+                margin-block-start: var(--s0);
+            }
+
+            & .home-introduction .draggable {
+                padding: var(--s-2);
+                max-width: 100%;
+                min-width: 100%;
+                background-color: var(--white);
+
+                & p {
+                    max-inline-size: 66ch;
+                }
             }
         }
 
         & #canvas {
             background-color: var(--accent);
-            border: solid 1px var(--gray-3);
-            bottom: var(--s4);
-            left: var(--s4);
-            height: 66vh;
+            grid-column: aside;
+            grid-row: content;
+            bottom: 0;
+            height: 60vh;
             width: 25vw;
             z-index: 1;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            background-color: var(--gray-2);
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            grid-column: text-overflow / span 2;
+        }
+        &::before  {
+            left: 0;
+        }
+        &::after {
+            right: 0;
         }
     }
 }
@@ -306,7 +329,7 @@
 
 
 /*---------------------------------------------------------------------*/
-/*---------------------------- LAYER - Blog -------------------------*/
+/*----------------------------- LAYER - Blog --------------------------*/
 /*---------------------------------------------------------------------*/
 @layer Blog {
     .post img {
