@@ -1,6 +1,6 @@
 ---
 title: Black Sword Hack - l'archipel d'or
-date: 
+date: 2024-01-15T13:21:35.000Z
 description: Une ébauche de cadre de campagne pour Black Sword Hack de Kobayashi.
 type: blog
 tags:

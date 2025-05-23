@@ -1,6 +1,6 @@
 ---
 title: Pourquoi écrire (un blog) ?
-date: 
+date: 2024-05-29T12:21:35.000Z
 description: C'est bien beau de faire un blog, mais pour quoi faire ? Eh bien c'est une excellente question, mais ne suis pas sûr qu'elle soit vite répondue.
 type: blog
 tags:

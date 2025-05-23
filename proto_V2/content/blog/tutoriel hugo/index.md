@@ -1,6 +1,6 @@
 ---
 title: "Tutoriel Hugo"
-date: 
+date: 2025-01-18T13:21:35.000Z
 description: "Un tutoriel complet pour créer de A à Z un site statique avec Hugo"
 type: blog
 tags:

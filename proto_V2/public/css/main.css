@@ -130,6 +130,7 @@
         --font-size__h3: 1.563rem;
         --line-height__body: 1.6;
         --line-height__title: 1.1;
+        --line-height__small: 0.9;
         --letter-spacing__body: -0.02em;
         --font-weight__body: 500;
         --font-weight__title: 800;
@@ -146,6 +147,8 @@
 
         /* spacing */
         --ratio: 1.25;
+        --s-6: calc(var(--s-5) / var(--ratio));
+        --s-5: calc(var(--s-4) / var(--ratio));
         --s-4: calc(var(--s-3) / var(--ratio));
         --s-3: calc(var(--s-2) / var(--ratio));
         --s-2: calc(var(--s-1) / var(--ratio));
@@ -155,6 +158,8 @@
         --s2: calc(var(--s1) * var(--ratio));
         --s3: calc(var(--s2) * var(--ratio));
         --s4: calc(var(--s3) * var(--ratio));
+        --s5: calc(var(--s4) * var(--ratio));
+        --s6: calc(var(--s5) * var(--ratio));
     }
 
     /* font */
@@ -167,7 +172,8 @@
         font-style: normal;
     }
     * {
-        font-family: 'Switzer-Variable', system-ui, sans-serif;
+        /* font-family: 'Switzer-Variable', system-ui, sans-serif; */
+        font-family: monospace, "system-ui";
     }
 
     /* Titres */
@@ -205,7 +211,7 @@
         grid-template-rows:
             [top-gutter] 1fr [content] 8fr [bottom-gutter] 1fr;
         grid-template-columns:
-            [left-gutter] 5rem [aside] 35rem [text-overflow] 15rem [text] 2fr [right-gutter] 10rem;
+            [left-gutter] 10rem [aside] 4fr [text] 6fr [right-gutter] 10rem;
         gap: var(--s0);
         height: 100%;
         width: 100%;
@@ -253,7 +259,7 @@
 
     #home {
         background-image: radial-gradient(var(--gray-2) 1px, transparent 0);
-        background-size: var(--s-1) var(--s-1) !important;
+        background-size: var(--s-4) var(--s-4) !important;
         background-repeat: repeat !important;
         border: solid 1px var(--gray-2);
 
@@ -279,7 +285,7 @@
         & #home-content {
             z-index: 2;
             padding-inline: var(--s4);
-            grid-column: text-overflow / span 2;
+            grid-column: text;
             grid-row: content;
 
             & > * + * {
@@ -299,7 +305,7 @@
         }
 
         & #canvas {
-            background-color: var(--accent);
+            /* background-color: var(--gray-1); */
             grid-column: aside;
             grid-row: content;
             bottom: 0;
@@ -315,7 +321,7 @@
             position: absolute;
             width: 1px;
             height: 100%;
-            grid-column: text-overflow / span 2;
+            grid-column: text;
         }
         &::before  {
             left: 0;
@@ -332,11 +338,25 @@
 /*----------------------------- LAYER - Blog --------------------------*/
 /*---------------------------------------------------------------------*/
 @layer Blog {
-    .post img {
-        max-height: var(--s4);
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
+    .blog-posts {
+        margin-block-end: var(--s4);
+
+        &>*+* {
+            margin-block-start: var(--s2);
+        }
+
+        & .post {
+
+            & .post--tags {
+            
+                & > * {
+                    display: inline-block;
+                    padding: var(--s-6);
+                    background-color: var(--gray-1);
+                    line-height: var(--line-height__small);
+                }
+            }
+        }
     }
 }
 

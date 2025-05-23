@@ -1,65 +1,39 @@
 <html lang="fr-FR">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Blog</title>
+<link rel="stylesheet" href="/css/main.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <title>Blog</title>
-  <link rel="stylesheet" href="/css/main.css">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-</head>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+        }
+    }
+</script>
+<script type="module" src="/js/model.js"></script>
 
-<body>
-  
+<script type="text/javascript" src="/js/draggable.js"></script>  
+  </head>
+  <body>
+    
 <main class="blog">
     <a href="/"><i>←</i>Retour</a>
-    <section class="blog-posts stack-s3 grid-area--text">
+    <section class="blog-posts">
         
-        <h1>Mes articles</h1>
-        
-        <article class="post">
-            <a href="/blog/500-objets-post-apo/">
-                
-                <h2>500 objets sans importances pour du post-apocalyptique</h2>
-                <div>Vous venez de rentrer dans un bâtiment en ruine, la horde de zombie semble vous avoir enfin lâché les basques. Pourquoi ne pas fouiller un peu les lieux ? Lancez 1d500.</div>
-                <span class="post--tags"> JDR  test </span>
-                <span class="post--date"></span>
-            </a>
-        </article>
+        <h1>Articles et billets de blog</h1>
         
         <article class="post">
-            <a href="/blog/black-sword-hack-archipel-or/">
+            <a href="/blog/tutoriel-hugo/">
                 
-                <h2>Black Sword Hack - l&#39;archipel d&#39;or</h2>
-                <div>Une ébauche de cadre de campagne pour Black Sword Hack de Kobayashi.</div>
-                <span class="post--tags"> JDR </span>
-                <span class="post--date"></span>
-            </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/death-in-space-anarchy-program/">
-                
-                    <img src="/blog/death-in-space-anarchy-program/banner.jpg">
-                
-                <h2>Death In Space #4N4RCHY PR06R4M</h2>
-                <div>DEATH IN SPACE est un jeu de rôle de science-fiction et de survie dans un univers dévasté par la guerre, écrit par Christian Plogfors et Niblaeus du Stockholm Kartell.</div>
-                <span class="post--tags"> JDR </span>
-                <span class="post--date"></span>
-            </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/degenesis-stele-echo/">
-                
-                    <img src="/blog/degenesis-stele-echo/banner.jpg">
-                
-                <h2>Degenesis - stèles d&#39;échos</h2>
-                <div>Expérimentation autour de l&#39;article de Mindstorm : NESTED MONSTER HIT DICE, appliqué à Degenesis.</div>
-                <span class="post--tags"> JDR </span>
-                <span class="post--date"></span>
+                <h2>Tutoriel Hugo</h2>
+                <div>Un tutoriel complet pour créer de A à Z un site statique avec Hugo</div>
+                <div class="post--tags"> <span>Web</span> </div>
+                <span class="post--date">
+                    
+                    janvier 2025
+                </span>
             </a>
         </article>
         
@@ -68,8 +42,37 @@
                 
                 <h2>Enquête à New Elness - Un scénario dans l&#39;univers Lovecraftien</h2>
                 <div>Vous avez été engagé par Jack Delany, l’une de vos connaissances. Il vous a demandé d’enquêter sur une rumeur inquiétante. Dans l&#39;ancien village isolé de New Elness, le taux de mortalité infantile est soit disant très élevé. On raconte que depuis plus de dix ans, aucun enfant ne survit plus de deux ou trois ans.</div>
-                <span class="post--tags"> JDR </span>
-                <span class="post--date"></span>
+                <div class="post--tags"> <span>JDR</span> </div>
+                <span class="post--date">
+                    
+                    décembre 2024
+                </span>
+            </a>
+        </article>
+        
+        <article class="post">
+            <a href="/blog/degenesis-stele-echo/">
+                
+                <h2>Degenesis - stèles d&#39;échos</h2>
+                <div>Expérimentation autour de l&#39;article de Mindstorm : NESTED MONSTER HIT DICE, appliqué à Degenesis.</div>
+                <div class="post--tags"> <span>JDR</span> </div>
+                <span class="post--date">
+                    
+                    juin 2024
+                </span>
+            </a>
+        </article>
+        
+        <article class="post">
+            <a href="/blog/500-objets-post-apo/">
+                
+                <h2>500 objets sans importances pour du post-apocalyptique</h2>
+                <div>Vous venez de rentrer dans un bâtiment en ruine, la horde de zombie semble vous avoir enfin lâché les basques. Pourquoi ne pas fouiller un peu les lieux ? Lancez 1d500.</div>
+                <div class="post--tags"> <span>JDR</span>  <span>test</span> </div>
+                <span class="post--date">
+                    
+                    juin 2024
+                </span>
             </a>
         </article>
         
@@ -78,24 +81,42 @@
                 
                 <h2>Pourquoi écrire (un blog) ?</h2>
                 <div>C&#39;est bien beau de faire un blog, mais pour quoi faire ? Eh bien c&#39;est une excellente question, mais ne suis pas sûr qu&#39;elle soit vite répondue.</div>
-                <span class="post--tags"> Meta </span>
-                <span class="post--date"></span>
+                <div class="post--tags"> <span>Meta</span> </div>
+                <span class="post--date">
+                    
+                    mai 2024
+                </span>
             </a>
         </article>
         
         <article class="post">
-            <a href="/blog/tutoriel-hugo/">
+            <a href="/blog/death-in-space-anarchy-program/">
                 
-                <h2>Tutoriel Hugo</h2>
-                <div>Un tutoriel complet pour créer de A à Z un site statique avec Hugo</div>
-                <span class="post--tags"> Web </span>
-                <span class="post--date"></span>
+                <h2>Death In Space #4N4RCHY PR06R4M</h2>
+                <div>DEATH IN SPACE est un jeu de rôle de science-fiction et de survie dans un univers dévasté par la guerre, écrit par Christian Plogfors et Niblaeus du Stockholm Kartell.</div>
+                <div class="post--tags"> <span>JDR</span> </div>
+                <span class="post--date">
+                    
+                    avril 2024
+                </span>
+            </a>
+        </article>
+        
+        <article class="post">
+            <a href="/blog/black-sword-hack-archipel-or/">
+                
+                <h2>Black Sword Hack - l&#39;archipel d&#39;or</h2>
+                <div>Une ébauche de cadre de campagne pour Black Sword Hack de Kobayashi.</div>
+                <div class="post--tags"> <span>JDR</span> </div>
+                <span class="post--date">
+                    
+                    janvier 2024
+                </span>
             </a>
         </article>
         
     </section>
 </main>
 
-</body>
-
+  </body>
 </html>

@@ -15,6 +15,7 @@
 
 # Langue par defaut du site
 defaultContentLanguage = 'fr'
+defaultContentLanguageInSubdir = true
 
 # Désactive les générations de termes dans le site
 disableKinds = ['taxonomy', 'term']
@@ -28,3 +29,10 @@ enableDefault = true
 # Active l'HTML dans les fichiers markdown
 [markup.goldmark.renderer]
   unsafe = true 
+
+# Format de la date 
+[params]
+  dateFormat = "January 2006"
+
+# Accès aux infos de Git
+  enableGitInfo = true

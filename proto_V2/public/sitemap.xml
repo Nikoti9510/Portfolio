@@ -2,40 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/web/</loc>
+    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/tutoriel-hugo/</loc>
+    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/enquete-new-elness/</loc>
+    <lastmod>2024-12-13T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/jdr/</loc>
+    <lastmod>2024-12-13T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/degenesis-stele-echo/</loc>
+    <lastmod>2024-06-13T12:21:35+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/blog/500-objets-post-apo/</loc>
+    <lastmod>2024-06-08T12:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/test/</loc>
+    <lastmod>2024-06-08T12:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/pourquoi-ecrire-un-blog/</loc>
+    <lastmod>2024-05-29T12:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/meta/</loc>
+    <lastmod>2024-05-29T12:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/death-in-space-anarchy-program/</loc>
+    <lastmod>2024-04-19T12:21:35+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/black-sword-hack-archipel-or/</loc>
+    <lastmod>2024-01-15T13:21:35+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/</loc>
   </url><url>
-    <loc>//localhost:1313/blog/death-in-space-anarchy-program/</loc>
-  </url><url>
-    <loc>//localhost:1313/blog/degenesis-stele-echo/</loc>
-  </url><url>
-    <loc>//localhost:1313/blog/enquete-new-elness/</loc>
-  </url><url>
     <loc>//localhost:1313/fr/</loc>
   </url><url>
-    <loc>//localhost:1313/</loc>
-  </url><url>
     <loc>//localhost:1313/info/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/jdr/</loc>
-  </url><url>
-    <loc>//localhost:1313/blog/pourquoi-ecrire-un-blog/</loc>
   </url><url>
     <loc>//localhost:1313/projets/</loc>
   </url><url>
     <loc>//localhost:1313/sandbox/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/meta/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/test/</loc>
-  </url><url>
-    <loc>//localhost:1313/tags/web/</loc>
-  </url><url>
-    <loc>//localhost:1313/blog/tutoriel-hugo/</loc>
+    <loc>//localhost:1313/true/</loc>
   </url>
 </urlset>
