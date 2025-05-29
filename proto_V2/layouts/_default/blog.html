@@ -1,7 +1,7 @@
 {{ define "main" }}
-<main class="blog">
+<main class="blog main-grid">
     {{ partial "back.html" . }}
-    <section class="blog-posts">
+    <section class="blog-posts stack">
         {{ .Content }}
         <h1>Articles et billets de blog</h1>
         {{ range where .Site.RegularPages "Type" "blog" }}

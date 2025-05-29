@@ -45,12 +45,6 @@
   </url><url>
     <loc>//localhost:1313/fr/</loc>
   </url><url>
-    <loc>//localhost:1313/info/</loc>
-  </url><url>
-    <loc>//localhost:1313/projets/</loc>
-  </url><url>
-    <loc>//localhost:1313/sandbox/</loc>
-  </url><url>
     <loc>//localhost:1313/true/</loc>
   </url>
 </urlset>

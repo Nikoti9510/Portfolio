@@ -4,10 +4,6 @@
     name = 'Blog'
     url = '/blog'
     weight = 10
-  [[menus.header]]
-    name = 'Projets'
-    url = '/projets'
-    weight = 20
 
 # Tags blog
 [taxonomies]

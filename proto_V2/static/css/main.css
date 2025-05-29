@@ -1,14 +1,15 @@
 /*---------------------------------------------------------------------*/
-/*------------------------ LAYER DEFINITION ---------------------------*/
+/*------------------------- LAYER DEFINITION --------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Reset, Defaults, Home, Single, Blog, Transitions;
+@layer reset, layout, variables, base, home, single, blog, transitions;
 
 
 
 /*---------------------------------------------------------------------*/
 /*--------------------------- Layer - Reset ---------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Reset {
+@layer reset {
+
     /* Reset from https://piccalil.li/blog/a-more-modern-css-reset/ */
     /* Box sizing rules */
     *,
@@ -41,16 +42,16 @@
     }
 
     /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-    ul[role='list'],
-    ol[role='list'] {
+    ul[role="list"],
+    ol[role="list"] {
         list-style: none;
     }
 
     /* Set core body defaults */
     body {
         min-height: 100vh;
-        line-height: var(--line-height__body);
-        font-size: var(--font-size__body);
+        text-wrap: pretty;
+        margin: 0;
     }
 
     /* Set shorter line heights on headings and interactive elements */
@@ -116,97 +117,13 @@
 }
 
 
-
 /*---------------------------------------------------------------------*/
-/*------------------------- Layer - Defaults --------------------------*/
+/*-------------------------- Layer - Layout ---------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Defaults {
-    :root {
-        /* Fonts */
-        --font-size__small: 0.8rem;
-        --font-size__body: 1rem;
-        --font-size__h1: 3.815rem;
-        --font-size__h2: 2.441rem;
-        --font-size__h3: 1.563rem;
-        --line-height__body: 1.6;
-        --line-height__title: 1.1;
-        --line-height__small: 0.9;
-        --letter-spacing__body: -0.02em;
-        --font-weight__body: 500;
-        --font-weight__title: 800;
-
-        /* Colors */
-        --white: #ffffff;
-        --gray-1: #F3F3F3;
-        --gray-2: #e9e7e7;
-        --gray-3: #4E4747;
-        --gray-4: #171616;
-        --acent-light: #FEC999;
-        --accent: #F94402;
-        --accent-dark: #900900;
-
-        /* spacing */
-        --ratio: 1.25;
-        --s-6: calc(var(--s-5) / var(--ratio));
-        --s-5: calc(var(--s-4) / var(--ratio));
-        --s-4: calc(var(--s-3) / var(--ratio));
-        --s-3: calc(var(--s-2) / var(--ratio));
-        --s-2: calc(var(--s-1) / var(--ratio));
-        --s-1: calc(var(--s0) / var(--ratio));
-        --s0: 32px;
-        --s1: calc(var(--s0) * var(--ratio));
-        --s2: calc(var(--s1) * var(--ratio));
-        --s3: calc(var(--s2) * var(--ratio));
-        --s4: calc(var(--s3) * var(--ratio));
-        --s5: calc(var(--s4) * var(--ratio));
-        --s6: calc(var(--s5) * var(--ratio));
-    }
-
-    /* font */
-    @font-face {
-        font-family: 'Switzer-Variable';
-        src: url('/fonts/Switzer/Switzer-Variable.woff2') format('woff2'),
-            url('/fonts/Switzer/Switzer-Variable.woff') format('woff');
-        font-weight: 100 900;
-        font-display: swap;
-        font-style: normal;
-    }
-    * {
-        /* font-family: 'Switzer-Variable', system-ui, sans-serif; */
-        font-family: monospace, "system-ui";
-    }
-
-    /* Titres */
-    h1 {
-        font-size: var(--font-size__h1);
-    }
-    h2 {
-        font-size: var(--font-size__h2);
-    }
-    h3 {
-        font-size: var(--font-size__h3);
-    }
-    h4 {
-        font-size: var(--font-size__h4);
-    }
-    :is(h1, h2, h3, h4, h5, h6) {
-        color: var(--gray-4);
-    }
-
-    /* Body */
-    body {
-        background-color: var(--white);
-        padding: var(--s4);
-        margin: 0;
-    }
-
-    /* Liens */
-    a:has(>*) {
-        text-decoration: none;
-    }
+@layer layout {
 
     /* Grille principale */
-    main {
+    .main-grid {
         display: grid;
         grid-template-rows:
             [top-gutter] 1fr [content] 8fr [bottom-gutter] 1fr;
@@ -217,10 +134,30 @@
         width: 100%;
     }
 
+    /* stack */
+    .stack {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .stack>* {
+        margin-block: 0;
+    }
+
+    .stack>*+* {
+        margin-block-start: var(--space, 1.5rem);
+    }
+
+    .stack:only-child {
+        block-size: 100%;
+    }
+
     /* Elements deplacables */
     *:has(>.draggable) {
         position: relative;
     }
+
     .draggable {
         position: absolute;
         user-select: none;
@@ -249,87 +186,90 @@
 }
 
 
+
+/*---------------------------------------------------------------------*/
+/*------------------------ Layer - Variables --------------------------*/
+/*---------------------------------------------------------------------*/
+@layer variables {
+    :root {
+        /* fonts */
+        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.25rem);
+        --font-size_h1: clamp(2rem, -0.875rem + 6cqi, 3.25rem);
+        --font-size_h2: clamp(1.5rem, -0.875rem + 6cqi, 2.5rem);
+        --font-size_h3: clamp(1.25rem, -0.875rem + 6cqi, 1.75rem);
+        --line-height__body: 1.7;
+        --line-height__title: 1.1;
+
+        /* colors */
+        --off-white: #fffcfb;
+        --dark-green: #2d312c;
+        --gray-01: #e9ede8;
+        --gray-02: #bac1b8;
+        --gray-03: #3b3d3b;
+        --gray-04: #151515;
+
+        /* theme */
+        --titles-color: var(--dark-green);
+        --texts-color: var(--gray-04);
+        --captions-color: var(--gray-03);
+        --background-color: var(--off-white);
+        --background-accent: var(--gray-01);
+    }
+}
+
+
+/*---------------------------------------------------------------------*/
+/*--------------------------- Layer - Base ----------------------------*/
+/*---------------------------------------------------------------------*/
+@layer base {
+    html {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        line-height: var(--line-height__body);
+        font-size: var(--font-size__body);
+        background-color: var(--background-color);
+        color: var(--texts-color);
+    }
+
+    h1 {
+        font-size: var(--font-size_h1);
+        color: var(--titles-color);
+    }
+    h2 {
+        font-size: var(--font-size_h2);
+        color: var(--titles-color);
+    }
+    h3 {
+        font-size: var(--font-size_h3);
+        color: var(--titles-color);
+    }
+
+    body {
+        padding: 6rem;
+    }
+
+    /* liens */
+    a[target="blank"] {
+        text-decoration: none;
+        box-shadow: 0 1px 0 0 currentColor;
+
+        &::after {
+            content: "↗";
+            text-decoration: none;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            margin-inline-start: .2rem;
+        }
+    }
+}
+
+
 /*---------------------------------------------------------------------*/
 /*--------------------------- LAYER - Home ----------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Home {
-    body:has(#home) {
-        overflow: hidden;
-    }
-
-    #home {
-        background-image: radial-gradient(var(--gray-2) 1px, transparent 0);
-        background-size: var(--s-4) var(--s-4) !important;
-        background-repeat: repeat !important;
-        border: solid 1px var(--gray-2);
-
-        & .nav__container {
-            position: relative;
-            z-index: 3;
-            display: block;
-            width: 100%;
-
-            & * {
-                width: fit-content;
-            }
-
-            & .nav__list {
-                list-style: none;
-                display: flex;
-                gap: var(--s0);
-                margin: 0;
-                padding: 0;
-            }
-        }
-
-        & #home-content {
-            z-index: 2;
-            padding-inline: var(--s4);
-            grid-column: text;
-            grid-row: content;
-
-            & > * + * {
-                margin-block-start: var(--s0);
-            }
-
-            & .home-introduction .draggable {
-                padding: var(--s-2);
-                max-width: 100%;
-                min-width: 100%;
-                background-color: var(--white);
-
-                & p {
-                    max-inline-size: 66ch;
-                }
-            }
-        }
-
-        & #canvas {
-            /* background-color: var(--gray-1); */
-            grid-column: aside;
-            grid-row: content;
-            bottom: 0;
-            height: 60vh;
-            width: 25vw;
-            z-index: 1;
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            background-color: var(--gray-2);
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            grid-column: text;
-        }
-        &::before  {
-            left: 0;
-        }
-        &::after {
-            right: 0;
-        }
-    }
+@layer home {
+    
 }
 
 
@@ -337,23 +277,21 @@
 /*---------------------------------------------------------------------*/
 /*----------------------------- LAYER - Blog --------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Blog {
-    .blog-posts {
-        margin-block-end: var(--s4);
+@layer blog {
+    .blog {
+        --space: 2rem;
+        
+        & .blog-posts {
+            grid-area: text;
+            max-width: 65ch;
 
-        &>*+* {
-            margin-block-start: var(--s2);
-        }
+            & .post {
 
-        & .post {
+                & .post--tags {
 
-            & .post--tags {
-            
-                & > * {
-                    display: inline-block;
-                    padding: var(--s-6);
-                    background-color: var(--gray-1);
-                    line-height: var(--line-height__small);
+                    &>* {
+
+                    }
                 }
             }
         }
@@ -361,22 +299,165 @@
 }
 
 
-
 /*---------------------------------------------------------------------*/
 /*---------------------------- LAYER - Single -------------------------*/
 /*---------------------------------------------------------------------*/
-@layer Single {
-    .single-content > * {
-        max-inline-size: 75ch;
-    }
-    
-    .single-content,
-    .blog-posts {
-        grid-column: text;
-    }
+@layer single {
+    .single-content {
+        grid-area: text;
+        --space: 2rem;
+        max-width: 65ch;
 
-    .single-content>*+* {
-        margin-block-start: 1rem;
+        /* texts */
+        & :is(p, span) {
+            font-variant-numeric: oldstyle-nums;
+        }
+
+        /* Titles */
+        & h2:not(:first-child) {
+            margin-block-start: 6rem;
+
+            &::after {
+                content: "";
+                display: block;
+                height: .5rem;
+                background: currentcolor;
+                width: 100%;
+                margin-block-start: .5rem;
+            }
+        }
+
+        & h3 {
+            margin-block-start: 4rem;
+            font-style: italic;
+        }
+
+        /* Anchors */
+        & :is(h2, h3) {
+            position: relative;
+
+            &>a {
+                text-decoration: none;
+                position: relative;
+            }
+
+            &>a::before {
+                content: "⩉";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -1.5ch;
+                color: var(--background-accent);
+                opacity: 0;
+                transition: ease-in-out .1s;
+            }
+
+            &:hover>a::before {
+                opacity: 1;
+            }
+        }
+
+        /* Lists */
+        & ol>li::marker {
+            font-weight: 700;
+        }
+
+        & :is(ol, ul) {
+            padding-inline-start: var(--global-list-padding, 1.75ch);
+
+            &>li+li,
+            & li>ul {
+                margin-block-start: var(--global-list-flow, 0.75em);
+            }
+        }
+
+        /* Quotes */
+        & blockquote {
+            margin-block: var(--space, 1.5rem);
+            margin-inline: 0;
+            padding: 2rem;
+            background-color: var(--background-accent);
+            border-left: solid 0.5rem currentColor;
+        }
+
+        /* Imgs */
+        & figure {
+            margin-inline: 0;
+            width: 100%;
+
+            & figcaption {
+                color: var(--captions-color);
+                margin-inline-start: .5rem;
+                margin-block-start: .5rem;
+                font-style: italic;
+                font-size: 1rem;
+                position: relative;
+
+                &::before {
+                    content: "—";
+                    margin-inline-end: .5rem;
+                }
+            }
+        }
+
+        /* Code blocks */
+        & pre {
+            display: flex;
+            border: solid 1px currentColor;
+            border-top: solid .5em currentColor;
+
+            & code {
+                min-width: 35ch;
+            }
+        }
+
+        /* Tables */
+        & table {
+            border: .1em solid currentColor;
+            height: 100%;
+            width: 100%;
+            table-layout: auto;
+            border-collapse: collapse;
+            border-spacing: 1px;
+            text-align: left;
+            font-variant-numeric: tabular-nums;
+
+            & thead {
+                background-color: var(--background-accent);
+                border-bottom: solid .25em currentColor;
+
+                & th {
+                    min-width: 15ch;
+                }
+            }
+
+            & :is(tbody, thead)>tr> :is(td, th)+ :is(td, th) {
+                border-left: solid 1px currentColor;
+            }
+
+            & tbody>tr+tr {
+                border-top: solid 1px currentColor;
+            }
+
+            & :is(tr, td, th) {
+                padding: 0.5rem;
+            }
+
+            & caption {
+                color: var(--captions-color);
+                margin-inline-start: .5rem;
+                margin-block-end: .5rem;
+                font-style: italic;
+                font-size: 1rem;
+                position: relative;
+                text-align: start;
+
+                &::before {
+                    content: "—";
+                    margin-inline-end: .5rem;
+                }
+            }
+        }
     }
 }
 
@@ -385,7 +466,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------- LAYER - Transitions -----------------------*/
 /*---------------------------------------------------------------------*/
-@layer Transitions {
+@layer transitions {
     /* :root {
         --transfromStartSlideIn: translateY(-100%); 
         --transfromEndSlideIn: translateY(0%);
