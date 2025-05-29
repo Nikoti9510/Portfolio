@@ -7,7 +7,7 @@ tags:
 - Web
 ---
 
-# Création d'un portfolio simple en prenant avantage de la JamStack.
+# Portfolio JamStack avec Hugo et Netlify.
 
 
 Avant de rentrer dans le vif du sujet, on présente rapidement le principe, les outils et la méthodologie. 
@@ -33,38 +33,38 @@ Dans ce tutoriel, on va créer un site en utilisant les outils suivants :
 Une fois Github Desktop et Visual Studio Code installé, on va pouvoir mettre en place le projet. On se rend dans notre [espace personnel sur GitHub](https://github.com/) et on créer un nouveau répertoire en cliquant sur le bouton `New` en haut à gauche.
 
 
-![Interface du dashboard Github](/dashboard-github.png "Interface du dashboard Github")
+![Interface du dashboard Github](dashboard-github.png "Interface du dashboard Github")
 
 
 Donner un nom à votre répertoire, dans notre exemple ce sera "*tutoriel_portfolio*", et validez en cliquant sur `Create repository` en bas à droite. (les autres options peuvent être laissés par défaut). 
 
 
-![Création d'un répertoire dans l'interface github](/dashboard-github-etape-2.png "Création d'un répertoire dans l'interface github")
+![Création d'un répertoire dans l'interface github](dashboard-github-etape-2.png "Création d'un répertoire dans l'interface github")
 
 
 Si on retourne dans notre dashboard, on voit que notre nouveau répertoire est bien créé. 
 
 
-![Dashboard de github avec le nouveau répertoire présent](/dashboard-github-etape-3.png "Dashboard de github avec le nouveau répertoire présent")
+![Dashboard de github avec le nouveau répertoire présent](dashboard-github-etape-3.png "Dashboard de github avec le nouveau répertoire présent")
 
 
 Maintenant, rendons nous dans Github Desktop. Si ce n'est pas déjà fait, connectez l'application à votre compte Github. Ensuite, il est possible de cloner votre répertoire, afin de pouvoir travailler localement sur votre machine. \
 En haut à gauche, cliquez sur `File > Clone repository`.
 
 
-![Interface de github desktop, clonage d'un répertoire ](/github-desktop-etape-1.png "Interface de github desktop, clonage d'un répertoire")
+![Interface de github desktop, clonage d'un répertoire ](github-desktop-etape-1.png "Interface de github desktop, clonage d'un répertoire")
 
 
 Choisissez le répertoire que vous avez créé plus tôt et cliquez sur `Clone` en bas de la fenêtre. 
 
 
-![Choix d'un répertoire dans github desktop ](/github-desktop-etape-2.png "Choix d'un répertoire dans github desktop")
+![Choix d'un répertoire dans github desktop ](github-desktop-etape-2.png "Choix d'un répertoire dans github desktop")
 
 
 Une fois le répertoire cloné, on peut constater que l'on se trouve bien dans le bon espace de travail en haut à gauche (et passer d'un projet à un autre si besoin). Vous pouvez maintenant ouvrir votre projet dans VScode en cliquant dans le bouton `Open in Visual Studio Code` au centre de l'écran.
 
 
-![Interface de github desktop une fois un répertoire cloné](/github-desktop-etape-3.png "Interface de github desktop une fois le répertoire cloné")
+![Interface de github desktop une fois un répertoire cloné](github-desktop-etape-3.png "Interface de github desktop une fois le répertoire cloné")
 
 
 Et voilà, vous êtes prêt à travailler ! On pourrait s'arrêter là et faire un site internet statique en créant des pages en HTML, en les personnalisant avec des feuilles de styles CSS et en ajoutant de l'interaction en Javascript. Mais avant de faire ça, on va installer Hugo afin de nous faciliter la vie. 
@@ -89,19 +89,19 @@ Commençez par vous rendre sur [](gohugo.io/installation/)[gohugo.io/installatio
 Dans un premier temps, il nous faut installer [Go](https://go.dev/doc/install), le langage de programmation dans lequel Hugo est écrit. Pas de panique, nous n'aurons pas besoin d'apprendre un nouveau langage pour ce projet, il est simplement nécessaire de l'installer sur notre machine pour que Hugo fonctionne. Téléchargez l'exécutable pour Windows et suivez les instructions de l'installateur. 
 
 
-![Choisir le bon exécutable pour installer Go](/go.png "Choisir le bon exécutable pour installer Go")
+![Choisir le bon exécutable pour installer Go](go.png "Choisir le bon exécutable pour installer Go")
 
 
 Vous pouvez changer l'emplacement de l'installation sans problème lors de l'installation. 
 
 
-![Changement de l'emplacement d'installation de Go](/go_2.png "Changement de l'emplacement d'installation de Go")
+![Changement de l'emplacement d'installation de Go](go_2.png "Changement de l'emplacement d'installation de Go")
 
 
 Une fois l'installation terminé, ouvrez une invite de commande (Windows + R et sélectionnez `cmd` ou cliquez sur le menu démarrer et cherchez `cmd`). Tapez dans la console la ligne `Go version` pour constater que l'installation est bien réussit. 
 
 
-![Go est bien installé sur cette machine](/go_3.png "Go est bien installé sur cette machine")
+![Go est bien installé sur cette machine](go_3.png "Go est bien installé sur cette machine")
 
 
 Dans la même console, vous pouvez maintenant copier la commande suivante pour installer Hugo : 
@@ -125,7 +125,7 @@ Rendez vous sur le [site de git pour Windows](https://git-scm.com/downloads/win)
 Une fois que l'installation est terminé, vous êtes prêt à créer votre site ! Pour ça, réouvrez GitHub Desktop et votre projet dans Visual Studio Code. Une fois dans VScode, on va dans `Terminal > New Terminal`.
 
 
-![Ouvrir un terminal dans Visual Studio Code](/terminal.png "Ouvrir un terminal dans Visual Studio Code")
+![Ouvrir un terminal dans Visual Studio Code](terminal.png "Ouvrir un terminal dans Visual Studio Code")
 
 
 Dans le terminal qui s'est ouvert en bas de l'éditeur, vous pouvez maintenant générer votre site avec Hugo. Pour cela, rien de plus simple, il suffit de taper la ligne de commande suivante : 
@@ -136,7 +136,7 @@ Dans le terminal qui s'est ouvert en bas de l'éditeur, vous pouvez maintenant g
 Remplacer `NOM_DU_SITE` par le nom de votre choix (sans espaces ni caractères spéciaux).
 
 
-![La création du site est terminé dans VScode](/hugo-new-site.png "La création du site est terminé dans VScode")
+![La création du site est terminé dans VScode](hugo-new-site.png "La création du site est terminé dans VScode")
 
 
 On constate une fois la création du site terminé, que des dossiers et fichiers ont été ajoutés dans le projet. À partir de là, deux choix s'offre à vous. Le premier, c'est d'installer un thème compatible avec Hugo. Le deuxième, continuer votre projet en partant de zéro. Pour ce tutoriel et dans un soucis de d'exhaustivité, je vais vous montrer comment installer un thèmes. Mais nous continuerons ensuite votre projet sans, afin de n'utiliser que ce qui est nécessaire et pour bien comprendre le fonctionnement de Hugo.
@@ -161,7 +161,7 @@ Une fois la commande lancé et le thème téléchargé, il ne reste plus qu'a in
 `theme = ["PaperMod"]`
 
 
-![Choix du template dans le fichier Hugo.toml](/hugo_toml.png "Choix du template dans le fichier Hugo.toml")
+![Choix du template dans le fichier Hugo.toml](hugo_toml.png "Choix du template dans le fichier Hugo.toml")
 
 
 Et voila ! Le template est chargé et on peut le prévisualiser sur le serveur de test, mais on va voir comment faire cela juste après, en partant de notre projet vierge. 
@@ -186,13 +186,13 @@ Hugo nous permet de tester notre travail via un serveur local. Pour cela, il suf
 Une fois le serveur lancé, cliquez sur le lien que nous donne Hugo pour visualiser notre site. (Il faut utiliser le raccourci clavier *Ctrl+C* pour couper le serveur local).
 
 
-![Lancement d'un serveur de test](/hugo-serve.png "lancement d'un serveur de test")
+![Lancement d'un serveur de test](hugo-serve.png "lancement d'un serveur de test")
 
 
 Si on se rend sur la page, on constaste qu'il y a un problème. 
 
 
-![Hugo ne trouve pas de page à afficher](/404-rip.png "Hugo ne trouve pas de page à afficher")
+![Hugo ne trouve pas de page à afficher](404-rip.png "Hugo ne trouve pas de page à afficher")
 
 ---
 
@@ -202,7 +202,7 @@ Si on se rend sur la page, on constaste qu'il y a un problème.
 Si rien ne s'affiche, c'est parce que notre site est vide (malin, je sais). Regardons la structure généré par Hugo lors de la création du site d'un peu plus près. 
 
 
-![Structure du projet dans VScode](/structure-du-site.png "Structure du projet dans VScode")
+![Structure du projet dans VScode](structure-du-site.png "Structure du projet dans VScode")
 
 
 Pour le moment, il y a 3 dossiers qui nous intéresses :
@@ -254,13 +254,13 @@ Pour que notre site puisse fonctionner, il y quelques étapes à suivre :
 Voilà à quoi ressemble la structure après la création.
 
 
-![Création des nouveaux fichiers](/structure-v2.png "Création des nouveaux fichiers")
+![Création des nouveaux fichiers](structure-v2.png "Création des nouveaux fichiers")
 
 
 Si vous relancez le serveur de testvous pouvez constatez que du contenu s'affiche ! 
 
 
-![La page affiche bien du contenu](/le-site-fonctionne-v2.png "la page affiche bien du contenu")
+![La page affiche bien du contenu](le-site-fonctionne-v2.png "la page affiche bien du contenu")
 
 
 Expliquons ce que l'on vient de faire : 
@@ -285,19 +285,19 @@ Avant d'aller plus loin, sauvegardons notre travail.
 Si on se rend dans GitHub Desktop, on remarque que plusieurs fichiers sont ajoutés dans la liste des modifications. Pour les envoyer sur votre RepoGitHub™, il faut donner un nom à votre commit. Quelques choses dans la veine de "Premier push" fera l'affaire. Vous pouvez ajouter une description si l'envie vous prend. Essayez d'être clair et précis dans vos noms de push, car vous pourrez les retrouver dans Github et revenir en arrière quand des bugs vont inévitablement apparaitres.  
 
 
-![Le premier push sur notre répertoire GitHub](/premier-push-github.png "Le premier push sur notre répertoire GitHub")
+![Le premier push sur notre répertoire GitHub](premier-push-github.png "Le premier push sur notre répertoire GitHub")
 
 
 Cliquez ensuite sur "Commit to main" en bas de la fenêtre. Il ne reste plus qu'a publier le commit sur le projet, pour cela, cliquez sur "Publish branch". 
 
 
-![Publier le commit en ligne](/publier-la-branch-en-ligne.png "Publier le commit en ligne")
+![Publier le commit en ligne](publier-la-branch-en-ligne.png "Publier le commit en ligne")
 
 
 Une fois cela fait et le chargement effectué, vous pouvez voir votre travail dans votre espace GitHub en ligne. 
 
 
-![Notre projet sur le dashboard GitHub](/premier-push-sur-le-dahsboard-github.png "Notre projet sur le dashboard GitHub")
+![Notre projet sur le dashboard GitHub](premier-push-sur-le-dahsboard-github.png "Notre projet sur le dashboard GitHub")
 
 
 Améliorons maintenant un peu le site.
@@ -341,7 +341,7 @@ On a ajouté dans notre page deux partials, `head.html` et `footer.html`. La syn
 Il faut maintenant créer les fichiers pour que Hugo puisse les charger. Pour cela, ajoutez un dossier `partials` dans le dossier `layouts`. Vous pouvez ajouter vos deux partials ici afin d'obtenir la structure suivante : 
 
 
-![Le dossier des partials](/dossier-partials.png "Le dossier des partials")
+![Le dossier des partials](dossier-partials.png "Le dossier des partials")
 
 
 Dans nos partials, on construit notre élément avec uniquement ce qui est nécessaire à son fonctionnement. par exemple, créons un `footer` très simple : 
@@ -374,7 +374,7 @@ On a également ajouté un lien vers un fichier CSS. Celui-ci doit être ajouté
 Avec un peu de CSS basique et les deux partials, le site commence (presque) à ressembler à quelque chose.
 
 
-![Le site avec les partials et le CSS](/le-site-avec-les-partials-et-le-css-v2.png "Le site avec les partials et le CSS")
+![Le site avec les partials et le CSS](le-site-avec-les-partials-et-le-css-v2.png "Le site avec les partials et le CSS")
 
 
 Vous pouvez faire un nouveau commit pour sauvegarder votre travail. Pensez à le faire de temps à temps, une fois que vous avez ajouter des fichiers ou modifiés du contenu de manière significative.
@@ -387,7 +387,7 @@ Vous pouvez faire un nouveau commit pour sauvegarder votre travail. Pensez à le
 Pour ajouter des pages dans notre site, il faut que l'on créer un dossier dans `content` avec le nom que l'on souhaite donner à la page. Si l'on veut créer une page Contact, on créer un dossier `contact`. Dans ce nouveau dossier, il faut également créer un fichier `index.md` (sans underscore). Notre structure ressemble à ceci : 
 
 
-![Ajout des dossiers pages](/page-contact-structure.png "Ajout des dossiers pages")
+![Ajout des dossiers pages](page-contact-structure.png "Ajout des dossiers pages")
 
 
 > Pour comprendre pourquoi on met parfois un `_` devant les fichiers index, consultez la documentation de Hugo à propros de l'organisation des pages : [https://gohugo.io/content-management/page-bundles/](https://gohugo.io/content-management/page-bundles/)
@@ -454,7 +454,7 @@ title: "Page d'accueil"
 # Bonjour internet
 Voilà le contenu de la page d'accueil, qui vient de `content/_index.md` !
 
-[Contactez moi](/contact/ "Contactez moi")
+[Contactez moi](contact/ "Contactez moi")
 {.btn}
 ```
 
@@ -494,7 +494,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.**
 Il ne reste plus qu'a ajouter un peu de CSS, de relancer votre serveur et de naviguer jusqu'à votre superbe page de contact ! 
 
 
-![Notre page de contact fonctionne](/page-contact.png "Notre page de contact fonctionne")
+![Notre page de contact fonctionne](page-contact.png "Notre page de contact fonctionne")
 
 
 N'oubliez pas de commit votre travail sur GitHub, et on continue. 
@@ -578,8 +578,7 @@ Il ne nous reste plus qu'a appeler le partial dans le fichier `baseof.html` pour
 
 Et voilà, votre menu apparait dans toutes les pages ! 
 
-
-![Notre menu de navigation foncitonne](/menu-ok.png "Notre menu de navigation fonctionne")
+![Notre menu de navigation foncitonne](menu-ok.png "Notre menu de navigation fonctionne")
 
 
 Il est possible d'aller plus loin évidemment, je vous met [un lien vers ce post qui rentre beaucoup plus en détail](https://harrycresswell.com/writing/menus-in-hugo/), notamment avec la mise en place de menu à plusieurs niveaux et de l'ajout de classe sur l'élément actif.
@@ -622,7 +621,7 @@ On remarque que l'on a définit dans le `FrontMatter` le type de la page comme u
 La structure doit ressembler à ça : 
 
 
-![La structure de nos projets dans VScode](/struct-projets-maj.png "La structure de nos projets dans VScode")
+![La structure de nos projets dans VScode](struct-projets-maj.png "La structure de nos projets dans VScode")
 
 
 Pour mettre en place les projets, il faut ensuite créer deux nouveaux fichiers de template dans `layouts > _default`, `section.html` et `single.html`. Commençons par `section.html`, c'est lui qui va récupérer tout les projets et les présenter dans une liste complète. 
@@ -655,7 +654,7 @@ Pour voir le résultat, ajoutez un onglet dans le menu (via le fichier `Hugo.tom
 Un nouvel onglet est créé, et la page `Mes projets` récupère bien tous les projets que l'on a ajouté sur le site, et nous propose un lien vers ces pages. 
 
 
-![Les projets affichés dans la page section](/cest-notre-projet.png "Les projets affichés dans la page section")
+![Les projets affichés dans la page section](cest-notre-projet.png "Les projets affichés dans la page section")
 
 
 Pour le moment, le site n'a pas de template pour afficher les projets unique, il faut donc le créer. C'est `single.html` qui s'en charge. Voilà un exemple très sommaire :
@@ -674,7 +673,7 @@ Pour le moment, le site n'a pas de template pour afficher les projets unique, il
 Maintenant, si on clique sur un des projets, le contenu est correctement affiché :
 
 
-![Le contenu d'un projet](/contenu-projet.png "Le contenu d'un projet")
+![Le contenu d'un projet](contenu-projet.png "Le contenu d'un projet")
 
 
 Pour l'exercice, essayez de créer un partial pour afficher le dernier projet sur votre page d'accueil. Je vous met la solution à la suite, mais prenez le temps d'essayer vous même, pour vous faire la main avec le fonctionnement de Hugo.
@@ -730,7 +729,7 @@ Il ne reste plus qu'a ajouter le partial dans la page d'accueil, en passant par 
 Et voilà, le dernier projet s'affiche bien : 
 
 
-![Notre partial fonctionne ](/dernier-projet-page-accueil.png "Notre partial fonctionne")
+![Notre partial fonctionne ](dernier-projet-page-accueil.png "Notre partial fonctionne")
 
 
 Avec tout ce qu'on a vu, vous avez une base solide pour créer un premier site et prendre en main Hugo. Maintenant, passons à la mise en ligne.
@@ -743,13 +742,13 @@ Avec tout ce qu'on a vu, vous avez une base solide pour créer un premier site e
 Avant de continuer, assurez vous d'avoir poussé vos dernières modifications sur Github. Une fois cela fait, créez vous un compte sur [Netlify](https://app.netlify.com/). Ensuite, rendez-vous dans la page `Sites` de votre espace personnel, puis cliquez sur `Add new site`. 
 
 
-![Ajouter un site à Netlify](/ajouter-site-netlify.png "Ajouter un site à Netlify")
+![Ajouter un site à Netlify](ajouter-site-netlify.png "Ajouter un site à Netlify")
 
 
 Choisissez l'option `import an existing project`, puis choisissez GitHub. Connectez vous alors avec votre compte personnel GitHub, et une fois que c'est fait, choisissez le répertoire utilisé pour stocker votre projet.
 
 
-![Choix du répertoire à utiliser](/choix-du-repo.png "Choix du répertoire à utiliser")
+![Choix du répertoire à utiliser](choix-du-repo.png "Choix du répertoire à utiliser")
 
 
 > Si votre répertoire ne s'affiche pas, suivez [les étapes de ce tutoriel proposé par Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) à partir de l'étape 4.
@@ -765,16 +764,16 @@ Une fois le répertoire choisit, il faut compléter quelques paramètres.
 5. Enfin, cliquez sur le bouton **Add environment variables**, puis dans **Key** ajoutez `HUGO_VERSION`, et dans **Value** ajoutez le numéro de [la dernière version de Hugo](https://github.com/gohugoio/hugo/releases/latest), à la création de cette article, c'est `0.140.2`.
 
 
-![Les paramètres dans Netlify ](/parametre-netlify.png "Les paramètres dans Netlify")
+![Les paramètres dans Netlify ](parametre-netlify.png "Les paramètres dans Netlify")
 
 
 Cliquez ensuite sur `Deploy` en bas de la page. Netlify va alors prendre un peu de temps pour mettre en ligne le site. Il se peut que votre installation de fonctionne pas, dans ce cas, assurez vous que vous avez bien lancé l'installation depuis la racine de votre projet. Si votre racine n'est pas au même niveau que le répertoire GitHub, alors il faut ajouter le chemin dans la configuration Netlify, au niveau de **Base directory**. 
 
 
-![Ajout du bon dossier comme racine](/base-directory.png "Ajout du bon dossier comme racine")
+![Ajout du bon dossier comme racine](base-directory.png "Ajout du bon dossier comme racine")
 
 
-![La racine du projet dans VScode](/racine-vscode.png "La racine du projet dans VScode")
+![La racine du projet dans VScode](racine-vscode.png "La racine du projet dans VScode")
 
 
 Dans le screenshot précédent, on voit que dans VScode, j'ai mon répertoire GitHub avec le nom `TEMPLATE_PORTFOLIO`, et la racine de mon projet dans un dossier appelé `Template_Portfolio` (c'est une mauvaise idée, ne faite pas ça). Il faut donc que je définisse `Base directory = Template_Portfolio` dans la configuration de Netlify.
@@ -783,7 +782,7 @@ Dans le screenshot précédent, on voit que dans VScode, j'ai mon répertoire Gi
 Le site une fois construit, vous aurez ce message :
 
 
-![Le site est bien en ligne](/le-site-est-publie.png "Le site est bien en ligne")
+![Le site est bien en ligne](le-site-est-publie.png "Le site est bien en ligne")
 
 
 Il ne reste plus qu'a consulter votre superbe site en ligne !
@@ -858,13 +857,13 @@ Une fois cela fait, poussez vos ajouts sur GitHub. Cependant, le CMS n'est pas e
 Pour cela, il faut se rendre dans les [paramètres de votre compte GitHub](https://github.com/settings/profile), puis tout en bas dans `Developer Settings`. Cliquez ensuite sur `OAuth Apps` : 
 
 
-![Accès aux options de OAuth de GitHub](/acces-oaut-setting.png "Accès aux options de OAuth de GitHub")
+![Accès aux options de OAuth de GitHub](acces-oaut-setting.png "Accès aux options de OAuth de GitHub")
 
 
 Dans cette page, cliquez sur `Register a new application`, et la fenêtre suivante va s'ouvrir : 
 
 
-![Les options de OAuth de GitHub](/oauth-github.png "Les options de OAuth de GitHub")
+![Les options de OAuth de GitHub](oauth-github.png "Les options de OAuth de GitHub")
 
 
 Il faut compléter les informations comme suit : 
@@ -878,19 +877,19 @@ Il faut compléter les informations comme suit :
 Une fois fait, cliquez sur `Register application`. GitHub vous ouvre alors la page de votre application, où vous pouvez voir son `Client ID`. Copiez le dans un coin, car on va en avoir besoin pour la prochaine étape. Il faut également générer un clé client, pour cela, cliquez sur `Generate a new client secret`.
 
 
-![Générer une clé privée](/generate-secret-id.png "Générer une clé privée")
+![Générer une clé privéegenerate-secret-id.png "Générer une clé privée")
 
 
 Copier bien la clée généré par GitHub dans un coin également, car il ne sera pas possible de la retrouver plus tard. Maintenant que c'est fait, il ne nous reste plus qu'a faire le lien entre GitHub et Netlify. Pour cela, rendez-vous dans le dashboard de votre site sur Netlify, puis naviguez dans `Site configuration > Access & security > OAuth`. Sous `Authentication providers`, cliquez sur `Install provider`. 
 
 
-![Installer un provider dans Netlify](/install-provider-netliffy.png "Installer un provider dans Netlify")
+![Installer un provider dans Netlify](install-provider-netliffy.png "Installer un provider dans Netlify")
 
 
 Sélectionnez ensuite GitHub, et complétez les deux clées avec celles que vous avez générées un peu plus tôt :
 
 
-![Ajout des clées](/install-provider-netlify-secret.png "Ajout des clés")
+![Ajout des clées](install-provider-netlify-secret.png "Ajout des clés")
 
 
 Enfin, il ne vous reste plus qu'a cliquer sur `Install`, et le tour est joué ! Maintenant, il vous est possible d'accéder à votre backoffice en ajoutant `/admin` à la suite de l'url de votre site en ligne. Il vous faudra vous identifier avec votre compte GitHub. 

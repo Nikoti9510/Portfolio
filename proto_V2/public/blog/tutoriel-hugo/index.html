@@ -23,8 +23,8 @@
         <section class="single-content stack">
             
   
-    <h1 id="création-dun-portfolio-simple-en-prenant-avantage-de-la-jamstack">
-      Création d&rsquo;un portfolio simple en prenant avantage de la JamStack.
+    <h1 id="portfolio-jamstack-avec-hugo-et-netlify">
+      Portfolio JamStack avec Hugo et Netlify.
     </h1>
   
 <p>Avant de rentrer dans le vif du sujet, on présente rapidement le principe, les outils et la méthodologie.</p>
@@ -41,55 +41,51 @@
 
   
     <h2 id="mettre-en-place-le-projet">
-      <a href="#mettre-en-place-le-projet">#</a>
-      Mettre en place le projet
+      <a href="#mettre-en-place-le-projet"># Mettre en place le projet</a>
     </h2>
   
 <p>Une fois Github Desktop et Visual Studio Code installé, on va pouvoir mettre en place le projet. On se rend dans notre <a href="https://github.com/">espace personnel sur GitHub</a> et on créer un nouveau répertoire en cliquant sur le bouton <code>New</code> en haut à gauche.</p>
-<p><img src="/blog/tutoriel-hugo/dashboard%20github.png" alt="Interface du dashboard Github" title="Interface du dashboard Github"></p>
-<p>Donner un nom à votre répertoire, dans notre exemple ce sera &ldquo;<em>tutoriel_portfolio</em>&rdquo;, et validez en cliquant sur <code>Create repository</code> en bas à droite. (les autres options peuvent être laissés par défaut).</p>
-<p><img src="/blog/tutoriel-hugo/dashboard%20github%20etape%202.png" alt="Création d&rsquo;un répertoire dans l&rsquo;interface github" title="Création d&#39;un répertoire dans l&#39;interface github"></p>
-<p>Si on retourne dans notre dashboard, on voit que notre nouveau répertoire est bien créé.</p>
-<p><img src="/blog/tutoriel-hugo/dashboard%20github%20etape%203.png" alt="Dashboard de github avec le nouveau répertoire présent" title="Dashboard de github avec le nouveau répertoire présent"></p>
-<p>Maintenant, rendons nous dans Github Desktop. Si ce n&rsquo;est pas déjà fait, connectez l&rsquo;application à votre compte Github. Ensuite, il est possible de cloner votre répertoire, afin de pouvoir travailler localement sur votre machine. <br>
+<figure>
+    <img src="dashboard-github.png" alt="Interface du dashboard Github"><figcaption>Interface du dashboard Github</figcaption></figure><p>Donner un nom à votre répertoire, dans notre exemple ce sera &ldquo;<em>tutoriel_portfolio</em>&rdquo;, et validez en cliquant sur <code>Create repository</code> en bas à droite. (les autres options peuvent être laissés par défaut).</p>
+<figure>
+    <img src="dashboard-github-etape-2.png" alt="Création dun répertoire dans linterface github"><figcaption>Création d&#39;un répertoire dans l&#39;interface github</figcaption></figure><p>Si on retourne dans notre dashboard, on voit que notre nouveau répertoire est bien créé.</p>
+<figure>
+    <img src="dashboard-github-etape-3.png" alt="Dashboard de github avec le nouveau répertoire présent"><figcaption>Dashboard de github avec le nouveau répertoire présent</figcaption></figure><p>Maintenant, rendons nous dans Github Desktop. Si ce n&rsquo;est pas déjà fait, connectez l&rsquo;application à votre compte Github. Ensuite, il est possible de cloner votre répertoire, afin de pouvoir travailler localement sur votre machine. <br>
 En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
-<p><img src="/blog/tutoriel-hugo/github%20desktop%20etape%201.png" alt="Interface de github desktop, clonage d&rsquo;un répertoire " title="Interface de github desktop, clonage d&#39;un répertoire"></p>
-<p>Choisissez le répertoire que vous avez créé plus tôt et cliquez sur <code>Clone</code> en bas de la fenêtre.</p>
-<p><img src="/blog/tutoriel-hugo/github%20desktop%20etape%202.png" alt="Choix d&rsquo;un répertoire dans github desktop " title="Choix d&#39;un répertoire dans github desktop"></p>
-<p>Une fois le répertoire cloné, on peut constater que l&rsquo;on se trouve bien dans le bon espace de travail en haut à gauche (et passer d&rsquo;un projet à un autre si besoin). Vous pouvez maintenant ouvrir votre projet dans VScode en cliquant dans le bouton <code>Open in Visual Studio Code</code> au centre de l&rsquo;écran.</p>
-<p><img src="/blog/tutoriel-hugo/github%20desktop%20etape%203.png" alt="Interface de github desktop une fois un répertoire cloné" title="Interface de github desktop une fois le répertoire cloné"></p>
-<p>Et voilà, vous êtes prêt à travailler ! On pourrait s&rsquo;arrêter là et faire un site internet statique en créant des pages en HTML, en les personnalisant avec des feuilles de styles CSS et en ajoutant de l&rsquo;interaction en Javascript. Mais avant de faire ça, on va installer Hugo afin de nous faciliter la vie.</p>
+<figure>
+    <img src="github-desktop-etape-1.png" alt="Interface de github desktop, clonage dun répertoire "><figcaption>Interface de github desktop, clonage d&#39;un répertoire</figcaption></figure><p>Choisissez le répertoire que vous avez créé plus tôt et cliquez sur <code>Clone</code> en bas de la fenêtre.</p>
+<figure>
+    <img src="github-desktop-etape-2.png" alt="Choix dun répertoire dans github desktop "><figcaption>Choix d&#39;un répertoire dans github desktop</figcaption></figure><p>Une fois le répertoire cloné, on peut constater que l&rsquo;on se trouve bien dans le bon espace de travail en haut à gauche (et passer d&rsquo;un projet à un autre si besoin). Vous pouvez maintenant ouvrir votre projet dans VScode en cliquant dans le bouton <code>Open in Visual Studio Code</code> au centre de l&rsquo;écran.</p>
+<figure>
+    <img src="github-desktop-etape-3.png" alt="Interface de github desktop une fois un répertoire cloné"><figcaption>Interface de github desktop une fois le répertoire cloné</figcaption></figure><p>Et voilà, vous êtes prêt à travailler ! On pourrait s&rsquo;arrêter là et faire un site internet statique en créant des pages en HTML, en les personnalisant avec des feuilles de styles CSS et en ajoutant de l&rsquo;interaction en Javascript. Mais avant de faire ça, on va installer Hugo afin de nous faciliter la vie.</p>
 <p><em><strong>Avant de continuer, fermez GitHub Desktop et Visual Studio Code.</strong></em></p>
 <hr>
 
   
     <h2 id="installation-de-go-hugo-et-git">
-      <a href="#installation-de-go-hugo-et-git">#</a>
-      Installation de Go, Hugo et Git
+      <a href="#installation-de-go-hugo-et-git"># Installation de Go, Hugo et Git</a>
     </h2>
   
 <p>Oui je sais, <em><strong>GIT</strong></em> ! Mais ce n&rsquo;est pas si terrible vous allez voir. Surtout, ce n&rsquo;est que pour l&rsquo;étape d&rsquo;installation et d&rsquo;initialisation du projet. Ensuite, on travaille uniquement avec la version Desktop (mais comme Git sera installé, si l&rsquo;envie vous prend d&rsquo;aller plus loin, c&rsquo;est possible).</p>
 
   
     <h3 id="installer-go-et-hugo">
-      <a href="#installer-go-et-hugo">#</a>
-      Installer GO et Hugo
+      <a href="#installer-go-et-hugo"># Installer GO et Hugo</a>
     </h3>
   
 <p>Commençez par vous rendre sur <a href="gohugo.io/installation/"></a><a href="">gohugo.io/installation/</a> et cliquez sur l&rsquo;option correspondant à votre navigateur. Pour ce tutoriel, je vais suivre les étapes pour Windows (mais c&rsquo;est même plus simple avec MacOS).</p>
 <p>Dans un premier temps, il nous faut installer <a href="https://go.dev/doc/install">Go</a>, le langage de programmation dans lequel Hugo est écrit. Pas de panique, nous n&rsquo;aurons pas besoin d&rsquo;apprendre un nouveau langage pour ce projet, il est simplement nécessaire de l&rsquo;installer sur notre machine pour que Hugo fonctionne. Téléchargez l&rsquo;exécutable pour Windows et suivez les instructions de l&rsquo;installateur.</p>
-<p><img src="/blog/tutoriel-hugo/go.png" alt="Choisir le bon exécutable pour installer Go" title="Choisir le bon exécutable pour installer Go"></p>
-<p>Vous pouvez changer l&rsquo;emplacement de l&rsquo;installation sans problème lors de l&rsquo;installation.</p>
-<p><img src="/blog/tutoriel-hugo/go_2.png" alt="Changement de l&rsquo;emplacement d&rsquo;installation de Go" title="Changement de l&#39;emplacement d&#39;installation de Go"></p>
-<p>Une fois l&rsquo;installation terminé, ouvrez une invite de commande (Windows + R et sélectionnez <code>cmd</code> ou cliquez sur le menu démarrer et cherchez <code>cmd</code>). Tapez dans la console la ligne <code>Go version</code> pour constater que l&rsquo;installation est bien réussit.</p>
-<p><img src="/blog/tutoriel-hugo/go_3.png" alt="Go est bien installé sur cette machine" title="Go est bien installé sur cette machine"></p>
-<p>Dans la même console, vous pouvez maintenant copier la commande suivante pour installer Hugo :</p>
+<figure>
+    <img src="go.png" alt="Choisir le bon exécutable pour installer Go"><figcaption>Choisir le bon exécutable pour installer Go</figcaption></figure><p>Vous pouvez changer l&rsquo;emplacement de l&rsquo;installation sans problème lors de l&rsquo;installation.</p>
+<figure>
+    <img src="go_2.png" alt="Changement de lemplacement dinstallation de Go"><figcaption>Changement de l&#39;emplacement d&#39;installation de Go</figcaption></figure><p>Une fois l&rsquo;installation terminé, ouvrez une invite de commande (Windows + R et sélectionnez <code>cmd</code> ou cliquez sur le menu démarrer et cherchez <code>cmd</code>). Tapez dans la console la ligne <code>Go version</code> pour constater que l&rsquo;installation est bien réussit.</p>
+<figure>
+    <img src="go_3.png" alt="Go est bien installé sur cette machine"><figcaption>Go est bien installé sur cette machine</figcaption></figure><p>Dans la même console, vous pouvez maintenant copier la commande suivante pour installer Hugo :</p>
 <p><code>go install github.com/gohugoio/hugo@latest</code></p>
 
   
     <h3 id="installer-git">
-      <a href="#installer-git">#</a>
-      Installer Git
+      <a href="#installer-git"># Installer Git</a>
     </h3>
   
 <p>Rendez vous sur le <a href="https://git-scm.com/downloads/win">site de git pour Windows</a> et téléchargez la dernière version en cliquant sur le premier lien. Il fois le téléchargement terminé, lancez l&rsquo;exécutable et suivez les instructions. Voilà, c&rsquo;est terminé. Pour le moment, pas si terrible.</p>
@@ -97,23 +93,21 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="création-du-site-avec-hugo">
-      <a href="#cr%25C3%25A9ation-du-site-avec-hugo">#</a>
-      Création du site avec Hugo
+      <a href="#cr%25C3%25A9ation-du-site-avec-hugo"># Création du site avec Hugo</a>
     </h2>
   
 <p>Une fois que l&rsquo;installation est terminé, vous êtes prêt à créer votre site ! Pour ça, réouvrez GitHub Desktop et votre projet dans Visual Studio Code. Une fois dans VScode, on va dans <code>Terminal &gt; New Terminal</code>.</p>
-<p><img src="/blog/tutoriel-hugo/terminal.png" alt="Ouvrir un terminal dans Visual Studio Code" title="Ouvrir un terminal dans Visual Studio Code"></p>
-<p>Dans le terminal qui s&rsquo;est ouvert en bas de l&rsquo;éditeur, vous pouvez maintenant générer votre site avec Hugo. Pour cela, rien de plus simple, il suffit de taper la ligne de commande suivante :</p>
+<figure>
+    <img src="terminal.png" alt="Ouvrir un terminal dans Visual Studio Code"><figcaption>Ouvrir un terminal dans Visual Studio Code</figcaption></figure><p>Dans le terminal qui s&rsquo;est ouvert en bas de l&rsquo;éditeur, vous pouvez maintenant générer votre site avec Hugo. Pour cela, rien de plus simple, il suffit de taper la ligne de commande suivante :</p>
 <p><code>Hugo new site NOM_DU_SITE</code></p>
 <p>Remplacer <code>NOM_DU_SITE</code> par le nom de votre choix (sans espaces ni caractères spéciaux).</p>
-<p><img src="/blog/tutoriel-hugo/hugo%20new%20site.png" alt="La création du site est terminé dans VScode" title="La création du site est terminé dans VScode"></p>
-<p>On constate une fois la création du site terminé, que des dossiers et fichiers ont été ajoutés dans le projet. À partir de là, deux choix s&rsquo;offre à vous. Le premier, c&rsquo;est d&rsquo;installer un thème compatible avec Hugo. Le deuxième, continuer votre projet en partant de zéro. Pour ce tutoriel et dans un soucis de d&rsquo;exhaustivité, je vais vous montrer comment installer un thèmes. Mais nous continuerons ensuite votre projet sans, afin de n&rsquo;utiliser que ce qui est nécessaire et pour bien comprendre le fonctionnement de Hugo.</p>
+<figure>
+    <img src="hugo-new-site.png" alt="La création du site est terminé dans VScode"><figcaption>La création du site est terminé dans VScode</figcaption></figure><p>On constate une fois la création du site terminé, que des dossiers et fichiers ont été ajoutés dans le projet. À partir de là, deux choix s&rsquo;offre à vous. Le premier, c&rsquo;est d&rsquo;installer un thème compatible avec Hugo. Le deuxième, continuer votre projet en partant de zéro. Pour ce tutoriel et dans un soucis de d&rsquo;exhaustivité, je vais vous montrer comment installer un thèmes. Mais nous continuerons ensuite votre projet sans, afin de n&rsquo;utiliser que ce qui est nécessaire et pour bien comprendre le fonctionnement de Hugo.</p>
 <hr>
 
   
     <h2 id="installer-un-thème">
-      <a href="#installer-un-th%25C3%25A8me">#</a>
-      Installer un thème
+      <a href="#installer-un-th%25C3%25A8me"># Installer un thème</a>
     </h2>
   
 <p>Hugo propose une <a href="https://themes.gohugo.io/">collection de thème gratuit sur son site</a>, et il est également possible d&rsquo;en trouver des plus complets sur d&rsquo;autres sites, comme par exemple <a href="https://gethugothemes.com/products">gethugothemes.com</a> ou <a href="https://anvodstudio.com/hugo-themes/">anvodstudio.com</a>. Pour l&rsquo;exemple, j&rsquo;ai choisi le thème <a href="https://themes.gohugo.io/themes/hugo-papermod/">PaperMod</a>. Pour l&rsquo;installer, rien de compliqué, il suffit de se rendre sur le page Github du thème (en cliquant sur le bouton &ldquo;Download&rdquo; dans la page du thème) et de copier la commande pour installer le submodule dans le terminal de VScode. Pour PaperMod, voilà la commande :</p>
@@ -123,41 +117,38 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </blockquote>
 <p>Une fois la commande lancé et le thème téléchargé, il ne reste plus qu&rsquo;a indiquer à Hugo que vous souhaitez utiliser ce thème. Pour cela, rendez-vous dans le fichier de configuration <code>config.toml</code> (ou <code>hugo.toml</code>, les deux fonctionnes et peuvent être présent) et d&rsquo;ajouter la ligne suivante dans le fichier :</p>
 <p><code>theme = [&quot;PaperMod&quot;]</code></p>
-<p><img src="/blog/tutoriel-hugo/hugo_toml.png" alt="Choix du template dans le fichier Hugo.toml" title="Choix du template dans le fichier Hugo.toml"></p>
-<p>Et voila ! Le template est chargé et on peut le prévisualiser sur le serveur de test, mais on va voir comment faire cela juste après, en partant de notre projet vierge.</p>
+<figure>
+    <img src="hugo_toml.png" alt="Choix du template dans le fichier Hugo.toml"><figcaption>Choix du template dans le fichier Hugo.toml</figcaption></figure><p>Et voila ! Le template est chargé et on peut le prévisualiser sur le serveur de test, mais on va voir comment faire cela juste après, en partant de notre projet vierge.</p>
 <hr>
 
   
     <h2 id="configuration-du-site-sans-template">
-      <a href="#configuration-du-site-sans-template">#</a>
-      Configuration du site sans template
+      <a href="#configuration-du-site-sans-template"># Configuration du site sans template</a>
     </h2>
   
 <p>Dans cette partie, nous allons créer la structure de base pour votre site. On va commencer par créer une page d&rsquo;accueil, avec un header, du contenu et un footer. Cela va vous permettre de prendre en main le fonctionnement de Hugo, en particulier le système de partials de template. On prendra également le temps de voir comment créer un menu de navigation ainsi qu&rsquo;une liste de projets dans notre page d&rsquo;accueil.</p>
 
   
     <h3 id="lancer-un-serveur-de-test">
-      <a href="#lancer-un-serveur-de-test">#</a>
-      Lancer un serveur de test
+      <a href="#lancer-un-serveur-de-test"># Lancer un serveur de test</a>
     </h3>
   
 <p>Hugo nous permet de tester notre travail via un serveur local. Pour cela, il suffit de taper la commande suivant dans le terminal :</p>
 <p><code>hugo serve</code></p>
 <p>Une fois le serveur lancé, cliquez sur le lien que nous donne Hugo pour visualiser notre site. (Il faut utiliser le raccourci clavier <em>Ctrl+C</em> pour couper le serveur local).</p>
-<p><img src="/blog/tutoriel-hugo/hugo%20serve.png" alt="Lancement d&rsquo;un serveur de test" title="lancement d&#39;un serveur de test"></p>
-<p>Si on se rend sur la page, on constaste qu&rsquo;il y a un problème.</p>
-<p><img src="/blog/tutoriel-hugo/404%20rip.png" alt="Hugo ne trouve pas de page à afficher" title="Hugo ne trouve pas de page à afficher"></p>
-<hr>
+<figure>
+    <img src="hugo-serve.png" alt="Lancement dun serveur de test"><figcaption>lancement d&#39;un serveur de test</figcaption></figure><p>Si on se rend sur la page, on constaste qu&rsquo;il y a un problème.</p>
+<figure>
+    <img src="404-rip.png" alt="Hugo ne trouve pas de page à afficher"><figcaption>Hugo ne trouve pas de page à afficher</figcaption></figure><hr>
 
   
     <h2 id="structure-dun-site-hugo">
-      <a href="#structure-dun-site-hugo">#</a>
-      Structure d&rsquo;un site Hugo
+      <a href="#structure-dun-site-hugo"># Structure d&rsquo;un site Hugo</a>
     </h2>
   
 <p>Si rien ne s&rsquo;affiche, c&rsquo;est parce que notre site est vide (malin, je sais). Regardons la structure généré par Hugo lors de la création du site d&rsquo;un peu plus près.</p>
-<p><img src="/blog/tutoriel-hugo/structure%20du%20site.png" alt="Structure du projet dans VScode" title="Structure du projet dans VScode"></p>
-<p>Pour le moment, il y a 3 dossiers qui nous intéresses :</p>
+<figure>
+    <img src="structure-du-site.png" alt="Structure du projet dans VScode"><figcaption>Structure du projet dans VScode</figcaption></figure><p>Pour le moment, il y a 3 dossiers qui nous intéresses :</p>
 <ol>
 <li><strong>static</strong> : C&rsquo;est ici que l&rsquo;on va stocker toutes les ressources utiles au site qui ne changent jamais, tels que les images réutilisées dans toutes les pages, les fichiers CSS et Javascripts, etc.</li>
 <li><strong>content</strong> : Dans ce dossier, on va retrouver nos pages de contenus, en format <code>.md</code> (pour <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a>)</li>
@@ -173,35 +164,41 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </li>
 <li>
 <p>Dans <code>_default</code>, créez un fichier <code>home.html</code> avec le contenu suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
 </span></span><span style="display:flex;"><span>    {{ .Content }}
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div></li>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code>
+</pre></li>
 <li>
 <p>Toujours dans <code>layouts &gt; _default</code>, créez un fichier <code>baseof.html</code> avec le contenu suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span> &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.Language }}&#34;</span>&gt;
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span> &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.Language }}&#34;</span>&gt;
 </span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">main</span>&gt;
 </span></span><span style="display:flex;"><span>     {{ block &#34;main&#34; . }}{{ end }}
 </span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">main</span>&gt;
 </span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div></li>
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">html</span>&gt;</span></span></code>
+</pre></li>
 <li>
 <p>Enfin, dans le dossier <code>content</code>, ajoutez un fichier <code>_index.md</code> avec le contenu suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+
+<pre tabindex="0" class="chroma" data-lang="markdown">
+    <code class="language-markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Page d&#39;accueil&#34;
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Bonjour internet
-</span></span><span style="display:flex;"><span>Voilà le contenu de la page d&#39;accueil, qui vient de <span style="color:#e6db74">`content/_index.md`</span>!
-</span></span></code></pre></div></li>
+</span></span><span style="display:flex;"><span>Voilà le contenu de la page d&#39;accueil, qui vient de <span style="color:#e6db74">`content/_index.md`</span>!</span></span></code>
+</pre></li>
 </ol>
 <p>Voilà à quoi ressemble la structure après la création.</p>
-<p><img src="/blog/tutoriel-hugo/structure%20v2.png" alt="Création des nouveaux fichiers" title="Création des nouveaux fichiers"></p>
-<p>Si vous relancez le serveur de testvous pouvez constatez que du contenu s&rsquo;affiche !</p>
-<p><img src="/blog/tutoriel-hugo/le%20site%20fonctionne%20v2.png" alt="La page affiche bien du contenu" title="la page affiche bien du contenu"></p>
-<p>Expliquons ce que l&rsquo;on vient de faire :</p>
+<figure>
+    <img src="structure-v2.png" alt="Création des nouveaux fichiers"><figcaption>Création des nouveaux fichiers</figcaption></figure><p>Si vous relancez le serveur de testvous pouvez constatez que du contenu s&rsquo;affiche !</p>
+<figure>
+    <img src="le-site-fonctionne-v2.png" alt="La page affiche bien du contenu"><figcaption>la page affiche bien du contenu</figcaption></figure><p>Expliquons ce que l&rsquo;on vient de faire :</p>
 <p>On a créé un fichier <code>home.html</code> qui correspond à notre page d&rsquo;accueil et on l&rsquo;ajoute dans le dossier <code>layouts &gt; _default</code> afin que Hugo le trouve. Dans ce fichier, on défini un bloc que l&rsquo;on nomme <code>main</code>, dans lequel on ajoute le contenu de la page, <code>Content</code>. Ce contenu est récupéré automatiquement par Hugo dans le fichier <code>_index.md</code>, si celui-ci existe dans le dossier content.</p>
 <p>On a ensuite défini dans notre dossier <code>_defaut</code> le template de page pour toutes nos pages, qui se nomme <code>baseof.html</code>. C&rsquo;est cette page qui est toujours utilisé par Hugo pour assembler nos pages (il est possible d&rsquo;en définir plusieurs en cas de besoin, voir <a href="https://gohugo.io/templates/lookup-order/">gohugo.io/templates/lookup-order</a>). Pour le moment, notre fichier <code>baseof.html</code> est très simple, mais on va venir l&rsquo;améliorer un peu plus tard. <code>home.html</code> se base sur ce template, et pour le moment ne fait rien de plus.</p>
 <p>Enfin, on a créé le fichier Markdown <code>_index.md</code>, c&rsquo;est à dire le fichier de contenu, pour notre page d&rsquo;accueil. On le place bien dans le dossier <code>content</code>, pour que Hugo puisse le retrouver et l&rsquo;injecter dans la page.</p>
@@ -210,27 +207,27 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="pousser-les-fichiers-locaux-sur-github">
-      <a href="#pousser-les-fichiers-locaux-sur-github">#</a>
-      Pousser les fichiers locaux sur Github
+      <a href="#pousser-les-fichiers-locaux-sur-github"># Pousser les fichiers locaux sur Github</a>
     </h2>
   
 <p>Si on se rend dans GitHub Desktop, on remarque que plusieurs fichiers sont ajoutés dans la liste des modifications. Pour les envoyer sur votre RepoGitHub™, il faut donner un nom à votre commit. Quelques choses dans la veine de &ldquo;Premier push&rdquo; fera l&rsquo;affaire. Vous pouvez ajouter une description si l&rsquo;envie vous prend. Essayez d&rsquo;être clair et précis dans vos noms de push, car vous pourrez les retrouver dans Github et revenir en arrière quand des bugs vont inévitablement apparaitres.</p>
-<p><img src="/blog/tutoriel-hugo/premier%20push%20github.png" alt="Le premier push sur notre répertoire GitHub" title="Le premier push sur notre répertoire GitHub"></p>
-<p>Cliquez ensuite sur &ldquo;Commit to main&rdquo; en bas de la fenêtre. Il ne reste plus qu&rsquo;a publier le commit sur le projet, pour cela, cliquez sur &ldquo;Publish branch&rdquo;.</p>
-<p><img src="/blog/tutoriel-hugo/publier%20la%20branch%20en%20ligne.png" alt="Publier le commit en ligne" title="Publier le commit en ligne"></p>
-<p>Une fois cela fait et le chargement effectué, vous pouvez voir votre travail dans votre espace GitHub en ligne.</p>
-<p><img src="/blog/tutoriel-hugo/premier%20push%20sur%20le%20dahsboard%20github.png" alt="Notre projet sur le dashboard GitHub" title="Notre projet sur le dashboard GitHub"></p>
-<p>Améliorons maintenant un peu le site.</p>
+<figure>
+    <img src="premier-push-github.png" alt="Le premier push sur notre répertoire GitHub"><figcaption>Le premier push sur notre répertoire GitHub</figcaption></figure><p>Cliquez ensuite sur &ldquo;Commit to main&rdquo; en bas de la fenêtre. Il ne reste plus qu&rsquo;a publier le commit sur le projet, pour cela, cliquez sur &ldquo;Publish branch&rdquo;.</p>
+<figure>
+    <img src="publier-la-branch-en-ligne.png" alt="Publier le commit en ligne"><figcaption>Publier le commit en ligne</figcaption></figure><p>Une fois cela fait et le chargement effectué, vous pouvez voir votre travail dans votre espace GitHub en ligne.</p>
+<figure>
+    <img src="premier-push-sur-le-dahsboard-github.png" alt="Notre projet sur le dashboard GitHub"><figcaption>Notre projet sur le dashboard GitHub</figcaption></figure><p>Améliorons maintenant un peu le site.</p>
 <hr>
 
   
     <h2 id="mettre-en-place-des-sections-avec-les-partials">
-      <a href="#mettre-en-place-des-sections-avec-les-partials">#</a>
-      Mettre en place des sections avec les Partials
+      <a href="#mettre-en-place-des-sections-avec-les-partials"># Mettre en place des sections avec les Partials</a>
     </h2>
   
 <p>Comme je l&rsquo;ai noté plus haut, Hugo nous permet de mettre en place des sections, qui vont nous permettre de réutiliser des portions de code à plusieurs endroits de notre site. Dans notre template par défaut <code>baseof.html</code>, ajoutons le code suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.Language }}&#34;</span>&gt;
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.Language }}&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>  {{ partial &#34;head.html&#34; . }}
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
@@ -242,53 +239,62 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </span></span><span style="display:flex;"><span>    {{ partial &#34;footer.html&#34; . }}
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">footer</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p>On a ajouté dans notre page deux partials, <code>head.html</code> et <code>footer.html</code>. La syntaxe est toujours :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partials &#34;chemin/du/partial.html&#34; . }}
-</span></span></code></pre></div><blockquote>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;</span></span></code>
+</pre><p>On a ajouté dans notre page deux partials, <code>head.html</code> et <code>footer.html</code>. La syntaxe est toujours :</p>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>{{ partials &#34;chemin/du/partial.html&#34; . }}</span></span></code>
+</pre><blockquote>
 <p>Concernant le <code>.</code> que l&rsquo;on ajoute après le chemin (et que l&rsquo;on remarque aussi dans l&rsquo;appel du block <code>main</code>), il représente le contexte. Je ne rentre pas dans le détail ici, mais il est indispensable au bon fonctionnement du partial. Plus d&rsquo;info sur la <a href="https://gohugo.io/templates/introduction/#context">documentation du contexte</a> dans Hugo et des <a href="https://gohugo.io/templates/partial/">partials</a>.</p>
 </blockquote>
 <p>Il faut maintenant créer les fichiers pour que Hugo puisse les charger. Pour cela, ajoutez un dossier <code>partials</code> dans le dossier <code>layouts</code>. Vous pouvez ajouter vos deux partials ici afin d&rsquo;obtenir la structure suivante :</p>
-<p><img src="/blog/tutoriel-hugo/dossier%20partials.png" alt="Le dossier des partials" title="Le dossier des partials"></p>
-<p>Dans nos partials, on construit notre élément avec uniquement ce qui est nécessaire à son fonctionnement. par exemple, créons un <code>footer</code> très simple :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;Le footer de mon site - 2025&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span></code></pre></div><p>Pour notre <code>head</code>, ajoutons un tout petit peu plus de contenu :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+<figure>
+    <img src="dossier-partials.png" alt="Le dossier des partials"><figcaption>Le dossier des partials</figcaption></figure><p>Dans nos partials, on construit notre élément avec uniquement ce qui est nécessaire à son fonctionnement. par exemple, créons un <code>footer</code> très simple :</p>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;Le footer de mon site - 2025&lt;/<span style="color:#f92672">p</span>&gt;</span></span></code>
+</pre><p>Pour notre <code>head</code>, ajoutons un tout petit peu plus de contenu :</p>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">title</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">title</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/style.css&#34;</span>&gt;
-</span></span></code></pre></div><p>Dans la balise <code>title</code>, on fait référence au titre de la page active, en faisant appel au contexte (avec le symbole <code>.</code>) de la page. La valeur de ce titre est récupéré dans le fichier Markdown correspondant. Il changera donc en fonction de la page dans lequel on se trouve.</p>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/style.css&#34;</span>&gt;</span></span></code>
+</pre><p>Dans la balise <code>title</code>, on fait référence au titre de la page active, en faisant appel au contexte (avec le symbole <code>.</code>) de la page. La valeur de ce titre est récupéré dans le fichier Markdown correspondant. Il changera donc en fonction de la page dans lequel on se trouve.</p>
 <p>On a également ajouté un lien vers un fichier CSS. Celui-ci doit être ajouté dans le dossier <code>static</code> de notre projet (dans cette exemple, on a donc <code>static &gt; css &gt; style.css</code>).</p>
 <blockquote>
 <p>Le contenu de ce dossier est chargé tel quel lors de la construction du site, mais le dossier lui n&rsquo;est pas ajouté ! Il ne faut donc pas l&rsquo;ajouter dans le chemin (j&rsquo;ai perdu quelques cheveux à comprendre ça).</p>
 </blockquote>
 <p>Avec un peu de CSS basique et les deux partials, le site commence (presque) à ressembler à quelque chose.</p>
-<p><img src="/blog/tutoriel-hugo/le%20site%20avec%20les%20partials%20et%20le%20css%20v2.png" alt="Le site avec les partials et le CSS" title="Le site avec les partials et le CSS"></p>
-<p>Vous pouvez faire un nouveau commit pour sauvegarder votre travail. Pensez à le faire de temps à temps, une fois que vous avez ajouter des fichiers ou modifiés du contenu de manière significative.</p>
+<figure>
+    <img src="le-site-avec-les-partials-et-le-css-v2.png" alt="Le site avec les partials et le CSS"><figcaption>Le site avec les partials et le CSS</figcaption></figure><p>Vous pouvez faire un nouveau commit pour sauvegarder votre travail. Pensez à le faire de temps à temps, une fois que vous avez ajouter des fichiers ou modifiés du contenu de manière significative.</p>
 <hr>
 
   
     <h2 id="ajouter-des-pages">
-      <a href="#ajouter-des-pages">#</a>
-      Ajouter des pages
+      <a href="#ajouter-des-pages"># Ajouter des pages</a>
     </h2>
   
 <p>Pour ajouter des pages dans notre site, il faut que l&rsquo;on créer un dossier dans <code>content</code> avec le nom que l&rsquo;on souhaite donner à la page. Si l&rsquo;on veut créer une page Contact, on créer un dossier <code>contact</code>. Dans ce nouveau dossier, il faut également créer un fichier <code>index.md</code> (sans underscore). Notre structure ressemble à ceci :</p>
-<p><img src="/blog/tutoriel-hugo/page%20contact%20structure.png" alt="Ajout des dossiers pages" title="Ajout des dossiers pages"></p>
-<blockquote>
+<figure>
+    <img src="page-contact-structure.png" alt="Ajout des dossiers pages"><figcaption>Ajout des dossiers pages</figcaption></figure><blockquote>
 <p>Pour comprendre pourquoi on met parfois un <code>_</code> devant les fichiers index, consultez la documentation de Hugo à propros de l&rsquo;organisation des pages : <a href="https://gohugo.io/content-management/page-bundles/">https://gohugo.io/content-management/page-bundles/</a></p>
 </blockquote>
 <p>De cette manière, notre page va avoir un contenu différent de notre page d&rsquo;accueil, mais toujours se construire à partir de notre fichier <code>baseof.html</code>. On peut également lui ajouter des éléments statiques différents et unique à cette page. Dans <code>contact.html</code>, ajoutez le code suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
 </span></span><span style="display:flex;"><span>    {{ .Content }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Votre message&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Envoyer&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">form</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/&#39;</span>&gt;Retour à l&#39;accueil&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><p>À la suite de notre injection de contenu, on créer un petit formulaire de contact et un lien vers la page d&rsquo;accueil. On remarque que le lien est fait en référencent la racine du site avec <code>/</code>.</p>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code>
+</pre><p>À la suite de notre injection de contenu, on créer un petit formulaire de contact et un lien vers la page d&rsquo;accueil. On remarque que le lien est fait en référencent la racine du site avec <code>/</code>.</p>
 <p>Il faut enfin ajouter du contenu à notre page, en passant par le fichier Markdown correspondant dans le dossiers <code>content &gt; contact</code>, c&rsquo;est à dire avec le même nom que notre nouvelle page. Voilà un exemple de contenu :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+
+<pre tabindex="0" class="chroma" data-lang="markdown">
+    <code class="language-markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Page d&#39;accueil&#34;
 </span></span><span style="display:flex;"><span>layout: &#34;contact&#34;
 </span></span><span style="display:flex;"><span>url: &#34;/contact/&#34;
@@ -296,8 +302,8 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Discutons ensemble :smile:
-</span></span><span style="display:flex;"><span>Je suis à votre écoute pour réaliser votre projet !
-</span></span></code></pre></div><p>C&rsquo;est le bon moment pour introduire le fonctionnement des fichiers Markdown. Vous l&rsquo;avez sans doute remarqué plus haut, on a ajouté du contenu entre des blocs <code>---</code> en haut de nos fichiers <code>.md</code>. C&rsquo;est le contenu <a href="https://frontmatter.codes/docs">Frontmatter</a> de notre page. Il nous permet de définir toute une collection d&rsquo;information relative à la page, que l&rsquo;on pourra ensuite piloter via notre CMS plus tard, et que l&rsquo;on peut récupérer dans les fichiers de templates. On reviendra un peu plus en détail sur cette partie plus tard, quand on abordera la création des projets. Ce que l&rsquo;on peut retenir pour le moment, ce sont les lignes <code>layout: &quot;contact&quot;</code> et <code>url: &quot;/contact/&quot;</code>. La première spécifie à Hugo de construire la page à partir du fichier <code>.html</code> correspondant dans le dossier <code>layout</code>. La deuxième définit l&rsquo;url de notre page.</p>
+</span></span><span style="display:flex;"><span>Je suis à votre écoute pour réaliser votre projet !</span></span></code>
+</pre><p>C&rsquo;est le bon moment pour introduire le fonctionnement des fichiers Markdown. Vous l&rsquo;avez sans doute remarqué plus haut, on a ajouté du contenu entre des blocs <code>---</code> en haut de nos fichiers <code>.md</code>. C&rsquo;est le contenu <a href="https://frontmatter.codes/docs">Frontmatter</a> de notre page. Il nous permet de définir toute une collection d&rsquo;information relative à la page, que l&rsquo;on pourra ensuite piloter via notre CMS plus tard, et que l&rsquo;on peut récupérer dans les fichiers de templates. On reviendra un peu plus en détail sur cette partie plus tard, quand on abordera la création des projets. Ce que l&rsquo;on peut retenir pour le moment, ce sont les lignes <code>layout: &quot;contact&quot;</code> et <code>url: &quot;/contact/&quot;</code>. La première spécifie à Hugo de construire la page à partir du fichier <code>.html</code> correspondant dans le dossier <code>layout</code>. La deuxième définit l&rsquo;url de notre page.</p>
 <blockquote>
 <p>Les émojis ne sont pas activés par défaut dans un site Hugo, il faut le définir dans le fichier de configuration <code>hugo.toml</code> ou <code>config.toml</code>. Plus d&rsquo;infos ici : <a href="https://gohugo.io/quick-reference/emojis/">gohugo.io/quick-reference/emojis/</a></p>
 </blockquote>
@@ -308,16 +314,18 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </ul>
 <p>Ce choix va dépendre de notre usage et de notre situation, on va pour l&rsquo;exemple passer par le contenu afin de voir comment ajouter un lien et une classe en Markdown.</p>
 <p>Dans <code>_index.md</code> donc :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+
+<pre tabindex="0" class="chroma" data-lang="markdown">
+    <code class="language-markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Page d&#39;accueil&#34;
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Bonjour internet
 </span></span><span style="display:flex;"><span>Voilà le contenu de la page d&#39;accueil, qui vient de <span style="color:#e6db74">`content/_index.md`</span> !
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[<span style="color:#f92672">Contactez moi</span>](<span style="color:#a6e22e">/contact/ &#34;Contactez moi&#34;</span>)
-</span></span><span style="display:flex;"><span>{.btn}
-</span></span></code></pre></div><p>Ajouter un lien en Markdown est relativement simple comme vous pouvez le voir. La structure est toujours : <br>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">Contactez moi</span>](<span style="color:#a6e22e">contact/ &#34;Contactez moi&#34;</span>)
+</span></span><span style="display:flex;"><span>{.btn}</span></span></code>
+</pre><p>Ajouter un lien en Markdown est relativement simple comme vous pouvez le voir. La structure est toujours : <br>
 <code>[infobulle](/url/ &quot;text du lien&quot;)</code></p>
 <p>Dans cet exemple, j&rsquo;ai indiqué le lien moi même, mais il est possible de laisser Hugo générer lui même le lien en <a href="https://gohugo.io/methods/shortcode/">utilisant un shortcode</a>.</p>
 <p>Pour ajouter une classe ou un ID à un élément, il faut le définir entre accolades sous cet élément (à l&rsquo;exception des titre Hn et des blocs de code, <a href="https://gohugo.io/content-management/markdown-attributes/#usage">plus de détail dans la documentation à ce sujet</a>). Cependant, il n&rsquo;est pas possible d&rsquo;ajouter directement une classe sur un lien. Dans notre cas, l&rsquo;ajout du code <code>{.btn}</code> créer une balise <code>&lt;p&gt;</code> englobant notre lien. Il faut donc le prendre en compte dans notre CSS.</p>
@@ -327,27 +335,30 @@ Les Partials sont des sections utilisables dans les fichiers de templates.
 Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</strong></p>
 <blockquote>
 <p>L&rsquo;ajout de classe dans les fichiers .md n&rsquo;est pas activé par défaut dans Hugo, il faut ajouter dans le fichier <code>hugo.toml</code> ou <code>config.toml</code> le contenu suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+
+<pre tabindex="0" class="chroma" data-lang="toml">
+    <code class="language-toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
 </span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">parser</span>]
 </span></span><span style="display:flex;"><span>      [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">parser</span>.<span style="color:#a6e22e">attribute</span>]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">block</span> = <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">title</span> = <span style="color:#66d9ef">true</span>
-</span></span></code></pre></div><p>Plus d&rsquo;info dans la documentation ici : <a href="https://gohugo.io/content-management/markdown-attributes/#block-elements">gohugo.io/content-management/markdown-attributes/#block-elements</a></p>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">title</span> = <span style="color:#66d9ef">true</span></span></span></code>
+</pre><p>Plus d&rsquo;info dans la documentation ici : <a href="https://gohugo.io/content-management/markdown-attributes/#block-elements">gohugo.io/content-management/markdown-attributes/#block-elements</a></p>
 </blockquote>
 <p>Il ne reste plus qu&rsquo;a ajouter un peu de CSS, de relancer votre serveur et de naviguer jusqu&rsquo;à votre superbe page de contact !</p>
-<p><img src="/page-contact.png" alt="Notre page de contact fonctionne" title="Notre page de contact fonctionne"></p>
-<p>N&rsquo;oubliez pas de commit votre travail sur GitHub, et on continue.</p>
+<figure>
+    <img src="page-contact.png" alt="Notre page de contact fonctionne"><figcaption>Notre page de contact fonctionne</figcaption></figure><p>N&rsquo;oubliez pas de commit votre travail sur GitHub, et on continue.</p>
 <hr>
 
   
     <h2 id="créer-un-menu-de-navigation">
-      <a href="#cr%25C3%25A9er-un-menu-de-navigation">#</a>
-      Créer un menu de navigation
+      <a href="#cr%25C3%25A9er-un-menu-de-navigation"># Créer un menu de navigation</a>
     </h2>
   
 <p>Maintenant que le site possède une structure (certes basique), on va pouvoir générer un menu de navigation. Pour cela, rendez-vous dans votre fichier de configuration <code>hugo.toml</code>(ou <code>config.toml</code>). En effet, c&rsquo;est dans ce fichier que l&rsquo;on définit tout les paramètres communs à l&rsquo;ensemble du site. La syntaxe est très simple et se présente comme suit :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">menus</span>]
+
+<pre tabindex="0" class="chroma" data-lang="toml">
+    <code class="language-toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">menus</span>]
 </span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">header</span>]]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Accueil&#39;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#39;/&#39;</span>
@@ -355,8 +366,8 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">header</span>]]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Contact&#39;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#39;/contact&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span>
-</span></span></code></pre></div><p>Ici, on définit deux éléments de menu, ajoutés dans le menu <code>header</code>. c&rsquo;est un nom arbitraire, libre à vous de le nommer différemment (Les majuscules et caractères spéciaux ne fonctionnent pas !). Pour chaque onglet, on définit :</p>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span></span></span></code>
+</pre><p>Ici, on définit deux éléments de menu, ajoutés dans le menu <code>header</code>. c&rsquo;est un nom arbitraire, libre à vous de le nommer différemment (Les majuscules et caractères spéciaux ne fonctionnent pas !). Pour chaque onglet, on définit :</p>
 <ol>
 <li><strong>Name</strong> : qui correspond au texte qui s&rsquo;affiche sur le site,</li>
 <li><strong>url</strong> : qui correspond au lien de la page dans le site,</li>
@@ -365,7 +376,9 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <p>Il existe d&rsquo;autres <a href="https://gohugo.io/content-management/menus/">options de menu que vous pouvez consulter dans la documentation</a>.</p>
 <p>Une fois votre menu créé, il faut ajouter un partial pour l&rsquo;appeler. Pour cela, rendez-vous dans <code>layouts &gt; partials</code> et créez le fichier <code>nav.html</code>.</p>
 <p>Celui-ci va contenir le code suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">nav</span>&gt;
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">nav</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;
 </span></span><span style="display:flex;"><span>        {{ range .Site.Menus.header }}
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;
@@ -373,10 +386,12 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">li</span>&gt;
 </span></span><span style="display:flex;"><span>        {{ end }}
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">nav</span>&gt;
-</span></span></code></pre></div><p>La structure de la navigation est écrite en HTML, et on utilise une autre fonction de Hugo, <a href="https://gohugo.io/functions/go-template/range/">range</a>, pour itérer sur les pages du menu. L&rsquo;<a href="https://gohugo.io/methods/site/">objet Site comporte tout un tas de méthode</a>, dont <code>Menus</code>, qui permet de récupérer un menu dans le fichier de configuration du site.</p>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">nav</span>&gt;</span></span></code>
+</pre><p>La structure de la navigation est écrite en HTML, et on utilise une autre fonction de Hugo, <a href="https://gohugo.io/functions/go-template/range/">range</a>, pour itérer sur les pages du menu. L&rsquo;<a href="https://gohugo.io/methods/site/">objet Site comporte tout un tas de méthode</a>, dont <code>Menus</code>, qui permet de récupérer un menu dans le fichier de configuration du site.</p>
 <p>Il ne nous reste plus qu&rsquo;a appeler le partial dans le fichier <code>baseof.html</code> pour que le menu apparaisse. On ajoute une balise <code>header</code> ici, mais on aurait aussi pu créer un partial avec la balise <code>header</code> déjà incluse, en fonction de notre préférence.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.Language }}&#34;</span>&gt;
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.Language }}&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>  {{ partial &#34;head.html&#34; . }}
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
@@ -391,62 +406,73 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>    {{ partial &#34;footer.html&#34; . }}
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">footer</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p>Et voilà, votre menu apparait dans toutes les pages !</p>
-<p><img src="/blog/tutoriel-hugo/menu%20ok.png" alt="Notre menu de navigation foncitonne" title="Notre menu de navigation fonctionne"></p>
-<p>Il est possible d&rsquo;aller plus loin évidemment, je vous met <a href="https://harrycresswell.com/writing/menus-in-hugo/">un lien vers ce post qui rentre beaucoup plus en détail</a>, notamment avec la mise en place de menu à plusieurs niveaux et de l&rsquo;ajout de classe sur l&rsquo;élément actif.</p>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;</span></span></code>
+</pre><p>Et voilà, votre menu apparait dans toutes les pages !</p>
+<figure>
+    <img src="menu-ok.png" alt="Notre menu de navigation foncitonne"><figcaption>Notre menu de navigation fonctionne</figcaption></figure><p>Il est possible d&rsquo;aller plus loin évidemment, je vous met <a href="https://harrycresswell.com/writing/menus-in-hugo/">un lien vers ce post qui rentre beaucoup plus en détail</a>, notamment avec la mise en place de menu à plusieurs niveaux et de l&rsquo;ajout de classe sur l&rsquo;élément actif.</p>
 <p>Mais pour le moment, passons à la dernière étape de la création de notre site !</p>
 <hr>
 
   
     <h2 id="créer-une-liste-de-projet">
-      <a href="#cr%25C3%25A9er-une-liste-de-projet">#</a>
-      Créer une liste de projet
+      <a href="#cr%25C3%25A9er-une-liste-de-projet"># Créer une liste de projet</a>
     </h2>
   
 <p>Pour commencer, il faut créer les projets. Pour cela, allez dans le dossier <code>content</code>, et ajoutez un dossier avec le nom de notre choix, pour le tutoriel, j&rsquo;ai choisi <code>projets</code>. Ce nom sera celui utilisé par Hugo pour déterminer le <code>type</code> de ces projets. On ajoute dans ce dossier un fichier <code>_index.md</code> afin de pouvoir passer des informations générales. Pour le moment, il peut simplement comprendre le titre de la page :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+
+<pre tabindex="0" class="chroma" data-lang="markdown">
+    <code class="language-markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Mes projets&#34;
-</span></span><span style="display:flex;"><span>--- 
-</span></span></code></pre></div><p>Ajoutez ensuite au moins deux projets, sous le forme de dossier avec le nom que l&rsquo;on souhaite donner au projet (pas d&rsquo;espaces ni de caractères spéciaux). Dans chacun de ces dossiers, on ajoute un fichier markdown <code>index.md</code> avec le contenu. Voilà un exemple simple de projet :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>--- </span></span></code>
+</pre><p>Ajoutez ensuite au moins deux projets, sous le forme de dossier avec le nom que l&rsquo;on souhaite donner au projet (pas d&rsquo;espaces ni de caractères spéciaux). Dans chacun de ces dossiers, on ajoute un fichier markdown <code>index.md</code> avec le contenu. Voilà un exemple simple de projet :</p>
+
+<pre tabindex="0" class="chroma" data-lang="markdown">
+    <code class="language-markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: Mon premier projet
 </span></span><span style="display:flex;"><span>date: 
 </span></span><span style="display:flex;"><span>description: Une description courte de mon projet.
 </span></span><span style="display:flex;"><span>type: projets
 </span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis risus ut magna fermentum, sed porttitor justo scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus vel varius libero. Suspendisse sed eros nunc. Mauris suscipit risus luctus nisi gravida, ac consequat ipsum efficitur. Nam feugiat lectus mauris, at pretium risus interdum nec. Nullam a ultricies diam. Duis tempor volutpat purus, quis condimentum mi elementum sit amet. Aenean et felis quis tellus tempus pellentesque nec et lacus. Etiam lobortis, quam in luctus congue, neque eros malesuada turpis, a egestas felis magna vitae lectus. In arcu orci, malesuada quis condimentum eu, posuere vel mi. Nullam dictum aliquam augue, nec dignissim diam porttitor quis. Fusce interdum sem dignissim augue tincidunt volutpat. Suspendisse potenti. Donec tempor accumsan augue vestibulum finibus.
-</span></span></code></pre></div><p>On remarque que l&rsquo;on a définit dans le <code>FrontMatter</code> le type de la page comme un <code>&quot;projets&quot;</code>, ce qui reprend le nom du dossier parent. Le champ date est laissé vide, on le complétera via le CMS quand celui-ci sera installé.</p>
+</span></span><span style="display:flex;"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis risus ut magna fermentum, sed porttitor justo scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus vel varius libero. Suspendisse sed eros nunc. Mauris suscipit risus luctus nisi gravida, ac consequat ipsum efficitur. Nam feugiat lectus mauris, at pretium risus interdum nec. Nullam a ultricies diam. Duis tempor volutpat purus, quis condimentum mi elementum sit amet. Aenean et felis quis tellus tempus pellentesque nec et lacus. Etiam lobortis, quam in luctus congue, neque eros malesuada turpis, a egestas felis magna vitae lectus. In arcu orci, malesuada quis condimentum eu, posuere vel mi. Nullam dictum aliquam augue, nec dignissim diam porttitor quis. Fusce interdum sem dignissim augue tincidunt volutpat. Suspendisse potenti. Donec tempor accumsan augue vestibulum finibus.</span></span></code>
+</pre><p>On remarque que l&rsquo;on a définit dans le <code>FrontMatter</code> le type de la page comme un <code>&quot;projets&quot;</code>, ce qui reprend le nom du dossier parent. Le champ date est laissé vide, on le complétera via le CMS quand celui-ci sera installé.</p>
 <p>La structure doit ressembler à ça :</p>
-<p><img src="/blog/tutoriel-hugo/struct-projets-maj.png" alt="La structure de nos projets dans VScode" title="La structure de nos projets dans VScode"></p>
-<p>Pour mettre en place les projets, il faut ensuite créer deux nouveaux fichiers de template dans <code>layouts &gt; _default</code>, <code>section.html</code> et <code>single.html</code>. Commençons par <code>section.html</code>, c&rsquo;est lui qui va récupérer tout les projets et les présenter dans une liste complète.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+<figure>
+    <img src="struct-projets-maj.png" alt="La structure de nos projets dans VScode"><figcaption>La structure de nos projets dans VScode</figcaption></figure><p>Pour mettre en place les projets, il faut ensuite créer deux nouveaux fichiers de template dans <code>layouts &gt; _default</code>, <code>section.html</code> et <code>single.html</code>. Commençons par <code>section.html</code>, c&rsquo;est lui qui va récupérer tout les projets et les présenter dans une liste complète.</p>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
 </span></span><span style="display:flex;"><span>    {{ .Content }}
 </span></span><span style="display:flex;"><span>    {{ range where .Site.RegularPages &#34;Type&#34; &#34;projets&#34; }}
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
 </span></span><span style="display:flex;"><span>    {{ end }}
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><p>On réutilise la fonction <code>range</code> que l&rsquo;on a vu plus haut, et on récupére les pages stockées dans la variable globale <code>Site</code>, tant que celles-ci sont de types <code>&quot;projets&quot;</code>. On laisse ici le tri des pages par défaut, mais il existe <a href="https://gohugo.io/methods/pages/">plusieurs autres méthodes</a>.</p>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code>
+</pre><p>On réutilise la fonction <code>range</code> que l&rsquo;on a vu plus haut, et on récupére les pages stockées dans la variable globale <code>Site</code>, tant que celles-ci sont de types <code>&quot;projets&quot;</code>. On laisse ici le tri des pages par défaut, mais il existe <a href="https://gohugo.io/methods/pages/">plusieurs autres méthodes</a>.</p>
 <p>Pour voir le résultat, ajoutez un onglet dans le menu (via le fichier <code>Hugo.toml</code>) de la manière suivante :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">header</span>]]
+
+<pre tabindex="0" class="chroma" data-lang="toml">
+    <code class="language-toml"><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">header</span>]]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Mes projets&#39;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#39;/projets&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">30</span>
-</span></span></code></pre></div><p>Un nouvel onglet est créé, et la page <code>Mes projets</code> récupère bien tous les projets que l&rsquo;on a ajouté sur le site, et nous propose un lien vers ces pages.</p>
-<p><img src="/blog/tutoriel-hugo/cest%20notre%20projet.png" alt="Les projets affichés dans la page section" title="Les projets affichés dans la page section"></p>
-<p>Pour le moment, le site n&rsquo;a pas de template pour afficher les projets unique, il faut donc le créer. C&rsquo;est <code>single.html</code> qui s&rsquo;en charge. Voilà un exemple très sommaire :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">30</span></span></span></code>
+</pre><p>Un nouvel onglet est créé, et la page <code>Mes projets</code> récupère bien tous les projets que l&rsquo;on a ajouté sur le site, et nous propose un lien vers ces pages.</p>
+<figure>
+    <img src="cest-notre-projet.png" alt="Les projets affichés dans la page section"><figcaption>Les projets affichés dans la page section</figcaption></figure><p>Pour le moment, le site n&rsquo;a pas de template pour afficher les projets unique, il faut donc le créer. C&rsquo;est <code>single.html</code> qui s&rsquo;en charge. Voilà un exemple très sommaire :</p>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
 </span></span><span style="display:flex;"><span>  {{ .Content }}
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt; 
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><p>Maintenant, si on clique sur un des projets, le contenu est correctement affiché :</p>
-<p><img src="/blog/tutoriel-hugo/contenu%20projet.png" alt="Le contenu d&rsquo;un projet" title="Le contenu d&#39;un projet"></p>
-<p>Pour l&rsquo;exercice, essayez de créer un partial pour afficher le dernier projet sur votre page d&rsquo;accueil. Je vous met la solution à la suite, mais prenez le temps d&rsquo;essayer vous même, pour vous faire la main avec le fonctionnement de Hugo.</p>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code>
+</pre><p>Maintenant, si on clique sur un des projets, le contenu est correctement affiché :</p>
+<figure>
+    <img src="contenu-projet.png" alt="Le contenu dun projet"><figcaption>Le contenu d&#39;un projet</figcaption></figure><p>Pour l&rsquo;exercice, essayez de créer un partial pour afficher le dernier projet sur votre page d&rsquo;accueil. Je vous met la solution à la suite, mais prenez le temps d&rsquo;essayer vous même, pour vous faire la main avec le fonctionnement de Hugo.</p>
 <p>Ma solution :</p>
 <p>Dans <code>layouts &gt; partials</code>, créez un fichier <code>html</code> avec le contenu suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">section</span>&gt;
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">section</span>&gt;
 </span></span><span style="display:flex;"><span>    {{ range where .Site.RegularPages &#34;Type&#34; &#34;projets&#34; | first 1 }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">article</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h2</span>&gt;
@@ -454,37 +480,40 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;lire la suite&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">article</span>&gt;
 </span></span><span style="display:flex;"><span>    {{ end }}
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">section</span>&gt;
-</span></span></code></pre></div><p>Très similaire au template <code>section.html</code>, sauf que l&rsquo;on récupère seulement le premier projet de la liste avec la fonction <code>first</code>, le chiffre à la suite détermine le nombre à afficher. Si on avait noté 3, alors la fonction aurait affiché les 3 premières pages trouvées.</p>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">section</span>&gt;</span></span></code>
+</pre><p>Très similaire au template <code>section.html</code>, sauf que l&rsquo;on récupère seulement le premier projet de la liste avec la fonction <code>first</code>, le chiffre à la suite détermine le nombre à afficher. Si on avait noté 3, alors la fonction aurait affiché les 3 premières pages trouvées.</p>
 <p>Pour que la description du projet que l&rsquo;on appel ne soit pas vide, il faut lui ajouter dans le <code>FrontMatter</code> de la manière suivante :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+
+<pre tabindex="0" class="chroma" data-lang="markdown">
+    <code class="language-markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Mon premier projet&#34;
 </span></span><span style="display:flex;"><span>type: &#34;projets&#34;
 </span></span><span style="display:flex;"><span>description : &#34;Une description courte de mon projet.&#34;
-</span></span><span style="display:flex;"><span>--- 
-</span></span></code></pre></div><p>Il ne reste plus qu&rsquo;a ajouter le partial dans la page d&rsquo;accueil, en passant par <code>home.html</code> :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>--- </span></span></code>
+</pre><p>Il ne reste plus qu&rsquo;a ajouter le partial dans la page d&rsquo;accueil, en passant par <code>home.html</code> :</p>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
 </span></span><span style="display:flex;"><span>    {{ .Content }}
 </span></span><span style="display:flex;"><span>    {{ partial &#34;previewProjet.html&#34; . }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/contact&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span>&gt;Contactez-moi&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><p>(J&rsquo;ai ajouté le lien vers la page d&rsquo;accueil ici et je l&rsquo;ai supprimé du fichier <code>_index.html</code> contenant le contenu de la page).</p>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code>
+</pre><p>(J&rsquo;ai ajouté le lien vers la page d&rsquo;accueil ici et je l&rsquo;ai supprimé du fichier <code>_index.html</code> contenant le contenu de la page).</p>
 <p>Et voilà, le dernier projet s&rsquo;affiche bien :</p>
-<p><img src="/blog/tutoriel-hugo/dernier%20projet%20page%20accueil.png" alt="Notre partial fonctionne " title="Notre partial fonctionne"></p>
-<p>Avec tout ce qu&rsquo;on a vu, vous avez une base solide pour créer un premier site et prendre en main Hugo. Maintenant, passons à la mise en ligne.</p>
+<figure>
+    <img src="dernier-projet-page-accueil.png" alt="Notre partial fonctionne "><figcaption>Notre partial fonctionne</figcaption></figure><p>Avec tout ce qu&rsquo;on a vu, vous avez une base solide pour créer un premier site et prendre en main Hugo. Maintenant, passons à la mise en ligne.</p>
 <hr>
 
   
     <h2 id="mettre-notre-site-en-ligne-avec-netlify">
-      <a href="#mettre-notre-site-en-ligne-avec-netlify">#</a>
-      Mettre notre site en ligne avec Netlify
+      <a href="#mettre-notre-site-en-ligne-avec-netlify"># Mettre notre site en ligne avec Netlify</a>
     </h2>
   
 <p>Avant de continuer, assurez vous d&rsquo;avoir poussé vos dernières modifications sur Github. Une fois cela fait, créez vous un compte sur <a href="https://app.netlify.com/">Netlify</a>. Ensuite, rendez-vous dans la page <code>Sites</code> de votre espace personnel, puis cliquez sur <code>Add new site</code>.</p>
-<p><img src="/blog/tutoriel-hugo/ajouter%20site%20netlify.png" alt="Ajouter un site à Netlify" title="Ajouter un site à Netlify"></p>
-<p>Choisissez l&rsquo;option <code>import an existing project</code>, puis choisissez GitHub. Connectez vous alors avec votre compte personnel GitHub, et une fois que c&rsquo;est fait, choisissez le répertoire utilisé pour stocker votre projet.</p>
-<p><img src="/blog/tutoriel-hugo/choix%20du%20repo.png" alt="Choix du répertoire à utiliser" title="Choix du répertoire à utiliser"></p>
-<blockquote>
+<figure>
+    <img src="ajouter-site-netlify.png" alt="Ajouter un site à Netlify"><figcaption>Ajouter un site à Netlify</figcaption></figure><p>Choisissez l&rsquo;option <code>import an existing project</code>, puis choisissez GitHub. Connectez vous alors avec votre compte personnel GitHub, et une fois que c&rsquo;est fait, choisissez le répertoire utilisé pour stocker votre projet.</p>
+<figure>
+    <img src="choix-du-repo.png" alt="Choix du répertoire à utiliser"><figcaption>Choix du répertoire à utiliser</figcaption></figure><blockquote>
 <p>Si votre répertoire ne s&rsquo;affiche pas, suivez <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">les étapes de ce tutoriel proposé par Hugo</a> à partir de l&rsquo;étape 4.</p>
 </blockquote>
 <p>Une fois le répertoire choisit, il faut compléter quelques paramètres.</p>
@@ -495,25 +524,26 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <li><strong>Publish directory</strong> : Si ce n&rsquo;est pas complété, ajoutez <code>public</code>,</li>
 <li>Enfin, cliquez sur le bouton <strong>Add environment variables</strong>, puis dans <strong>Key</strong> ajoutez <code>HUGO_VERSION</code>, et dans <strong>Value</strong> ajoutez le numéro de <a href="https://github.com/gohugoio/hugo/releases/latest">la dernière version de Hugo</a>, à la création de cette article, c&rsquo;est <code>0.140.2</code>.</li>
 </ol>
-<p><img src="/blog/tutoriel-hugo/parametre%20netlify.png" alt="Les paramètres dans Netlify " title="Les paramètres dans Netlify"></p>
-<p>Cliquez ensuite sur <code>Deploy</code> en bas de la page. Netlify va alors prendre un peu de temps pour mettre en ligne le site. Il se peut que votre installation de fonctionne pas, dans ce cas, assurez vous que vous avez bien lancé l&rsquo;installation depuis la racine de votre projet. Si votre racine n&rsquo;est pas au même niveau que le répertoire GitHub, alors il faut ajouter le chemin dans la configuration Netlify, au niveau de <strong>Base directory</strong>.</p>
-<p><img src="/blog/tutoriel-hugo/base%20directory.png" alt="Ajout du bon dossier comme racine" title="Ajout du bon dossier comme racine"></p>
-<p><img src="/blog/tutoriel-hugo/racine%20vscode.png" alt="La racine du projet dans VScode" title="La racine du projet dans VScode"></p>
-<p>Dans le screenshot précédent, on voit que dans VScode, j&rsquo;ai mon répertoire GitHub avec le nom <code>TEMPLATE_PORTFOLIO</code>, et la racine de mon projet dans un dossier appelé <code>Template_Portfolio</code> (c&rsquo;est une mauvaise idée, ne faite pas ça). Il faut donc que je définisse <code>Base directory = Template_Portfolio</code> dans la configuration de Netlify.</p>
+<figure>
+    <img src="parametre-netlify.png" alt="Les paramètres dans Netlify "><figcaption>Les paramètres dans Netlify</figcaption></figure><p>Cliquez ensuite sur <code>Deploy</code> en bas de la page. Netlify va alors prendre un peu de temps pour mettre en ligne le site. Il se peut que votre installation de fonctionne pas, dans ce cas, assurez vous que vous avez bien lancé l&rsquo;installation depuis la racine de votre projet. Si votre racine n&rsquo;est pas au même niveau que le répertoire GitHub, alors il faut ajouter le chemin dans la configuration Netlify, au niveau de <strong>Base directory</strong>.</p>
+<figure>
+    <img src="base-directory.png" alt="Ajout du bon dossier comme racine"><figcaption>Ajout du bon dossier comme racine</figcaption></figure><figure>
+    <img src="racine-vscode.png" alt="La racine du projet dans VScode"><figcaption>La racine du projet dans VScode</figcaption></figure><p>Dans le screenshot précédent, on voit que dans VScode, j&rsquo;ai mon répertoire GitHub avec le nom <code>TEMPLATE_PORTFOLIO</code>, et la racine de mon projet dans un dossier appelé <code>Template_Portfolio</code> (c&rsquo;est une mauvaise idée, ne faite pas ça). Il faut donc que je définisse <code>Base directory = Template_Portfolio</code> dans la configuration de Netlify.</p>
 <p>Le site une fois construit, vous aurez ce message :</p>
-<p><img src="/blog/tutoriel-hugo/le%20site%20est%20publie.png" alt="Le site est bien en ligne" title="Le site est bien en ligne"></p>
-<p>Il ne reste plus qu&rsquo;a consulter votre superbe site en ligne !</p>
+<figure>
+    <img src="le-site-est-publie.png" alt="Le site est bien en ligne"><figcaption>Le site est bien en ligne</figcaption></figure><p>Il ne reste plus qu&rsquo;a consulter votre superbe site en ligne !</p>
 <hr>
 
   
     <h2 id="installer-le-cms">
-      <a href="#installer-le-cms">#</a>
-      Installer le CMS
+      <a href="#installer-le-cms"># Installer le CMS</a>
     </h2>
   
 <p>On va commencer par ajouter dans notre projet la page d&rsquo;administration du CMS. Dans <code>static</code>, créez un dossier <code>admin</code> dans lequel il faut insérer les fichiers <code>index.html</code> et <code>config.yml</code>.</p>
 <p><code>index.html</code> :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+
+<pre tabindex="0" class="chroma" data-lang="html">
+    <code class="language-html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
@@ -524,9 +554,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Include the script that builds the page and powers Decap CMS and sveltia CMS--&gt;</span>
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p><code>config.yml</code> :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">backend</span><span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;</span></span></code>
+</pre><p><code>config.yml</code> :</p>
+
+<pre tabindex="0" class="chroma" data-lang="toml">
+    <code class="language-toml"><span style="display:flex;"><span><span style="color:#a6e22e">backend</span><span style="color:#960050;background-color:#1e0010">:</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">github</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">repo</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">COMPTE</span> <span style="color:#a6e22e">GITHUB</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">REPO</span> <span style="color:#75715e"># C&#39;est le nom de votre répertoire github</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">branch</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">main</span> <span style="color:#75715e"># Branch to update (optional; defaults to master)</span>
@@ -551,27 +583,27 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">-</span> { <span style="color:#a6e22e">label</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Date&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;date&#39;</span>, <span style="color:#a6e22e">widget</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;datetime&#39;</span>, <span style="color:#a6e22e">date_format</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;DD.MM.YYYY&#34;</span>, <span style="color:#a6e22e">time_format</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;HH:mm&#34;</span>}
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">-</span> { <span style="color:#a6e22e">label</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Description&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;description&#39;</span>, <span style="color:#a6e22e">widget</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;string&#39;</span> }
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">-</span> { <span style="color:#a6e22e">label</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Type&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;type&#34;</span>, <span style="color:#a6e22e">widget</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;string&#39;</span>}
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">-</span> { <span style="color:#a6e22e">label</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Contenu&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;body&#39;</span>, <span style="color:#a6e22e">widget</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;markdown&#39;</span> }
-</span></span></code></pre></div><p>le fichier <code>index.html</code> est simplement la page statique de notre pannel d&rsquo;administration. Il appelle un script qui charge toutes les fonctionnalitées proposés par Sveltia.</p>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">-</span> { <span style="color:#a6e22e">label</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Contenu&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;body&#39;</span>, <span style="color:#a6e22e">widget</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;markdown&#39;</span> }</span></span></code>
+</pre><p>le fichier <code>index.html</code> est simplement la page statique de notre pannel d&rsquo;administration. Il appelle un script qui charge toutes les fonctionnalitées proposés par Sveltia.</p>
 <p>Le fichier <code>config.yml</code> quant à lui, définit les paramètres de sécurités de notre backend ainsi que la structure des pages que l&rsquo;on souhaite pouvoir retrouver dans le CMS. C&rsquo;est ici que l&rsquo;on fait le lien entre le FrontMatter des fichiers <code>.md</code> et notre CMS.</p>
 <p>Une fois cela fait, poussez vos ajouts sur GitHub. Cependant, le CMS n&rsquo;est pas encore tous à fait accessible, il faut gérer les autorisations. En effet, pour éviter que d&rsquo;autres personnes puissent accéder à votre panel d&rsquo;administration, il est nécessaire de faire le lien entre Netlify, le CMS et GitHub. On va donc mettre en place une sécurité afin de pouvoir se connecter via notre compte GitHub.</p>
 <p>Pour cela, il faut se rendre dans les <a href="https://github.com/settings/profile">paramètres de votre compte GitHub</a>, puis tout en bas dans <code>Developer Settings</code>. Cliquez ensuite sur <code>OAuth Apps</code> :</p>
-<p><img src="/blog/tutoriel-hugo/acces%20oaut%20setting.png" alt="Accès aux options de OAuth de GitHub" title="Accès aux options de OAuth de GitHub"></p>
-<p>Dans cette page, cliquez sur <code>Register a new application</code>, et la fenêtre suivante va s&rsquo;ouvrir :</p>
-<p><img src="/blog/tutoriel-hugo/OAuth%20github.png" alt="Les options de OAuth de GitHub" title="Les options de OAuth de GitHub"></p>
-<p>Il faut compléter les informations comme suit :</p>
+<figure>
+    <img src="acces-oaut-setting.png" alt="Accès aux options de OAuth de GitHub"><figcaption>Accès aux options de OAuth de GitHub</figcaption></figure><p>Dans cette page, cliquez sur <code>Register a new application</code>, et la fenêtre suivante va s&rsquo;ouvrir :</p>
+<figure>
+    <img src="oauth-github.png" alt="Les options de OAuth de GitHub"><figcaption>Les options de OAuth de GitHub</figcaption></figure><p>Il faut compléter les informations comme suit :</p>
 <ol>
 <li><strong>Application name</strong> : Un nom de votre choix,</li>
 <li><strong>Homepage URL</strong> : C&rsquo;est l&rsquo;url de votre site en ligne, que vous pouvez retrouver dans l&rsquo;espace du site sur Netlify,</li>
 <li><strong>Authorization callback URL</strong> : Il faut lui donner la valeur <code>https://api.netlify.com/auth/done</code>.</li>
 </ol>
 <p>Une fois fait, cliquez sur <code>Register application</code>. GitHub vous ouvre alors la page de votre application, où vous pouvez voir son <code>Client ID</code>. Copiez le dans un coin, car on va en avoir besoin pour la prochaine étape. Il faut également générer un clé client, pour cela, cliquez sur <code>Generate a new client secret</code>.</p>
-<p><img src="/blog/tutoriel-hugo/generate%20secret%20ID.png" alt="Générer une clé privée" title="Générer une clé privée"></p>
+<p>![Générer une clé privéegenerate-secret-id.png &ldquo;Générer une clé privée&rdquo;)</p>
 <p>Copier bien la clée généré par GitHub dans un coin également, car il ne sera pas possible de la retrouver plus tard. Maintenant que c&rsquo;est fait, il ne nous reste plus qu&rsquo;a faire le lien entre GitHub et Netlify. Pour cela, rendez-vous dans le dashboard de votre site sur Netlify, puis naviguez dans <code>Site configuration &gt; Access &amp; security &gt; OAuth</code>. Sous <code>Authentication providers</code>, cliquez sur <code>Install provider</code>.</p>
-<p><img src="/blog/tutoriel-hugo/install%20provider%20netliffy.png" alt="Installer un provider dans Netlify" title="Installer un provider dans Netlify"></p>
-<p>Sélectionnez ensuite GitHub, et complétez les deux clées avec celles que vous avez générées un peu plus tôt :</p>
-<p><img src="/blog/tutoriel-hugo/install%20provider%20netlify%20secret.png" alt="Ajout des clées" title="Ajout des clés"></p>
-<p>Enfin, il ne vous reste plus qu&rsquo;a cliquer sur <code>Install</code>, et le tour est joué ! Maintenant, il vous est possible d&rsquo;accéder à votre backoffice en ajoutant <code>/admin</code> à la suite de l&rsquo;url de votre site en ligne. Il vous faudra vous identifier avec votre compte GitHub.</p>
+<figure>
+    <img src="install-provider-netliffy.png" alt="Installer un provider dans Netlify"><figcaption>Installer un provider dans Netlify</figcaption></figure><p>Sélectionnez ensuite GitHub, et complétez les deux clées avec celles que vous avez générées un peu plus tôt :</p>
+<figure>
+    <img src="install-provider-netlify-secret.png" alt="Ajout des clées"><figcaption>Ajout des clés</figcaption></figure><p>Enfin, il ne vous reste plus qu&rsquo;a cliquer sur <code>Install</code>, et le tour est joué ! Maintenant, il vous est possible d&rsquo;accéder à votre backoffice en ajoutant <code>/admin</code> à la suite de l&rsquo;url de votre site en ligne. Il vous faudra vous identifier avec votre compte GitHub.</p>
 <p>Vous êtes maintenant prêt pour ajouter du contenu à votre site à distance. À chaque mise à jour, le CMS va pousser les modifications sur le répertoire GitHub, et Netlify relancera la construction du site. Il n&rsquo;y a rien à faire, quelques instants après avoir publié du contenu, il sera automatiquement en ligne.</p>
 <blockquote>
 <p>Ressource utile pour cette section :</p>

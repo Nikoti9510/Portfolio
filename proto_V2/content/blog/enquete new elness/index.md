@@ -402,18 +402,18 @@ L’idée de mener une enquête en amoureux avec Betty est plaisante, mais il fa
 
 ## Annexes
 
-![Plan de la mine](/mine-plan.jpg "Carte de la mine")
+![Plan de la mine](mine-plan.jpg "Carte de la mine")
 
-![Carte de la mine avec indication de Wayne Richardson](/map-indication.png "Carte de la mine avec indication de Wayne Richardson")
+![Carte de la mine avec indication de Wayne Richardson](map-indication.png "Carte de la mine avec indication de Wayne Richardson")
 
-![Télégraphe d'un expéditeur inconnu](/telegraphe.png "Télégraphe d'un expéditeur inconnu")
+![Télégraphe d'un expéditeur inconnu](telegraphe.png "Télégraphe d'un expéditeur inconnu")
 
-![Liste des décès durant l'exploitation de la mine](/liste-deces.png "Liste des décès durant l'exploitation de la mine")
+![Liste des décès durant l'exploitation de la mine](liste-deces.png "Liste des décès durant l'exploitation de la mine")
 
-![Le rituel non traduit](/rituel-de-la-mere.jpg "Le rituel non traduit")
+![Le rituel non traduit](rituel-de-la-mere.jpg "Le rituel non traduit")
 
-![Traduction du rituel](/rituel_maj.png "Traduction du rituel")
+![Traduction du rituel](rituel_maj.png "Traduction du rituel")
 
-![Inversion du rituel](/anti-rituel_maj.png "Inversion du rituel")
+![Inversion du rituel](anti-rituel_maj.png "Inversion du rituel")
 
-![Lettre de Harvey](/lettre-harvey.png "Lettre de Harvey")
+![Lettre de Harvey](lettre-harvey.png "Lettre de Harvey")

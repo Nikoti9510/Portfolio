@@ -18,7 +18,7 @@ J'avais envie d'écrire un peu pour le jeu <a href="https://degenesis.com/" targ
 ## Le lien
 Le tonnerre gronde au loin, les nuages sombres roulent sur les flancs de basaltes abrupts. Les grosses gouttes humidifient les étranges stèles d'échos qui percent les escarpements, entre les saillies rocheuses et les conifères. L'eau ruisselle et de curieux reflets apparaissent sur les faces encore illuminées par les derniers rayons de soleil. La brume déjà lourde nappe le fond de la vallée, et les stèles la transpercent, comme de multiples ailerons de squales, tournant autour du champ de spore mère caché sous les nappes de brouillards.
 
-![Un champ de spore dans les balkans, par sixmorevodka.](/degenesis-steles_echos.jpg "Un champ de sport dans les balkans, par sixmorevodka.")
+![Un champ de spore dans les balkans, par sixmorevodka.](degenesis-steles_echos.jpg "Un champ de sport dans les balkans, par sixmorevodka.")
 
 ## Les antagonistes
 Trois Dushani, des Lesnje, protègent le champ de spore. Ils sont entièrement nus, leurs peaux sont pâles et sales. Leurs pieds et mains griffus sont contusionnés et couverts d'hématomes. Leurs visages sont masqués sous des scaphandres de métal noir, d'où dépassent des dents pointues et luisantes. Les casques sont posés sur leurs épaules, et des dizaines de câbles et tuyaux en sortent, dansant comme les membres indépendants d'un céphalopode. L'un est assis au centre du champ de spore, ses mains ondulent au-dessus de sa tête. Les deux autres marchent entre les stèles autour du cratère, formant volutes et tourbillons dans les brumes à leurs passages.  

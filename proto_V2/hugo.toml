@@ -16,7 +16,7 @@ defaultContentLanguageInSubdir = true
 # Désactive les générations de termes dans le site
 disableKinds = ['taxonomy', 'term']
 
-# je sais plus
+# Active les render hooks
 [markup.goldmark.renderHooks.image]
 enableDefault = true
 [markup.goldmark.renderHooks.link]
@@ -25,6 +25,12 @@ enableDefault = true
 # Active l'HTML dans les fichiers markdown
 [markup.goldmark.renderer]
   unsafe = true 
+
+# Empeche les images dans le markdown d'être englobé dans une balise <p>
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
 
 # Format de la date 
 [params]

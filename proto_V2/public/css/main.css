@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------- LAYER DEFINITION --------------------------*/
 /*---------------------------------------------------------------------*/
-@layer reset, layout, variables, base, home, single, blog, transitions;
+@layer reset, layout, variables, base, home, blog, single;
 
 
 
@@ -125,12 +125,9 @@
     /* Grille principale */
     .main-grid {
         display: grid;
-        grid-template-rows:
-            [top-gutter] 1fr [content] 8fr [bottom-gutter] 1fr;
         grid-template-columns:
             [left-gutter] 10rem [aside] 4fr [text] 6fr [right-gutter] 10rem;
-        gap: var(--s0);
-        height: 100%;
+        gap: 1rem;
         width: 100%;
     }
 
@@ -194,11 +191,12 @@
     :root {
         /* fonts */
         --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.25rem);
-        --font-size_h1: clamp(2rem, -0.875rem + 6cqi, 3.25rem);
+        --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 4.25rem);
         --font-size_h2: clamp(1.5rem, -0.875rem + 6cqi, 2.5rem);
         --font-size_h3: clamp(1.25rem, -0.875rem + 6cqi, 1.75rem);
         --line-height__body: 1.7;
         --line-height__title: 1.1;
+        --font-family-titles: Woodland;
 
         /* colors */
         --off-white: #fffcfb;
@@ -222,8 +220,14 @@
 /*--------------------------- Layer - Base ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer base {
+    @font-face {
+        font-family: 'Woodland';
+        font-weight: 700;
+        src: url('/fonts/PPWoodland-Bold.woff2') format('woff2');
+    }
+
     html {
-        font-family: "Inter", sans-serif;
+        font-family: sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
         line-height: var(--line-height__body);
@@ -232,17 +236,22 @@
         color: var(--texts-color);
     }
 
+    :is(h1,h2,h3) {
+        color: var(--titles-color);
+        font-family: var(--font-family-titles);
+    }
+
     h1 {
         font-size: var(--font-size_h1);
-        color: var(--titles-color);
+        
     }
+
     h2 {
         font-size: var(--font-size_h2);
-        color: var(--titles-color);
     }
+
     h3 {
         font-size: var(--font-size_h3);
-        color: var(--titles-color);
     }
 
     body {
@@ -265,12 +274,11 @@
 }
 
 
+
 /*---------------------------------------------------------------------*/
 /*--------------------------- LAYER - Home ----------------------------*/
 /*---------------------------------------------------------------------*/
-@layer home {
-    
-}
+@layer home {}
 
 
 
@@ -280,20 +288,10 @@
 @layer blog {
     .blog {
         --space: 2rem;
-        
+
         & .blog-posts {
-            grid-area: text;
+            grid-column: text;
             max-width: 65ch;
-
-            & .post {
-
-                & .post--tags {
-
-                    &>* {
-
-                    }
-                }
-            }
         }
     }
 }
@@ -304,9 +302,9 @@
 /*---------------------------------------------------------------------*/
 @layer single {
     .single-content {
-        grid-area: text;
-        --space: 2rem;
+        grid-column: text;
         max-width: 65ch;
+        --space: 2rem;
 
         /* texts */
         & :is(p, span) {
@@ -383,7 +381,12 @@
         /* Imgs */
         & figure {
             margin-inline: 0;
-            width: 100%;
+
+            & img {
+                width: 100%;
+                border-radius: 0.2rem;
+                border: solid 1px var(--gray-02);
+            }
 
             & figcaption {
                 color: var(--captions-color);
@@ -403,13 +406,51 @@
         /* Code blocks */
         & pre {
             display: flex;
-            border: solid 1px currentColor;
-            border-top: solid .5em currentColor;
+            flex-direction: column;
+
+            &::before {
+                content: attr(data-lang);
+                display: inline-block;
+                padding: .5rem;
+                font-size: 0.6rem;
+                line-height: var(--line-height__title);
+                border: solid 1px currentColor;
+                width: fit-content;
+                margin-bottom: -1px;
+                text-transform: capitalize;
+                font-style: italic;
+            }
 
             & code {
+                border: solid 1px var(--texts-color);
+                border-top: solid .5em var(--texts-color);
                 min-width: 35ch;
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0;
+                background-color: var(--dark-green);
+                color: var(--off-white);
+
+                & span {
+                    max-width: 100%;
+                    text-wrap: wrap;
+                }
             }
         }
+
+        & code {
+            display: inline-block;
+            background-color: var(--background-accent);
+            padding: .2rem;
+            line-height: var(--line-height__title);
+            border: solid 1px var(--gray-02);
+            border-radius: 0.2rem;
+        }
+
+        p:has(>code:only-child) {
+            --space: .5rem;
+        }
+
 
         /* Tables */
         & table {
@@ -424,7 +465,7 @@
 
             & thead {
                 background-color: var(--background-accent);
-                border-bottom: solid .25em currentColor;
+                border-bottom: solid .5em currentColor;
 
                 & th {
                     min-width: 15ch;
@@ -459,61 +500,4 @@
             }
         }
     }
-}
-
-
-
-/*---------------------------------------------------------------------*/
-/*------------------------- LAYER - Transitions -----------------------*/
-/*---------------------------------------------------------------------*/
-@layer transitions {
-    /* :root {
-        --transfromStartSlideIn: translateY(-100%); 
-        --transfromEndSlideIn: translateY(0%);
-
-        --transfromStartSlideOut: translateY(0); 
-        --transfromEndSlideOut: translateY(100%);
-    } 
-
-    @view-transition {
-        navigation: auto;
-    }
-
-    @keyframes slide-in {
-        0% {
-            transform: var(--transfromStartSlideIn);
-        }
-    
-        100% {
-            transform: var(--transfromEndSlideIn);
-        }
-    }
-
-    @keyframes slide-out {
-        0% {
-            transform: var(--transfromStartSlideOut);
-        }
-    
-        100% {
-            transform: var(--transfromEndSlideOut);
-        }
-    } */
-
-
-    /* :root {
-        --transfromStartSlideIn: translateX(-100%);
-        --transfromEndSlideIn: translateX(0%);
-    }
-    body {
-        background-color: lemonchiffon;
-    } */
-
-
-    /* ::view-transition-old(root) {
-        animation: slide-out 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-    }
-    
-    ::view-transition-new(root) {
-        animation: slide-in 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-    }*/
 }

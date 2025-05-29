@@ -5,8 +5,7 @@
     </h{{ .Level }}>
   {{ else }}
     <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
-      <a href="#{{ .Anchor | urlize }}">#</a>
-      {{ .Text }}
+      <a href="#{{ .Anchor | urlize }}"># {{ .Text }}</a>
     </h{{ .Level }}>
   {{ end }}
 {{ end }}
