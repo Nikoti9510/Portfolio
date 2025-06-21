@@ -128,15 +128,12 @@
         flex-direction: column;
         justify-content: flex-start;
     }
-
     .stack>* {
         margin-block: 0;
     }
-
     .stack>*+* {
         margin-block-start: var(--space, 1.5rem);
     }
-
     .stack:only-child {
         block-size: 100%;
     }
@@ -164,7 +161,6 @@
     *:has(>.draggable) {
         position: relative;
     }
-
     .draggable {
         position: absolute;
         user-select: none;
@@ -190,6 +186,11 @@
             background-repeat: no-repeat;
         }
     }
+
+    /* Mono */
+    .monospace {
+        font-family: monospace;
+    }
 }
 
 
@@ -213,11 +214,13 @@
         --black: #181818;
         --gray-01: #bbbbbb;
         --gray-02: #494949;
+        --blue: #122de6;
 
         /* theme */
         --titles-color: var(--black);
         --texts-color: var(--gray-02);
         --captions-color: var(--gray-02);
+        --interact: var(--blue);
         --background-color: var(--white);
         --foreground-color: var(--black);
         --border-color-light: var(--gray-01);
@@ -668,7 +671,7 @@
         & .clock__dot {
             position: relative;
             display: inline-block;
-            height: 0.75rem;
+            height: 0.75em;
             width: 0.75em;
             align-self: center;
             margin-inline-start: .2rem;
