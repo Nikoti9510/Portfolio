@@ -2,8 +2,13 @@
 <main id="home" class="stack">
   {{ partial "header.html" . }}
   {{ partial "navigation.html" . }}
-  <section>
-    <!-- <section id="canvas" class="draggable"></section> -->
+  <section class="main-grid">
+    <div>
+      {{ partial "portrait.html" . }}
+    </div>
+    <div class="flex-end z1">
+      {{ partial "articles.html" . }}
+    </div>
   </section>
   {{ partial "footer.html" . }}
 </main>

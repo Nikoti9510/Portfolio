@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const container = document.getElementById('canvas');
         // renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-        renderer.setSize(200, 200);
+        renderer.setSize(275, 350);
         renderer.setPixelRatio(window.devicePixelRatio);
 
         renderer.shadowMap.enabled = true;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // camera 
         const camera = new THREE.PerspectiveCamera(10, container.clientWidth / container.clientHeight);
-        camera.position.set(0, 10, 0);
+        camera.position.set(0, 7, 0);
 
         // controls 
         const controls = new OrbitControls(camera, renderer.domElement);

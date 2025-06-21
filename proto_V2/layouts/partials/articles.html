@@ -1,0 +1,24 @@
+<div class="stack">
+    {{ range ( where .Site.RegularPages "Type" "blog" | first 3 ) }}
+    <article class="post">
+        <a href="{{ .RelPermalink }}" class="stack">
+            {{ with .Resources.GetMatch "banner.jpg" }}
+            <img src="{{ .RelPermalink }}">
+            {{ end }}
+            <p class="post__title">{{ .LinkTitle }}</p>
+            <!-- <div>{{ .Params.description }}</div> -->
+            <div class="flex-start">
+                <div class="post__tags">
+                    {{ range .Params.tags }}
+                    <span class="post__tags--tag">{{ . }}</span>
+                    {{end}}
+                </div>
+                <span class="post__date monospace">
+                    {{ $mois := index $.Site.Data.mois }}
+                    {{ index $mois (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                </span>
+            </div>
+        </a>
+    </article>
+    {{ end }}
+</div>

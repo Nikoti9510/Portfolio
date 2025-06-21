@@ -4,24 +4,12 @@
     <title>Home</title>
 <link rel="stylesheet" href="/css/main.css">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-
-
-<script type="importmap">
-    {
-        "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
-                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
-        }
-    }
-</script>
-
- 
 <script type="text/javascript" src="/js/draggable.js"></script>  
   </head>
   <body>
     
 <main id="home" class="stack">
-  <section class="header main-grid">
+  <section class="header main-grid z1">
     <div class="flex-between">
         <div class="logo">
             <a href="/" class="stack">
@@ -71,7 +59,7 @@
         <script type="text/javascript" src="/js/clock.js"></script>
     </div>
 </section>
-  <section class="navigation main-grid">
+  <section class="navigation main-grid z1">
     <nav class="flex-end">
         <ul class="nav__list">
             
@@ -79,13 +67,93 @@
                 <a class="nav__item--link" href="/blog">Blog</a>
             </li>
             
+            <li class="nav__item">
+                <a class="nav__item--link" href="/info">Info</a>
+            </li>
+            
         </ul>
     </nav>
 </section>
-  <section>
+  <section class="main-grid">
+    <div>
+      <div id="canvas" class="draggable portrait"></div>
+<div class="visibility-hidden">
     
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="/js/model.js"></script>
+</div>
+    </div>
+    <div class="flex-end z1">
+      <div class="stack">
+    
+    <article class="post">
+        <a href="/blog/tutoriel-hugo/" class="stack">
+            
+            <p class="post__title">Tutoriel Hugo</p>
+            
+            <div class="flex-start">
+                <div class="post__tags">
+                    
+                    <span class="post__tags--tag">Web</span>
+                    
+                </div>
+                <span class="post__date monospace">
+                    
+                    janvier 2025
+                </span>
+            </div>
+        </a>
+    </article>
+    
+    <article class="post">
+        <a href="/blog/enquete-new-elness/" class="stack">
+            
+            <p class="post__title">Enquête à New Elness - Un scénario dans l&#39;univers Lovecraftien</p>
+            
+            <div class="flex-start">
+                <div class="post__tags">
+                    
+                    <span class="post__tags--tag">JDR</span>
+                    
+                </div>
+                <span class="post__date monospace">
+                    
+                    décembre 2024
+                </span>
+            </div>
+        </a>
+    </article>
+    
+    <article class="post">
+        <a href="/blog/degenesis-stele-echo/" class="stack">
+            
+            <p class="post__title">Degenesis - stèles d&#39;échos</p>
+            
+            <div class="flex-start">
+                <div class="post__tags">
+                    
+                    <span class="post__tags--tag">JDR</span>
+                    
+                </div>
+                <span class="post__date monospace">
+                    
+                    juin 2024
+                </span>
+            </div>
+        </a>
+    </article>
+    
+</div>
+    </div>
   </section>
-  <section class="footer main-grid">
+  <section class="footer main-grid z1">
     <div class="flex-between">
         <span class="version monospace">Portfolio - v2.0 - ©2025</span>
         <div class="coords stack monospace">
