@@ -122,7 +122,6 @@
 /*-------------------------- Layer - Layout ---------------------------*/
 /*---------------------------------------------------------------------*/
 @layer layout {
-
     /* Stack */
     .stack {
         display: flex;
@@ -205,6 +204,7 @@
         --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 4.25rem);
         --font-size_h2: clamp(1.5rem, -0.875rem + 6cqi, 2.5rem);
         --font-size_h3: clamp(1.25rem, -0.875rem + 6cqi, 1.75rem);
+        --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
         --line-height__body: 1.7;
         --line-height__title: 1.1;
 
@@ -212,7 +212,7 @@
         --white: #ffffff;
         --black: #020202;
         --gray-01: #bbbbbb;
-        --gray-02: #353535;
+        --gray-02: #494949;
 
         /* theme */
         --titles-color: var(--black);
@@ -536,12 +536,12 @@
 /*----------------------------- LAYER - main --------------------------*/
 /*---------------------------------------------------------------------*/
 @layer main {
-
-    /* HEADER */
+    /* ------------- HEADER ------------- */
+    /* logo */
     .logo {
         & a {
             text-decoration: none;
-            font-size: var(--font-size_h3);
+            font-size: var(--font-size_h2);
             color: var(--texts-color);
             font-weight: 500;
         }
@@ -627,7 +627,6 @@
             }
         }
     }
-
     /* DARKMODE */
     [data-theme="dark"] .theme-switch .theme-switch__icon {
         &>.soleil {
@@ -659,10 +658,11 @@
     .clock {
         height: fit-content;
         width: fit-content;
-        --space: .25rem;
+        --space: .1rem;
 
         &>div {
             line-height: var(--line-height__title);
+            font-size: var(--font-size__small);
         }
 
         & .clock__dot {
@@ -683,9 +683,7 @@
             }
         }
     }
-
     @keyframes clock__dot {
-
         25%,
         75% {
             display: none;
@@ -695,6 +693,29 @@
         100% {
             display: block;
         }
+    }
+
+    /* ------------- HOME ------------- */
+    #home {
+        justify-content: space-between;
+    }
+
+
+    /* ------------- FOOTER ------------- */
+    .coords, .version {
+        font-size: var(--font-size__small);
+    }
+    .coords, .contact {
+        --space: .1rem;
+        line-height: var(--line-height__title); 
+        text-align: end;
+    }
+    .contact span {
+        color: var(--titles-color);
+        font-weight: 500;
+    }
+    .coords {
+        font-size: var(--font-size__small);
     }
 }
 
