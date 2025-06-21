@@ -117,30 +117,55 @@
 }
 
 
+
 /*---------------------------------------------------------------------*/
 /*-------------------------- Layer - Layout ---------------------------*/
 /*---------------------------------------------------------------------*/
 @layer layout {
-    /* stack */
+
+    /* Stack */
     .stack {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
+
     .stack>* {
         margin-block: 0;
     }
+
     .stack>*+* {
         margin-block-start: var(--space, 1.5rem);
     }
+
     .stack:only-child {
         block-size: 100%;
+    }
+
+    /* Grille principale */
+    .main-grid {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        grid-template-rows: none;
+    }
+
+    /* Flex between */
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Flex end */
+    .flex-end {
+        display: flex;
+        justify-content: end;
     }
 
     /* Elements deplacables */
     *:has(>.draggable) {
         position: relative;
     }
+
     .draggable {
         position: absolute;
         user-select: none;
@@ -176,13 +201,12 @@
 @layer variables {
     :root {
         /* fonts */
-        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.25rem);
+        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.1rem);
         --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 4.25rem);
         --font-size_h2: clamp(1.5rem, -0.875rem + 6cqi, 2.5rem);
         --font-size_h3: clamp(1.25rem, -0.875rem + 6cqi, 1.75rem);
         --line-height__body: 1.7;
         --line-height__title: 1.1;
-        --font-family-titles: Woodland;
 
         /* colors */
         --white: #ffffff;
@@ -198,6 +222,10 @@
         --foreground-color: var(--black);
         --border-color-light: var(--gray-01);
         --border-color-dark: var(--gray-02);
+
+        /* transitions */
+        --bezier-33: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+        --bezier-25: 0.25s cubic-bezier(0.48, 0, 0.3, 1);
     }
 
     /* THEME */
@@ -210,6 +238,7 @@
         --border-color-light: var(--gray-01);
         --border-color-dark: var(--gray-02);
     }
+
     [data-theme="dark"] {
         --titles-color: var(--white);
         --texts-color: var(--gray-01);
@@ -222,18 +251,37 @@
 }
 
 
+
 /*---------------------------------------------------------------------*/
 /*--------------------------- Layer - Base ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer base {
-    /* @font-face {
-        font-family: 'Woodland';
+    @font-face {
+        font-family: 'Instrument';
         font-weight: 700;
-        src: url('/fonts/PPWoodland-Bold.woff2') format('woff2');
-    } */
+        src: url('/fonts/InstrumentSans-Bold.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Instrument';
+        font-weight: 500;
+        src: url('/fonts/InstrumentSans-Medium.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Instrument';
+        font-weight: 400;
+        src: url('/fonts/InstrumentSans-Regular.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Instrument serif';
+        font-weight: 400;
+        src: url('/fonts/InstrumentSerif-Regular.woff2') format('woff2');
+    }
 
     html {
-        font-family: sans-serif;
+        font-family: Instrument;
         font-optical-sizing: auto;
         font-style: normal;
         line-height: var(--line-height__body);
@@ -242,18 +290,14 @@
         color: var(--texts-color);
     }
 
-    :is(h1,h2,h3) {
-        color: var(--titles-color);
-        /* font-family: var(--font-family-titles); */
-    }
-
     h1 {
         font-size: var(--font-size_h1);
-        
+
     }
 
     h2 {
         font-size: var(--font-size_h2);
+        font-family: Instrument serif;
     }
 
     h3 {
@@ -261,7 +305,7 @@
     }
 
     body {
-        padding: 6rem;
+        padding: 3rem 6rem;
     }
 
     /* liens */
@@ -492,121 +536,180 @@
 /*----------------------------- LAYER - main --------------------------*/
 /*---------------------------------------------------------------------*/
 @layer main {
+
+    /* HEADER */
+    .logo {
+        & a {
+            text-decoration: none;
+            font-size: var(--font-size_h3);
+            color: var(--texts-color);
+            font-weight: 500;
+        }
+
+        & div {
+            --space: .25rem;
+            text-box-trim: trim-both;
+            text-box-edge: cap alphabetic;
+        }
+
+        & .logo__accent {
+            color: var(--titles-color);
+        }
+
+        & .logo__trait {
+            height: 5px;
+            width: 3rem;
+            display: inline-block;
+            background: currentColor;
+            vertical-align: super;
+            margin-inline-end: .5rem;
+            transition: var(--bezier-25);
+        }
+
+        &:is(:active, :hover) .logo__trait {
+            width: 2rem;
+        }
+    }
+
     /* SWITCH COLOR */
     .theme-switch {
-    color: var(--foreground-color);
-    --size: 2rem;
+        color: var(--foreground-color);
+        --size: 2rem;
 
-    background: none;
-    border: none;
-    padding: 0;
+        background: none;
+        border: none;
+        padding: 0;
 
-    inline-size: var(--size);
-    block-size: var(--size);
-    border-radius: 50%;
-    aspect-ratio: 1;
+        inline-size: var(--size);
+        block-size: var(--size);
+        border-radius: 50%;
+        aspect-ratio: 1;
 
-    cursor: pointer;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    outline-offset: 5px;
+        cursor: pointer;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        outline-offset: 5px;
 
-    @media (hover: none) {
-        --size: 48px;
-    }
-
-    & > .sr-only {
-        display: none;
-    }
-
-    /* ICON */
-    & .theme-switch__icon {
-        & > :is(.lune, .soleil, .rayons) {
-        transform-origin: center center;
+        @media (hover: none) {
+            --size: 48px;
         }
 
-        & > :is(.lune, .soleil) {
-        fill: currentColor;
+        &>.sr-only {
+            display: none;
         }
 
-        & > .rayons {
-        stroke: currentColor;
-        stroke-width: 2px;
-        }
-    }
-
-    /* ANIMATIONS */
-    @media (prefers-reduced-motion: no-preference) {
+        /* ICON */
         & .theme-switch__icon {
-        & * {
-            transition: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+            &> :is(.lune, .soleil, .rayons) {
+                transform-origin: center center;
+            }
+
+            &> :is(.lune, .soleil) {
+                fill: currentColor;
+            }
+
+            &>.rayons {
+                stroke: currentColor;
+                stroke-width: 2px;
+            }
         }
-        & .lune > circle {
-            transform: translateX(0px);
-        }
+
+        /* ANIMATIONS */
+        @media (prefers-reduced-motion: no-preference) {
+            & .theme-switch__icon {
+                & * {
+                    transition: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+                }
+
+                & .lune>circle {
+                    transform: translateX(0px);
+                }
+            }
         }
     }
-    }
+
     /* DARKMODE */
     [data-theme="dark"] .theme-switch .theme-switch__icon {
-    & > .soleil {
-        transform: scale(1.75);
-    }
-
-    & > .rayons {
-        opacity: 0;
-    }
-
-    & > .lune > circle {
-        transform: translateX(-7px);
-    }
-
-    /* ANIMATION DARKMODE */
-    @media (prefers-reduced-motion: no-preference) {
-        & > .soleil {
-        transform: scale(1.75);
-        
+        &>.soleil {
+            transform: scale(1.75);
         }
 
-        & > .rayons {
-        transform: rotateZ(-25deg);
+        &>.rayons {
+            opacity: 0;
         }
-    }
+
+        &>.lune>circle {
+            transform: translateX(-7px);
+        }
+
+        /* ANIMATION DARKMODE */
+        @media (prefers-reduced-motion: no-preference) {
+            &>.soleil {
+                transform: scale(1.75);
+
+            }
+
+            &>.rayons {
+                transform: rotateZ(-25deg);
+            }
+        }
     }
 
     /* CLOCK */
     .clock {
-        grid-area: content;
         height: fit-content;
         width: fit-content;
-        justify-self: end;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
+        --space: .25rem;
+
+        &>div {
+            line-height: var(--line-height__title);
+        }
 
         & .clock__dot {
             position: relative;
+            display: inline-block;
             height: 0.75rem;
             width: 0.75em;
+            align-self: center;
+            margin-inline-start: .2rem;
 
-            & > span {
-            inset: 0;
-            display: block;
-            position: absolute;
-            border-radius: 50%;
-            background-color: red;
-            animation: 1s infinite clock__dot;
+            &>span {
+                inset: 0;
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                background-color: red;
+                animation: 1s infinite clock__dot;
             }
         }
     }
+
     @keyframes clock__dot {
+
         25%,
         75% {
             display: none;
         }
+
         0%,
         100% {
             display: block;
         }
+    }
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*-------------------------- LAYER - utilities ------------------------*/
+/*---------------------------------------------------------------------*/
+@layer utilities {
+    .visibility-hidden {
+        visibility: hidden;
+        display: none;
+        overflow: hidden;
+        opacity: 0;
+        position: absolute;
+        left: -9999px;
     }
 }

@@ -1,18 +1,26 @@
-<section class="header">
-    <div>
+<section class="header main-grid">
+    <div class="flex-between">
         <div class="logo">
-            <h1><span class="logo__trait"></span>Antoine Moreau</h1>
+            <a href="/" class="stack">
+                <div>
+                    <span class="logo__trait"></span><span class="logo__accent">Antoine</span>
+                </div>
+                <div>
+                    <span>Moreau</span>
+                </div>
+            </a>
         </div>
-        <div id="clock" class="clock">
-            <span class="clock__loc">Angoulême [FR]</span>
-            <span class="clock__spacer">|</span>
-            <span class="clock__time">13:37</span>
-            <span class="clock__dot">
-                <span></span>
-            </span>
+        <div id="clock" class="clock stack">
+            <div class="clock__loc">Angoulême [FR]</div>
+            <div class="flex-end">
+                <span class="clock__time">13:37</span>
+                <span class="clock__dot">
+                    <span></span>
+                </span>
+            </div>
         </div>
     </div>
-    <div>
+    <div class="flex-end">
         <button class="theme-switch" id="theme-switch" title="Passer du thème clair au thème sombre" aria-label="auto"
             aria-live="polite">
             <svg class="theme-switch__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
@@ -35,6 +43,8 @@
             <span class="sr-only"></span>
         </button>
     </div>
+    <div class="visibility-hidden">
+        <script type="text/javascript" src="/js/themeSwitcher.js"></script>
+        <script type="text/javascript" src="/js/clock.js"></script>
+    </div>
 </section>
-<script type="text/javascript" src="/js/themeSwitcher.js"></script>
-<script type="text/javascript" src="/js/clock.js"></script>
