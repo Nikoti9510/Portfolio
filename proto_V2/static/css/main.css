@@ -119,6 +119,73 @@
 
 
 /*---------------------------------------------------------------------*/
+/*------------------------ Layer - Variables --------------------------*/
+/*---------------------------------------------------------------------*/
+@layer variables {
+    :root {
+        /* fonts */
+        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.1rem);
+        --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 4.25rem);
+        --font-size_h2: clamp(1.5rem, -0.875rem + 6cqi, 2.5rem);
+        --font-size_h3: clamp(1.25rem, -0.875rem + 6cqi, 1.75rem);
+        --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
+        --line-height__body: 1.7;
+        --line-height__title: 1.1;
+        --max-text-width: 70ch;
+
+        /* colors */
+        --white: #f3f3f3;
+        --black: #181818;
+        --gray-01: #bbbbbb;
+        --gray-02: #494949;
+        --blue: #122de6;
+        --green: #3ad521;
+
+        /* theme */
+        --titles-color: var(--black);
+        --texts-color: var(--gray-02);
+        --captions-color: var(--gray-02);
+        --interact: var(--blue);
+        --background-color: var(--white);
+        --foreground-color: var(--black);
+        --border-color-light: var(--gray-01);
+        --border-color-dark: var(--gray-02);
+
+        /* transitions */
+        --bezier-33: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+        --bezier-25: 0.25s cubic-bezier(0.48, 0, 0.3, 1);
+
+        /* breakpoint */
+        --main-bp: 60rem;
+    }
+
+    /* THEME */
+    [data-theme="light"] {
+        --titles-color: var(--black);
+        --texts-color: var(--gray-02);
+        --captions-color: var(--gray-02);
+        --background-color: var(--white);
+        --foreground-color: var(--black);
+        --border-color-light: var(--gray-01);
+        --border-color-dark: var(--gray-02);
+        --interact: var(--blue);
+    }
+
+    [data-theme="dark"] {
+        --titles-color: var(--white);
+        --texts-color: var(--gray-01);
+        --captions-color: var(--gray-01);
+        --background-color: var(--black);
+        --foreground-color: var(--white);
+        --border-color-light: var(--gray-02);
+        --border-color-dark: var(--gray-01);
+        --interact: var(--green);
+    }
+}
+
+
+
+/*---------------------------------------------------------------------*/
 /*-------------------------- Layer - Layout ---------------------------*/
 /*---------------------------------------------------------------------*/
 @layer layout {
@@ -145,8 +212,13 @@
     /* Grille principale */
     .main-grid {
         display: grid;
-        grid-template-columns: 7fr 5fr;
-        grid-template-rows: none;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        @media (width > 70rem) {
+            grid-template-columns: 7fr 5fr;
+            grid-template-rows: none;
+        }
     }
 
     /* Flex between */
@@ -206,70 +278,6 @@
     .z1 {
         position: relative;
         z-index: 1;
-    }
-}
-
-
-
-/*---------------------------------------------------------------------*/
-/*------------------------ Layer - Variables --------------------------*/
-/*---------------------------------------------------------------------*/
-@layer variables {
-    :root {
-        /* fonts */
-        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.1rem);
-        --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 4.25rem);
-        --font-size_h2: clamp(1.5rem, -0.875rem + 6cqi, 2.5rem);
-        --font-size_h3: clamp(1.25rem, -0.875rem + 6cqi, 1.75rem);
-        --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
-        --line-height__body: 1.7;
-        --line-height__title: 1.1;
-        --max-text-width: 70ch;
-
-        /* colors */
-        --white: #f3f3f3;
-        --black: #181818;
-        --gray-01: #bbbbbb;
-        --gray-02: #494949;
-        --blue: #122de6;
-        --green: #3ad521;
-
-        /* theme */
-        --titles-color: var(--black);
-        --texts-color: var(--gray-02);
-        --captions-color: var(--gray-02);
-        --interact: var(--blue);
-        --background-color: var(--white);
-        --foreground-color: var(--black);
-        --border-color-light: var(--gray-01);
-        --border-color-dark: var(--gray-02);
-
-        /* transitions */
-        --bezier-33: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
-        --bezier-25: 0.25s cubic-bezier(0.48, 0, 0.3, 1);
-    }
-
-    /* THEME */
-    [data-theme="light"] {
-        --titles-color: var(--black);
-        --texts-color: var(--gray-02);
-        --captions-color: var(--gray-02);
-        --background-color: var(--white);
-        --foreground-color: var(--black);
-        --border-color-light: var(--gray-01);
-        --border-color-dark: var(--gray-02);
-        --interact: var(--blue);
-    }
-
-    [data-theme="dark"] {
-        --titles-color: var(--white);
-        --texts-color: var(--gray-01);
-        --captions-color: var(--gray-01);
-        --background-color: var(--black);
-        --foreground-color: var(--white);
-        --border-color-light: var(--gray-02);
-        --border-color-dark: var(--gray-01);
-        --interact: var(--green);
     }
 }
 
@@ -790,6 +798,8 @@
 
     /* ------------- PORTRAIT ------------- */
     .portrait {
+        display: none;
+
         & > canvas {
             background-size: 8px 8px !important;
             background-repeat: repeat !important;
@@ -797,6 +807,10 @@
             background-color: var(--background-color);
             border: solid 1px color-mix(in srgb, var(--border-color-light) 33%, transparent);
             border-radius: .2em; 
+        }
+
+        @media (width > 70rem) {
+            display: block;
         }
     }
     
