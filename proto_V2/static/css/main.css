@@ -186,6 +186,7 @@
 
         &::before {
             content: url(/icons/move.svg);
+            filter: invert(1);
             display: block;
             position: absolute;
             height: 32px;
@@ -231,6 +232,7 @@
         --gray-01: #bbbbbb;
         --gray-02: #494949;
         --blue: #122de6;
+        --green: #3ad521;
 
         /* theme */
         --titles-color: var(--black);
@@ -256,6 +258,7 @@
         --foreground-color: var(--black);
         --border-color-light: var(--gray-01);
         --border-color-dark: var(--gray-02);
+        --interact: var(--blue);
     }
 
     [data-theme="dark"] {
@@ -266,6 +269,7 @@
         --foreground-color: var(--white);
         --border-color-light: var(--gray-02);
         --border-color-dark: var(--gray-01);
+        --interact: var(--green);
     }
 }
 
