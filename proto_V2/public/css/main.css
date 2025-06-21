@@ -122,18 +122,22 @@
 /*-------------------------- Layer - Layout ---------------------------*/
 /*---------------------------------------------------------------------*/
 @layer layout {
+
     /* Stack */
     .stack {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
+
     .stack>* {
         margin-block: 0;
     }
+
     .stack>*+* {
         margin-block-start: var(--space, 1.5rem);
     }
+
     .stack:only-child {
         block-size: 100%;
     }
@@ -161,6 +165,7 @@
     *:has(>.draggable) {
         position: relative;
     }
+
     .draggable {
         position: absolute;
         user-select: none;
@@ -540,93 +545,139 @@
 /*---------------------------------------------------------------------*/
 @layer main {
     /* ------------- HEADER ------------- */
-    /* logo */
-    .logo {
-        & a {
-            text-decoration: none;
-            font-size: var(--font-size_h2);
-            color: var(--texts-color);
-            font-weight: 500;
-        }
+    .header {
 
-        & div {
-            --space: .25rem;
-            text-box-trim: trim-both;
-            text-box-edge: cap alphabetic;
-        }
-
-        & .logo__accent {
-            color: var(--titles-color);
-        }
-
-        & .logo__trait {
-            height: 5px;
-            width: 3rem;
-            display: inline-block;
-            background: currentColor;
-            vertical-align: super;
-            margin-inline-end: .5rem;
-            transition: width var(--bezier-25);
-        }
-
-        &:is(:active, :hover) .logo__trait {
-            width: 2rem;
-        }
-    }
-
-    /* SWITCH COLOR */
-    .theme-switch {
-        color: var(--foreground-color);
-        --size: 2rem;
-
-        background: none;
-        border: none;
-        padding: 0;
-
-        inline-size: var(--size);
-        block-size: var(--size);
-        border-radius: 50%;
-        aspect-ratio: 1;
-
-        cursor: pointer;
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-        outline-offset: 5px;
-
-        @media (hover: none) {
-            --size: 48px;
-        }
-
-        &>.sr-only {
-            display: none;
-        }
-
-        /* ICON */
-        & .theme-switch__icon {
-            &> :is(.lune, .soleil, .rayons) {
-                transform-origin: center center;
+        /* logo */
+        & .logo {
+            & a {
+                text-decoration: none;
+                font-size: var(--font-size_h2);
+                color: var(--texts-color);
+                font-weight: 500;
             }
 
-            &> :is(.lune, .soleil) {
-                fill: currentColor;
+            & div {
+                --space: .25rem;
+                text-box-trim: trim-both;
+                text-box-edge: cap alphabetic;
             }
 
-            &>.rayons {
-                stroke: currentColor;
-                stroke-width: 2px;
+            & .logo__accent {
+                color: var(--titles-color);
+            }
+
+            & .logo__trait {
+                height: 5px;
+                width: 3rem;
+                display: inline-block;
+                background: currentColor;
+                vertical-align: super;
+                margin-inline-end: .5rem;
+                transition: width var(--bezier-25);
+            }
+
+            &:is(:active, :hover) .logo__trait {
+                width: 2rem;
             }
         }
 
-        /* ANIMATIONS */
-        @media (prefers-reduced-motion: no-preference) {
+        /* SWITCH COLOR */
+        & .theme-switch {
+            color: var(--foreground-color);
+            --size: 2rem;
+
+            background: none;
+            border: none;
+            padding: 0;
+
+            inline-size: var(--size);
+            block-size: var(--size);
+            border-radius: 50%;
+            aspect-ratio: 1;
+
+            cursor: pointer;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            outline-offset: 5px;
+
+            @media (hover: none) {
+                --size: 48px;
+            }
+
+            &>.sr-only {
+                display: none;
+            }
+
+            /* ICON */
             & .theme-switch__icon {
-                & * {
-                    transition: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+                &> :is(.lune, .soleil, .rayons) {
+                    transform-origin: center center;
                 }
 
-                & .lune>circle {
-                    transform: translateX(0px);
+                &> :is(.lune, .soleil) {
+                    fill: currentColor;
                 }
+
+                &>.rayons {
+                    stroke: currentColor;
+                    stroke-width: 2px;
+                }
+            }
+
+            /* ANIMATIONS */
+            @media (prefers-reduced-motion: no-preference) {
+                & .theme-switch__icon {
+                    & * {
+                        transition: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+                    }
+
+                    & .lune>circle {
+                        transform: translateX(0px);
+                    }
+                }
+            }
+        }
+
+        /* CLOCK */
+        & .clock {
+            height: fit-content;
+            width: fit-content;
+            --space: .1rem;
+
+            &>div {
+                line-height: var(--line-height__title);
+                font-size: var(--font-size__small);
+            }
+
+            & .clock__dot {
+                position: relative;
+                display: inline-block;
+                height: 0.75em;
+                width: 0.75em;
+                align-self: center;
+                margin-inline-start: .2rem;
+
+                &>span {
+                    inset: 0;
+                    display: block;
+                    position: absolute;
+                    border-radius: 50%;
+                    background-color: red;
+                    animation: 1s infinite clock__dot;
+                }
+            }
+        }
+
+        @keyframes clock__dot {
+
+            25%,
+            75% {
+                display: none;
+            }
+
+            0%,
+            100% {
+                display: block;
             }
         }
     }
@@ -657,71 +708,49 @@
         }
     }
 
-    /* CLOCK */
-    .clock {
-        height: fit-content;
-        width: fit-content;
-        --space: .1rem;
-
-        &>div {
-            line-height: var(--line-height__title);
-            font-size: var(--font-size__small);
-        }
-
-        & .clock__dot {
-            position: relative;
-            display: inline-block;
-            height: 0.75em;
-            width: 0.75em;
-            align-self: center;
-            margin-inline-start: .2rem;
-
-            &>span {
-                inset: 0;
-                display: block;
-                position: absolute;
-                border-radius: 50%;
-                background-color: red;
-                animation: 1s infinite clock__dot;
-            }
-        }
-    }
-    @keyframes clock__dot {
-        25%,
-        75% {
-            display: none;
-        }
-
-        0%,
-        100% {
-            display: block;
-        }
-    }
-
     /* ------------- HOME ------------- */
     #home {
         justify-content: space-between;
-    }
 
+        & .nav__list {
+            list-style: none;
+
+            & .nav__item--link {
+                text-decoration: none;
+                font-size: var(--font-size_h3);
+                color: var(--titles-color);
+                font-weight: 500;
+            }
+        }
+    }
 
     /* ------------- FOOTER ------------- */
-    .coords, .version {
-        font-size: var(--font-size__small);
-    }
-    .version {
-        align-self: flex-end;
-    }
-    .coords, .contact {
-        --space: .1rem;
-        line-height: var(--line-height__title); 
-        text-align: end;
-    }
-    .contact span {
-        color: var(--titles-color);
-        font-weight: 500;
-    }
-    .coords {
-        font-size: var(--font-size__small);
+    .footer {
+
+        & .coords,
+        & .version {
+            font-size: var(--font-size__small);
+        }
+
+        & .version {
+            align-self: flex-end;
+        }
+
+        & .coords,
+        & .contact {
+            --space: .1rem;
+            line-height: var(--line-height__title);
+            text-align: end;
+        }
+
+        & .contact span {
+            color: var(--titles-color);
+            font-weight: 500;
+        }
+
+        & .coords {
+            font-size: var(--font-size__small);
+        }
     }
 }
 
