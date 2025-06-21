@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------*/
 /*------------------------- LAYER DEFINITION --------------------------*/
 /*---------------------------------------------------------------------*/
-@layer reset, layout, variables, base, home, blog, single;
+@layer reset, layout, variables, base, single, main;
 
 
 
@@ -121,31 +121,18 @@
 /*-------------------------- Layer - Layout ---------------------------*/
 /*---------------------------------------------------------------------*/
 @layer layout {
-
-    /* Grille principale */
-    .main-grid {
-        display: grid;
-        grid-template-columns:
-            [left-gutter] 10rem [aside] 4fr [text] 6fr [right-gutter] 10rem;
-        gap: 1rem;
-        width: 100%;
-    }
-
     /* stack */
     .stack {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
-
     .stack>* {
         margin-block: 0;
     }
-
     .stack>*+* {
         margin-block-start: var(--space, 1.5rem);
     }
-
     .stack:only-child {
         block-size: 100%;
     }
@@ -154,7 +141,6 @@
     *:has(>.draggable) {
         position: relative;
     }
-
     .draggable {
         position: absolute;
         user-select: none;
@@ -199,19 +185,39 @@
         --font-family-titles: Woodland;
 
         /* colors */
-        --off-white: #fffcfb;
-        --dark-green: #2d312c;
-        --gray-01: #e9ede8;
-        --gray-02: #bac1b8;
-        --gray-03: #3b3d3b;
-        --gray-04: #151515;
+        --white: #ffffff;
+        --black: #020202;
+        --gray-01: #bbbbbb;
+        --gray-02: #353535;
 
         /* theme */
-        --titles-color: var(--dark-green);
-        --texts-color: var(--gray-04);
-        --captions-color: var(--gray-03);
-        --background-color: var(--off-white);
-        --background-accent: var(--gray-01);
+        --titles-color: var(--black);
+        --texts-color: var(--gray-02);
+        --captions-color: var(--gray-02);
+        --background-color: var(--white);
+        --foreground-color: var(--black);
+        --border-color-light: var(--gray-01);
+        --border-color-dark: var(--gray-02);
+    }
+
+    /* THEME */
+    [data-theme="light"] {
+        --titles-color: var(--black);
+        --texts-color: var(--gray-02);
+        --captions-color: var(--gray-02);
+        --background-color: var(--white);
+        --foreground-color: var(--black);
+        --border-color-light: var(--gray-01);
+        --border-color-dark: var(--gray-02);
+    }
+    [data-theme="dark"] {
+        --titles-color: var(--white);
+        --texts-color: var(--gray-01);
+        --captions-color: var(--gray-01);
+        --background-color: var(--black);
+        --foreground-color: var(--white);
+        --border-color-light: var(--gray-02);
+        --border-color-dark: var(--gray-01);
     }
 }
 
@@ -220,11 +226,11 @@
 /*--------------------------- Layer - Base ----------------------------*/
 /*---------------------------------------------------------------------*/
 @layer base {
-    @font-face {
+    /* @font-face {
         font-family: 'Woodland';
         font-weight: 700;
         src: url('/fonts/PPWoodland-Bold.woff2') format('woff2');
-    }
+    } */
 
     html {
         font-family: sans-serif;
@@ -238,7 +244,7 @@
 
     :is(h1,h2,h3) {
         color: var(--titles-color);
-        font-family: var(--font-family-titles);
+        /* font-family: var(--font-family-titles); */
     }
 
     h1 {
@@ -273,28 +279,6 @@
     }
 }
 
-
-
-/*---------------------------------------------------------------------*/
-/*--------------------------- LAYER - Home ----------------------------*/
-/*---------------------------------------------------------------------*/
-@layer home {}
-
-
-
-/*---------------------------------------------------------------------*/
-/*----------------------------- LAYER - Blog --------------------------*/
-/*---------------------------------------------------------------------*/
-@layer blog {
-    .blog {
-        --space: 2rem;
-
-        & .blog-posts {
-            grid-column: text;
-            max-width: 65ch;
-        }
-    }
-}
 
 
 /*---------------------------------------------------------------------*/
@@ -498,6 +482,131 @@
                     margin-inline-end: .5rem;
                 }
             }
+        }
+    }
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*----------------------------- LAYER - main --------------------------*/
+/*---------------------------------------------------------------------*/
+@layer main {
+    /* SWITCH COLOR */
+    .theme-switch {
+    color: var(--foreground-color);
+    --size: 2rem;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    inline-size: var(--size);
+    block-size: var(--size);
+    border-radius: 50%;
+    aspect-ratio: 1;
+
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 5px;
+
+    @media (hover: none) {
+        --size: 48px;
+    }
+
+    & > .sr-only {
+        display: none;
+    }
+
+    /* ICON */
+    & .theme-switch__icon {
+        & > :is(.lune, .soleil, .rayons) {
+        transform-origin: center center;
+        }
+
+        & > :is(.lune, .soleil) {
+        fill: currentColor;
+        }
+
+        & > .rayons {
+        stroke: currentColor;
+        stroke-width: 2px;
+        }
+    }
+
+    /* ANIMATIONS */
+    @media (prefers-reduced-motion: no-preference) {
+        & .theme-switch__icon {
+        & * {
+            transition: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
+        }
+        & .lune > circle {
+            transform: translateX(0px);
+        }
+        }
+    }
+    }
+    /* DARKMODE */
+    [data-theme="dark"] .theme-switch .theme-switch__icon {
+    & > .soleil {
+        transform: scale(1.75);
+    }
+
+    & > .rayons {
+        opacity: 0;
+    }
+
+    & > .lune > circle {
+        transform: translateX(-7px);
+    }
+
+    /* ANIMATION DARKMODE */
+    @media (prefers-reduced-motion: no-preference) {
+        & > .soleil {
+        transform: scale(1.75);
+        
+        }
+
+        & > .rayons {
+        transform: rotateZ(-25deg);
+        }
+    }
+    }
+
+    /* CLOCK */
+    .clock {
+        grid-area: content;
+        height: fit-content;
+        width: fit-content;
+        justify-self: end;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        & .clock__dot {
+            position: relative;
+            height: 0.75rem;
+            width: 0.75em;
+
+            & > span {
+            inset: 0;
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            background-color: red;
+            animation: 1s infinite clock__dot;
+            }
+        }
+    }
+    @keyframes clock__dot {
+        25%,
+        75% {
+            display: none;
+        }
+        0%,
+        100% {
+            display: block;
         }
     }
 }

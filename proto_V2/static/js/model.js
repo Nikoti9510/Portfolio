@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         renderer.outputColorSpace = THREE.SRGBColorSpace;
 
         const container = document.getElementById('canvas');
-        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        // renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        renderer.setSize(200, 200);
         renderer.setPixelRatio(window.devicePixelRatio);
 
         renderer.shadowMap.enabled = true;
