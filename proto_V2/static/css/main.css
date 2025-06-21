@@ -667,19 +667,6 @@
                 }
             }
         }
-
-        @keyframes clock__dot {
-
-            25%,
-            75% {
-                display: none;
-            }
-
-            0%,
-            100% {
-                display: block;
-            }
-        }
     }
     /* DARKMODE */
     [data-theme="dark"] .theme-switch .theme-switch__icon {
@@ -705,6 +692,17 @@
             &>.rayons {
                 transform: rotateZ(-25deg);
             }
+        }
+    }
+    @keyframes clock__dot {
+        25%,
+        75% {
+            display: none;
+        }
+
+        0%,
+        100% {
+            display: block;
         }
     }
 
