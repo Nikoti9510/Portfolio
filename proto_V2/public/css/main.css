@@ -210,7 +210,7 @@
 
         /* colors */
         --white: #ffffff;
-        --black: #020202;
+        --black: #181818;
         --gray-01: #bbbbbb;
         --gray-02: #494949;
 
@@ -563,7 +563,7 @@
             background: currentColor;
             vertical-align: super;
             margin-inline-end: .5rem;
-            transition: var(--bezier-25);
+            transition: width var(--bezier-25);
         }
 
         &:is(:active, :hover) .logo__trait {
@@ -704,6 +704,9 @@
     /* ------------- FOOTER ------------- */
     .coords, .version {
         font-size: var(--font-size__small);
+    }
+    .version {
+        align-self: flex-end;
     }
     .coords, .contact {
         --space: .1rem;
