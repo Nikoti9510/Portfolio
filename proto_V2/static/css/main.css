@@ -137,19 +137,20 @@
         --white: #f3f3f3;
         --black: #181818;
         --gray-01: #bbbbbb;
-        --gray-02: #494949;
+        --gray-02: #a5a5a5;
+        --gray-03: #494949;
         --blue: #122de6;
-        --green: #3ad521;
+        --yellow: #ffd800;
 
         /* theme */
         --titles-color: var(--black);
-        --texts-color: var(--gray-02);
-        --captions-color: var(--gray-02);
+        --texts-color: var(--gray-03);
+        --captions-color: var(--gray-03);
         --interact: var(--blue);
         --background-color: var(--white);
         --foreground-color: var(--black);
         --border-color-light: var(--gray-01);
-        --border-color-dark: var(--gray-02);
+        --border-color-dark: var(--gray-03);
 
         /* transitions */
         --bezier-33: 0.33s cubic-bezier(0.48, 0, 0.3, 1);
@@ -162,12 +163,12 @@
     /* THEME */
     [data-theme="light"] {
         --titles-color: var(--black);
-        --texts-color: var(--gray-02);
-        --captions-color: var(--gray-02);
+        --texts-color: var(--gray-03);
+        --captions-color: var(--gray-03);
         --background-color: var(--white);
         --foreground-color: var(--black);
         --border-color-light: var(--gray-01);
-        --border-color-dark: var(--gray-02);
+        --border-color-dark: var(--gray-03);
         --interact: var(--blue);
     }
 
@@ -177,9 +178,9 @@
         --captions-color: var(--gray-01);
         --background-color: var(--black);
         --foreground-color: var(--white);
-        --border-color-light: var(--gray-02);
+        --border-color-light: var(--gray-03);
         --border-color-dark: var(--gray-01);
-        --interact: var(--green);
+        --interact: var(--yellow);
     }
 }
 
@@ -237,40 +238,12 @@
         gap: var(--gap, .5em);
     }
 
-    /* Elements deplacables */
-    *:has(>.draggable) {
-        position: relative;
-    }
-
-    .draggable {
-        position: absolute;
-        z-index: 0;
-        user-select: none;
-        cursor: move;
-
-        &>* {
-            pointer-events: none;
-        }
-
-        &::before {
-            content: url(/icons/move.svg);
-            filter: invert(1);
-            display: block;
-            position: absolute;
-            height: 32px;
-            width: 32px;
-            padding: 4px;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    }
-
     /* Mono */
     .monospace {
         font-family: monospace;
     }
 
+    /* zindex */
     .z1 {
         position: relative;
         z-index: 1;
@@ -332,7 +305,7 @@
     }
 
     body {
-        padding: 4vw;
+        padding: 4vh 4vw;
     }
 
     /* liens */
@@ -795,8 +768,9 @@
     /* ------------- PORTRAIT ------------- */
     .portrait {
         display: none;
+        position: relative;
 
-        &>canvas {
+        & > canvas {
             background-size: 8px 8px !important;
             background-repeat: repeat !important;
             background-image: radial-gradient(color-mix(in srgb, var(--border-color-light) 33%, transparent) 1px, transparent 0);
@@ -809,6 +783,29 @@
             display: block;
         }
     }
+
+    /* Elements deplacables */
+    *:has(>.draggable) {
+        position: relative;
+    }
+
+    .draggable {
+        position: absolute;
+        z-index: 3;
+        user-select: none;
+        cursor: move;
+
+        & > * {
+            pointer-events: none;
+        }
+
+        & svg {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            fill: currentColor;
+        }
+    } 
 
 
     /* ------------- FOOTER ------------- */
@@ -842,7 +839,7 @@
         @media (width < 70rem) {
             flex-direction: column-reverse;
             display: flex;
-            gap: .5rem;
+            gap: 1.5rem;
         }
     }
 }
