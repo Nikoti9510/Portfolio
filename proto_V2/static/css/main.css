@@ -205,10 +205,6 @@
         margin-block-start: var(--space, 1.5em);
     }
 
-    /* .stack:only-child {
-        block-size: 100%;
-    } */
-
     /* Grille principale */
     .main-grid {
         display: grid;
@@ -570,11 +566,6 @@
 
     /* ------------- HEADER ------------- */
     .header {
-
-        @media (width > 70rem) {
-
-        }
-
         /* logo */
         & .logo {
             & a {
@@ -740,6 +731,7 @@
     /* ------------- HOME ------------- */
     #home {
         justify-content: space-between;
+        height: 100%;
 
         & .nav__list {
             list-style: none;
