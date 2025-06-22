@@ -530,6 +530,7 @@
 
     /* ------------- HEADER ------------- */
     .header {
+
         /* logo */
         & .logo {
             & a {
@@ -692,34 +693,35 @@
         }
     }
 
-    /* --------------- HOME --------------- */
-    #home {
-        justify-content: space-between;
-        height: 100%;
+    /* ------------- NAVIGATION ------------ */
+    .nav__list {
+        list-style: none;
 
-        & .nav__list {
-            list-style: none;
+        & .nav__item--link {
+            text-decoration: none;
+            font-size: var(--font-size_h3);
+            color: var(--titles-color);
+            font-weight: 500;
+            transition: color var(--bezier-25);
 
-            & .nav__item--link {
-                text-decoration: none;
-                font-size: var(--font-size_h3);
-                color: var(--titles-color);
-                font-weight: 500;
-                transition: color var(--bezier-25);
-
-                &:hover {
-                    color: var(--interact);
-                }
+            &:hover {
+                color: var(--interact);
             }
         }
     }
 
     /* --------------- HOME --------------- */
+    #home {
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    /* --------------- BLOG --------------- */
     #blog {
         --space: 3rem;
 
         & .all-posts {
-            --space:1.5rem;
+            --space: 1.5rem;
         }
     }
 
@@ -770,14 +772,24 @@
     .portrait {
         display: none;
         position: relative;
+        width: 275px;
+        height: 350px;
+        background-size: 8px 8px !important;
+        background-repeat: repeat !important;
+        background-image: radial-gradient(color-mix(in srgb, var(--border-color-light) 33%, transparent) 1px, transparent 0);
+        background-color: var(--background-color);
+        border: solid 1px color-mix(in srgb, var(--border-color-light) 33%, transparent);
+        border-radius: .2em;
 
-        & > canvas {
-            background-size: 8px 8px !important;
-            background-repeat: repeat !important;
-            background-image: radial-gradient(color-mix(in srgb, var(--border-color-light) 33%, transparent) 1px, transparent 0);
-            background-color: var(--background-color);
-            border: solid 1px color-mix(in srgb, var(--border-color-light) 33%, transparent);
-            border-radius: .2em;
+        & .loading {
+            --space: .2em;
+            line-height: var(--line-height__title);
+            font-size: var(--font-size__small);
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         @media (width > 70rem) {
@@ -796,7 +808,7 @@
         user-select: none;
         cursor: move;
 
-        & > * {
+        &>* {
             pointer-events: none;
         }
 
@@ -806,7 +818,7 @@
             left: 4px;
             fill: currentColor;
         }
-    } 
+    }
 
 
     /* ------------- FOOTER ------------- */

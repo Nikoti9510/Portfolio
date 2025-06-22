@@ -14,19 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Gestion du chargement du modèle et des erreurs
     function loadModel() {
         const loader = new GLTFLoader();
+        const loadContainer = document.querySelector('#canvas .loading');
         loader.load('3d_files/model_animated_notexture.glb',
             (gltf) => {
                 // loaded
                 setupScene(gltf);
+                loadContainer.style.display = 'none';
             },
             (xhr) => {
                 // progress
                 const loadPercent = Math.round((xhr.loaded / xhr.total) * 100);
-                console.log(`Chargement... ${loadPercent}%`);
+                loadContainer.children[0].innerHTML = (`${loadPercent}%`);    
+                // console.log(`Chargement... ${loadPercent}%`);
             },
             (error) => {
                 // error
-                console.log(error);
+                // console.log(error);
+                loadContainer.innerHTML = (`${error}%`);  
             }
         );
     }
