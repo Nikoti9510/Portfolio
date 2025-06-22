@@ -3,14 +3,64 @@
     <title>Tutoriel Hugo</title>
 <link rel="stylesheet" href="/css/main.css">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="/js/draggable.js"></script>  
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>  
   </head>
   <body>
     
-    <main class="article main-grid">
-        <a href="/blog/"><i>←</i>Retour</a>
-        <section class="single-content stack">
-            
+<main id="article" class="stack">
+    <section class="header main-grid z1">
+    <div class="flex-between">
+        <div class="logo">
+            <a href="/" class="stack">
+                <div>
+                    <span class="logo__trait"></span><span class="logo__accent">Antoine</span>
+                </div>
+                <div>
+                    <span>Moreau</span>
+                </div>
+            </a>
+        </div>
+        <div id="clock" class="clock stack">
+            <div class="clock__loc monospace">Angoulême [FR]</div>
+            <div class="flex-end">
+                <span class="clock__time monospace">13:37</span>
+                <span class="clock__dot">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="flex-end">
+        <button class="theme-switch" id="theme-switch" title="Passer du thème clair au thème sombre" aria-label="auto"
+            aria-live="polite">
+            <svg class="theme-switch__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="soleil" cx="12" cy="12" r="6" mask="url(#mask-lune)" fill="currentColor" />
+                <g class="rayons" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+                <mask class="lune" id="mask-lune">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+            </svg>
+            <span class="sr-only"></span>
+        </button>
+    </div>
+    <div class="visibility-hidden">
+        <script type="text/javascript" src="/js/clock.js"></script>
+    </div>
+</section>
+    <section class="main-grid">
+        <div class="flex-end">
+            <div class="single-content stack">
+                
   
     <h1 id="portfolio-jamstack-avec-hugo-et-netlify">
       Portfolio JamStack avec Hugo et Netlify.
@@ -30,7 +80,7 @@
 
   
     <h2 id="mettre-en-place-le-projet">
-      <a href="#mettre-en-place-le-projet"># Mettre en place le projet</a>
+      <a href="#mettre-en-place-le-projet">Mettre en place le projet</a>
     </h2>
   
 <p>Une fois Github Desktop et Visual Studio Code installé, on va pouvoir mettre en place le projet. On se rend dans notre <a href="https://github.com/">espace personnel sur GitHub</a> et on créer un nouveau répertoire en cliquant sur le bouton <code>New</code> en haut à gauche.</p>
@@ -52,14 +102,14 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="installation-de-go-hugo-et-git">
-      <a href="#installation-de-go-hugo-et-git"># Installation de Go, Hugo et Git</a>
+      <a href="#installation-de-go-hugo-et-git">Installation de Go, Hugo et Git</a>
     </h2>
   
 <p>Oui je sais, <em><strong>GIT</strong></em> ! Mais ce n&rsquo;est pas si terrible vous allez voir. Surtout, ce n&rsquo;est que pour l&rsquo;étape d&rsquo;installation et d&rsquo;initialisation du projet. Ensuite, on travaille uniquement avec la version Desktop (mais comme Git sera installé, si l&rsquo;envie vous prend d&rsquo;aller plus loin, c&rsquo;est possible).</p>
 
   
     <h3 id="installer-go-et-hugo">
-      <a href="#installer-go-et-hugo"># Installer GO et Hugo</a>
+      <a href="#installer-go-et-hugo">Installer GO et Hugo</a>
     </h3>
   
 <p>Commençez par vous rendre sur <a href="gohugo.io/installation/"></a><a href="">gohugo.io/installation/</a> et cliquez sur l&rsquo;option correspondant à votre navigateur. Pour ce tutoriel, je vais suivre les étapes pour Windows (mais c&rsquo;est même plus simple avec MacOS).</p>
@@ -74,7 +124,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h3 id="installer-git">
-      <a href="#installer-git"># Installer Git</a>
+      <a href="#installer-git">Installer Git</a>
     </h3>
   
 <p>Rendez vous sur le <a href="https://git-scm.com/downloads/win">site de git pour Windows</a> et téléchargez la dernière version en cliquant sur le premier lien. Il fois le téléchargement terminé, lancez l&rsquo;exécutable et suivez les instructions. Voilà, c&rsquo;est terminé. Pour le moment, pas si terrible.</p>
@@ -82,7 +132,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="création-du-site-avec-hugo">
-      <a href="#cr%25C3%25A9ation-du-site-avec-hugo"># Création du site avec Hugo</a>
+      <a href="#cr%25C3%25A9ation-du-site-avec-hugo">Création du site avec Hugo</a>
     </h2>
   
 <p>Une fois que l&rsquo;installation est terminé, vous êtes prêt à créer votre site ! Pour ça, réouvrez GitHub Desktop et votre projet dans Visual Studio Code. Une fois dans VScode, on va dans <code>Terminal &gt; New Terminal</code>.</p>
@@ -96,7 +146,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="installer-un-thème">
-      <a href="#installer-un-th%25C3%25A8me"># Installer un thème</a>
+      <a href="#installer-un-th%25C3%25A8me">Installer un thème</a>
     </h2>
   
 <p>Hugo propose une <a href="https://themes.gohugo.io/">collection de thème gratuit sur son site</a>, et il est également possible d&rsquo;en trouver des plus complets sur d&rsquo;autres sites, comme par exemple <a href="https://gethugothemes.com/products">gethugothemes.com</a> ou <a href="https://anvodstudio.com/hugo-themes/">anvodstudio.com</a>. Pour l&rsquo;exemple, j&rsquo;ai choisi le thème <a href="https://themes.gohugo.io/themes/hugo-papermod/">PaperMod</a>. Pour l&rsquo;installer, rien de compliqué, il suffit de se rendre sur le page Github du thème (en cliquant sur le bouton &ldquo;Download&rdquo; dans la page du thème) et de copier la commande pour installer le submodule dans le terminal de VScode. Pour PaperMod, voilà la commande :</p>
@@ -112,14 +162,14 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="configuration-du-site-sans-template">
-      <a href="#configuration-du-site-sans-template"># Configuration du site sans template</a>
+      <a href="#configuration-du-site-sans-template">Configuration du site sans template</a>
     </h2>
   
 <p>Dans cette partie, nous allons créer la structure de base pour votre site. On va commencer par créer une page d&rsquo;accueil, avec un header, du contenu et un footer. Cela va vous permettre de prendre en main le fonctionnement de Hugo, en particulier le système de partials de template. On prendra également le temps de voir comment créer un menu de navigation ainsi qu&rsquo;une liste de projets dans notre page d&rsquo;accueil.</p>
 
   
     <h3 id="lancer-un-serveur-de-test">
-      <a href="#lancer-un-serveur-de-test"># Lancer un serveur de test</a>
+      <a href="#lancer-un-serveur-de-test">Lancer un serveur de test</a>
     </h3>
   
 <p>Hugo nous permet de tester notre travail via un serveur local. Pour cela, il suffit de taper la commande suivant dans le terminal :</p>
@@ -132,7 +182,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="structure-dun-site-hugo">
-      <a href="#structure-dun-site-hugo"># Structure d&rsquo;un site Hugo</a>
+      <a href="#structure-dun-site-hugo">Structure d&rsquo;un site Hugo</a>
     </h2>
   
 <p>Si rien ne s&rsquo;affiche, c&rsquo;est parce que notre site est vide (malin, je sais). Regardons la structure généré par Hugo lors de la création du site d&rsquo;un peu plus près.</p>
@@ -196,7 +246,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="pousser-les-fichiers-locaux-sur-github">
-      <a href="#pousser-les-fichiers-locaux-sur-github"># Pousser les fichiers locaux sur Github</a>
+      <a href="#pousser-les-fichiers-locaux-sur-github">Pousser les fichiers locaux sur Github</a>
     </h2>
   
 <p>Si on se rend dans GitHub Desktop, on remarque que plusieurs fichiers sont ajoutés dans la liste des modifications. Pour les envoyer sur votre RepoGitHub™, il faut donner un nom à votre commit. Quelques choses dans la veine de &ldquo;Premier push&rdquo; fera l&rsquo;affaire. Vous pouvez ajouter une description si l&rsquo;envie vous prend. Essayez d&rsquo;être clair et précis dans vos noms de push, car vous pourrez les retrouver dans Github et revenir en arrière quand des bugs vont inévitablement apparaitres.</p>
@@ -210,7 +260,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="mettre-en-place-des-sections-avec-les-partials">
-      <a href="#mettre-en-place-des-sections-avec-les-partials"># Mettre en place des sections avec les Partials</a>
+      <a href="#mettre-en-place-des-sections-avec-les-partials">Mettre en place des sections avec les Partials</a>
     </h2>
   
 <p>Comme je l&rsquo;ai noté plus haut, Hugo nous permet de mettre en place des sections, qui vont nous permettre de réutiliser des portions de code à plusieurs endroits de notre site. Dans notre template par défaut <code>baseof.html</code>, ajoutons le code suivant :</p>
@@ -260,7 +310,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 
   
     <h2 id="ajouter-des-pages">
-      <a href="#ajouter-des-pages"># Ajouter des pages</a>
+      <a href="#ajouter-des-pages">Ajouter des pages</a>
     </h2>
   
 <p>Pour ajouter des pages dans notre site, il faut que l&rsquo;on créer un dossier dans <code>content</code> avec le nom que l&rsquo;on souhaite donner à la page. Si l&rsquo;on veut créer une page Contact, on créer un dossier <code>contact</code>. Dans ce nouveau dossier, il faut également créer un fichier <code>index.md</code> (sans underscore). Notre structure ressemble à ceci :</p>
@@ -341,7 +391,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 
   
     <h2 id="créer-un-menu-de-navigation">
-      <a href="#cr%25C3%25A9er-un-menu-de-navigation"># Créer un menu de navigation</a>
+      <a href="#cr%25C3%25A9er-un-menu-de-navigation">Créer un menu de navigation</a>
     </h2>
   
 <p>Maintenant que le site possède une structure (certes basique), on va pouvoir générer un menu de navigation. Pour cela, rendez-vous dans votre fichier de configuration <code>hugo.toml</code>(ou <code>config.toml</code>). En effet, c&rsquo;est dans ce fichier que l&rsquo;on définit tout les paramètres communs à l&rsquo;ensemble du site. La syntaxe est très simple et se présente comme suit :</p>
@@ -404,7 +454,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 
   
     <h2 id="créer-une-liste-de-projet">
-      <a href="#cr%25C3%25A9er-une-liste-de-projet"># Créer une liste de projet</a>
+      <a href="#cr%25C3%25A9er-une-liste-de-projet">Créer une liste de projet</a>
     </h2>
   
 <p>Pour commencer, il faut créer les projets. Pour cela, allez dans le dossier <code>content</code>, et ajoutez un dossier avec le nom de notre choix, pour le tutoriel, j&rsquo;ai choisi <code>projets</code>. Ce nom sera celui utilisé par Hugo pour déterminer le <code>type</code> de ces projets. On ajoute dans ce dossier un fichier <code>_index.md</code> afin de pouvoir passer des informations générales. Pour le moment, il peut simplement comprendre le titre de la page :</p>
@@ -495,7 +545,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 
   
     <h2 id="mettre-notre-site-en-ligne-avec-netlify">
-      <a href="#mettre-notre-site-en-ligne-avec-netlify"># Mettre notre site en ligne avec Netlify</a>
+      <a href="#mettre-notre-site-en-ligne-avec-netlify">Mettre notre site en ligne avec Netlify</a>
     </h2>
   
 <p>Avant de continuer, assurez vous d&rsquo;avoir poussé vos dernières modifications sur Github. Une fois cela fait, créez vous un compte sur <a href="https://app.netlify.com/">Netlify</a>. Ensuite, rendez-vous dans la page <code>Sites</code> de votre espace personnel, puis cliquez sur <code>Add new site</code>.</p>
@@ -525,7 +575,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 
   
     <h2 id="installer-le-cms">
-      <a href="#installer-le-cms"># Installer le CMS</a>
+      <a href="#installer-le-cms">Installer le CMS</a>
     </h2>
   
 <p>On va commencer par ajouter dans notre projet la page d&rsquo;administration du CMS. Dans <code>static</code>, créez un dossier <code>admin</code> dans lequel il faut insérer les fichiers <code>index.html</code> et <code>config.yml</code>.</p>
@@ -606,8 +656,25 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <p>Je vous laisse faire le tour du CMS par vous même, c&rsquo;est une interface graphique assez simple, vous devriez vous en sortir.</p>
 <p>J&rsquo;espère que vous avez tout compris. Intéro surprise, montrez moi vos portfolios :mortar_board:</p>
 
-        </section>
-    </main>
+            </div>
+        </div>
+    </section>
+    <section class="footer main-grid z1">
+    <div class="flex-between">
+        <span class="version monospace">Portfolio - v2.0 - ©2025</span>
+        <div class="coords stack monospace">
+            <span>45.6703136</span>
+            <span>0.1612927</span>
+        </div>
+    </div>
+    <div class="flex-end">
+        <div class="contact stack">
+            <span>Dispo pour discuter</span>
+            <a href="mailto:antoine9510@gmail.com">antoine9510@gmail.com</a>
+        </div>
+    </div>
+</section>
+</main>
 
   </body>
 </html>

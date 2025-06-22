@@ -1,8 +1,13 @@
 {{ define "main" }}
-    <main class="article main-grid">
-        <a href="/blog/"><i>←</i>Retour</a>
-        <section class="single-content stack">
-            {{ .Content }}
-        </section>
-    </main>
+<main id="article" class="stack">
+    {{ partial "header.html" . }}
+    <section class="main-grid">
+        <div class="flex-end">
+            <div class="single-content stack">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+    {{ partial "footer.html" . }}
+</main>
 {{ end }}

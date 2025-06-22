@@ -125,19 +125,19 @@
     :root {
         /* fonts */
         --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.1rem);
-        --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 4.25rem);
-        --font-size_h2: clamp(1.75rem, -0.875rem + 6cqi, 2.5rem);
-        --font-size_h3: clamp(1.5rem, -0.875rem + 6cqi, 1.75rem);
+        --font-size_h1: clamp(4rem, -0.875rem + 6cqi, 6rem);
+        --font-size_h2: clamp(2rem, -0.875rem + 6cqi, 3rem);
+        --font-size_h3: clamp(1.5rem, -0.875rem + 6cqi, 2rem);
         --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
         --line-height__body: 1.7;
         --line-height__title: 1.1;
-        --max-text-width: 70ch;
+        --max-text-width: 65ch;
 
         /* colors */
         --white: #f3f3f3;
         --black: #181818;
         --gray-01: #d3d3d3;
-        --gray-02: #494949;
+        --gray-02: #3d3d3d;
         --blue: #122de6;
         --yellow: #ffd800;
 
@@ -281,14 +281,19 @@
         color: var(--texts-color);
     }
 
+    :is(h1, h2, h3) {
+        font-family: Instrument serif;
+        color: var(--titles-color);
+        font-weight: 300;
+        line-height: var(--line-height__title);
+    }
+
     h1 {
         font-size: var(--font-size_h1);
-
     }
 
     h2 {
         font-size: var(--font-size_h2);
-        font-family: Instrument serif;
     }
 
     h3 {
@@ -310,213 +315,6 @@
             -webkit-font-smoothing: antialiased;
             display: inline-block;
             margin-inline-start: .2rem;
-        }
-    }
-}
-
-
-
-/*---------------------------------------------------------------------*/
-/*---------------------------- LAYER - Single -------------------------*/
-/*---------------------------------------------------------------------*/
-@layer single {
-    .single-content {
-        grid-column: text;
-        max-width: 65ch;
-        --space: 2rem;
-
-        /* texts */
-        & :is(p, span) {
-            font-variant-numeric: oldstyle-nums;
-        }
-
-        /* Titles */
-        & h2:not(:first-child) {
-            margin-block-start: 6rem;
-
-            &::after {
-                content: "";
-                display: block;
-                height: .5rem;
-                background: currentcolor;
-                width: 100%;
-                margin-block-start: .5rem;
-            }
-        }
-
-        & h3 {
-            margin-block-start: 4rem;
-            font-style: italic;
-        }
-
-        /* Anchors */
-        & :is(h2, h3) {
-            position: relative;
-
-            &>a {
-                text-decoration: none;
-                position: relative;
-            }
-
-            &>a::before {
-                content: "⩉";
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: -1.5ch;
-                color: var(--background-accent);
-                opacity: 0;
-                transition: ease-in-out .1s;
-            }
-
-            &:hover>a::before {
-                opacity: 1;
-            }
-        }
-
-        /* Lists */
-        & ol>li::marker {
-            font-weight: 700;
-        }
-
-        & :is(ol, ul) {
-            padding-inline-start: var(--global-list-padding, 1.75ch);
-
-            &>li+li,
-            & li>ul {
-                margin-block-start: var(--global-list-flow, 0.75em);
-            }
-        }
-
-        /* Quotes */
-        & blockquote {
-            margin-block: var(--space, 1.5rem);
-            margin-inline: 0;
-            padding: 2rem;
-            background-color: var(--background-accent);
-            border-left: solid 0.5rem currentColor;
-        }
-
-        /* Imgs */
-        & figure {
-            margin-inline: 0;
-
-            & img {
-                width: 100%;
-                border-radius: 0.2rem;
-                border: solid 1px var(--gray-02);
-            }
-
-            & figcaption {
-                color: var(--captions-color);
-                margin-inline-start: .5rem;
-                margin-block-start: .5rem;
-                font-style: italic;
-                font-size: 1rem;
-                position: relative;
-
-                &::before {
-                    content: "—";
-                    margin-inline-end: .5rem;
-                }
-            }
-        }
-
-        /* Code blocks */
-        & pre {
-            display: flex;
-            flex-direction: column;
-
-            &::before {
-                content: attr(data-lang);
-                display: inline-block;
-                padding: .5rem;
-                font-size: 0.6rem;
-                line-height: var(--line-height__title);
-                border: solid 1px currentColor;
-                width: fit-content;
-                margin-bottom: -1px;
-                text-transform: capitalize;
-                font-style: italic;
-            }
-
-            & code {
-                border: solid 1px var(--texts-color);
-                border-top: solid .5em var(--texts-color);
-                min-width: 35ch;
-                width: 100%;
-                padding: 1rem;
-                border-radius: 0;
-                background-color: var(--dark-green);
-                color: var(--off-white);
-
-                & span {
-                    max-width: 100%;
-                    text-wrap: wrap;
-                }
-            }
-        }
-
-        & code {
-            display: inline-block;
-            background-color: var(--background-accent);
-            padding: .2rem;
-            line-height: var(--line-height__title);
-            border: solid 1px var(--gray-02);
-            border-radius: 0.2rem;
-        }
-
-        p:has(>code:only-child) {
-            --space: .5rem;
-        }
-
-
-        /* Tables */
-        & table {
-            border: .1em solid currentColor;
-            height: 100%;
-            width: 100%;
-            table-layout: auto;
-            border-collapse: collapse;
-            border-spacing: 1px;
-            text-align: left;
-            font-variant-numeric: tabular-nums;
-
-            & thead {
-                background-color: var(--background-accent);
-                border-bottom: solid .5em currentColor;
-
-                & th {
-                    min-width: 15ch;
-                }
-            }
-
-            & :is(tbody, thead)>tr> :is(td, th)+ :is(td, th) {
-                border-left: solid 1px currentColor;
-            }
-
-            & tbody>tr+tr {
-                border-top: solid 1px currentColor;
-            }
-
-            & :is(tr, td, th) {
-                padding: 0.5rem;
-            }
-
-            & caption {
-                color: var(--captions-color);
-                margin-inline-start: .5rem;
-                margin-block-end: .5rem;
-                font-style: italic;
-                font-size: 1rem;
-                position: relative;
-                text-align: start;
-
-                &::before {
-                    content: "—";
-                    margin-inline-end: .5rem;
-                }
-            }
         }
     }
 }
@@ -820,7 +618,6 @@
         }
     }
 
-
     /* ------------- FOOTER ------------- */
     .footer {
 
@@ -853,6 +650,201 @@
             flex-direction: column-reverse;
             display: flex;
             gap: 1.5rem;
+        }
+    }
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*---------------------------- LAYER - Single -------------------------*/
+/*---------------------------------------------------------------------*/
+@layer single {
+    .single-content {
+        --space: 1rem;
+        max-width: var(--max-text-width);
+        margin-block: 6rem;
+
+        /* texts */
+        & :is(p, span) {
+            font-variant-numeric: oldstyle-nums;
+        }
+
+        /* Titles */
+        & h2:not(:first-child) {
+            margin-block-start: 6rem;
+        }
+
+        & h3 {
+            margin-block-start: 4rem;
+            font-style: italic;
+        }
+
+        /* Anchors */
+        & :is(h2, h3) {
+            position: relative;
+
+            &>a {
+                text-decoration: none;
+                position: relative;
+            }
+
+            &>a::before {
+                content: "⩉";
+                position: absolute;
+                left: -1.5ch;
+                color: var(--texts-color);
+                opacity: 0;
+                transition: ease-in-out .1s;
+            }
+
+            &:hover>a::before {
+                opacity: 1;
+            }
+        }
+
+        /* Lists */
+        & ol>li::marker {
+            font-weight: 700;
+        }
+
+        & :is(ol, ul) {
+            padding-inline-start: var(--global-list-padding, 1.75ch);
+
+            &>li+li,
+            & li>ul {
+                margin-block-start: var(--global-list-flow, 0.75em);
+            }
+        }
+
+        /* Quotes */
+        & blockquote {
+            margin-block: var(--space, 1.5rem);
+            margin-inline: 0;
+            padding: 2rem;
+            background-color: color-mix(in srgb, var(--midground-color) 33%, transparent);
+            border-left: solid 0.2rem currentColor;
+        }
+
+        /* Imgs */
+        & figure {
+            margin-inline: 0;
+            margin-block-end: 2rem;
+
+            & img {
+                width: 100%;
+                border-radius: 0.2rem;
+                border: solid 1px var(--border-color-light);
+            }
+
+            & figcaption {
+                margin-inline-start: .5rem;
+                margin-block-start: .5rem;
+                font-style: italic;
+                font-size: var(--font-size__small);
+                position: relative;
+
+                &::before {
+                    content: "—";
+                    margin-inline-end: .5rem;
+                }
+            }
+        }
+
+        /* Code blocks */
+        & pre {
+            display: flex;
+            flex-direction: column;
+            margin-block-end: 3rem;
+
+            &::before {
+                content: attr(data-lang);
+                display: inline-block;
+                padding: .5rem;
+                font-size: var(--font-size__small);
+                line-height: var(--line-height__title);
+                border: solid 1px currentColor;
+                width: fit-content;
+                margin-bottom: -1px;
+                text-transform: capitalize;
+                font-style: italic;
+            }
+
+            & code {
+                border: solid 1px var(--texts-color);
+                border-top: solid .2em var(--texts-color);
+                min-width: calc(var(--max-text-width) / 2);
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0;
+                color: var(--titles-color);
+
+                & span {
+                    max-width: 100%;
+                    text-wrap: wrap;
+                }
+            }
+        }
+
+        & code {
+            font-family: monospace;
+            display: inline-block;
+            color: var(--titles-color);
+            background-color: color-mix(in srgb, var(--midground-color) 33%, transparent);
+            padding: .2em .4em;
+            line-height: var(--line-height__title);
+            border-radius: 0.2rem;
+        }
+
+        p:has(>code:only-child) {
+            --space: .5rem;
+        }
+
+        /* Tables */
+        & table {
+            border: .1em solid currentColor;
+            height: 100%;
+            width: 100%;
+            table-layout: auto;
+            border-collapse: collapse;
+            border-spacing: 1px;
+            text-align: left;
+            font-variant-numeric: tabular-nums;
+
+            & thead {
+                background-color: var(--midground-color);
+                border-bottom: solid .2em currentColor;
+
+                & th {
+                    min-width: 15ch;
+                }
+            }
+
+            & :is(tbody, thead)>tr> :is(td, th)+ :is(td, th) {
+                border-left: solid 1px currentColor;
+            }
+
+            & tbody>tr+tr {
+                border-top: solid 1px currentColor;
+            }
+
+            & :is(tr, td, th) {
+                padding: 0.5rem;
+            }
+
+            & caption {
+                margin-inline-start: .5rem;
+                margin-block-end: .5rem;
+                font-style: italic;
+                font-size: 1rem;
+                position: relative;
+                text-align: start;
+
+                &::before {
+                    content: "—";
+                    margin-inline-end: .5rem;
+                }
+            }
         }
     }
 }

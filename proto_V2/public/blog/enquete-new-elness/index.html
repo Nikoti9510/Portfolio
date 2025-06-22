@@ -3,14 +3,64 @@
     <title>Enquête à New Elness - Un scénario dans l&#39;univers Lovecraftien</title>
 <link rel="stylesheet" href="/css/main.css">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="/js/draggable.js"></script>  
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>  
   </head>
   <body>
     
-    <main class="article main-grid">
-        <a href="/blog/"><i>←</i>Retour</a>
-        <section class="single-content stack">
-            
+<main id="article" class="stack">
+    <section class="header main-grid z1">
+    <div class="flex-between">
+        <div class="logo">
+            <a href="/" class="stack">
+                <div>
+                    <span class="logo__trait"></span><span class="logo__accent">Antoine</span>
+                </div>
+                <div>
+                    <span>Moreau</span>
+                </div>
+            </a>
+        </div>
+        <div id="clock" class="clock stack">
+            <div class="clock__loc monospace">Angoulême [FR]</div>
+            <div class="flex-end">
+                <span class="clock__time monospace">13:37</span>
+                <span class="clock__dot">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="flex-end">
+        <button class="theme-switch" id="theme-switch" title="Passer du thème clair au thème sombre" aria-label="auto"
+            aria-live="polite">
+            <svg class="theme-switch__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="soleil" cx="12" cy="12" r="6" mask="url(#mask-lune)" fill="currentColor" />
+                <g class="rayons" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+                <mask class="lune" id="mask-lune">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+            </svg>
+            <span class="sr-only"></span>
+        </button>
+    </div>
+    <div class="visibility-hidden">
+        <script type="text/javascript" src="/js/clock.js"></script>
+    </div>
+</section>
+    <section class="main-grid">
+        <div class="flex-end">
+            <div class="single-content stack">
+                
   
     <h1 id="enquête-à-new-elness---un-scénario-dans-lunivers-lovecraftien">
       Enquête à New Elness - Un scénario dans l&rsquo;univers Lovecraftien
@@ -22,7 +72,7 @@
 
   
     <h2 id="introduction">
-      <a href="#introduction"># Introduction</a>
+      <a href="#introduction">Introduction</a>
     </h2>
   
 <p>Vous avez été engagé par <strong>Jack Delany</strong>, l’une de vos connaissances. Il vous a demandé d’enquêter sur une rumeur inquiétante. Dans l&rsquo;ancien village isolé de <strong>New Elness</strong>, le taux de mortalité infantile est soit disant très élevé. On raconte que depuis plus de 10 ans, aucun enfant ne survit plus de 2 ou 3 ans. Jack est un homme réputé dans certain milieu comme un investigateur compétent, spécialisé dans les événements étranges et hors du commun. Quelles que soient vos raisons, quelques choses vous poussent à explorer les recoins sombres de notre monde, à comprendre l’incompréhensible, à expliquer l’inexplicable. Travailler pour <strong>Jack Delany</strong> est une aubaine, une chance de faire vos preuves et de lui prouver que vous avez du potentiel.</p>
@@ -31,7 +81,7 @@
 
   
     <h2 id="chronologie-des-événements">
-      <a href="#chronologie-des-%25C3%25A9v%25C3%25A9nements"># Chronologie des événements</a>
+      <a href="#chronologie-des-%25C3%25A9v%25C3%25A9nements">Chronologie des événements</a>
     </h2>
   
 <ul>
@@ -59,7 +109,7 @@
 
   
     <h2 id="listes-des-indices">
-      <a href="#listes-des-indices"># Listes des Indices</a>
+      <a href="#listes-des-indices">Listes des Indices</a>
     </h2>
   
 <div class="ul-margin-small">
@@ -83,13 +133,13 @@
 
   
     <h2 id="new-elness-et-les-différents-lieux-à-visiter">
-      <a href="#new-elness-et-les-diff%25C3%25A9rents-lieux-%25C3%25A0-visiter"># New Elness et les différents lieux à visiter</a>
+      <a href="#new-elness-et-les-diff%25C3%25A9rents-lieux-%25C3%25A0-visiter">New Elness et les différents lieux à visiter</a>
     </h2>
   
 
   
     <h3 id="épicerieposte-sams-common-goods">
-      <a href="#%25C3%25A9picerieposte-sams-common-goods"># <strong>Épicerie/poste “Sam’s common goods”</strong></a>
+      <a href="#%25C3%25A9picerieposte-sams-common-goods"><strong>Épicerie/poste “Sam’s common goods”</strong></a>
     </h3>
   
 <p>Juste devant la vieille gare du village, la petite épicerie semble être le seul bâtiment du village encore à peu prêt entretenu. A la fois magasin général, bar et bureau de poste, c’est le dernier commerce du village. La ligne électrique qui longe la route sinueuse menant au village s&rsquo;arrête ici.</p>
@@ -113,7 +163,7 @@
 
   
     <h3 id="maison-des-wilder">
-      <a href="#maison-des-wilder"># <strong>Maison des Wilder</strong></a>
+      <a href="#maison-des-wilder"><strong>Maison des Wilder</strong></a>
     </h3>
   
 <p><strong>Thomas</strong> et <strong>Chelsea Wilder</strong> (61 ans et 57 ans) vivent dans une petite maison de mineur insalubre, dans laquelle ils restent enfermés à longueur de journée. Ils ne vivent que dans l’espoir de voir revenir leur petite fille, en dépit de toute logique. Pour eux, elle peut franchir la porte à tout instant, et ils refusent de discuter avec <strong>Preston Horne</strong>, car celui-ci ne partage pas leur point de vue.</p>
@@ -125,7 +175,7 @@
 
   
     <h3 id="cimetière">
-      <a href="#cimeti%25C3%25A8re"># <strong>Cimetière</strong></a>
+      <a href="#cimeti%25C3%25A8re"><strong>Cimetière</strong></a>
     </h3>
   
 <p>Au plus bas du village, des rigoles d’eau pluviales détrempent la terre. Les tombes sont peu nombreuses. Il est possible de voir un petit endroit à part, à l’ombre des grands arbres du bois qui entourent le village. Il n’y a, dans cette espace délimité par un petit muret, que des sépultures d’enfants, et la dernière date d’il y a environ trois semaines.</p>
@@ -135,7 +185,7 @@
 
   
     <h3 id="église">
-      <a href="#%25C3%25A9glise"># <strong>Église</strong></a>
+      <a href="#%25C3%25A9glise"><strong>Église</strong></a>
     </h3>
   
 <p>Adossé au petit cimetière de la ville, l’office du pasteur <strong>Roland Simmons</strong> ne paye pas de mine, mais c’est sans doute le bâtiment le mieux entretenu de <strong>New Elness</strong>. Le pasteur accueille tous les visiteurs chaleureusement et est ravi de répondre aux questions.</p>
@@ -147,7 +197,7 @@
 
   
     <h3 id="maison-de-martin-henderson">
-      <a href="#maison-de-martin-henderson"># <strong>Maison de Martin Henderson</strong></a>
+      <a href="#maison-de-martin-henderson"><strong>Maison de Martin Henderson</strong></a>
     </h3>
   
 <p><strong>Martin Henderson</strong> est l’un des mineurs ayant découvert la cave, et le seul toujours à <strong>New Elness</strong>. Il est capable d&rsquo;indiquer le chemin pour l&rsquo;atteindre, mais refuse de s’y rendre. Il ne semble pas très stable mentalement, et passe ses journées à aider le pasteur <strong>Roland Simmons</strong> avec l&rsquo;église, mais il peut également être aperçu sur le palier de sa maison, dessinant à la pastel (qu’il récupère au bureau de poste). Quand il est à l&rsquo;extérieur, il regarde le sol, et ne lève jamais le regard vers le ciel. Si quelqu’un est plus grand que lui, il ne le regarde pas dans les yeux. Il prétend s’occuper de sa mère, madame <strong>Elizabeth Henderson</strong>, gravement malade. Mais celle-ci est en réalité décédée depuis plusieurs années. Il lui apporte à manger trois fois par jour et discute avec elle, répondant au silence comme s’il entendait sa mère. À l’étage de la maison, il y a deux chambres :</p>
@@ -158,7 +208,7 @@
 
   
     <h3 id="maison-des-horne">
-      <a href="#maison-des-horne"># <strong>Maison des Horne</strong></a>
+      <a href="#maison-des-horne"><strong>Maison des Horne</strong></a>
     </h3>
   
 <p>La maison de <strong>Preston Horne</strong> (58 ans et veuf) se trouve à l’angle de la seule rue perpendiculaire à l’avenue unique du village. On peut voir le petit chemin de fer autrefois utilisé par les mineurs passer devant chez lui et tourner en direction de la gare. Il est morose, mais aidera tout de même les nouveaux visiteurs s’ils se montrent sympathiques à son égard. C’est un homme intelligent qui vivote à New Elness depuis la fermeture de la mine, pour laquelle il était ingénieur. L’intérieur de la bâtisse est sombre et poussiéreuse. On peut voir des portraits de sa femme et de sa fille sur les murs, et quelques éditions du Boston Globe des mois derniers.</p>
@@ -170,7 +220,7 @@
 
   
     <h3 id="le-chemin-de-fer">
-      <a href="#le-chemin-de-fer"># <strong>Le chemin de fer</strong></a>
+      <a href="#le-chemin-de-fer"><strong>Le chemin de fer</strong></a>
     </h3>
   
 <p>Un long sentier serpente sur les flancs de la colline au pied de laquelle <strong>New Elness</strong> est niché. Un chemin de fer en mauvais état passe au-dessus de quelques creux sur des ponts de bois en ruine. Au sommet, on aperçoit entre les conifères le grand bâtiment de la mine.</p>
@@ -180,7 +230,7 @@
 
   
     <h3 id="maison-de-wayne-richardson">
-      <a href="#maison-de-wayne-richardson"># <strong>Maison de Wayne Richardson</strong></a>
+      <a href="#maison-de-wayne-richardson"><strong>Maison de Wayne Richardson</strong></a>
     </h3>
   
 <p>Au cours des 10 années qui se sont passées depuis la fermeture de la mine, Wayne Richardson à eu le temps de mettre en place des rites de protection païens dans son domicile et ses bureaux. Ils lui permettent d’observer à travers les surfaces réflectives les mouvements des lieux protégés. Les personnes qui s&rsquo;infiltrent peuvent apercevoir des mouvements flous ou des yeux les fixant pendant un bref instant dans les reflets.</p>
@@ -233,7 +283,7 @@
 
   
     <h3 id="ancien-bureau-de-la-compagnie-champlin-herman-mining-company">
-      <a href="#ancien-bureau-de-la-compagnie-champlin-herman-mining-company"># <strong>Ancien Bureau de la compagnie Champlin-Herman mining company</strong></a>
+      <a href="#ancien-bureau-de-la-compagnie-champlin-herman-mining-company"><strong>Ancien Bureau de la compagnie Champlin-Herman mining company</strong></a>
     </h3>
   
 <p>Les bureaux sont situés au troisième étage du bâtiment de chargement et de tri de la mine. L’édifice haut de 4 étages domine le haut de la colline. C’est d’ici que part le petit chemin de fer permettant de relier la gare en bas du village et la mine. De chaque côté du bâtiment se trouvent deux trémies de chargement. <em>(Les deux sont encore plein, si un joueur passe dessous, Wayne en fait tomber le contenu)</em>. Le bâtiment est visiblement à l’abandon, les outils sont rouillés, les planches moisies, les mauvaises herbes partout. Une porte est entrouverte à l’ouest du bâtiment. Les étages sont reliés entre eux par un escalier central.</p>
@@ -259,21 +309,21 @@
 
   
     <h3 id="petit-camp-de-chasse">
-      <a href="#petit-camp-de-chasse"># <strong>Petit camp de chasse</strong></a>
+      <a href="#petit-camp-de-chasse"><strong>Petit camp de chasse</strong></a>
     </h3>
   
 <p>En suivant la petite piste grimpant vers l’ouest entre les racines sinueuses, on débouche sur une petite clairière de moins de 10 mètres. Au centre, un tilleul mort à l’écorce particulièrement sombre et aux branches mortes taillées en têtard. Au pied de l’arbre, une petite chaise est adossée, et de nombreux ossements et restes de bêtes diverses sont étalés tout autour. Enfin, à quelques pas de là, un petit renfoncement recouvert d’une trappe ouverte protège une ancienne cheminée d’aération de la mine. Plusieurs cordes semblent permettre de faire descendre ou monter un vieux seau en ferraille.</p>
 
   
     <h3 id="entrée-de-la-mine-abandonné">
-      <a href="#entr%25C3%25A9e-de-la-mine-abandonn%25C3%25A9"># <strong>Entrée de la mine abandonné</strong></a>
+      <a href="#entr%25C3%25A9e-de-la-mine-abandonn%25C3%25A9"><strong>Entrée de la mine abandonné</strong></a>
     </h3>
   
 <p>De vieux chemins de fer et quelques chariots sont à l&rsquo;abandon devant l’entrée de la mine. Des traces de pas sont très facile à discerner dans le sol légèrement mouillé suite à la pluie des derniers jours. Sur une poutre en piteux état, une araignée a tissé une toile, une grosse mouche se débat pour essayer de lui échapper, en vain.</p>
 
   
     <h3 id="les-tunnels-de-la-mine">
-      <a href="#les-tunnels-de-la-mine"># <strong>Les tunnels de la mine</strong></a>
+      <a href="#les-tunnels-de-la-mine"><strong>Les tunnels de la mine</strong></a>
     </h3>
   
 <p>Une fois rentrée dans la mine, les sons de la montagne disparaissent pour laisser place aux mélodies de la roche. On entend les gouttes d’eau ruisseler, les graviers crisser sous les chaussures, les souffles haletants. L’air est moite et l’odeur de charbon sur les poumons.</p>
@@ -321,7 +371,7 @@
 
   
     <h2 id="prélude">
-      <a href="#pr%25C3%25A9lude"># Prélude</a>
+      <a href="#pr%25C3%25A9lude">Prélude</a>
     </h2>
   
 <p>Si vous avez le temps, il est possible de jouer une ou deux scènes d&rsquo;enquêtes à Boston avant de partir pour New Elness. Cela permet de commencer doucement le scénario, ce qui donnera encore plus de contraste à la partie. Laissez les joueurs faire des propositions, et piochez dans la liste des indices pour récompenser les bonnes idées.</p>
@@ -348,7 +398,7 @@
 
   
     <h2 id="conseils-pour-mener-lenquête">
-      <a href="#conseils-pour-mener-lenqu%25C3%25AAte"># Conseils pour mener l&rsquo;enquête</a>
+      <a href="#conseils-pour-mener-lenqu%25C3%25AAte">Conseils pour mener l&rsquo;enquête</a>
     </h2>
   
 <p>Les joueurs peuvent, en découvrant au fur et à mesure de leurs enquêtes ce qu’il se passe à New Elness, décider de partir faire un rapport à <strong>Jack Delany</strong> en ville avant de revenir avec des renforts. Laissez-les faire ! En fonction du temps qu’ils mettent pour revenir, la situation pourrait bien avoir changé pour le pire, mais cela ne va qu’ajouter à la tension. Vous pouvez jouer une scène dans le petit salon enfumé du détective, durant laquelle les joueurs seront pris simultanément d’un frisson leurs glaçant le sang, sans qu’ils ne sachent vraiment pourquoi.</p>
@@ -366,7 +416,7 @@
 
   
     <h2 id="et-ensuite-">
-      <a href="#et-ensuite-"># Et ensuite ?</a>
+      <a href="#et-ensuite-">Et ensuite ?</a>
     </h2>
   
 <p>A la fin de l’aventure, les joueurs n’auront pas toutes les réponses à leurs questions (si tant est qu’ils aient survécu).</p>
@@ -389,14 +439,14 @@
 
   
     <h2 id="les-personnages-joueurs">
-      <a href="#les-personnages-joueurs"># Les personnages joueurs</a>
+      <a href="#les-personnages-joueurs">Les personnages joueurs</a>
     </h2>
   
 <p>J&rsquo;ai préparé cinq personnages pour rapidement commencer l&rsquo;aventure avec mes joueurs, mais vous pouvez très facilement en créer d&rsquo;autres, ou prendre les personnages déjà existant. Je n&rsquo;ai pas inclus ici d&rsquo;information lié à un système de jeu en particulier, libre à vous d&rsquo;adapter avec ce qui vous convient le mieux.</p>
 
   
     <h3 id="ray-murphy">
-      <a href="#ray-murphy"># <strong>Ray Murphy</strong></a>
+      <a href="#ray-murphy"><strong>Ray Murphy</strong></a>
     </h3>
   
 <p>Ancien courtier à la Bourse de Boston, et à bientôt 80 ans, vous vous êtes pris depuis plusieurs années de passion pour l&rsquo;occulte et l’étrange. Cela déplaît à votre femme Judith bien sûr, avec qui vous êtes mariée depuis 46 ans. Plus exactement depuis le 16 août 1877, impossible d’oublier la date, Judith vous la rabâche sans cesse.</p>
@@ -404,7 +454,7 @@
 
   
     <h3 id="betty-burnett">
-      <a href="#betty-burnett"># <strong>Betty Burnett</strong></a>
+      <a href="#betty-burnett"><strong>Betty Burnett</strong></a>
     </h3>
   
 <p>Suite à vos études de journalisme (où vous avez rencontré Frank Austin), vous avez été embauché au Boston Globe, rubrique économique. Rien de plus lassant que d’écrire sur les transactions économiques à longueur de journée.Mais pas cette semaine ! Car cette semaine c’est votre cadeau de fiançailles. Frank et vous allez mener une enquête, une vraie ! C’est notre chance de faire la première page du journal (et de rendre maman fière qui sait ?).</p>
@@ -412,7 +462,7 @@
 
   
     <h3 id="ernest-faulkner">
-      <a href="#ernest-faulkner"># <strong>Ernest Faulkner</strong></a>
+      <a href="#ernest-faulkner"><strong>Ernest Faulkner</strong></a>
     </h3>
   
 <p>Vous avez travaillé dans le minerai toute votre vie. D’abord comme mineur, puis dans la revente un peu plus tard. Ce que ça vous a apporté ? Un dos en miettes surtout, mais aussi, un certain attrait pour l’obscurité et tout ce qui est enfoui. Vous êtes persuadé que Jack Delany vous a uniquement embauché pour cette mission de par votre passé de mineur. Mais rien ne vous empêche de lui prouver que vous êtes un bon investigateur.</p>
@@ -420,7 +470,7 @@
 
   
     <h3 id="dr-allen-stokes">
-      <a href="#dr-allen-stokes"># <strong>Dr Allen Stokes</strong></a>
+      <a href="#dr-allen-stokes"><strong>Dr Allen Stokes</strong></a>
     </h3>
   
 <p>Vous avez enseigné la géologie à l’université de Boston pendant 30 ans. Mais il y a 3 ans, votre vie a basculé à la suite de votre rencontre avec Lori Lake. Un divorce et une démission plus tard, vous travaillez maintenant à l’université Miskatonic d’Arkham en tant que spécialiste géologue pour une expédition en Antarctique. Votre vie est passée de la route monotone à l&rsquo;excitation de l’aventure, et tout cela est dû à Lori. Elle a réveillé en vous la curiosité, et vous n’en pouvez plus de partir dans le grand nord avec elle et les autres chercheurs.</p>
@@ -428,7 +478,7 @@
 
   
     <h3 id="frank-austin">
-      <a href="#frank-austin"># <strong>Frank Austin</strong></a>
+      <a href="#frank-austin"><strong>Frank Austin</strong></a>
     </h3>
   
 <p>Qui aurait cru qu’une bague de fiançailles coûterait aussi cher ? Je me retrouve à devoir travailler double. Mais si ça rend ma Betty Burnett heureuse alors ça vaut le coup. En plus, ce Jack Delany paie bien, et la plupart du temps, les petits travaux de filature qu’il me donne ne sont pas trop compliqués à réaliser. Et puis ça me change un peu de ma routine de pigiste.</p>
@@ -436,7 +486,7 @@
 
   
     <h2 id="annexes">
-      <a href="#annexes"># Annexes</a>
+      <a href="#annexes">Annexes</a>
     </h2>
   
 <figure>
@@ -448,8 +498,25 @@
     <img src="rituel_maj.png" alt="Traduction du rituel"><figcaption>Traduction du rituel</figcaption></figure><figure>
     <img src="anti-rituel_maj.png" alt="Inversion du rituel"><figcaption>Inversion du rituel</figcaption></figure><figure>
     <img src="lettre-harvey.png" alt="Lettre de Harvey"><figcaption>Lettre de Harvey</figcaption></figure>
-        </section>
-    </main>
+            </div>
+        </div>
+    </section>
+    <section class="footer main-grid z1">
+    <div class="flex-between">
+        <span class="version monospace">Portfolio - v2.0 - ©2025</span>
+        <div class="coords stack monospace">
+            <span>45.6703136</span>
+            <span>0.1612927</span>
+        </div>
+    </div>
+    <div class="flex-end">
+        <div class="contact stack">
+            <span>Dispo pour discuter</span>
+            <a href="mailto:antoine9510@gmail.com">antoine9510@gmail.com</a>
+        </div>
+    </div>
+</section>
+</main>
 
   </body>
 </html>
