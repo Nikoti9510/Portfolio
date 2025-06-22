@@ -125,8 +125,8 @@
     :root {
         /* fonts */
         --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.1rem);
-        --font-size_h1: clamp(4rem, -0.875rem + 6cqi, 6rem);
-        --font-size_h2: clamp(2rem, -0.875rem + 6cqi, 3rem);
+        --font-size_h1: clamp(3.5rem, -0.875rem + 6cqi, 6rem);
+        --font-size_h2: clamp(2.5rem, -0.875rem + 6cqi, 3rem);
         --font-size_h3: clamp(1.5rem, -0.875rem + 6cqi, 2rem);
         --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
         --line-height__body: 1.7;
@@ -199,11 +199,8 @@
 
     /* Grille principale */
     .main-grid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-
         @media (width > 70rem) {
+            display: grid;
             grid-template-columns: 7fr 5fr;
             grid-template-rows: none;
         }
@@ -302,6 +299,10 @@
 
     body {
         padding: 4vh 4vw;
+
+        @media (width < 70rem) {
+            padding: 2em;
+        }
     }
 
     /* liens */
@@ -660,6 +661,12 @@
 /*---------------------------- LAYER - Single -------------------------*/
 /*---------------------------------------------------------------------*/
 @layer single {
+    .single-content-container {
+        @media (width < 70rem) {
+            display: block;
+        }
+    }
+
     .single-content {
         --space: 1rem;
         max-width: var(--max-text-width);
@@ -709,7 +716,7 @@
         }
 
         & :is(ol, ul) {
-            padding-inline-start: var(--global-list-padding, 1.75ch);
+            padding-inline-start: var(--global-list-padding, 3.5ch);
 
             &>li+li,
             & li>ul {
