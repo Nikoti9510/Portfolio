@@ -1,25 +1,15 @@
 {{ define "main" }}
-<main class="blog main-grid">
-    {{ partial "back.html" . }}
-    <section class="blog-posts stack">
-        {{ .Content }}
-        <h1>Articles et billets de blog</h1>
-        {{ range where .Site.RegularPages "Type" "blog" }}
-        <article class="post">
-            <a href="{{ .RelPermalink }}">
-                {{ with .Resources.GetMatch "banner.jpg" }}
-                    <img src="{{ .RelPermalink }}">
+<main id="blog" class="stack">
+    {{ partial "header.html" . }}
+    <section class="main-grid">
+        <div class="flex-end">
+            <div class="all-posts stack">
+                {{ range where .Site.RegularPages "Type" "blog" }}
+                {{ partial "articles.html" . }}
                 {{ end }}
-                <h2>{{ .LinkTitle }}</h2>
-                <div>{{ .Params.description }}</div>
-                <div class="post--tags">{{ range .Params.tags }} <span>{{ . }}</span> {{end}}</div>
-                <span class="post--date">
-                    {{ $mois := index $.Site.Data.mois }}
-                    {{ index $mois (printf "%d" .Date.Month) }} {{ .Date.Year }}
-                </span>
-            </a>
-        </article>
-        {{ end }}
+            </div>
+        </div>
     </section>
+    {{ partial "footer.html" . }}
 </main>
 {{ end }}

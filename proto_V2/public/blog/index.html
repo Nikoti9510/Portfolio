@@ -7,104 +7,213 @@
   </head>
   <body>
     
-<main class="blog main-grid">
-    <a href="/"><i>←</i>Retour</a>
-    <section class="blog-posts stack">
-        
-        <h1>Articles et billets de blog</h1>
-        
-        <article class="post">
-            <a href="/blog/tutoriel-hugo/">
-                
-                <h2>Tutoriel Hugo</h2>
-                <div>Un tutoriel complet pour créer de A à Z un site statique avec Hugo</div>
-                <div class="post--tags"> <span>Web</span> </div>
-                <span class="post--date">
-                    
-                    janvier 2025
-                </span>
+<main id="blog" class="stack">
+    <section class="header main-grid z1">
+    <div class="flex-between">
+        <div class="logo">
+            <a href="/" class="stack">
+                <div>
+                    <span class="logo__trait"></span><span class="logo__accent">Antoine</span>
+                </div>
+                <div>
+                    <span>Moreau</span>
+                </div>
             </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/enquete-new-elness/">
-                
-                <h2>Enquête à New Elness - Un scénario dans l&#39;univers Lovecraftien</h2>
-                <div>Vous avez été engagé par Jack Delany, l’une de vos connaissances. Il vous a demandé d’enquêter sur une rumeur inquiétante. Dans l&#39;ancien village isolé de New Elness, le taux de mortalité infantile est soit disant très élevé. On raconte que depuis plus de dix ans, aucun enfant ne survit plus de deux ou trois ans.</div>
-                <div class="post--tags"> <span>JDR</span> </div>
-                <span class="post--date">
-                    
-                    décembre 2024
+        </div>
+        <div id="clock" class="clock stack">
+            <div class="clock__loc monospace">Angoulême [FR]</div>
+            <div class="flex-end">
+                <span class="clock__time monospace">13:37</span>
+                <span class="clock__dot">
+                    <span></span>
                 </span>
-            </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/degenesis-stele-echo/">
+            </div>
+        </div>
+    </div>
+    <div class="flex-end">
+        <button class="theme-switch" id="theme-switch" title="Passer du thème clair au thème sombre" aria-label="auto"
+            aria-live="polite">
+            <svg class="theme-switch__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="soleil" cx="12" cy="12" r="6" mask="url(#mask-lune)" fill="currentColor" />
+                <g class="rayons" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+                <mask class="lune" id="mask-lune">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+            </svg>
+            <span class="sr-only"></span>
+        </button>
+    </div>
+    <div class="visibility-hidden">
+        <script type="text/javascript" src="/js/clock.js"></script>
+    </div>
+</section>
+    <section class="main-grid">
+        <div class="flex-end">
+            <div class="all-posts stack">
                 
-                <h2>Degenesis - stèles d&#39;échos</h2>
-                <div>Expérimentation autour de l&#39;article de Mindstorm : NESTED MONSTER HIT DICE, appliqué à Degenesis.</div>
-                <div class="post--tags"> <span>JDR</span> </div>
-                <span class="post--date">
-                    
-                    juin 2024
-                </span>
-            </a>
-        </article>
+                <article class="post">
+    <a href="/blog/tutoriel-hugo/" class="stack">
         
-        <article class="post">
-            <a href="/blog/500-objets-post-apo/">
+        <p class="post__title">Tutoriel Hugo</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
                 
-                <h2>500 objets sans importances pour du post-apocalyptique</h2>
-                <div>Vous venez de rentrer dans un bâtiment en ruine, la horde de zombie semble vous avoir enfin lâché les basques. Pourquoi ne pas fouiller un peu les lieux ? Lancez 1d500.</div>
-                <div class="post--tags"> <span>JDR</span>  <span>test</span> </div>
-                <span class="post--date">
-                    
-                    juin 2024
-                </span>
-            </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/pourquoi-ecrire-un-blog/">
+                <span class="post__tags--tag">Web</span>
                 
-                <h2>Pourquoi écrire (un blog) ?</h2>
-                <div>C&#39;est bien beau de faire un blog, mais pour quoi faire ? Eh bien c&#39;est une excellente question, mais ne suis pas sûr qu&#39;elle soit vite répondue.</div>
-                <div class="post--tags"> <span>Meta</span> </div>
-                <span class="post--date">
-                    
-                    mai 2024
-                </span>
-            </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/death-in-space-anarchy-program/">
+            </div>
+            <span class="post__date monospace">
                 
-                <h2>Death In Space #4N4RCHY PR06R4M</h2>
-                <div>DEATH IN SPACE est un jeu de rôle de science-fiction et de survie dans un univers dévasté par la guerre, écrit par Christian Plogfors et Niblaeus du Stockholm Kartell.</div>
-                <div class="post--tags"> <span>JDR</span> </div>
-                <span class="post--date">
-                    
-                    avril 2024
-                </span>
-            </a>
-        </article>
-        
-        <article class="post">
-            <a href="/blog/black-sword-hack-archipel-or/">
+                janvier 2025
+            </span>
+        </div>
+    </a>
+</article>
                 
-                <h2>Black Sword Hack - l&#39;archipel d&#39;or</h2>
-                <div>Une ébauche de cadre de campagne pour Black Sword Hack de Kobayashi.</div>
-                <div class="post--tags"> <span>JDR</span> </div>
-                <span class="post--date">
-                    
-                    janvier 2024
-                </span>
-            </a>
-        </article>
+                <article class="post">
+    <a href="/blog/enquete-new-elness/" class="stack">
         
+        <p class="post__title">Enquête à New Elness - Un scénario dans l&#39;univers Lovecraftien</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
+                
+                <span class="post__tags--tag">JDR</span>
+                
+            </div>
+            <span class="post__date monospace">
+                
+                décembre 2024
+            </span>
+        </div>
+    </a>
+</article>
+                
+                <article class="post">
+    <a href="/blog/degenesis-stele-echo/" class="stack">
+        
+        <p class="post__title">Degenesis - stèles d&#39;échos</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
+                
+                <span class="post__tags--tag">JDR</span>
+                
+            </div>
+            <span class="post__date monospace">
+                
+                juin 2024
+            </span>
+        </div>
+    </a>
+</article>
+                
+                <article class="post">
+    <a href="/blog/500-objets-post-apo/" class="stack">
+        
+        <p class="post__title">500 objets sans importances pour du post-apocalyptique</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
+                
+                <span class="post__tags--tag">JDR</span>
+                
+                <span class="post__tags--tag">test</span>
+                
+            </div>
+            <span class="post__date monospace">
+                
+                juin 2024
+            </span>
+        </div>
+    </a>
+</article>
+                
+                <article class="post">
+    <a href="/blog/pourquoi-ecrire-un-blog/" class="stack">
+        
+        <p class="post__title">Pourquoi écrire (un blog) ?</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
+                
+                <span class="post__tags--tag">Meta</span>
+                
+            </div>
+            <span class="post__date monospace">
+                
+                mai 2024
+            </span>
+        </div>
+    </a>
+</article>
+                
+                <article class="post">
+    <a href="/blog/death-in-space-anarchy-program/" class="stack">
+        
+        <p class="post__title">Death In Space #4N4RCHY PR06R4M</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
+                
+                <span class="post__tags--tag">JDR</span>
+                
+            </div>
+            <span class="post__date monospace">
+                
+                avril 2024
+            </span>
+        </div>
+    </a>
+</article>
+                
+                <article class="post">
+    <a href="/blog/black-sword-hack-archipel-or/" class="stack">
+        
+        <p class="post__title">Black Sword Hack - l&#39;archipel d&#39;or</p>
+        
+        <div class="flex-start">
+            <div class="post__tags">
+                
+                <span class="post__tags--tag">JDR</span>
+                
+            </div>
+            <span class="post__date monospace">
+                
+                janvier 2024
+            </span>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
     </section>
+    <section class="footer main-grid z1">
+    <div class="flex-between">
+        <span class="version monospace">Portfolio - v2.0 - ©2025</span>
+        <div class="coords stack monospace">
+            <span>45.6703136</span>
+            <span>0.1612927</span>
+        </div>
+    </div>
+    <div class="flex-end">
+        <div class="contact stack">
+            <span>Dispo pour discuter</span>
+            <a href="mailto:antoine9510@gmail.com">antoine9510@gmail.com</a>
+        </div>
+    </div>
+</section>
 </main>
 
   </body>
