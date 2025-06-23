@@ -509,9 +509,12 @@
     }
 
     /* --------------- HOME --------------- */
-    body:has(>#home) {
-        overflow: hidden;
+    @media (width > 70rem) {
+        body:has(>#home) {
+            overflow: hidden;
+        }
     }
+    
     #home {
         justify-content: space-between;
         min-height: 100%;
