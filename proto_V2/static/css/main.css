@@ -268,21 +268,13 @@
         src: url('/fonts/InstrumentSerif-Regular.woff2') format('woff2');
     }
 
-    html {
-        font-family: Instrument;
-        font-optical-sizing: auto;
-        font-style: normal;
-        line-height: var(--line-height__body);
-        font-size: var(--font-size__body);
-        background-color: var(--background-color);
-        color: var(--texts-color);
-    }
-
     :is(h1, h2, h3) {
         font-family: Instrument serif;
         color: var(--titles-color);
         font-weight: 300;
         line-height: var(--line-height__title);
+        max-width: calc(var(--max-text-width) / 2);
+        text-wrap: balance;
     }
 
     h1 {
@@ -298,6 +290,13 @@
     }
 
     body {
+        font-family: Instrument;
+        font-optical-sizing: auto;
+        font-style: normal;
+        line-height: var(--line-height__body);
+        font-size: var(--font-size__body);
+        background-color: var(--background-color);
+        color: var(--texts-color);
         padding: 4vh 4vw;
 
         @media (width < 70rem) {
