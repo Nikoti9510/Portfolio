@@ -509,6 +509,9 @@
     }
 
     /* --------------- HOME --------------- */
+    body:has(>#home) {
+        overflow: hidden;
+    }
     #home {
         justify-content: space-between;
         min-height: 100%;
