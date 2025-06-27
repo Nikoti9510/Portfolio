@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fonction pour la création de la scène 3D 
     function setupScene(gltf) {
-        const renderer = new THREE.WebGLRenderer({
+        const renderer = new THREE.WebGL1Renderer({
             antialias: true,
             alpha: true
         });
