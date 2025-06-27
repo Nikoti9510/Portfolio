@@ -81,6 +81,8 @@ async function loadModelAsync() {
             const { done, value } = await reader.read();
             if (done) break;
 
+            console.log("Content-Length déclaré :", totalBytes);
+
             chunks.push(value);
             received += value.length;
 
