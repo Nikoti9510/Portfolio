@@ -305,7 +305,7 @@
     }
 
     /* liens */
-    a[target="blank"] {
+    a[target="_blank"] {
         text-decoration: none;
         box-shadow: 0 1px 0 0 currentColor;
 
@@ -509,6 +509,12 @@
     }
 
     /* --------------- HOME --------------- */
+    @media (width > 70rem) {
+        body:has(>#home) {
+            overflow: hidden;
+        }
+    }
+    
     #home {
         justify-content: space-between;
         min-height: 100%;
