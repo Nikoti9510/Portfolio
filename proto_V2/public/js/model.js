@@ -88,16 +88,14 @@ async function loadModelAsync() {
             console.log("received :", totalBytes);
 
             if (totalBytes === 0 || isNaN(totalBytes)) {
-                // Ne pas afficher de pourcentage
                 progressText.textContent = "";
             } else if (totalBytes > 0) {
 
-                const percent = Math.round((received / totalBytes) * 100);
+                const percent = Math.min(100, Math.round((received / totalBytes) * 100));
 
                 if (percent >= lastPercentShown + 10 || percent === 100) {
                     progressText.textContent = `${percent}%`;
                     lastPercentShown = percent;
-                    // Laisse au navigateur le temps d'afficher la mise à jour
                     await new Promise(requestAnimationFrame);
                 }
             }
@@ -110,7 +108,6 @@ async function loadModelAsync() {
             offset += chunk.length;
         }
 
-        // Laisse le thread respirer
         requestAnimationFrame(() => {
             loader.parse(arrayBuffer.buffer, '', gltf => {
                 addModelToScene(gltf);
