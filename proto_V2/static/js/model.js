@@ -84,8 +84,8 @@ async function loadModelAsync() {
             chunks.push(value);
             received += value.length;
 
-            console.log("Content-Length :", totalBytes);
-            console.log("received :", totalBytes);
+            // console.log("Content-Length :", totalBytes);
+            // console.log("received :", totalBytes);
 
             if (totalBytes === 0 || isNaN(totalBytes)) {
                 progressText.textContent = "";
