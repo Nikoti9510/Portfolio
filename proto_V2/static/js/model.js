@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadModel() {
         const loader = new GLTFLoader();
         const loadContainer = document.querySelector('#canvas .loading');
-        loader.load('3d_files/model_animated_notexture.glb',
+        loader.load('3d_files/model_compressed.glb',
             (gltf) => {
                 // loaded
                 setupScene(gltf);
