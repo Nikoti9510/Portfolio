@@ -68,6 +68,7 @@ async function loadModelAsync() {
     loader.setMeshoptDecoder(MeshoptDecoder);
 
     const loadContainer = document.querySelector('#canvas .loading');
+    const progressText = loadContainer.children[0];
     try {
         const response = await fetch('3d_files/model_compressed.glb');
         const totalBytes = parseInt(response.headers.get('Content-Length') || '0');
@@ -75,14 +76,24 @@ async function loadModelAsync() {
         let received = 0;
         const chunks = [];
 
+        let lastPercentShown = 0;
         while (true) {
             const { done, value } = await reader.read();
             if (done) break;
+
             chunks.push(value);
             received += value.length;
+
             if (totalBytes > 0) {
                 const percent = Math.round((received / totalBytes) * 100);
-                loadContainer.children[0].textContent = `${percent}%`;
+
+                if (percent >= lastPercentShown + 10 || percent === 100) {
+                    progressText.textContent = `${percent}%`;
+                    lastPercentShown = percent;
+
+                    // Laisse au navigateur le temps d'afficher la mise à jour
+                    await new Promise(requestAnimationFrame);
+                }
             }
         }
 
