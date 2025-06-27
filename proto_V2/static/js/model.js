@@ -89,7 +89,7 @@ async function loadModelAsync() {
 
             if (totalBytes === 0 || isNaN(totalBytes)) {
                 // Ne pas afficher de pourcentage
-                progressText.textContent = "Chargement";
+                progressText.textContent = "";
             } else if (totalBytes > 0) {
 
                 const percent = Math.round((received / totalBytes) * 100);
