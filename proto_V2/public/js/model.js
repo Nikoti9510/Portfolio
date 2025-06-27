@@ -6,6 +6,8 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { DotScreenPass } from 'three/addons/postprocessing/DotScreenPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // chargement du modèle une fois la page chargé
@@ -15,7 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadModel() {
         const loader = new GLTFLoader();
         const loadContainer = document.querySelector('#canvas .loading');
-        loader.load('3d_files/model_animated_notexture.glb',
+
+        loader.setMeshoptDecoder(MeshoptDecoder);
+        
+
+        loader.load('3d_files/model_compressed.glb',
             (gltf) => {
                 // loaded
                 setupScene(gltf);
@@ -25,11 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 // progress
                 const loadPercent = Math.round((xhr.loaded / xhr.total) * 100);
                 loadContainer.children[0].innerHTML = (`${loadPercent}%`);    
-                // console.log(`Chargement... ${loadPercent}%`);
             },
             (error) => {
                 // error
-                // console.log(error);
                 loadContainer.innerHTML = (`${error}%`);  
             }
         );
@@ -37,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fonction pour la création de la scène 3D 
     function setupScene(gltf) {
-        const renderer = new THREE.WebGL1Renderer({
+        const renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true
         });
@@ -55,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // camera 
         const camera = new THREE.PerspectiveCamera(10, container.clientWidth / container.clientHeight);
-        camera.position.set(0, 7, 0);
+        camera.position.set(0, 6, 0);
 
         // controls 
         const controls = new OrbitControls(camera, renderer.domElement);
