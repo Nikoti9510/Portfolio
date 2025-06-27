@@ -81,18 +81,22 @@ async function loadModelAsync() {
             const { done, value } = await reader.read();
             if (done) break;
 
-            console.log("Content-Length déclaré :", totalBytes);
-
             chunks.push(value);
             received += value.length;
 
-            if (totalBytes > 0) {
+            console.log("Content-Length :", totalBytes);
+            console.log("received :", totalBytes);
+
+            if (totalBytes === 0 || isNaN(totalBytes)) {
+                // Ne pas afficher de pourcentage
+                progressText.textContent = "Chargement";
+            } else if (totalBytes > 0) {
+
                 const percent = Math.round((received / totalBytes) * 100);
 
                 if (percent >= lastPercentShown + 10 || percent === 100) {
                     progressText.textContent = `${percent}%`;
                     lastPercentShown = percent;
-
                     // Laisse au navigateur le temps d'afficher la mise à jour
                     await new Promise(requestAnimationFrame);
                 }
