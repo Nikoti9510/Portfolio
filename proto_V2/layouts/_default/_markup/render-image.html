@@ -1,41 +1,29 @@
+{{ $number := math.Rand | mul 900000 | math.Floor | add 100000 }}
+
 {{- if .IsBlock -}}
 
-  <div class="image">
-    <figure>
-      <button class="image__button" popovertarget="  {{ math.Rand | mul 1234 | math.Ceil }}  " popovertargetaction="show">
-        <img src="{{ .Destination | safeURL }}" 
-          {{- with .PlainText }} alt="{{ . }}" {{ end -}}
-        >
-      </button>
-      {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-    </figure>
-  </div>
-  <dialog popover class="image__lightbox" id="{{ .Destination | safeURL }}">
-    <button popovertarget="{{ .Destination | safeURL }}" popovertargetaction="hide">
-      Fermer le lightbox
+<div class="image">
+  <figure>
+    <button class="image__button" popovertarget="{{ $number }}" popovertargetaction="show">
+      <img src="{{ .Destination | safeURL }}" {{- with .PlainText }} alt="{{ . }}" {{ end -}}>
     </button>
-    <img src="{{ .Destination | safeURL }}" 
-      {{- with .PlainText }} alt="{{ . }}" {{ end -}} 
-      {{- with .Title }} title="{{ . }}" {{ end -}}
-    >
+    {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+  </figure>
+  <dialog popover class="image__lightbox" id="{{ $number }}">
+    <button popovertarget="{{ $number }}" popovertargetaction="hide">
+      <span class="visibility-hidden">Fermer la lightbox</span>
+      <span> X </span>
+    </button>
+    <div class="zoom-container">
+      <img src="{{ .Destination | safeURL }}" {{- with .PlainText }} alt="{{ . }}" {{ end -}} {{- with .Title }}
+        title="{{ . }}" {{ end -}}>
+    </div>
   </dialog>
+</div>
 
 {{- else -}}
 
-  <div class="image">
-    <img src="{{ .Destination | safeURL }}" 
-      {{- with .PlainText }} alt="{{ . }}" {{ end -}} 
-      {{- with .Title }} title="{{ . }}" {{ end -}}
-    >
-    <dialog popover class="image__lightbox" id="{{ .Destination | safeURL }}">
-      <button popovertarget="{{ .Destination | safeURL }}" popovertargetaction="hide">
-        Fermer le lightbox
-      </button>
-      <img src="{{ .Destination | safeURL }}" 
-        {{- with .PlainText }} alt="{{ . }}" {{ end -}} 
-        {{- with .Title }} title="{{ . }}" {{ end -}}
-      >
-    </dialog>
-  </div>
+<img src="{{ .Destination | safeURL }}" {{- with .PlainText }} alt="{{ . }}" {{ end -}} {{- with .Title }}
+  title="{{ . }}" {{ end -}}>
 
 {{- end -}}
