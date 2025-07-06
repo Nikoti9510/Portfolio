@@ -18,6 +18,13 @@
         box-sizing: border-box;
     }
 
+    /* Tabulation navigation */
+    *:focus-visible {
+        padding: .4rem !important;
+        outline: .2rem solid currentColor;
+        border-radius: .2rem;
+    }
+
     /* Prevent font size inflation */
     html {
         -moz-text-size-adjust: none;
@@ -573,66 +580,97 @@
     }
 
     /* ------------- Lightbox ------------- */
-
     body:has(*:popover-open) {
-        overflow-y: hidden;
+        overflow: hidden;
+        pointer-events: none;
     }
 
     .image {
+        & > figure {
+            display: grid;
 
-        & .image__button {
-            padding: 0;
-            border: 0;
-            cursor: zoom-in;
+            & .image__button {
+                padding: 0;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
         }
 
         & .image__lightbox {
             display: none;
             opacity: 0;
 
+            pointer-events: all;
             position: fixed;
-            width: 80vw;
-            height: 90vh;
+            min-width: 50vw;
+            min-height: 70vh;
+            max-height: 90vh;
+            max-width: 90vw;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            margin: 0;
+            margin: 1rem;
+            padding: 0;
             border: 0;
             background: transparent;
+            overflow: visible;
 
-            transition:
-                opacity var(--bezier-33),
-                display var(--bezier-33),
-                background-color var(--bezier-33);
-            transition-behavior: allow-discrete;
+            & .image__lightbox--button {
+            height: fit-content;
+            width: fit-content;
+            background: var(--background-color);
+            color: var(--foreground-color);
+            border-radius: .2rem;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: color ease .1s;
+            
+                &:hover {
+                    color: var(--interact);
+                }
 
-            & button {
-                height: fit-content;
-                width: fit-content;
-                position: relative;
-                z-index: 2;
+                & svg {
+                    width: 32px;
+                    height: 32px;
+                }
             }
 
-            & .zoom-container {
-                position: absolute;
-                inset: 0;
-                z-index: 1;
-                border-radius: 0.2rem;
+            & .image__lightbox--img {
+                overflow: auto;
+                width: 100%;
+                min-height: 60vh;
+                padding: 1rem;
+                border-radius: .2rem;
+                background-color:
+                    color-mix(in srgb, var(--midground-color) 33%, currentColor);
 
                 & img {
-                    width: 100%;
+                    width: auto;
                     height: 100%;
                     object-fit: contain;
+                    margin: auto;
+                    border-radius: .2rem;
                     background-color: transparent;
+                }
+
+                &:has(> img.zoomed) {
+                    height: 100%;
                 }
             }
 
             &:popover-open {
                 display: grid;
+                gap: .5rem;
+
                 opacity: 1;
+                color: var(--background-color);
 
                 & img {
                     cursor: zoom-in;
+                    color: var(--foreground-color);
                 }
 
                 @starting-style {
@@ -642,11 +680,9 @@
             }
 
             &::backdrop {
-                background-color: color-mix(in srgb, var(--foreground-color) 88%, transparent);
+                background-color: color-mix(in srgb, var(--foreground-color) 95%, transparent);
             }
         }
-
-
     }
 
     /* ------------- PORTRAIT ------------- */
@@ -818,7 +854,6 @@
         /* Imgs */
         & figure {
             margin-inline: 0;
-            margin-block-end: 2rem;
 
             & img {
                 width: 100%;

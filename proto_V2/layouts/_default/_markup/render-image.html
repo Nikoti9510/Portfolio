@@ -10,13 +10,19 @@
     {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
   </figure>
   <dialog popover class="image__lightbox" id="{{ $number }}">
-    <button popovertarget="{{ $number }}" popovertargetaction="hide">
-      <span class="visibility-hidden">Fermer la lightbox</span>
-      <span> X </span>
+    <button class="image__lightbox--button" popovertarget="{{ $number }}" popovertargetaction="hide">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        height="24px" width="24px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
     </button>
-    <div class="zoom-container">
+    <div class="image__lightbox--img">
       <img src="{{ .Destination | safeURL }}" {{- with .PlainText }} alt="{{ . }}" {{ end -}} {{- with .Title }}
         title="{{ . }}" {{ end -}}>
+    </div>
+    <div class="image__lightbox--desc">
+      <span class="visibility-hidden">Fermer la lightbox</span>
+      {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
     </div>
   </dialog>
 </div>

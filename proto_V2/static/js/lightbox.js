@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const zoomContainers = document.querySelectorAll('.zoom-container');
+    const zoomContainers = document.querySelectorAll('.image__lightbox--img');
 
     zoomContainers.forEach(container => {
         const img = container.querySelector('img');
@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let origin = { x: 50, y: 50 };
 
         container.addEventListener('click', (e) => {
+            img.classList.toggle("zoomed");
             const rect = container.getBoundingClientRect();
             origin.x = ((e.clientX - rect.left) / rect.width) * 100;
             origin.y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (zoomed) {
                 img.style.transformOrigin = `${origin.x}% ${origin.y}%`;
-                img.style.transform = 'scale(2)';
+                img.style.transform = 'scale(1.75)';
             } else {
                 img.style.transform = 'scale(1)';
                 img.style.transformOrigin = 'center center';
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const offsetY = origin.y - y;
 
             img.style.transformOrigin = `${origin.x}% ${origin.y}%`;
-            img.style.transform = `scale(2) translate(${offsetX}%, ${offsetY}%)`;
+            img.style.transform = `scale(1.75) translateZ(1px) translate(${offsetX}%, ${offsetY}%)`;
         });
     });
 });
