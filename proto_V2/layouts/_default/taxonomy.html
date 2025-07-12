@@ -1,7 +1,17 @@
 {{ define "main" }}
-  <h1>{{ .Page.Name }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .Page.Name }}</a></h2>
-  {{ end }}
+<main class="stack">
+  {{ partial "header.html" . }}
+  <section class="taxonomies main-grid grow-1">
+    <div class="taxonomies__content stack">
+      <h1>{{ .Page.Name }}</h1>
+      {{ .Content }}
+      <div class="taxonomies__pages">
+      {{ range .Pages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .Page.Name }}</a></h2>
+      {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ partial "footer.html" . }}
+</main>
 {{ end }}

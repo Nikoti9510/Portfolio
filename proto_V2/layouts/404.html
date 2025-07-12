@@ -1,11 +1,12 @@
 {{ define "main" }}
-
-<main>  
-    <h1>We couldn't find this Page!</h1>
-    <p>
-        Please try our search page to look for it or go back 
-        to the <a href="/">home page</a>.
-    </p>
+<main class="stack">
+  {{ partial "header.html" . }}
+  <section id="page404" class="main-grid grow-1">
+    <div class="stack">
+      <h1>404</h1>
+      <p>Retour à la <a href="/">page d'accueil</a>.</p>
+    </div>
+  </section>
+  {{ partial "footer.html" . }}
 </main>
-
 {{ end }}
