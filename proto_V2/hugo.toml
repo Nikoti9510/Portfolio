@@ -16,6 +16,7 @@
 # Langue par defaut du site
 defaultContentLanguage = 'fr'
 defaultContentLanguageInSubdir = true
+removePathAccents = true
 
 # Désactive les générations de termes dans le site
 disableKinds = ['taxonomy', 'term']

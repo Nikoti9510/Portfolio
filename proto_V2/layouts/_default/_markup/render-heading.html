@@ -1,10 +1,10 @@
 {{ if eq .Page.Params.type "blog" }}
   {{ if eq .Level 1 }}
-    <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+    <h{{ .Level }} id="{{ .Anchor | anchorize }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
       {{ .Text }}
     </h{{ .Level }}>
   {{ else }}
-    <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+    <h{{ .Level }} id="{{ .Anchor | anchorize }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
       <a href="#{{ .Anchor | urlize }}">{{ .Text }}</a>
     </h{{ .Level }}>
   {{ end }}

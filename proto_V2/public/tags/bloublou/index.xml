@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags/Bloublou on </title>
+    <link>//localhost:1313/tags/bloublou/</link>
+    <description>Recent content in Tags/Bloublou on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 May 2024 12:21:35 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/bloublou/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pourquoi écrire (un blog) ?</title>
+      <link>//localhost:1313/blog/pourquoi-ecrire-un-blog/</link>
+      <pubDate>Wed, 29 May 2024 12:21:35 +0000</pubDate>
+      <guid>//localhost:1313/blog/pourquoi-ecrire-un-blog/</guid>
+      <description>&lt;h1 id=&#34;pourquoi-écrire-un-blog-&#34;&gt;&#xD;&#xA;      Pourquoi écrire (un blog) ?&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;L&amp;rsquo;idée d&amp;rsquo;écrire un petit blog personnel me trotte dans la tête depuis longtemps déjà, inspiré à la fois par les nombreux blogs de développeurs et designers web, que par la blogosphère OSR, toutes deux très prolifiques et riches. La première étape était bien sur de créer mon site. Chose que je voulais faire moi-même, avec comme condition de ne pas utiliser d&amp;rsquo;outils préexistants (mais je renterais plus en détail dans le processus de création et les explications des technologies utilisées dans un article à part entière).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

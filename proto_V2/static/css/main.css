@@ -210,6 +210,7 @@
             display: grid;
             grid-template-columns: 7fr 5fr;
             grid-template-rows: none;
+            gap: 2rem;
         }
     }
 
@@ -530,9 +531,32 @@
     /* --------------- BLOG --------------- */
     #blog {
         --space: 3rem;
+        min-height: 100%;
+        justify-content: space-between;
+
+        & .content {
+            flex-grow: 1;
+
+            & > .main-grid {
+                @media (width < 70rem) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    gap: 1.5rem;
+                }
+            }
+        }
 
         & .all-posts {
             --space: 1.5rem;
+            min-width: 60%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @media (width < 70rem) {
+                min-width: 100%;
+            }
         }
     }
 
@@ -541,6 +565,11 @@
         border: solid 1px var(--border-color-light);
         padding: 1em;
         border-radius: .2em;
+
+        &:has(.post__tags--tag.hide) {
+            opacity: 0;
+            display: none;
+        }
 
         & a {
             --space: .4em;
@@ -579,6 +608,35 @@
 
     }
 
+    /* --------------- TAGS --------------- */
+    .tags {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & .tags__tag {
+            display: flex;
+            font-size: var(--font-size_h2);
+            cursor: pointer;
+
+            & button {
+                border: none;
+                cursor: pointer;
+                color: var(--titles-color);
+
+                &.active {
+                    font-style: italic;
+                    color: var(--interact);
+                }
+            }
+
+            & sup {
+                font-size: var(--font-size__small);
+                color: var(--texts-color);
+            }
+        }
+    }
+
     /* ------------- Lightbox ------------- */
     body:has(*:popover-open) {
         overflow: hidden;
@@ -586,7 +644,7 @@
     }
 
     .image {
-        & > figure {
+        &>figure {
             display: grid;
 
             & .image__button {
@@ -618,16 +676,16 @@
             overflow: visible;
 
             & .image__lightbox--button {
-            height: fit-content;
-            width: fit-content;
-            background: var(--background-color);
-            color: var(--foreground-color);
-            border-radius: .2rem;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            transition: color ease .1s;
-            
+                height: fit-content;
+                width: fit-content;
+                background: var(--background-color);
+                color: var(--foreground-color);
+                border-radius: .2rem;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                transition: color ease .1s;
+
                 &:hover {
                     color: var(--interact);
                 }
@@ -739,6 +797,7 @@
 
     /* ------------- FOOTER ------------- */
     .footer {
+        flex-shrink: 0;
 
         & .coords,
         & .version {

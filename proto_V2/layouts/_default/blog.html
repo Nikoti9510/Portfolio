@@ -1,15 +1,20 @@
 {{ define "main" }}
 <main id="blog" class="stack">
     {{ partial "header.html" . }}
-    {{ partial "navigation.html" . }}
-    <section class="main-grid">
-        <div class="flex-end">
-            <div class="all-posts stack">
-                {{ range where .Site.RegularPages "Type" "blog" }}
-                {{ partial "articles.html" . }}
-                {{ end }}
+    <section class="content stack">
+        {{ partial "navigation.html" . }}
+        <section class="main-grid">
+            <div class="flex-end">
+                <div class="all-posts">
+                    {{ range where .Site.RegularPages "Type" "blog" }}
+                    {{ partial "articles.html" . }}
+                    {{ end }}
+                </div>
             </div>
-        </div>
+            <div class="flex-start">
+                {{ partial "allTags.html" . }}
+            </div>
+        </section>
     </section>
     {{ partial "footer.html" . }}
 </main>

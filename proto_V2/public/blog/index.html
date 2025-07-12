@@ -67,7 +67,8 @@
         <script type="text/javascript" src="/js/clock.js"></script>
     </div>
 </section>
-    <section class="navigation main-grid z1">
+    <section class="content stack">
+        <section class="navigation main-grid z1">
     <nav class="flex-end">
         <ul class="nav__list">
             
@@ -82,15 +83,14 @@
         </ul>
     </nav>
 </section>
-    <section class="main-grid">
-        <div class="flex-end">
-            <div class="all-posts stack">
-                
-                <article class="post">
+        <section class="main-grid">
+            <div class="flex-end">
+                <div class="all-posts">
+                    
+                    <article class="post">
     <a href="/blog/tutoriel-hugo/" class="stack">
         
         <p class="post__title">Tutoriel Hugo</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
@@ -104,12 +104,11 @@
         </div>
     </a>
 </article>
-                
-                <article class="post">
+                    
+                    <article class="post">
     <a href="/blog/enquete-new-elness/" class="stack">
         
         <p class="post__title">Enquête à New Elness - Un scénario dans l&#39;univers Lovecraftien</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
@@ -123,12 +122,11 @@
         </div>
     </a>
 </article>
-                
-                <article class="post">
+                    
+                    <article class="post">
     <a href="/blog/degenesis-stele-echo/" class="stack">
         
         <p class="post__title">Degenesis - stèles d&#39;échos</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
@@ -142,18 +140,15 @@
         </div>
     </a>
 </article>
-                
-                <article class="post">
+                    
+                    <article class="post">
     <a href="/blog/500-objets-post-apo/" class="stack">
         
         <p class="post__title">500 objets sans importances pour du post-apocalyptique</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
                 <span class="post__tags--tag">JDR</span>
-                
-                <span class="post__tags--tag">test</span>
                 
             </div>
             <span class="post__date monospace">
@@ -163,12 +158,11 @@
         </div>
     </a>
 </article>
-                
-                <article class="post">
+                    
+                    <article class="post">
     <a href="/blog/pourquoi-ecrire-un-blog/" class="stack">
         
         <p class="post__title">Pourquoi écrire (un blog) ?</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
@@ -182,12 +176,11 @@
         </div>
     </a>
 </article>
-                
-                <article class="post">
+                    
+                    <article class="post">
     <a href="/blog/death-in-space-anarchy-program/" class="stack">
         
         <p class="post__title">Death In Space #4N4RCHY PR06R4M</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
@@ -201,12 +194,11 @@
         </div>
     </a>
 </article>
-                
-                <article class="post">
+                    
+                    <article class="post">
     <a href="/blog/black-sword-hack-archipel-or/" class="stack">
         
         <p class="post__title">Black Sword Hack - l&#39;archipel d&#39;or</p>
-        
         <div class="flex-start">
             <div class="post__tags">
                 
@@ -220,9 +212,26 @@
         </div>
     </a>
 </article>
-                
+                    
+                </div>
             </div>
-        </div>
+            <div class="flex-start">
+                <ul class="tags">
+    <div class="visibility-hidden">Listes des tags du site</div>
+    
+        <li class="tags__tag"><button onclick="tags(this, &#34;JDR&#34;)">JDR</button> <sup>5</sup></li>
+    
+        <li class="tags__tag"><button onclick="tags(this, &#34;Meta&#34;)">Meta</button> <sup>1</sup></li>
+    
+        <li class="tags__tag"><button onclick="tags(this, &#34;Web&#34;)">Web</button> <sup>1</sup></li>
+    
+</ul>
+
+<div class="visibility-hidden">
+    <script defer src="/js/tags.js"></script>
+</div>
+            </div>
+        </section>
     </section>
     <section class="footer main-grid z1">
     <div class="flex-between">

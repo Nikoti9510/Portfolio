@@ -1,0 +1,10 @@
+<ul class="tags">
+    <div class="visibility-hidden">Listes des tags du site</div>
+    {{ range .Site.Taxonomies.tags }}
+        <li class="tags__tag"><button onclick="tags(this, {{ .Page.Name }})">{{ .Page.Name }}</button> <sup>{{ .Count }}</sup></li>
+    {{ end }}
+</ul>
+
+<div class="visibility-hidden">
+    <script defer src="/js/tags.js"></script>
+</div>
