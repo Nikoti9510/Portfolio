@@ -1,8 +1,5 @@
 <article class="post">
     <a href="{{ .RelPermalink }}" class="stack">
-        {{ with .Resources.GetMatch "banner.jpg" }}
-        <img src="{{ .RelPermalink }}">
-        {{ end }}
         <p class="post__title">{{ .LinkTitle }}</p>
         <div class="flex-start">
             <div class="post__tags">

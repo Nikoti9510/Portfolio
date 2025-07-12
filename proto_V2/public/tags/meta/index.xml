@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags/Meta on </title>
+    <title>Meta on </title>
     <link>//localhost:1313/tags/meta/</link>
-    <description>Recent content in Tags/Meta on </description>
+    <description>Recent content in Meta on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 May 2024 12:21:35 +0000</lastBuildDate>

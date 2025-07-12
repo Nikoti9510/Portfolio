@@ -1,4 +1,3 @@
-# Menu du site
 [menus]
   [[menus.header]]
     name = 'Blog'
@@ -9,37 +8,24 @@
     url = '/info'
     weight = 20
 
-# Tags blog
-[taxonomies]
-  tag = 'tags'
 
-# Langue par defaut du site
-defaultContentLanguage = 'fr'
-defaultContentLanguageInSubdir = true
-removePathAccents = true
 
-# Désactive les générations de termes dans le site
-disableKinds = ['taxonomy', 'term']
+disableKinds = ['taxonomyTerm', 'taxonomy', 'term']
 
-# Active les render hooks
 [markup.goldmark.renderHooks.image]
 enableDefault = true
 [markup.goldmark.renderHooks.link]
 enableDefault = true
 
-# Active l'HTML dans les fichiers markdown
 [markup.goldmark.renderer]
   unsafe = true 
 
-# Empeche les images dans le markdown d'être englobé dans une balise <p>
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]
       wrapStandAloneImageWithinParagraph = false
 
-# Format de la date 
 [params]
   dateFormat = "January 2006"
 
-# Accès aux infos de Git
-  enableGitInfo = true
+enableGitInfo = true

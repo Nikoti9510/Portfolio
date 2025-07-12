@@ -624,6 +624,10 @@
                 cursor: pointer;
                 color: var(--titles-color);
 
+                &:is(:hover, :active) {
+                    color: var(--interact);
+                }
+
                 &.active {
                     font-style: italic;
                     color: var(--interact);
