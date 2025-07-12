@@ -1,10 +1,6 @@
 {{ define "main" }}
   <h1>{{ .Page.Name }}</h1>
   {{ .Content }}
-
-    <div>{{ print .Site.Taxonomies.get }}</div>
-
-  
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .Page.Name }}</a></h2>
   {{ end }}

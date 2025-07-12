@@ -623,6 +623,7 @@
                 border: none;
                 cursor: pointer;
                 color: var(--titles-color);
+                background-color: initial;
 
                 &:is(:hover, :active) {
                     color: var(--interact);
