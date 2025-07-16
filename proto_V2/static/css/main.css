@@ -81,7 +81,7 @@
     h4,
     h5,
     h6 {
-        text-wrap: balance;
+        text-wrap: pretty;
     }
 
     /* Apply parent style to child spans */
@@ -93,7 +93,15 @@
     /* A elements that don't have a class get default styles */
     a:not([class]) {
         text-decoration-skip-ink: auto;
+        text-decoration-color: var(--interact);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
         color: currentColor;
+
+        &:hover {
+            text-decoration: underline dotted;
+            text-decoration-color: var(--interact);
+        }
     }
 
     /* Make images easier to work with */
@@ -131,14 +139,14 @@
 @layer variables {
     :root {
         /* fonts */
-        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.1rem);
-        --font-size_h1: clamp(3.5rem, -0.875rem + 6cqi, 6rem);
+        --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.2rem);
+        --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 5rem);
         --font-size_h2: clamp(2.5rem, -0.875rem + 6cqi, 3rem);
         --font-size_h3: clamp(1.5rem, -0.875rem + 6cqi, 2rem);
         --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
         --line-height__body: 1.7;
-        --line-height__title: 1.1;
-        --max-text-width: 65ch;
+        --line-height__title: 1;
+        --max-text-width: 50ch;
 
         /* colors */
         --white: #f3f3f3;
@@ -286,7 +294,6 @@
         font-weight: 300;
         line-height: var(--line-height__title);
         max-width: calc(var(--max-text-width) / 2);
-        text-wrap: balance;
     }
 
     h1 {
@@ -574,51 +581,93 @@
     }
 
     /* ------------- ARTICLES ------------- */
+    #home .stack:has(.post) {
+        align-items: flex-end;
+    }
+
     .post {
         border: solid 1px var(--border-color-light);
         padding: 1em;
         border-radius: .2em;
+        width: fit-content;
 
         &:has(.post__tags--tag.hide) {
             opacity: 0;
             display: none;
         }
 
+        &:hover .post__title {
+            color: var(--interact);
+        }
+
         & a {
             --space: .4em;
             text-decoration: none;
             color: var(--texts-color);
+        }
+    }
 
-            & .post__title {
-                color: var(--titles-color);
-                font-size: var(--font-size_h3);
-                line-height: var(--line-height__title);
-                font-family: Instrument serif;
-                max-inline-size: calc(var(--max-text-width) / 2);
-                transition: color var(--bezier-25);
+    .post__title {
+        color: var(--titles-color);
+        font-size: var(--font-size_h3);
+        line-height: var(--line-height__title);
+        font-family: Instrument serif;
+        max-inline-size: calc(var(--max-text-width) / 2);
+        transition: color var(--bezier-25);
+    }
+
+    .post__tags,
+    .post-data_tags {
+        background-color: var(--midground-color);
+        color: var(--titles-color);
+        font-size: var(--font-size__small);
+        line-height: var(--line-height__title);
+        border-radius: .2em;
+        padding: .2em .4em;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .post__date,
+    .post-data__date {
+        font-size: var(--font-size__small);
+    }
+
+    /* ----------- Fil d'ariane ----------- */
+    .ariane {
+        list-style: none;
+        padding-inline-start: 0;
+        margin: 0;
+        font-size: var(--font-size__small);
+
+        & .ariane__item {
+            display: inline;
+
+            &:not(:first-child) {
+                margin-inline-start: .5rem;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 1rem;
+                    height: .2rem;
+                    vertical-align: middle;
+                    background-color: var(--texts-color);
+                    margin-inline-end: .5em;
+                }
             }
 
-            & .post__tags {
-                background-color: var(--midground-color);
-                color: var(--titles-color);
-                font-size: var(--font-size__small);
-                line-height: var(--line-height__title);
-                border-radius: .2em;
-                padding: .2em .4em;
-                display: flex;
-                align-items: center;
+            &:not(.ariane__item--current) a {
+                text-decoration: none;
             }
 
-            & .post__date {
-                font-size: var(--font-size__small);
-            }
-
-            &:hover .post__title {
+            & a:hover,
+            &.ariane__item--current a {
                 color: var(--interact);
+                text-decoration-color: var(--interact);
             }
         }
-
-
     }
 
     /* --------------- TAGS --------------- */
@@ -857,6 +906,7 @@
         }
 
         & h1 {
+            margin-block-start: 4rem;
             text-box-trim: trim-both;
             text-box-edge: cap alphabetic;
             font-size: calc(var(--font-size_h1) * 4);
@@ -876,15 +926,22 @@
 /*---------------------------------------------------------------------*/
 @layer single {
     .single-content-container {
+        margin-block-start: 6rem;
+
         @media (width < 70rem) {
             display: block;
         }
     }
 
-    .single-content {
-        --space: 1rem;
+    .post-data {
         max-width: var(--max-text-width);
-        margin-block: 6rem;
+        align-items: center;
+    }
+
+    .single-content {
+        --space: 1.5rem;
+        max-width: var(--max-text-width);
+        margin-block: 2rem;
 
         /* texts */
         & :is(p, span) {
@@ -892,6 +949,10 @@
         }
 
         /* Titles */
+        & h1 {
+            margin-block-end: 4rem;
+        }
+
         & h2:not(:first-child) {
             margin-block-start: 6rem;
         }
@@ -948,25 +1009,31 @@
         }
 
         /* Imgs */
-        & figure {
-            margin-inline: 0;
-
-            & img {
-                width: 100%;
-                border-radius: 0.2rem;
-                border: solid 1px var(--border-color-light);
+        .image {
+            &:has(>figure) {
+                margin-block-end: 1.5rem;
             }
 
-            & figcaption {
-                margin-inline-start: .5rem;
-                margin-block-start: .5rem;
-                font-style: italic;
-                font-size: var(--font-size__small);
-                position: relative;
+            & figure {
+                margin-inline: 0;
 
-                &::before {
-                    content: "—";
-                    margin-inline-end: .5rem;
+                & img {
+                    width: 100%;
+                    border-radius: 0.2rem;
+                    border: solid 1px var(--border-color-light);
+                }
+
+                & figcaption {
+                    margin-inline-start: .5rem;
+                    margin-block-start: .5rem;
+                    font-style: italic;
+                    font-size: var(--font-size__small);
+                    position: relative;
+
+                    &::before {
+                        content: "—";
+                        margin-inline-end: .5rem;
+                    }
                 }
             }
         }
@@ -1014,10 +1081,6 @@
             padding: .2em .4em;
             line-height: var(--line-height__title);
             border-radius: 0.2rem;
-        }
-
-        p:has(>code:only-child) {
-            --space: .5rem;
         }
 
         /* Tables */

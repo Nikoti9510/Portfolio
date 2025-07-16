@@ -1,0 +1,6 @@
+<ul class="ariane">
+    {{- range .Ancestors.Reverse }}
+        <li class="ariane__item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+    <li class="ariane__item ariane__item--current"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+</ul>

@@ -1,5 +1,5 @@
 ---
-title: "Antoine Moreau"
+title: "Accueil"
 url: "/"
 layout: "home"
 draft: false
