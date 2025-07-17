@@ -35,3 +35,6 @@ enableDefault = true
 
 # Accès aux infos de Git
 enableGitInfo = true
+
+# Generation de robot.txt
+enableRobotsTXT = true
