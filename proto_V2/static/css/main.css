@@ -93,13 +93,12 @@
     /* A elements that don't have a class get default styles */
     a:not([class]) {
         text-decoration-skip-ink: auto;
-        text-decoration-color: var(--interact);
-        text-decoration-thickness: 2px;
+        text-decoration: underline solid var(--interact) 2px;
         text-underline-offset: 2px;
         color: currentColor;
 
         &:hover {
-            text-decoration: underline dotted;
+            text-decoration: underline dashed;
             text-decoration-color: var(--interact);
         }
     }
@@ -140,20 +139,20 @@
     :root {
         /* fonts */
         --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.2rem);
-        --font-size_h1: clamp(3rem, -0.875rem + 6cqi, 5rem);
+        --font-size_h1: clamp(3.5rem, -0.875rem + 6cqi, 6rem);
         --font-size_h2: clamp(2.5rem, -0.875rem + 6cqi, 3rem);
         --font-size_h3: clamp(1.5rem, -0.875rem + 6cqi, 2rem);
         --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
         --line-height__body: 1.7;
         --line-height__title: 1;
-        --max-text-width: 50ch;
+        --max-text-width: 55ch;
 
         /* colors */
         --white: #f3f3f3;
         --black: #181818;
         --gray-01: #d3d3d3;
         --gray-02: #3d3d3d;
-        --blue: #122de6;
+        --blue: #4242fa;
         --yellow: #ffd800;
 
         /* transitions */
@@ -187,6 +186,11 @@
         --border-color-light: var(--gray-02);
         --border-color-dark: var(--gray-01);
         --interact: var(--yellow);
+    }
+
+    [data-theme="dark"] ::backdrop {
+        --foreground-color: var(--gray-02);
+        --background-color: var(--white);
     }
 }
 
@@ -330,8 +334,6 @@
 
     /* liens */
     a[target="_blank"] {
-        text-decoration: none;
-        box-shadow: 0 1px 0 0 currentColor;
 
         &::after {
             content: "↗";
@@ -589,7 +591,6 @@
         border: solid 1px var(--border-color-light);
         padding: 1em;
         border-radius: .2em;
-        width: fit-content;
 
         &:has(.post__tags--tag.hide) {
             opacity: 0;
@@ -597,7 +598,10 @@
         }
 
         &:hover .post__title {
-            color: var(--interact);
+            text-decoration-skip-ink: auto;
+            text-decoration: underline dashed var(--interact) 3px;
+            text-underline-offset: 2px;
+            color: currentColor;
         }
 
         & a {
@@ -630,7 +634,12 @@
 
     .post__date,
     .post-data__date {
+        display: inline-block;
         font-size: var(--font-size__small);
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 
     /* ----------- Fil d'ariane ----------- */
@@ -648,22 +657,17 @@
                 position: relative;
 
                 &::before {
-                    content: "";
+                    content: "→";
                     display: inline-block;
-                    width: 1rem;
-                    height: .2rem;
+                    /* width: 1rem;
+                    height: .2rem; */
                     vertical-align: middle;
-                    background-color: var(--texts-color);
+                    /* background-color: var(--texts-color); */
                     margin-inline-end: .5em;
                 }
             }
 
-            &:not(.ariane__item--current) a {
-                text-decoration: none;
-            }
-
-            & a:hover,
-            &.ariane__item--current a {
+            &:hover {
                 color: var(--interact);
                 text-decoration-color: var(--interact);
             }
@@ -936,6 +940,7 @@
     .post-data {
         max-width: var(--max-text-width);
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .single-content {
