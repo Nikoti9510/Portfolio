@@ -190,6 +190,7 @@
 
     [data-theme="dark"] ::backdrop {
         --foreground-color: var(--gray-02);
+        --texts-color: var(--white);
     }
 }
 
