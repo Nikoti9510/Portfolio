@@ -1047,6 +1047,7 @@
                 content: attr(data-lang);
                 display: inline-block;
                 padding: .5rem;
+                margin-inline-start: .2em;
                 font-size: var(--font-size__small);
                 line-height: var(--line-height__title);
                 border: solid 1px currentColor;
@@ -1060,10 +1061,11 @@
                 border: solid 1px var(--texts-color);
                 border-top: solid .2em var(--texts-color);
                 min-width: calc(var(--max-text-width) / 2);
+                color: inherit;
+                background: inherit;
                 width: 100%;
                 padding: 1rem;
-                border-radius: 0;
-                color: var(--titles-color);
+                border-radius: .2rem;
 
                 & span {
                     max-width: 100%;
