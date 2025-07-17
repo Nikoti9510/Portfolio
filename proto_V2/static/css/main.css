@@ -190,7 +190,6 @@
 
     [data-theme="dark"] ::backdrop {
         --foreground-color: var(--gray-02);
-        --background-color: var(--white);
     }
 }
 
@@ -793,9 +792,8 @@
             &:popover-open {
                 display: grid;
                 gap: .5rem;
-
                 opacity: 1;
-                color: var(--background-color);
+                color: var(--texts-color);
 
                 & img {
                     cursor: zoom-in;
