@@ -187,11 +187,6 @@
         --border-color-dark: var(--gray-01);
         --interact: var(--yellow);
     }
-
-    [data-theme="dark"] ::backdrop {
-        --foreground-color: var(--gray-02);
-        --texts-color: var(--white);
-    }
 }
 
 
@@ -749,8 +744,8 @@
             & .image__lightbox--button {
                 height: fit-content;
                 width: fit-content;
-                background: var(--background-color);
-                color: var(--foreground-color);
+                background: var(--gray-02);
+                color: var(--white);
                 border-radius: .2rem;
                 border: none;
                 padding: 0;
@@ -774,7 +769,7 @@
                 padding: 1rem;
                 border-radius: .2rem;
                 background-color:
-                    color-mix(in srgb, var(--midground-color) 33%, currentColor);
+                    color-mix(in srgb, var(--gray-01) 33%, currentColor);
 
                 & img {
                     width: auto;
@@ -794,11 +789,11 @@
                 display: grid;
                 gap: .5rem;
                 opacity: 1;
-                color: var(--texts-color);
+                color: var(--white);
 
                 & img {
                     cursor: zoom-in;
-                    color: var(--foreground-color);
+                    color: var(--white);
                 }
 
                 @starting-style {
@@ -808,7 +803,7 @@
             }
 
             &::backdrop {
-                background-color: color-mix(in srgb, var(--foreground-color) 95%, transparent);
+                background-color: color-mix(in srgb, var(--gray-02) 95%, transparent);
             }
         }
     }
