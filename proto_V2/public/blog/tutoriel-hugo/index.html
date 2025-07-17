@@ -99,11 +99,11 @@
 <p>On parle de JamStack pour décrire un site créé en prenant avantage de plusieurs outils mis à disposition (gratuits, en libres de droits, payants, avec abonnement, etc..) et en les assemblant afin de bénéficier de leurs avantages (et ne pas réinventer la roue à chaque contrainte). Par exemple, plutôt que de gérer manuellement l&rsquo;hébergement de notre site, on utilise un outil comme Netlify qui le fait pour nous. L&rsquo;idée, c&rsquo;est de ne pas perdre de temps sur des fonctionnalités déjà existantes, et de se concentrer sur le design et le contenu de notre site.</p>
 <p>Dans ce tutoriel, on va créer un site en utilisant les outils suivants :</p>
 <ul>
-<li><a href="https://desktop.github.com/download/">Github Desktop</a> pour gérer facilement notre projet en créant des sauvegardes et différentes versions, tout en stockant notre projet en ligne. On utilise la version desktop pour ne pas avoir à apprendre les commandes Gits.</li>
-<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> pour notre éditeur de code. Il nous permet de faire le lien avec Github et Hugo. Il est tout à fait possible d&rsquo;en utiliser un autre, mais c&rsquo;est de loin de plus pratique.</li>
-<li><a href="https://gohugo.io/">Hugo</a>, un framework ultra rapide et open source, qui nous permet de simplifier la construction d&rsquo;un site web optimisé, avec des options de templating nous permettant de facilité la maintenabilité et les modifications du site.</li>
-<li><a href="https://github.com/sveltia/sveltia-cms/?tab=readme-ov-file#getting-started">Sveltia</a>, c&rsquo;est un projet se basant sur DecapCMS (anciennement <a href="https://www.netlify.com/blog/netlify-cms-to-become-decap-cms/">NetlifyCMS</a>) et l&rsquo;améliorant, notamment avec l&rsquo;ajout d&rsquo;un interface beaucoup plus poussé et de fonctionnalité de traitement d&rsquo;images plus avancé. C&rsquo;est grâce à Sveltia que l&rsquo;on va pouvoir mettre à jour et ajouter du contenu sur notre site sans passer par un éditeur de code.</li>
-<li><a href="https://www.netlify.com/">Netlify</a>, qui fait le lien avec notre répertoire Github où est stocké notre projet, pour le transformer en site internet disponible en ligne.</li>
+<li><a href="https://desktop.github.com/download/" rel="external" target="_blank">Github Desktop</a> pour gérer facilement notre projet en créant des sauvegardes et différentes versions, tout en stockant notre projet en ligne. On utilise la version desktop pour ne pas avoir à apprendre les commandes Gits.</li>
+<li><a href="https://code.visualstudio.com/" rel="external" target="_blank">Visual Studio Code</a> pour notre éditeur de code. Il nous permet de faire le lien avec Github et Hugo. Il est tout à fait possible d&rsquo;en utiliser un autre, mais c&rsquo;est de loin de plus pratique.</li>
+<li><a href="https://gohugo.io/" rel="external" target="_blank">Hugo</a>, un framework ultra rapide et open source, qui nous permet de simplifier la construction d&rsquo;un site web optimisé, avec des options de templating nous permettant de facilité la maintenabilité et les modifications du site.</li>
+<li><a href="https://github.com/sveltia/sveltia-cms/?tab=readme-ov-file#getting-started" rel="external" target="_blank">Sveltia</a>, c&rsquo;est un projet se basant sur DecapCMS (anciennement <a href="https://www.netlify.com/blog/netlify-cms-to-become-decap-cms/" rel="external" target="_blank">NetlifyCMS</a>) et l&rsquo;améliorant, notamment avec l&rsquo;ajout d&rsquo;un interface beaucoup plus poussé et de fonctionnalité de traitement d&rsquo;images plus avancé. C&rsquo;est grâce à Sveltia que l&rsquo;on va pouvoir mettre à jour et ajouter du contenu sur notre site sans passer par un éditeur de code.</li>
+<li><a href="https://www.netlify.com/" rel="external" target="_blank">Netlify</a>, qui fait le lien avec notre répertoire Github où est stocké notre projet, pour le transformer en site internet disponible en ligne.</li>
 </ul>
 <hr>
 
@@ -112,14 +112,14 @@
       <a href="#mettre-en-place-le-projet">Mettre en place le projet</a>
     </h2>
   
-<p>Une fois Github Desktop et Visual Studio Code installé, on va pouvoir mettre en place le projet. On se rend dans notre <a href="https://github.com/">espace personnel sur GitHub</a> et on créer un nouveau répertoire en cliquant sur le bouton <code>New</code> en haut à gauche.</p>
+<p>Une fois Github Desktop et Visual Studio Code installé, on va pouvoir mettre en place le projet. On se rend dans notre <a href="https://github.com/" rel="external" target="_blank">espace personnel sur GitHub</a> et on créer un nouveau répertoire en cliquant sur le bouton <code>New</code> en haut à gauche.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="319978" popovertargetaction="show">
+    <button class="image__button" popovertarget="746746" popovertargetaction="show">
       <img src="dashboard-github.png" alt="Interface du dashboard Github" >
     </button><figcaption>Interface du dashboard Github</figcaption></figure>
-  <dialog popover class="image__lightbox" id="319978">
-    <button class="image__lightbox--button" popovertarget="319978" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="746746">
+    <button class="image__lightbox--button" popovertarget="746746" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -135,11 +135,11 @@
 </div><p>Donner un nom à votre répertoire, dans notre exemple ce sera &ldquo;<em>tutoriel_portfolio</em>&rdquo;, et validez en cliquant sur <code>Create repository</code> en bas à droite. (les autres options peuvent être laissés par défaut).</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="913015" popovertargetaction="show">
+    <button class="image__button" popovertarget="991667" popovertargetaction="show">
       <img src="dashboard-github-etape-2.png" alt="Création dun répertoire dans linterface github" >
     </button><figcaption>Création d&#39;un répertoire dans l&#39;interface github</figcaption></figure>
-  <dialog popover class="image__lightbox" id="913015">
-    <button class="image__lightbox--button" popovertarget="913015" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="991667">
+    <button class="image__lightbox--button" popovertarget="991667" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -155,11 +155,11 @@
 </div><p>Si on retourne dans notre dashboard, on voit que notre nouveau répertoire est bien créé.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="586404" popovertargetaction="show">
+    <button class="image__button" popovertarget="805768" popovertargetaction="show">
       <img src="dashboard-github-etape-3.png" alt="Dashboard de github avec le nouveau répertoire présent" >
     </button><figcaption>Dashboard de github avec le nouveau répertoire présent</figcaption></figure>
-  <dialog popover class="image__lightbox" id="586404">
-    <button class="image__lightbox--button" popovertarget="586404" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="805768">
+    <button class="image__lightbox--button" popovertarget="805768" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -176,11 +176,11 @@
 En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="288334" popovertargetaction="show">
+    <button class="image__button" popovertarget="131284" popovertargetaction="show">
       <img src="github-desktop-etape-1.png" alt="Interface de github desktop, clonage dun répertoire " >
     </button><figcaption>Interface de github desktop, clonage d&#39;un répertoire</figcaption></figure>
-  <dialog popover class="image__lightbox" id="288334">
-    <button class="image__lightbox--button" popovertarget="288334" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="131284">
+    <button class="image__lightbox--button" popovertarget="131284" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -196,11 +196,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Choisissez le répertoire que vous avez créé plus tôt et cliquez sur <code>Clone</code> en bas de la fenêtre.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="454486" popovertargetaction="show">
+    <button class="image__button" popovertarget="685803" popovertargetaction="show">
       <img src="github-desktop-etape-2.png" alt="Choix dun répertoire dans github desktop " >
     </button><figcaption>Choix d&#39;un répertoire dans github desktop</figcaption></figure>
-  <dialog popover class="image__lightbox" id="454486">
-    <button class="image__lightbox--button" popovertarget="454486" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="685803">
+    <button class="image__lightbox--button" popovertarget="685803" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -216,11 +216,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Une fois le répertoire cloné, on peut constater que l&rsquo;on se trouve bien dans le bon espace de travail en haut à gauche (et passer d&rsquo;un projet à un autre si besoin). Vous pouvez maintenant ouvrir votre projet dans VScode en cliquant dans le bouton <code>Open in Visual Studio Code</code> au centre de l&rsquo;écran.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="747067" popovertargetaction="show">
+    <button class="image__button" popovertarget="345550" popovertargetaction="show">
       <img src="github-desktop-etape-3.png" alt="Interface de github desktop une fois un répertoire cloné" >
     </button><figcaption>Interface de github desktop une fois le répertoire cloné</figcaption></figure>
-  <dialog popover class="image__lightbox" id="747067">
-    <button class="image__lightbox--button" popovertarget="747067" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="345550">
+    <button class="image__lightbox--button" popovertarget="345550" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -250,14 +250,14 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
     </h3>
   
 <p>Commençez par vous rendre sur <a href="gohugo.io/installation/"></a><a href="">gohugo.io/installation/</a> et cliquez sur l&rsquo;option correspondant à votre navigateur. Pour ce tutoriel, je vais suivre les étapes pour Windows (mais c&rsquo;est même plus simple avec MacOS).</p>
-<p>Dans un premier temps, il nous faut installer <a href="https://go.dev/doc/install">Go</a>, le langage de programmation dans lequel Hugo est écrit. Pas de panique, nous n&rsquo;aurons pas besoin d&rsquo;apprendre un nouveau langage pour ce projet, il est simplement nécessaire de l&rsquo;installer sur notre machine pour que Hugo fonctionne. Téléchargez l&rsquo;exécutable pour Windows et suivez les instructions de l&rsquo;installateur.</p>
+<p>Dans un premier temps, il nous faut installer <a href="https://go.dev/doc/install" rel="external" target="_blank">Go</a>, le langage de programmation dans lequel Hugo est écrit. Pas de panique, nous n&rsquo;aurons pas besoin d&rsquo;apprendre un nouveau langage pour ce projet, il est simplement nécessaire de l&rsquo;installer sur notre machine pour que Hugo fonctionne. Téléchargez l&rsquo;exécutable pour Windows et suivez les instructions de l&rsquo;installateur.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="410317" popovertargetaction="show">
+    <button class="image__button" popovertarget="379000" popovertargetaction="show">
       <img src="go.png" alt="Choisir le bon exécutable pour installer Go" >
     </button><figcaption>Choisir le bon exécutable pour installer Go</figcaption></figure>
-  <dialog popover class="image__lightbox" id="410317">
-    <button class="image__lightbox--button" popovertarget="410317" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="379000">
+    <button class="image__lightbox--button" popovertarget="379000" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -273,11 +273,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Vous pouvez changer l&rsquo;emplacement de l&rsquo;installation sans problème lors de l&rsquo;installation.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="807184" popovertargetaction="show">
+    <button class="image__button" popovertarget="510553" popovertargetaction="show">
       <img src="go_2.png" alt="Changement de lemplacement dinstallation de Go" >
     </button><figcaption>Changement de l&#39;emplacement d&#39;installation de Go</figcaption></figure>
-  <dialog popover class="image__lightbox" id="807184">
-    <button class="image__lightbox--button" popovertarget="807184" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="510553">
+    <button class="image__lightbox--button" popovertarget="510553" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -293,11 +293,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Une fois l&rsquo;installation terminé, ouvrez une invite de commande (Windows + R et sélectionnez <code>cmd</code> ou cliquez sur le menu démarrer et cherchez <code>cmd</code>). Tapez dans la console la ligne <code>Go version</code> pour constater que l&rsquo;installation est bien réussit.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="144494" popovertargetaction="show">
+    <button class="image__button" popovertarget="863749" popovertargetaction="show">
       <img src="go_3.png" alt="Go est bien installé sur cette machine" >
     </button><figcaption>Go est bien installé sur cette machine</figcaption></figure>
-  <dialog popover class="image__lightbox" id="144494">
-    <button class="image__lightbox--button" popovertarget="144494" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="863749">
+    <button class="image__lightbox--button" popovertarget="863749" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -318,7 +318,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
       <a href="#installer-git">Installer Git</a>
     </h3>
   
-<p>Rendez vous sur le <a href="https://git-scm.com/downloads/win">site de git pour Windows</a> et téléchargez la dernière version en cliquant sur le premier lien. Il fois le téléchargement terminé, lancez l&rsquo;exécutable et suivez les instructions. Voilà, c&rsquo;est terminé. Pour le moment, pas si terrible.</p>
+<p>Rendez vous sur le <a href="https://git-scm.com/downloads/win" rel="external" target="_blank">site de git pour Windows</a> et téléchargez la dernière version en cliquant sur le premier lien. Il fois le téléchargement terminé, lancez l&rsquo;exécutable et suivez les instructions. Voilà, c&rsquo;est terminé. Pour le moment, pas si terrible.</p>
 <hr>
 
   
@@ -329,11 +329,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Une fois que l&rsquo;installation est terminé, vous êtes prêt à créer votre site ! Pour ça, réouvrez GitHub Desktop et votre projet dans Visual Studio Code. Une fois dans VScode, on va dans <code>Terminal &gt; New Terminal</code>.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="193931" popovertargetaction="show">
+    <button class="image__button" popovertarget="493834" popovertargetaction="show">
       <img src="terminal.png" alt="Ouvrir un terminal dans Visual Studio Code" >
     </button><figcaption>Ouvrir un terminal dans Visual Studio Code</figcaption></figure>
-  <dialog popover class="image__lightbox" id="193931">
-    <button class="image__lightbox--button" popovertarget="193931" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="493834">
+    <button class="image__lightbox--button" popovertarget="493834" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -351,11 +351,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Remplacer <code>NOM_DU_SITE</code> par le nom de votre choix (sans espaces ni caractères spéciaux).</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="390688" popovertargetaction="show">
+    <button class="image__button" popovertarget="177630" popovertargetaction="show">
       <img src="hugo-new-site.png" alt="La création du site est terminé dans VScode" >
     </button><figcaption>La création du site est terminé dans VScode</figcaption></figure>
-  <dialog popover class="image__lightbox" id="390688">
-    <button class="image__lightbox--button" popovertarget="390688" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="177630">
+    <button class="image__lightbox--button" popovertarget="177630" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -376,7 +376,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
       <a href="#installer-un-th%25C3%25A8me">Installer un thème</a>
     </h2>
   
-<p>Hugo propose une <a href="https://themes.gohugo.io/">collection de thème gratuit sur son site</a>, et il est également possible d&rsquo;en trouver des plus complets sur d&rsquo;autres sites, comme par exemple <a href="https://gethugothemes.com/products">gethugothemes.com</a> ou <a href="https://anvodstudio.com/hugo-themes/">anvodstudio.com</a>. Pour l&rsquo;exemple, j&rsquo;ai choisi le thème <a href="https://themes.gohugo.io/themes/hugo-papermod/">PaperMod</a>. Pour l&rsquo;installer, rien de compliqué, il suffit de se rendre sur le page Github du thème (en cliquant sur le bouton &ldquo;Download&rdquo; dans la page du thème) et de copier la commande pour installer le submodule dans le terminal de VScode. Pour PaperMod, voilà la commande :</p>
+<p>Hugo propose une <a href="https://themes.gohugo.io/" rel="external" target="_blank">collection de thème gratuit sur son site</a>, et il est également possible d&rsquo;en trouver des plus complets sur d&rsquo;autres sites, comme par exemple <a href="https://gethugothemes.com/products" rel="external" target="_blank">gethugothemes.com</a> ou <a href="https://anvodstudio.com/hugo-themes/" rel="external" target="_blank">anvodstudio.com</a>. Pour l&rsquo;exemple, j&rsquo;ai choisi le thème <a href="https://themes.gohugo.io/themes/hugo-papermod/" rel="external" target="_blank">PaperMod</a>. Pour l&rsquo;installer, rien de compliqué, il suffit de se rendre sur le page Github du thème (en cliquant sur le bouton &ldquo;Download&rdquo; dans la page du thème) et de copier la commande pour installer le submodule dans le terminal de VScode. Pour PaperMod, voilà la commande :</p>
 <p><code>git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod</code></p>
 <blockquote>
 <p>/!\ Il faut s&rsquo;assurer que l&rsquo;on se trouve à la racine de notre projet avant d&rsquo;exécuter la commande. Dans le terminal, le chemin devrait être &ldquo;GitHub\Nom_du_repertoire&rdquo;. Si ce n&rsquo;est pas le cas, il faut s&rsquo;y rendre. Utiliser <code>cd Nom_du_dossier</code> vous permet de vous rendre à cet endroit. Utilisez <code>ls</code> vous permet de lister tout les dossiers en enfant de celui dans lequel vous vous trouvez. Utilisez <code>cd ..</code> vous permet de remonter un niveau.</p>
@@ -385,11 +385,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p><code>theme = [&quot;PaperMod&quot;]</code></p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="985474" popovertargetaction="show">
+    <button class="image__button" popovertarget="824980" popovertargetaction="show">
       <img src="hugo_toml.png" alt="Choix du template dans le fichier Hugo.toml" >
     </button><figcaption>Choix du template dans le fichier Hugo.toml</figcaption></figure>
-  <dialog popover class="image__lightbox" id="985474">
-    <button class="image__lightbox--button" popovertarget="985474" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="824980">
+    <button class="image__lightbox--button" popovertarget="824980" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -422,11 +422,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Une fois le serveur lancé, cliquez sur le lien que nous donne Hugo pour visualiser notre site. (Il faut utiliser le raccourci clavier <em>Ctrl+C</em> pour couper le serveur local).</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="760144" popovertargetaction="show">
+    <button class="image__button" popovertarget="719730" popovertargetaction="show">
       <img src="hugo-serve.png" alt="Lancement dun serveur de test" >
     </button><figcaption>lancement d&#39;un serveur de test</figcaption></figure>
-  <dialog popover class="image__lightbox" id="760144">
-    <button class="image__lightbox--button" popovertarget="760144" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="719730">
+    <button class="image__lightbox--button" popovertarget="719730" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -442,11 +442,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Si on se rend sur la page, on constaste qu&rsquo;il y a un problème.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="438417" popovertargetaction="show">
+    <button class="image__button" popovertarget="471920" popovertargetaction="show">
       <img src="404-rip.png" alt="Hugo ne trouve pas de page à afficher" >
     </button><figcaption>Hugo ne trouve pas de page à afficher</figcaption></figure>
-  <dialog popover class="image__lightbox" id="438417">
-    <button class="image__lightbox--button" popovertarget="438417" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="471920">
+    <button class="image__lightbox--button" popovertarget="471920" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -469,11 +469,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Si rien ne s&rsquo;affiche, c&rsquo;est parce que notre site est vide (malin, je sais). Regardons la structure généré par Hugo lors de la création du site d&rsquo;un peu plus près.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="382595" popovertargetaction="show">
+    <button class="image__button" popovertarget="694409" popovertargetaction="show">
       <img src="structure-du-site.png" alt="Structure du projet dans VScode" >
     </button><figcaption>Structure du projet dans VScode</figcaption></figure>
-  <dialog popover class="image__lightbox" id="382595">
-    <button class="image__lightbox--button" popovertarget="382595" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="694409">
+    <button class="image__lightbox--button" popovertarget="694409" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -489,11 +489,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Pour le moment, il y a 3 dossiers qui nous intéresses :</p>
 <ol>
 <li><strong>static</strong> : C&rsquo;est ici que l&rsquo;on va stocker toutes les ressources utiles au site qui ne changent jamais, tels que les images réutilisées dans toutes les pages, les fichiers CSS et Javascripts, etc.</li>
-<li><strong>content</strong> : Dans ce dossier, on va retrouver nos pages de contenus, en format <code>.md</code> (pour <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a>)</li>
+<li><strong>content</strong> : Dans ce dossier, on va retrouver nos pages de contenus, en format <code>.md</code> (pour <a href="https://www.markdownguide.org/cheat-sheet/" rel="external" target="_blank">Markdown</a>)</li>
 <li><strong>layouts</strong> : Où on va stocker les pages de templates en format <code>.HTML</code>, ainsi que les fameuses Partials, en quelques sortent des sections que l&rsquo;on va pouvoir réutiliser dans notre site.</li>
 </ol>
 <blockquote>
-<p>Pour plus de détails sur la structure de Hugo, consultez la documentation à ce sujet : <a href="https://gohugo.io/getting-started/directory-structure/#directories">gohugo.io/getting-started/directory-structure/#directories</a></p>
+<p>Pour plus de détails sur la structure de Hugo, consultez la documentation à ce sujet : <a href="https://gohugo.io/getting-started/directory-structure/#directories" rel="external" target="_blank">gohugo.io/getting-started/directory-structure/#directories</a></p>
 </blockquote>
 <p>Pour que notre site puisse fonctionner, il y quelques étapes à suivre :</p>
 <ol>
@@ -535,11 +535,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Voilà à quoi ressemble la structure après la création.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="194063" popovertargetaction="show">
+    <button class="image__button" popovertarget="323087" popovertargetaction="show">
       <img src="structure-v2.png" alt="Création des nouveaux fichiers" >
     </button><figcaption>Création des nouveaux fichiers</figcaption></figure>
-  <dialog popover class="image__lightbox" id="194063">
-    <button class="image__lightbox--button" popovertarget="194063" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="323087">
+    <button class="image__lightbox--button" popovertarget="323087" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -555,11 +555,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Si vous relancez le serveur de testvous pouvez constatez que du contenu s&rsquo;affiche !</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="682794" popovertargetaction="show">
+    <button class="image__button" popovertarget="860347" popovertargetaction="show">
       <img src="le-site-fonctionne-v2.png" alt="La page affiche bien du contenu" >
     </button><figcaption>la page affiche bien du contenu</figcaption></figure>
-  <dialog popover class="image__lightbox" id="682794">
-    <button class="image__lightbox--button" popovertarget="682794" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="860347">
+    <button class="image__lightbox--button" popovertarget="860347" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -574,7 +574,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
   </dialog>
 </div><p>Expliquons ce que l&rsquo;on vient de faire :</p>
 <p>On a créé un fichier <code>home.html</code> qui correspond à notre page d&rsquo;accueil et on l&rsquo;ajoute dans le dossier <code>layouts &gt; _default</code> afin que Hugo le trouve. Dans ce fichier, on défini un bloc que l&rsquo;on nomme <code>main</code>, dans lequel on ajoute le contenu de la page, <code>Content</code>. Ce contenu est récupéré automatiquement par Hugo dans le fichier <code>_index.md</code>, si celui-ci existe dans le dossier content.</p>
-<p>On a ensuite défini dans notre dossier <code>_defaut</code> le template de page pour toutes nos pages, qui se nomme <code>baseof.html</code>. C&rsquo;est cette page qui est toujours utilisé par Hugo pour assembler nos pages (il est possible d&rsquo;en définir plusieurs en cas de besoin, voir <a href="https://gohugo.io/templates/lookup-order/">gohugo.io/templates/lookup-order</a>). Pour le moment, notre fichier <code>baseof.html</code> est très simple, mais on va venir l&rsquo;améliorer un peu plus tard. <code>home.html</code> se base sur ce template, et pour le moment ne fait rien de plus.</p>
+<p>On a ensuite défini dans notre dossier <code>_defaut</code> le template de page pour toutes nos pages, qui se nomme <code>baseof.html</code>. C&rsquo;est cette page qui est toujours utilisé par Hugo pour assembler nos pages (il est possible d&rsquo;en définir plusieurs en cas de besoin, voir <a href="https://gohugo.io/templates/lookup-order/" rel="external" target="_blank">gohugo.io/templates/lookup-order</a>). Pour le moment, notre fichier <code>baseof.html</code> est très simple, mais on va venir l&rsquo;améliorer un peu plus tard. <code>home.html</code> se base sur ce template, et pour le moment ne fait rien de plus.</p>
 <p>Enfin, on a créé le fichier Markdown <code>_index.md</code>, c&rsquo;est à dire le fichier de contenu, pour notre page d&rsquo;accueil. On le place bien dans le dossier <code>content</code>, pour que Hugo puisse le retrouver et l&rsquo;injecter dans la page.</p>
 <p>Avant d&rsquo;aller plus loin, sauvegardons notre travail.</p>
 <hr>
@@ -587,11 +587,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Si on se rend dans GitHub Desktop, on remarque que plusieurs fichiers sont ajoutés dans la liste des modifications. Pour les envoyer sur votre RepoGitHub™, il faut donner un nom à votre commit. Quelques choses dans la veine de &ldquo;Premier push&rdquo; fera l&rsquo;affaire. Vous pouvez ajouter une description si l&rsquo;envie vous prend. Essayez d&rsquo;être clair et précis dans vos noms de push, car vous pourrez les retrouver dans Github et revenir en arrière quand des bugs vont inévitablement apparaitres.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="364325" popovertargetaction="show">
+    <button class="image__button" popovertarget="696237" popovertargetaction="show">
       <img src="premier-push-github.png" alt="Le premier push sur notre répertoire GitHub" >
     </button><figcaption>Le premier push sur notre répertoire GitHub</figcaption></figure>
-  <dialog popover class="image__lightbox" id="364325">
-    <button class="image__lightbox--button" popovertarget="364325" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="696237">
+    <button class="image__lightbox--button" popovertarget="696237" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -607,11 +607,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Cliquez ensuite sur &ldquo;Commit to main&rdquo; en bas de la fenêtre. Il ne reste plus qu&rsquo;a publier le commit sur le projet, pour cela, cliquez sur &ldquo;Publish branch&rdquo;.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="674385" popovertargetaction="show">
+    <button class="image__button" popovertarget="435177" popovertargetaction="show">
       <img src="publier-la-branch-en-ligne.png" alt="Publier le commit en ligne" >
     </button><figcaption>Publier le commit en ligne</figcaption></figure>
-  <dialog popover class="image__lightbox" id="674385">
-    <button class="image__lightbox--button" popovertarget="674385" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="435177">
+    <button class="image__lightbox--button" popovertarget="435177" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -627,11 +627,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </div><p>Une fois cela fait et le chargement effectué, vous pouvez voir votre travail dans votre espace GitHub en ligne.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="637491" popovertargetaction="show">
+    <button class="image__button" popovertarget="695798" popovertargetaction="show">
       <img src="premier-push-sur-le-dahsboard-github.png" alt="Notre projet sur le dashboard GitHub" >
     </button><figcaption>Notre projet sur le dashboard GitHub</figcaption></figure>
-  <dialog popover class="image__lightbox" id="637491">
-    <button class="image__lightbox--button" popovertarget="637491" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="695798">
+    <button class="image__lightbox--button" popovertarget="695798" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -673,16 +673,16 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <pre tabindex="0" class="chroma" data-lang="html">
     <code class="language-html"><span style="display:flex;"><span>{{ partials &#34;chemin/du/partial.html&#34; . }}</span></span></code>
 </pre><blockquote>
-<p>Concernant le <code>.</code> que l&rsquo;on ajoute après le chemin (et que l&rsquo;on remarque aussi dans l&rsquo;appel du block <code>main</code>), il représente le contexte. Je ne rentre pas dans le détail ici, mais il est indispensable au bon fonctionnement du partial. Plus d&rsquo;info sur la <a href="https://gohugo.io/templates/introduction/#context">documentation du contexte</a> dans Hugo et des <a href="https://gohugo.io/templates/partial/">partials</a>.</p>
+<p>Concernant le <code>.</code> que l&rsquo;on ajoute après le chemin (et que l&rsquo;on remarque aussi dans l&rsquo;appel du block <code>main</code>), il représente le contexte. Je ne rentre pas dans le détail ici, mais il est indispensable au bon fonctionnement du partial. Plus d&rsquo;info sur la <a href="https://gohugo.io/templates/introduction/#context" rel="external" target="_blank">documentation du contexte</a> dans Hugo et des <a href="https://gohugo.io/templates/partial/" rel="external" target="_blank">partials</a>.</p>
 </blockquote>
 <p>Il faut maintenant créer les fichiers pour que Hugo puisse les charger. Pour cela, ajoutez un dossier <code>partials</code> dans le dossier <code>layouts</code>. Vous pouvez ajouter vos deux partials ici afin d&rsquo;obtenir la structure suivante :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="217750" popovertargetaction="show">
+    <button class="image__button" popovertarget="866954" popovertargetaction="show">
       <img src="dossier-partials.png" alt="Le dossier des partials" >
     </button><figcaption>Le dossier des partials</figcaption></figure>
-  <dialog popover class="image__lightbox" id="217750">
-    <button class="image__lightbox--button" popovertarget="217750" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="866954">
+    <button class="image__lightbox--button" popovertarget="866954" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -713,11 +713,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Avec un peu de CSS basique et les deux partials, le site commence (presque) à ressembler à quelque chose.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="455057" popovertargetaction="show">
+    <button class="image__button" popovertarget="969056" popovertargetaction="show">
       <img src="le-site-avec-les-partials-et-le-css-v2.png" alt="Le site avec les partials et le CSS" >
     </button><figcaption>Le site avec les partials et le CSS</figcaption></figure>
-  <dialog popover class="image__lightbox" id="455057">
-    <button class="image__lightbox--button" popovertarget="455057" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="969056">
+    <button class="image__lightbox--button" popovertarget="969056" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -741,11 +741,11 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 <p>Pour ajouter des pages dans notre site, il faut que l&rsquo;on créer un dossier dans <code>content</code> avec le nom que l&rsquo;on souhaite donner à la page. Si l&rsquo;on veut créer une page Contact, on créer un dossier <code>contact</code>. Dans ce nouveau dossier, il faut également créer un fichier <code>index.md</code> (sans underscore). Notre structure ressemble à ceci :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="424720" popovertargetaction="show">
+    <button class="image__button" popovertarget="530472" popovertargetaction="show">
       <img src="page-contact-structure.png" alt="Ajout des dossiers pages" >
     </button><figcaption>Ajout des dossiers pages</figcaption></figure>
-  <dialog popover class="image__lightbox" id="424720">
-    <button class="image__lightbox--button" popovertarget="424720" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="530472">
+    <button class="image__lightbox--button" popovertarget="530472" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -759,7 +759,7 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
       <span class="visibility-hidden">Fermer la lightbox</span><figcaption>Ajout des dossiers pages</figcaption></div>
   </dialog>
 </div><blockquote>
-<p>Pour comprendre pourquoi on met parfois un <code>_</code> devant les fichiers index, consultez la documentation de Hugo à propros de l&rsquo;organisation des pages : <a href="https://gohugo.io/content-management/page-bundles/">https://gohugo.io/content-management/page-bundles/</a></p>
+<p>Pour comprendre pourquoi on met parfois un <code>_</code> devant les fichiers index, consultez la documentation de Hugo à propros de l&rsquo;organisation des pages : <a href="https://gohugo.io/content-management/page-bundles/" rel="external" target="_blank">https://gohugo.io/content-management/page-bundles/</a></p>
 </blockquote>
 <p>De cette manière, notre page va avoir un contenu différent de notre page d&rsquo;accueil, mais toujours se construire à partir de notre fichier <code>baseof.html</code>. On peut également lui ajouter des éléments statiques différents et unique à cette page. Dans <code>contact.html</code>, ajoutez le code suivant :</p>
 
@@ -785,9 +785,9 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Discutons ensemble :smile:
 </span></span><span style="display:flex;"><span>Je suis à votre écoute pour réaliser votre projet !</span></span></code>
-</pre><p>C&rsquo;est le bon moment pour introduire le fonctionnement des fichiers Markdown. Vous l&rsquo;avez sans doute remarqué plus haut, on a ajouté du contenu entre des blocs <code>---</code> en haut de nos fichiers <code>.md</code>. C&rsquo;est le contenu <a href="https://frontmatter.codes/docs">Frontmatter</a> de notre page. Il nous permet de définir toute une collection d&rsquo;information relative à la page, que l&rsquo;on pourra ensuite piloter via notre CMS plus tard, et que l&rsquo;on peut récupérer dans les fichiers de templates. On reviendra un peu plus en détail sur cette partie plus tard, quand on abordera la création des projets. Ce que l&rsquo;on peut retenir pour le moment, ce sont les lignes <code>layout: &quot;contact&quot;</code> et <code>url: &quot;/contact/&quot;</code>. La première spécifie à Hugo de construire la page à partir du fichier <code>.html</code> correspondant dans le dossier <code>layout</code>. La deuxième définit l&rsquo;url de notre page.</p>
+</pre><p>C&rsquo;est le bon moment pour introduire le fonctionnement des fichiers Markdown. Vous l&rsquo;avez sans doute remarqué plus haut, on a ajouté du contenu entre des blocs <code>---</code> en haut de nos fichiers <code>.md</code>. C&rsquo;est le contenu <a href="https://frontmatter.codes/docs" rel="external" target="_blank">Frontmatter</a> de notre page. Il nous permet de définir toute une collection d&rsquo;information relative à la page, que l&rsquo;on pourra ensuite piloter via notre CMS plus tard, et que l&rsquo;on peut récupérer dans les fichiers de templates. On reviendra un peu plus en détail sur cette partie plus tard, quand on abordera la création des projets. Ce que l&rsquo;on peut retenir pour le moment, ce sont les lignes <code>layout: &quot;contact&quot;</code> et <code>url: &quot;/contact/&quot;</code>. La première spécifie à Hugo de construire la page à partir du fichier <code>.html</code> correspondant dans le dossier <code>layout</code>. La deuxième définit l&rsquo;url de notre page.</p>
 <blockquote>
-<p>Les émojis ne sont pas activés par défaut dans un site Hugo, il faut le définir dans le fichier de configuration <code>hugo.toml</code> ou <code>config.toml</code>. Plus d&rsquo;infos ici : <a href="https://gohugo.io/quick-reference/emojis/">gohugo.io/quick-reference/emojis/</a></p>
+<p>Les émojis ne sont pas activés par défaut dans un site Hugo, il faut le définir dans le fichier de configuration <code>hugo.toml</code> ou <code>config.toml</code>. Plus d&rsquo;infos ici : <a href="https://gohugo.io/quick-reference/emojis/" rel="external" target="_blank">gohugo.io/quick-reference/emojis/</a></p>
 </blockquote>
 <p>Pour finir, il faut que l&rsquo;on ajoute un lien vers notre page contact sur notre page d&rsquo;accueil afin de pouvoir l&rsquo;atteindre. On a ici deux choix :</p>
 <ul>
@@ -809,8 +809,8 @@ En haut à gauche, cliquez sur <code>File &gt; Clone repository</code>.</p>
 </span></span><span style="display:flex;"><span>{.btn}</span></span></code>
 </pre><p>Ajouter un lien en Markdown est relativement simple comme vous pouvez le voir. La structure est toujours : <br>
 <code>[infobulle](/url/ &quot;text du lien&quot;)</code></p>
-<p>Dans cet exemple, j&rsquo;ai indiqué le lien moi même, mais il est possible de laisser Hugo générer lui même le lien en <a href="https://gohugo.io/methods/shortcode/">utilisant un shortcode</a>.</p>
-<p>Pour ajouter une classe ou un ID à un élément, il faut le définir entre accolades sous cet élément (à l&rsquo;exception des titre Hn et des blocs de code, <a href="https://gohugo.io/content-management/markdown-attributes/#usage">plus de détail dans la documentation à ce sujet</a>). Cependant, il n&rsquo;est pas possible d&rsquo;ajouter directement une classe sur un lien. Dans notre cas, l&rsquo;ajout du code <code>{.btn}</code> créer une balise <code>&lt;p&gt;</code> englobant notre lien. Il faut donc le prendre en compte dans notre CSS.</p>
+<p>Dans cet exemple, j&rsquo;ai indiqué le lien moi même, mais il est possible de laisser Hugo générer lui même le lien en <a href="https://gohugo.io/methods/shortcode/" rel="external" target="_blank">utilisant un shortcode</a>.</p>
+<p>Pour ajouter une classe ou un ID à un élément, il faut le définir entre accolades sous cet élément (à l&rsquo;exception des titre Hn et des blocs de code, <a href="https://gohugo.io/content-management/markdown-attributes/#usage" rel="external" target="_blank">plus de détail dans la documentation à ce sujet</a>). Cependant, il n&rsquo;est pas possible d&rsquo;ajouter directement une classe sur un lien. Dans notre cas, l&rsquo;ajout du code <code>{.btn}</code> créer une balise <code>&lt;p&gt;</code> englobant notre lien. Il faut donc le prendre en compte dans notre CSS.</p>
 <p>L&rsquo;idéal est de définir un style par défaut pour les liens issus d&rsquo;un bloc de contenu, afin de ne pas ajouter de classe. Les liens toujours présents dans une page peuvent être placé dans les partials ou templates. Encore mieux, vous pouvez passer par un shortcode, afin de définir une structure plus complexe pour des éléments à ajouter dans des fichiers markdown.</p>
 <p><strong>Pour donner une analogie :
 Les Partials sont des sections utilisables dans les fichiers de templates.
@@ -825,16 +825,16 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>      [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">parser</span>.<span style="color:#a6e22e">attribute</span>]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">block</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">title</span> = <span style="color:#66d9ef">true</span></span></span></code>
-</pre><p>Plus d&rsquo;info dans la documentation ici : <a href="https://gohugo.io/content-management/markdown-attributes/#block-elements">gohugo.io/content-management/markdown-attributes/#block-elements</a></p>
+</pre><p>Plus d&rsquo;info dans la documentation ici : <a href="https://gohugo.io/content-management/markdown-attributes/#block-elements" rel="external" target="_blank">gohugo.io/content-management/markdown-attributes/#block-elements</a></p>
 </blockquote>
 <p>Il ne reste plus qu&rsquo;a ajouter un peu de CSS, de relancer votre serveur et de naviguer jusqu&rsquo;à votre superbe page de contact !</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="692981" popovertargetaction="show">
+    <button class="image__button" popovertarget="850919" popovertargetaction="show">
       <img src="page-contact.png" alt="Notre page de contact fonctionne" >
     </button><figcaption>Notre page de contact fonctionne</figcaption></figure>
-  <dialog popover class="image__lightbox" id="692981">
-    <button class="image__lightbox--button" popovertarget="692981" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="850919">
+    <button class="image__lightbox--button" popovertarget="850919" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -873,7 +873,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <li><strong>url</strong> : qui correspond au lien de la page dans le site,</li>
 <li><strong>weight</strong> : qui correspond au poids de la page dans le menu. Plus un élément a un poids léger, plus il est affiché tôt dans le menu.</li>
 </ol>
-<p>Il existe d&rsquo;autres <a href="https://gohugo.io/content-management/menus/">options de menu que vous pouvez consulter dans la documentation</a>.</p>
+<p>Il existe d&rsquo;autres <a href="https://gohugo.io/content-management/menus/" rel="external" target="_blank">options de menu que vous pouvez consulter dans la documentation</a>.</p>
 <p>Une fois votre menu créé, il faut ajouter un partial pour l&rsquo;appeler. Pour cela, rendez-vous dans <code>layouts &gt; partials</code> et créez le fichier <code>nav.html</code>.</p>
 <p>Celui-ci va contenir le code suivant :</p>
 
@@ -887,7 +887,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>        {{ end }}
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">nav</span>&gt;</span></span></code>
-</pre><p>La structure de la navigation est écrite en HTML, et on utilise une autre fonction de Hugo, <a href="https://gohugo.io/functions/go-template/range/">range</a>, pour itérer sur les pages du menu. L&rsquo;<a href="https://gohugo.io/methods/site/">objet Site comporte tout un tas de méthode</a>, dont <code>Menus</code>, qui permet de récupérer un menu dans le fichier de configuration du site.</p>
+</pre><p>La structure de la navigation est écrite en HTML, et on utilise une autre fonction de Hugo, <a href="https://gohugo.io/functions/go-template/range/" rel="external" target="_blank">range</a>, pour itérer sur les pages du menu. L&rsquo;<a href="https://gohugo.io/methods/site/" rel="external" target="_blank">objet Site comporte tout un tas de méthode</a>, dont <code>Menus</code>, qui permet de récupérer un menu dans le fichier de configuration du site.</p>
 <p>Il ne nous reste plus qu&rsquo;a appeler le partial dans le fichier <code>baseof.html</code> pour que le menu apparaisse. On ajoute une balise <code>header</code> ici, mais on aurait aussi pu créer un partial avec la balise <code>header</code> déjà incluse, en fonction de notre préférence.</p>
 
 <pre tabindex="0" class="chroma" data-lang="html">
@@ -910,11 +910,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </pre><p>Et voilà, votre menu apparait dans toutes les pages !</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="279473" popovertargetaction="show">
+    <button class="image__button" popovertarget="808730" popovertargetaction="show">
       <img src="menu-ok.png" alt="Notre menu de navigation foncitonne" >
     </button><figcaption>Notre menu de navigation fonctionne</figcaption></figure>
-  <dialog popover class="image__lightbox" id="279473">
-    <button class="image__lightbox--button" popovertarget="279473" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="808730">
+    <button class="image__lightbox--button" popovertarget="808730" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -927,7 +927,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
     <div class="image__lightbox--desc">
       <span class="visibility-hidden">Fermer la lightbox</span><figcaption>Notre menu de navigation fonctionne</figcaption></div>
   </dialog>
-</div><p>Il est possible d&rsquo;aller plus loin évidemment, je vous met <a href="https://harrycresswell.com/writing/menus-in-hugo/">un lien vers ce post qui rentre beaucoup plus en détail</a>, notamment avec la mise en place de menu à plusieurs niveaux et de l&rsquo;ajout de classe sur l&rsquo;élément actif.</p>
+</div><p>Il est possible d&rsquo;aller plus loin évidemment, je vous met <a href="https://harrycresswell.com/writing/menus-in-hugo/" rel="external" target="_blank">un lien vers ce post qui rentre beaucoup plus en détail</a>, notamment avec la mise en place de menu à plusieurs niveaux et de l&rsquo;ajout de classe sur l&rsquo;élément actif.</p>
 <p>Mais pour le moment, passons à la dernière étape de la création de notre site !</p>
 <hr>
 
@@ -956,11 +956,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <p>La structure doit ressembler à ça :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="813370" popovertargetaction="show">
+    <button class="image__button" popovertarget="104794" popovertargetaction="show">
       <img src="struct-projets-maj.png" alt="La structure de nos projets dans VScode" >
     </button><figcaption>La structure de nos projets dans VScode</figcaption></figure>
-  <dialog popover class="image__lightbox" id="813370">
-    <button class="image__lightbox--button" popovertarget="813370" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="104794">
+    <button class="image__lightbox--button" popovertarget="104794" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -982,7 +982,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
 </span></span><span style="display:flex;"><span>    {{ end }}
 </span></span><span style="display:flex;"><span>{{ end }}</span></span></code>
-</pre><p>On réutilise la fonction <code>range</code> que l&rsquo;on a vu plus haut, et on récupére les pages stockées dans la variable globale <code>Site</code>, tant que celles-ci sont de types <code>&quot;projets&quot;</code>. On laisse ici le tri des pages par défaut, mais il existe <a href="https://gohugo.io/methods/pages/">plusieurs autres méthodes</a>.</p>
+</pre><p>On réutilise la fonction <code>range</code> que l&rsquo;on a vu plus haut, et on récupére les pages stockées dans la variable globale <code>Site</code>, tant que celles-ci sont de types <code>&quot;projets&quot;</code>. On laisse ici le tri des pages par défaut, mais il existe <a href="https://gohugo.io/methods/pages/" rel="external" target="_blank">plusieurs autres méthodes</a>.</p>
 <p>Pour voir le résultat, ajoutez un onglet dans le menu (via le fichier <code>Hugo.toml</code>) de la manière suivante :</p>
 
 <pre tabindex="0" class="chroma" data-lang="toml">
@@ -993,11 +993,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </pre><p>Un nouvel onglet est créé, et la page <code>Mes projets</code> récupère bien tous les projets que l&rsquo;on a ajouté sur le site, et nous propose un lien vers ces pages.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="778131" popovertargetaction="show">
+    <button class="image__button" popovertarget="541452" popovertargetaction="show">
       <img src="cest-notre-projet.png" alt="Les projets affichés dans la page section" >
     </button><figcaption>Les projets affichés dans la page section</figcaption></figure>
-  <dialog popover class="image__lightbox" id="778131">
-    <button class="image__lightbox--button" popovertarget="778131" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="541452">
+    <button class="image__lightbox--button" popovertarget="541452" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1022,11 +1022,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </pre><p>Maintenant, si on clique sur un des projets, le contenu est correctement affiché :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="628012" popovertargetaction="show">
+    <button class="image__button" popovertarget="904223" popovertargetaction="show">
       <img src="contenu-projet.png" alt="Le contenu dun projet" >
     </button><figcaption>Le contenu d&#39;un projet</figcaption></figure>
-  <dialog popover class="image__lightbox" id="628012">
-    <button class="image__lightbox--button" popovertarget="628012" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="904223">
+    <button class="image__lightbox--button" popovertarget="904223" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1074,11 +1074,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <p>Et voilà, le dernier projet s&rsquo;affiche bien :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="262688" popovertargetaction="show">
+    <button class="image__button" popovertarget="810239" popovertargetaction="show">
       <img src="dernier-projet-page-accueil.png" alt="Notre partial fonctionne " >
     </button><figcaption>Notre partial fonctionne</figcaption></figure>
-  <dialog popover class="image__lightbox" id="262688">
-    <button class="image__lightbox--button" popovertarget="262688" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="810239">
+    <button class="image__lightbox--button" popovertarget="810239" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1099,14 +1099,14 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
       <a href="#mettre-notre-site-en-ligne-avec-netlify">Mettre notre site en ligne avec Netlify</a>
     </h2>
   
-<p>Avant de continuer, assurez vous d&rsquo;avoir poussé vos dernières modifications sur Github. Une fois cela fait, créez vous un compte sur <a href="https://app.netlify.com/">Netlify</a>. Ensuite, rendez-vous dans la page <code>Sites</code> de votre espace personnel, puis cliquez sur <code>Add new site</code>.</p>
+<p>Avant de continuer, assurez vous d&rsquo;avoir poussé vos dernières modifications sur Github. Une fois cela fait, créez vous un compte sur <a href="https://app.netlify.com/" rel="external" target="_blank">Netlify</a>. Ensuite, rendez-vous dans la page <code>Sites</code> de votre espace personnel, puis cliquez sur <code>Add new site</code>.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="286444" popovertargetaction="show">
+    <button class="image__button" popovertarget="450877" popovertargetaction="show">
       <img src="ajouter-site-netlify.png" alt="Ajouter un site à Netlify" >
     </button><figcaption>Ajouter un site à Netlify</figcaption></figure>
-  <dialog popover class="image__lightbox" id="286444">
-    <button class="image__lightbox--button" popovertarget="286444" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="450877">
+    <button class="image__lightbox--button" popovertarget="450877" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1122,11 +1122,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </div><p>Choisissez l&rsquo;option <code>import an existing project</code>, puis choisissez GitHub. Connectez vous alors avec votre compte personnel GitHub, et une fois que c&rsquo;est fait, choisissez le répertoire utilisé pour stocker votre projet.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="972980" popovertargetaction="show">
+    <button class="image__button" popovertarget="650809" popovertargetaction="show">
       <img src="choix-du-repo.png" alt="Choix du répertoire à utiliser" >
     </button><figcaption>Choix du répertoire à utiliser</figcaption></figure>
-  <dialog popover class="image__lightbox" id="972980">
-    <button class="image__lightbox--button" popovertarget="972980" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="650809">
+    <button class="image__lightbox--button" popovertarget="650809" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1140,7 +1140,7 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
       <span class="visibility-hidden">Fermer la lightbox</span><figcaption>Choix du répertoire à utiliser</figcaption></div>
   </dialog>
 </div><blockquote>
-<p>Si votre répertoire ne s&rsquo;affiche pas, suivez <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">les étapes de ce tutoriel proposé par Hugo</a> à partir de l&rsquo;étape 4.</p>
+<p>Si votre répertoire ne s&rsquo;affiche pas, suivez <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" rel="external" target="_blank">les étapes de ce tutoriel proposé par Hugo</a> à partir de l&rsquo;étape 4.</p>
 </blockquote>
 <p>Une fois le répertoire choisit, il faut compléter quelques paramètres.</p>
 <ol>
@@ -1148,15 +1148,15 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <li><strong>Branch to deploy</strong> : Laissez sur <code>main</code> par défaut,</li>
 <li><strong>Build command</strong> : Ajoutez la commande suivante : <code>hugo --gc --minify</code>,</li>
 <li><strong>Publish directory</strong> : Si ce n&rsquo;est pas complété, ajoutez <code>public</code>,</li>
-<li>Enfin, cliquez sur le bouton <strong>Add environment variables</strong>, puis dans <strong>Key</strong> ajoutez <code>HUGO_VERSION</code>, et dans <strong>Value</strong> ajoutez le numéro de <a href="https://github.com/gohugoio/hugo/releases/latest">la dernière version de Hugo</a>, à la création de cette article, c&rsquo;est <code>0.140.2</code>.</li>
+<li>Enfin, cliquez sur le bouton <strong>Add environment variables</strong>, puis dans <strong>Key</strong> ajoutez <code>HUGO_VERSION</code>, et dans <strong>Value</strong> ajoutez le numéro de <a href="https://github.com/gohugoio/hugo/releases/latest" rel="external" target="_blank">la dernière version de Hugo</a>, à la création de cette article, c&rsquo;est <code>0.140.2</code>.</li>
 </ol>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="907867" popovertargetaction="show">
+    <button class="image__button" popovertarget="808453" popovertargetaction="show">
       <img src="parametre-netlify.png" alt="Les paramètres dans Netlify " >
     </button><figcaption>Les paramètres dans Netlify</figcaption></figure>
-  <dialog popover class="image__lightbox" id="907867">
-    <button class="image__lightbox--button" popovertarget="907867" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="808453">
+    <button class="image__lightbox--button" popovertarget="808453" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1172,11 +1172,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </div><p>Cliquez ensuite sur <code>Deploy</code> en bas de la page. Netlify va alors prendre un peu de temps pour mettre en ligne le site. Il se peut que votre installation de fonctionne pas, dans ce cas, assurez vous que vous avez bien lancé l&rsquo;installation depuis la racine de votre projet. Si votre racine n&rsquo;est pas au même niveau que le répertoire GitHub, alors il faut ajouter le chemin dans la configuration Netlify, au niveau de <strong>Base directory</strong>.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="162223" popovertargetaction="show">
+    <button class="image__button" popovertarget="314348" popovertargetaction="show">
       <img src="base-directory.png" alt="Ajout du bon dossier comme racine" >
     </button><figcaption>Ajout du bon dossier comme racine</figcaption></figure>
-  <dialog popover class="image__lightbox" id="162223">
-    <button class="image__lightbox--button" popovertarget="162223" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="314348">
+    <button class="image__lightbox--button" popovertarget="314348" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1191,11 +1191,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
   </dialog>
 </div><div class="image">
   <figure>
-    <button class="image__button" popovertarget="477010" popovertargetaction="show">
+    <button class="image__button" popovertarget="648597" popovertargetaction="show">
       <img src="racine-vscode.png" alt="La racine du projet dans VScode" >
     </button><figcaption>La racine du projet dans VScode</figcaption></figure>
-  <dialog popover class="image__lightbox" id="477010">
-    <button class="image__lightbox--button" popovertarget="477010" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="648597">
+    <button class="image__lightbox--button" popovertarget="648597" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1212,11 +1212,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <p>Le site une fois construit, vous aurez ce message :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="110614" popovertargetaction="show">
+    <button class="image__button" popovertarget="364373" popovertargetaction="show">
       <img src="le-site-est-publie.png" alt="Le site est bien en ligne" >
     </button><figcaption>Le site est bien en ligne</figcaption></figure>
-  <dialog popover class="image__lightbox" id="110614">
-    <button class="image__lightbox--button" popovertarget="110614" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="364373">
+    <button class="image__lightbox--button" popovertarget="364373" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1285,14 +1285,14 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </pre><p>le fichier <code>index.html</code> est simplement la page statique de notre pannel d&rsquo;administration. Il appelle un script qui charge toutes les fonctionnalitées proposés par Sveltia.</p>
 <p>Le fichier <code>config.yml</code> quant à lui, définit les paramètres de sécurités de notre backend ainsi que la structure des pages que l&rsquo;on souhaite pouvoir retrouver dans le CMS. C&rsquo;est ici que l&rsquo;on fait le lien entre le FrontMatter des fichiers <code>.md</code> et notre CMS.</p>
 <p>Une fois cela fait, poussez vos ajouts sur GitHub. Cependant, le CMS n&rsquo;est pas encore tous à fait accessible, il faut gérer les autorisations. En effet, pour éviter que d&rsquo;autres personnes puissent accéder à votre panel d&rsquo;administration, il est nécessaire de faire le lien entre Netlify, le CMS et GitHub. On va donc mettre en place une sécurité afin de pouvoir se connecter via notre compte GitHub.</p>
-<p>Pour cela, il faut se rendre dans les <a href="https://github.com/settings/profile">paramètres de votre compte GitHub</a>, puis tout en bas dans <code>Developer Settings</code>. Cliquez ensuite sur <code>OAuth Apps</code> :</p>
+<p>Pour cela, il faut se rendre dans les <a href="https://github.com/settings/profile" rel="external" target="_blank">paramètres de votre compte GitHub</a>, puis tout en bas dans <code>Developer Settings</code>. Cliquez ensuite sur <code>OAuth Apps</code> :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="740668" popovertargetaction="show">
+    <button class="image__button" popovertarget="350200" popovertargetaction="show">
       <img src="acces-oaut-setting.png" alt="Accès aux options de OAuth de GitHub" >
     </button><figcaption>Accès aux options de OAuth de GitHub</figcaption></figure>
-  <dialog popover class="image__lightbox" id="740668">
-    <button class="image__lightbox--button" popovertarget="740668" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="350200">
+    <button class="image__lightbox--button" popovertarget="350200" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1308,11 +1308,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </div><p>Dans cette page, cliquez sur <code>Register a new application</code>, et la fenêtre suivante va s&rsquo;ouvrir :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="811658" popovertargetaction="show">
+    <button class="image__button" popovertarget="192375" popovertargetaction="show">
       <img src="oauth-github.png" alt="Les options de OAuth de GitHub" >
     </button><figcaption>Les options de OAuth de GitHub</figcaption></figure>
-  <dialog popover class="image__lightbox" id="811658">
-    <button class="image__lightbox--button" popovertarget="811658" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="192375">
+    <button class="image__lightbox--button" popovertarget="192375" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1336,11 +1336,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <p>Copier bien la clée généré par GitHub dans un coin également, car il ne sera pas possible de la retrouver plus tard. Maintenant que c&rsquo;est fait, il ne nous reste plus qu&rsquo;a faire le lien entre GitHub et Netlify. Pour cela, rendez-vous dans le dashboard de votre site sur Netlify, puis naviguez dans <code>Site configuration &gt; Access &amp; security &gt; OAuth</code>. Sous <code>Authentication providers</code>, cliquez sur <code>Install provider</code>.</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="863175" popovertargetaction="show">
+    <button class="image__button" popovertarget="338048" popovertargetaction="show">
       <img src="install-provider-netliffy.png" alt="Installer un provider dans Netlify" >
     </button><figcaption>Installer un provider dans Netlify</figcaption></figure>
-  <dialog popover class="image__lightbox" id="863175">
-    <button class="image__lightbox--button" popovertarget="863175" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="338048">
+    <button class="image__lightbox--button" popovertarget="338048" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1356,11 +1356,11 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 </div><p>Sélectionnez ensuite GitHub, et complétez les deux clées avec celles que vous avez générées un peu plus tôt :</p>
 <div class="image">
   <figure>
-    <button class="image__button" popovertarget="169800" popovertargetaction="show">
+    <button class="image__button" popovertarget="124875" popovertargetaction="show">
       <img src="install-provider-netlify-secret.png" alt="Ajout des clées" >
     </button><figcaption>Ajout des clés</figcaption></figure>
-  <dialog popover class="image__lightbox" id="169800">
-    <button class="image__lightbox--button" popovertarget="169800" popovertargetaction="hide">
+  <dialog popover class="image__lightbox" id="124875">
+    <button class="image__lightbox--button" popovertarget="124875" popovertargetaction="hide">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         height="24px" width="24px">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -1378,10 +1378,10 @@ Les Shortcodes sont des widgets, utilisables dans les fichiers de contenus.</str
 <blockquote>
 <p>Ressource utile pour cette section :</p>
 <ul>
-<li><a href="https://github.com/sveltia/sveltia-cms/?tab=readme-ov-file#getting-started">https://github.com/sveltia/sveltia-cms/?tab=readme-ov-file#getting-started</a></li>
-<li><a href="https://decapcms.org/docs/hugo/">https://decapcms.org/docs/hugo/</a></li>
-<li><a href="https://decapcms.org/docs/github-backend/">https://decapcms.org/docs/github-backend/</a></li>
-<li><a href="https://docs.netlify.com/security/secure-access-to-sites/oauth-provider-tokens/#using-an-authentication-provider">https://docs.netlify.com/security/secure-access-to-sites/oauth-provider-tokens/#using-an-authentication-provider</a></li>
+<li><a href="https://github.com/sveltia/sveltia-cms/?tab=readme-ov-file#getting-started" rel="external" target="_blank">https://github.com/sveltia/sveltia-cms/?tab=readme-ov-file#getting-started</a></li>
+<li><a href="https://decapcms.org/docs/hugo/" rel="external" target="_blank">https://decapcms.org/docs/hugo/</a></li>
+<li><a href="https://decapcms.org/docs/github-backend/" rel="external" target="_blank">https://decapcms.org/docs/github-backend/</a></li>
+<li><a href="https://docs.netlify.com/security/secure-access-to-sites/oauth-provider-tokens/#using-an-authentication-provider" rel="external" target="_blank">https://docs.netlify.com/security/secure-access-to-sites/oauth-provider-tokens/#using-an-authentication-provider</a></li>
 </ul>
 </blockquote>
 <p>Je vous laisse faire le tour du CMS par vous même, c&rsquo;est une interface graphique assez simple, vous devriez vous en sortir.</p>
