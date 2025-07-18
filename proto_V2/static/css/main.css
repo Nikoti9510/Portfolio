@@ -349,7 +349,6 @@
 
     /* ------------- HEADER ------------- */
     .header {
-
         /* logo */
         & .logo {
             & a {
@@ -468,6 +467,16 @@
                     background-color: red;
                     animation: 1s infinite clock__dot;
                 }
+            }
+        }
+
+        @media (width < 70rem) {
+            & :is(.flex-end, .flex-between) {
+                display: block;
+            }
+
+            & .clock {
+                margin-block-start: 1rem;
             }
         }
     }
@@ -1066,6 +1075,8 @@
                 width: 100%;
                 padding: 1rem;
                 border-radius: .2rem;
+                font-size: calc(var(--font-size__body) / 1.2);
+                line-height: calc(var(--line-height__title) / .8);
 
                 & span {
                     max-width: 100%;
