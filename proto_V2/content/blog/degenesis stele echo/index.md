@@ -8,12 +8,15 @@ tags:
 ---
 
 # Degenesis - Stèles d'échos
-Il y a quelque temps j'ai découvert le blog Mindstorm avec ce post : \
-<a href="https://www.mindstormpress.com/nested-monster-hit-dice" target="_blank">nested-monster-hit-dice</a>. Tyrell, l'auteur du site, nous présente une méthode de création et d'interprétation des monstres qui vise à renforcer les piliers du jeu OSR, à savoir la prise d'information et de décision des joueurs face aux problèmes proposés par le maître du jeu. 
-Selon lui, cet aspect n'est pas assez exploité lors de la phase de combat, qui se résume trop souvent par quelque chose comme : *"Je lance mon dé d'attaque, je touche et applique mes dégâts. Au suivant !".* Il nous propose donc de segmenter les adversaires en sous ensembles d'éléments, chacun possédant des caractéristiques particulières. L'idée étant de présenter les adversaires en fonction de ce que peuvent percevoir les personnages de nos joueurs, et que certains aspects restent cachés jusqu'à leurs utilisations lors du combat. 
+Il y a quelque temps j'ai découvert le blog Mindstorm avec le post [nested-monster-hit-dice](https://www.mindstormpress.com/nested-monster-hit-dice). Tyrell, l'auteur du site, nous présente une méthode de création et d'interprétation des monstres qui vise à renforcer les piliers du jeu OSR, à savoir la prise d'information et de décision des joueurs face aux problèmes proposés par le maître du jeu.
+
+Selon lui, cet aspect n'est pas assez exploité lors de la phase de combat, qui se résume trop souvent par quelque chose comme : *"Je lance mon dé d'attaque, je touche et applique mes dégâts. Au suivant !"*. Il nous propose donc de segmenter les adversaires en sous ensembles d'éléments, chacun possédant des caractéristiques particulières. L'idée étant de présenter les adversaires en fonction de ce que peuvent percevoir les personnages de nos joueurs, et que certains aspects restent cachés jusqu'à leurs utilisations lors du combat.
+
 De cette façon, les joueurs peuvent prioriser certains points vitaux ou stratégiques de l'adversaire, prendre le temps de se renseigner en amont sur un ennemi pour apprendre et se préparer à l'avance, ou encore fuir un combat déséquilibré pour revenir mieux équiper et prendre leur revanche. Tout cela est bien évidemment possible sans ce système, mais celui-ci permet de le rendre organique et très simple à mettre en place pour le maître du jeu. Je vous invite grandement à lire l'article de Mindstorm, car il explore d'autres avantages à cette méthode.
-Personnellement, j'utilise ce système dès que je veux proposer un affrontement qui sort de l'ordinaire à mes joueurs. Je ne pense pas en effet qu'il soit adapté pour tous les combats dans lesquels vos joueurs vont se retrouver. Un loup galeux ne présente pas un intérêt suffisant pour en détailler les mécaniques outre mesure, alors  qu'une Cocatrix traumatisant les vallons alentours depuis des semaines, oui.  
-J'avais envie d'écrire un peu pour le jeu <a href="https://degenesis.com/" target="_blank">Degenesis</a>, et je me suis dit que ça serait un bon prétexte pour illustrer la manière dont j'utilise la méthode de Mindstrom, tout en découvrant un peu les Balkans, que je n'ai pas encore eu l'occasion d'explorer en jeu avec mes joueurs.  
+
+Personnellement, j'utilise ce système dès que je veux proposer un affrontement qui sort de l'ordinaire à mes joueurs. Je ne pense pas en effet qu'il soit adapté pour tous les combats dans lesquels vos joueurs vont se retrouver. Un loup galeux ne présente pas un intérêt suffisant pour en détailler les mécaniques outre mesure, alors  qu'une Cocatrix traumatisant les vallons alentours depuis des semaines, oui.
+
+J'avais envie d'écrire un peu pour le jeu [Degenesis](https://degenesis.com/), et je me suis dit que ça serait un bon prétexte pour illustrer la manière dont j'utilise la méthode de Mindstrom, tout en découvrant un peu les Balkans, que je n'ai pas encore eu l'occasion d'explorer en jeu avec mes joueurs.  
 
 ## Le lien
 Le tonnerre gronde au loin, les nuages sombres roulent sur les flancs de basaltes abrupts. Les grosses gouttes humidifient les étranges stèles d'échos qui percent les escarpements, entre les saillies rocheuses et les conifères. L'eau ruisselle et de curieux reflets apparaissent sur les faces encore illuminées par les derniers rayons de soleil. La brume déjà lourde nappe le fond de la vallée, et les stèles la transpercent, comme de multiples ailerons de squales, tournant autour du champ de spore mère caché sous les nappes de brouillards.
@@ -35,12 +38,19 @@ Trois Dushani, des Lesnje, protègent le champ de spore. Ils sont entièrement n
 
 ## Compétences et statistiques
 ***Lesnje*** : \
-*Veux :* Protéger le champ de spore mère et l'harmonie de la matrice sonore. \
-*Rage :* Bruits dissonants\
-*Peur :* Perdre son masque
+*Veux* : Protéger le champ de spore mère et l'harmonie de la matrice sonore. \
+*Rage* : Bruits dissonants\
+*Peur* : Perdre son masque
 
-<table class="flow-space__small"><thead><tr><th>Compétence</th><th>Valeur</th></tr></thead><tbody><tr><td>Instinct</td><td>8d</td></tr><tr><td>Psyché</td><td>6d</td></tr><tr><td>Agilité</td><td>5d</td></tr><tr><td>Physique</td><td>7d</td></tr><tr><td>Intellect</td><td>4d</td></tr><tr><td>Charisme</td><td>4d</td></tr><tr><td>Défense passive</td><td>3d</td></tr></tbody></table>
-
+| Compétence | Valeur |
+|---|---|
+| Instinct | 8d |
+| Psyché | 6d |
+| Agilité | 5d |
+| Physique | 7d |
+| Intellect | 4d |
+| Charisme | 4d |
+| Défense passive | 3d |
 
 * **Scaphandre** : *(25HP | 3 Armures)* \
   Ajoute +4d pour percevoir l'environnement dans un rayon de 100 mètres autour du Lesnje

@@ -24,7 +24,6 @@ Simplement pour écrire. Oui d'accord, mais pourquoi écrire ? Et pourquoi le me
 Je suis persuadé que quand je relirais ces premiers articles, d'ici un an ou deux, je serais accablé de honte en me relisant. Je me vois déjà dire *"Mais comment j'ai pu pondre un truc pareil"*, la tête entre les mains. Peu importe, et même, tant mieux ! Cela signifiera que j'ai : *1.* continué à écrire, et *2.* progressé au point de voir des erreurs que je ne perçois pas maintenant.
 En attendant, je vais essayer des choses. Quel ton je devrais avoir ? Lequel me convient le mieux ? Quel sujet ai-je envie d'aborder, et de quelle manière ? Et sans doute beaucoup d'autres questions auxquelles je n'ai même pas idée pour l'instant et qui me viendront naturellement d'ici là. Ou peut-être pas d'ailleurs. 
 
-
 ## 4. Développer des projets personnels
 Que ce soit dans le domaine du webdesign, du jeu de rôle, ou d'autres hobbies actuels et futurs, écrire permet de prendre du temps pour explorer mes passions. Écrire pour soit ou pour expliquer aux autres est une excellente façon de s'assurer de la compréhension d'un sujet. Et si ce n'est pas le cas, c'est un prétexte parfait pour l'approfondir, en mettant le doigt sur les éléments précis sur lesquels on peut avoir des lacunes. 
 

@@ -140,8 +140,8 @@
         /* fonts */
         --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.2rem);
         --font-size_h1: clamp(3.5rem, -0.875rem + 6cqi, 6rem);
-        --font-size_h2: clamp(2.75rem, -0.875rem + 6cqi, 3.2rem);
-        --font-size_h3: clamp(2rem, -0.875rem + 6cqi, 2.5rem);
+        --font-size_h2: clamp(2.75rem, -0.875rem + 6cqi, 3.5rem);
+        --font-size_h3: clamp(2rem, -0.875rem + 6cqi, 2.25rem);
         --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
         --line-height__body: 1.7;
         --line-height__title: 1;
@@ -1010,6 +1010,7 @@
         /* Quotes */
         & blockquote {
             margin-block: var(--space, 1.5rem);
+            border-radius: .2rem;
             margin-inline: 0;
             padding: 2rem;
             background-color: color-mix(in srgb, var(--midground-color) 33%, transparent);
@@ -1050,7 +1051,6 @@
         & pre {
             display: flex;
             flex-direction: column;
-            margin-block-end: 3rem;
 
             &::before {
                 content: attr(data-lang);

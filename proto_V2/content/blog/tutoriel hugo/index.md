@@ -83,7 +83,7 @@ Oui je sais, ***GIT*** ! Mais ce n'est pas si terrible vous allez voir. Surtout,
 ### Installer GO et Hugo
 
 
-Commençez par vous rendre sur [](gohugo.io/installation/)[gohugo.io/installation/](<>) et cliquez sur l'option correspondant à votre navigateur. Pour ce tutoriel, je vais suivre les étapes pour Windows (mais c'est même plus simple avec MacOS). 
+Commençez par vous rendre sur [gohugo.io/installation](https://gohugo.io/installation/) et cliquez sur l'option correspondant à votre navigateur. Pour ce tutoriel, je vais suivre les étapes pour Windows (mais c'est même plus simple avec MacOS). 
 
 
 Dans un premier temps, il nous faut installer [Go](https://go.dev/doc/install), le langage de programmation dans lequel Hugo est écrit. Pas de panique, nous n'aurons pas besoin d'apprendre un nouveau langage pour ce projet, il est simplement nécessaire de l'installer sur notre machine pour que Hugo fonctionne. Téléchargez l'exécutable pour Windows et suivez les instructions de l'installateur. 
@@ -106,8 +106,9 @@ Une fois l'installation terminé, ouvrez une invite de commande (Windows + R et 
 
 Dans la même console, vous pouvez maintenant copier la commande suivante pour installer Hugo : 
 
-
-`go install github.com/gohugoio/hugo@latest`
+```shell
+go install github.com/gohugoio/hugo@latest
+```
 
 
 ### Installer Git
@@ -130,8 +131,9 @@ Une fois que l'installation est terminé, vous êtes prêt à créer votre site 
 
 Dans le terminal qui s'est ouvert en bas de l'éditeur, vous pouvez maintenant générer votre site avec Hugo. Pour cela, rien de plus simple, il suffit de taper la ligne de commande suivante : 
 
-
-`Hugo new site NOM_DU_SITE`
+```shell
+Hugo new site NOM_DU_SITE
+```
 
 Remplacer `NOM_DU_SITE` par le nom de votre choix (sans espaces ni caractères spéciaux).
 
@@ -148,18 +150,19 @@ On constate une fois la création du site terminé, que des dossiers et fichiers
 
 Hugo propose une [collection de thème gratuit sur son site](https://themes.gohugo.io/), et il est également possible d'en trouver des plus complets sur d'autres sites, comme par exemple [gethugothemes.com](https://gethugothemes.com/products) ou [anvodstudio.com](https://anvodstudio.com/hugo-themes/). Pour l'exemple, j'ai choisi le thème [PaperMod](https://themes.gohugo.io/themes/hugo-papermod/). Pour l'installer, rien de compliqué, il suffit de se rendre sur le page Github du thème (en cliquant sur le bouton "Download" dans la page du thème) et de copier la commande pour installer le submodule dans le terminal de VScode. Pour PaperMod, voilà la commande : 
 
+```shell
+git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+```
 
-`git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod`
 
-
-> /!\ Il faut s'assurer que l'on se trouve à la racine de notre projet avant d'exécuter la commande. Dans le terminal, le chemin devrait être "GitHub\Nom_du_repertoire". Si ce n'est pas le cas, il faut s'y rendre. Utiliser `cd Nom_du_dossier` vous permet de vous rendre à cet endroit. Utilisez `ls` vous permet de lister tout les dossiers en enfant de celui dans lequel vous vous trouvez. Utilisez `cd ..` vous permet de remonter un niveau. 
+> Il faut s'assurer que l'on se trouve à la racine de notre projet avant d'exécuter la commande. Dans le terminal, le chemin devrait être "GitHub\Nom_du_repertoire". Si ce n'est pas le cas, il faut s'y rendre. Utiliser `cd Nom_du_dossier` vous permet de vous rendre à cet endroit. Utilisez `ls` vous permet de lister tout les dossiers en enfant de celui dans lequel vous vous trouvez. Utilisez `cd ..` vous permet de remonter un niveau. 
 
 
 Une fois la commande lancé et le thème téléchargé, il ne reste plus qu'a indiquer à Hugo que vous souhaitez utiliser ce thème. Pour cela, rendez-vous dans le fichier de configuration `config.toml` (ou `hugo.toml`, les deux fonctionnes et peuvent être présent) et d'ajouter la ligne suivante dans le fichier : 
 
-
-`theme = ["PaperMod"]`
-
+```toml
+theme = ["PaperMod"]
+```
 
 ![Choix du template dans le fichier Hugo.toml](hugo_toml.png "Choix du template dans le fichier Hugo.toml")
 
@@ -179,9 +182,9 @@ Dans cette partie, nous allons créer la structure de base pour votre site. On v
 
 Hugo nous permet de tester notre travail via un serveur local. Pour cela, il suffit de taper la commande suivant dans le terminal : 
 
-
-`hugo serve`
-
+```shell
+hugo serve
+```
 
 Une fois le serveur lancé, cliquez sur le lien que nous donne Hugo pour visualiser notre site. (Il faut utiliser le raccourci clavier *Ctrl+C* pour couper le serveur local).
 
@@ -220,18 +223,16 @@ Pour que notre site puisse fonctionner, il y quelques étapes à suivre :
 
 
 1. Créez un dossier `_default` dans `layouts`.
+
 2. Dans `_default`, créez un fichier `home.html` avec le contenu suivant :
-
-
-   ```html
+   ```go-template
    {{ define "main" }}
        {{ .Content }}
    {{ end }}
    ```
+
 3. Toujours dans `layouts > _default`, créez un fichier `baseof.html` avec le contenu suivant :
-
-
-	```html
+	```go-template
      <html lang="{{ site.Language }}">
      <body>
        <main>
@@ -240,6 +241,7 @@ Pour que notre site puisse fonctionner, il y quelques étapes à suivre :
      </body>
      </html>
    ```
+
 4. Enfin, dans le dossier `content`, ajoutez un fichier `_index.md` avec le contenu suivant : 
 	```markdown
 	---
@@ -288,7 +290,7 @@ Si on se rend dans GitHub Desktop, on remarque que plusieurs fichiers sont ajout
 ![Le premier push sur notre répertoire GitHub](premier-push-github.png "Le premier push sur notre répertoire GitHub")
 
 
-Cliquez ensuite sur "Commit to main" en bas de la fenêtre. Il ne reste plus qu'a publier le commit sur le projet, pour cela, cliquez sur "Publish branch". 
+Cliquez ensuite sur `Commit to main` en bas de la fenêtre. Il ne reste plus qu'a publier le commit sur le projet, pour cela, cliquez sur `Publish branch`. 
 
 
 ![Publier le commit en ligne](publier-la-branch-en-ligne.png "Publier le commit en ligne")
@@ -310,7 +312,7 @@ Améliorons maintenant un peu le site.
 Comme je l'ai noté plus haut, Hugo nous permet de mettre en place des sections, qui vont nous permettre de réutiliser des portions de code à plusieurs endroits de notre site. Dans notre template par défaut `baseof.html`, ajoutons le code suivant : 
 
 
-```html
+```go-template
 <html lang="{{ site.Language }}">
 <head>
   {{ partial "head.html" . }}
@@ -330,7 +332,7 @@ Comme je l'ai noté plus haut, Hugo nous permet de mettre en place des sections,
 On a ajouté dans notre page deux partials, `head.html` et `footer.html`. La syntaxe est toujours : 
 
 
-```html
+```go-template
 {{ partials "chemin/du/partial.html" . }}
 ```
 
@@ -459,8 +461,7 @@ Voilà le contenu de la page d'accueil, qui vient de `content/_index.md` !
 ```
 
 
-Ajouter un lien en Markdown est relativement simple comme vous pouvez le voir. La structure est toujours : \
-`[infobulle](/url/ "text du lien")`
+Ajouter un lien en Markdown est relativement simple comme vous pouvez le voir. La structure est toujours : `[infobulle](/url/ "text du lien")`
 
 
 Dans cet exemple, j'ai indiqué le lien moi même, mais il est possible de laisser Hugo générer lui même le lien en [utilisant un shortcode](https://gohugo.io/methods/shortcode/). 
@@ -627,7 +628,7 @@ La structure doit ressembler à ça :
 Pour mettre en place les projets, il faut ensuite créer deux nouveaux fichiers de template dans `layouts > _default`, `section.html` et `single.html`. Commençons par `section.html`, c'est lui qui va récupérer tout les projets et les présenter dans une liste complète. 
 
 
-```html
+```go-template
 {{ define "main" }}
     {{ .Content }}
     {{ range where .Site.RegularPages "Type" "projets" }}
@@ -660,7 +661,7 @@ Un nouvel onglet est créé, et la page `Mes projets` récupère bien tous les p
 Pour le moment, le site n'a pas de template pour afficher les projets unique, il faut donc le créer. C'est `single.html` qui s'en charge. Voilà un exemple très sommaire :
 
 
-```html
+```go-template
 {{ define "main" }}
 <article>
   <h1>{{ .Title }}</h1>
@@ -683,7 +684,7 @@ Ma solution :
 Dans `layouts > partials`, créez un fichier `html` avec le contenu suivant : 
 
 
-```html
+```go-template
 <section>
     {{ range where .Site.RegularPages "Type" "projets" | first 1 }}
     <article>
@@ -714,7 +715,7 @@ description : "Une description courte de mon projet."
 Il ne reste plus qu'a ajouter le partial dans la page d'accueil, en passant par `home.html` : 
 
 
-```html
+```go-template
 {{ define "main" }}
     {{ .Content }}
     {{ partial "previewProjet.html" . }}
@@ -817,7 +818,7 @@ On va commencer par ajouter dans notre projet la page d'administration du CMS. D
 `config.yml` : 
 
 
-```toml
+```yml
 backend:
   name: github
   repo: COMPTE GITHUB/REPO # C'est le nom de votre répertoire github
@@ -877,7 +878,7 @@ Il faut compléter les informations comme suit :
 Une fois fait, cliquez sur `Register application`. GitHub vous ouvre alors la page de votre application, où vous pouvez voir son `Client ID`. Copiez le dans un coin, car on va en avoir besoin pour la prochaine étape. Il faut également générer un clé client, pour cela, cliquez sur `Generate a new client secret`.
 
 
-![Générer une clé privéegenerate-secret-id.png "Générer une clé privée")
+![Générer une clé privée](generate-secret-id.png "Générer une clé privée")
 
 
 Copier bien la clée généré par GitHub dans un coin également, car il ne sera pas possible de la retrouver plus tard. Maintenant que c'est fait, il ne nous reste plus qu'a faire le lien entre GitHub et Netlify. Pour cela, rendez-vous dans le dashboard de votre site sur Netlify, puis naviguez dans `Site configuration > Access & security > OAuth`. Sous `Authentication providers`, cliquez sur `Install provider`. 

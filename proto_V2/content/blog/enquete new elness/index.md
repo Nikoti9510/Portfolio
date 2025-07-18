@@ -56,10 +56,6 @@ Deux fois par mois, une livraison arrive en ville par la gare pour réapprovisio
 
 ## Listes des Indices
 
-
-<div class="ul-margin-small">
-
-
 1. Rachat de la mine 6 mois avant la fermeture par Wayne Richardson. (13 mai 1911)
 2. Découverte d'une cave deux semaines avant la fermeture. (vendredi 13 octobre 1911)
 3. Deux fillettes (Jeanne Horne et Theresa Wilder) disparaissent une semaine avant la fermeture. (Dimanche 22 octobre 1911)
@@ -76,9 +72,6 @@ Deux fois par mois, une livraison arrive en ville par la gare pour réapprovisio
 14. Liste des décès à l'église. Le dernier enfants est morts il y a 3 semaines.
 
 
-</div>
-
-
 ## New Elness et les différents lieux à visiter
 
 
@@ -90,32 +83,16 @@ Juste devant la vieille gare du village, la petite épicerie semble être le seu
 
 **Clyde** et **Carls Higgin** sont deux frères, des habitués de l’épicerie et d’anciens mineurs. Ils traînent devant le magasin et sont ravis d’avoir de la compagnie. Ils savent que : 
 
-
-<div class="ul-margin-small">
-
-
 * La mine a été rachetée en mai 1911,
 * La mine a fermé en octobre 1911,
 * Une cave a été découverte avant la fermeture,
 * Que la mine n’avait aucune bonne raison d’être fermée. Le vieux salopard de Wayne à sans doute trouvé quelque chose de précieux dans la cave et a voulu le garder pour lui.
 
-
-</div>
-
-
 A l'intérieur, le tenancier **Sam Holcomb** s’occupe de trier une livraison reçue la veille. Il sait que : 
-
-
-<div class="ul-margin-small">
-
 
 * La mine a été rachetée en mai 1911,
 * Les filles de **Preston Horne** et **Thomas** et **Chelsea Wilder** ont disparu un peu avant la fermeture de la mine, et qu’ils vivent encore en ville,
 * **Wayne Richardson** est un personnage taciturne et esseulé. Il vient parfois acheter des boîtes de conserve ou quelques balles de fusils de chasse.
-
-
-</div>
-
 
 ### **Maison des Wilder**
 
