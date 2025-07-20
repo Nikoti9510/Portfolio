@@ -1052,6 +1052,12 @@
             }
         }
 
+        & hr {
+            height: 1px;
+            width: 100%;
+            margin-block-start: 6rem;
+        }
+
         /* Code blocks */
         & pre {
             display: flex;
