@@ -5,8 +5,8 @@
     url = '/blog'
     weight = 10
   [[menus.header]]
-    name = 'Info'
-    url = '/info'
+    name = 'Infos'
+    url = '/infos'
     weight = 20
 
 # Définition des taxonomies

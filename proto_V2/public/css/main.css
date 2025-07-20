@@ -927,6 +927,11 @@
             color: var(--interact);
         }
     }
+
+    /* --------------- Transitions -------------- */
+    @view-transition {
+        navigation: auto;
+    }
 }
 
 
