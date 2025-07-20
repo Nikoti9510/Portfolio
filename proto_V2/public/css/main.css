@@ -1052,10 +1052,18 @@
             }
         }
 
+        /* Sep */
         & hr {
-            height: 1px;
+            height: .2rem;
+            border-radius: .2rem;
+            background-color: currentColor;
             width: 100%;
             margin-block: 6rem;
+            border: none;
+
+            &~h2[id] {
+                margin-block-start: 0;
+            }
         }
 
         /* Code blocks */
