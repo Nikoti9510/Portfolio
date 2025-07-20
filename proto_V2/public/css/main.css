@@ -1055,7 +1055,7 @@
         & hr {
             height: 1px;
             width: 100%;
-            margin-block-start: 6rem;
+            margin-block: 6rem;
         }
 
         /* Code blocks */
