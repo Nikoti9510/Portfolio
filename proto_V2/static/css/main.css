@@ -953,6 +953,14 @@
         max-width: var(--max-text-width);
         align-items: center;
         flex-wrap: wrap;
+
+        @media (width <  70rem) {
+            display: block;
+
+            &> *:not(:first-child) {
+                margin-block-start: .5rem;
+            }
+        }
     }
 
     .single-content {
