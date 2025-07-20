@@ -1,52 +1,45 @@
 {{ $number := math.Rand | mul 900000 | math.Floor | add 100000 }}
-
 {{ $res := .Page.Resources.GetMatch .Destination }}
+
 {{ with $res }}
+
   {{ $original := .Resize (printf "%dx%d webp" .Width .Height) }}
   {{ $optimized := $original.Resize "600x webp" }}
 
   {{- if $.IsBlock }}
-
-  <div class="image">
-    <figure>
-      <button class="image__button" popovertarget="{{ $number }}" popovertargetaction="show">
-        <source srcset="{{ $optimized.RelPermalink }}" media="(min-width:50rem)" type="image/webp">
-        <img src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}"
-          width="{{ $original.Width }}" height="{{ $original.Height }}">
-      </button>
-      {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-    </figure>
-
-    <dialog popover class="image__lightbox" id="{{ $number }}">
-      <button class="image__lightbox--button" popovertarget="{{ $number }}" popovertargetaction="hide">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          height="24px" width="24px">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <div class="image__lightbox--img">
-        <source srcset="{{ $optimized.RelPermalink }}" media="(min-width: 50rem)" type="image/webp">
-        <img src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}"
-          width="{{ $original.Width }}" height="{{ $original.Height }}">
-      </div>
-      <div class="image__lightbox--desc">
-        <span class="visibility-hidden">Fermer la lightbox</span>
+    <div class="image">
+      <figure>
+        <button class="image__button" popovertarget="{{ $number }}" popovertargetaction="show">
+          <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
+            1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
+        </button>
         {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-      </div>
-    </dialog>
-  </div>
+      </figure>
 
+      <dialog popover class="image__lightbox" id="{{ $number }}">
+        <button class="image__lightbox--button" popovertarget="{{ $number }}" popovertargetaction="hide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            height="24px" width="24px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="image__lightbox--img">
+          <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
+            1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
+        </div>
+        <div class="image__lightbox--desc">
+          <span class="visibility-hidden">Fermer la lightbox</span>
+          {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+        </div>
+      </dialog>
+    </div>
   {{- else }}
-
   <figure>
-    <source srcset="{{ $optimized.RelPermalink }}" media="(min-width: 50rem)" type="image/webp">
-    <img src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}"
-      width="{{ $original.Width }}" height="{{ $original.Height }}">
+    <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
+          1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
   </figure>
-
   {{- end }}
 
 {{ else }}
-  <img src="" alt="Image introuvable : {{ .Destination }}"
-      width="100%" height="100px">
+  <img src="" alt="Image introuvable : {{ .Destination }}" width="100%" height="100px">
 {{ end }}

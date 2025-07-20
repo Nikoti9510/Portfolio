@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const zoomContainers = document.querySelectorAll('.image__lightbox--img');
 
     zoomContainers.forEach(container => {
@@ -7,7 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let zoomed = false;
         let origin = { x: 50, y: 50 };
 
-        container.addEventListener('click', (e) => {
+        container.addEventListener('click', lightboxClick(e));
+        container.addEventListener('touchstart', lightboxClick(e));
+        container.addEventListener('mousemove', lightboxMove(e));
+        container.addEventListener('touchmove', lightboxMove(e));
+
+        function lightboxClick(e) {
             img.classList.toggle("zoomed");
             const rect = container.getBoundingClientRect();
             origin.x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -23,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 img.style.transform = 'scale(1)';
                 img.style.transformOrigin = 'center center';
             }
-        });
+        }
 
-        container.addEventListener('mousemove', (e) => {
+        function lightboxMove(e) {
             if (!zoomed) return;
 
             const rect = container.getBoundingClientRect();
@@ -37,6 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             img.style.transformOrigin = `${origin.x}% ${origin.y}%`;
             img.style.transform = `scale(1.75) translateZ(1px) translate(${offsetX}%, ${offsetY}%)`;
-        });
+        }
     });
 });

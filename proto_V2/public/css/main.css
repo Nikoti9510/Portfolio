@@ -349,6 +349,7 @@
 
     /* ------------- HEADER ------------- */
     .header {
+
         /* logo */
         & .logo {
             & a {
@@ -524,6 +525,7 @@
     /* ------------- NAVIGATION ------------ */
     .nav__list {
         list-style: none;
+        margin: 0;
 
         & .nav__item--link {
             text-decoration: none;
@@ -734,17 +736,18 @@
         & .image__lightbox {
             display: none;
             opacity: 0;
-
             pointer-events: all;
             position: fixed;
             min-width: 50vw;
             min-height: 70vh;
             max-height: 90vh;
             max-width: 90vw;
+            width: 100%;
+            height: 100%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            margin: 1rem;
+            margin: 0;
             padding: 0;
             border: 0;
             background: transparent;
