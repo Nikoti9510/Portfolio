@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let origin = { x: 50, y: 50 };
 
         container.addEventListener('click', lightboxClick(e));
-        container.addEventListener('touchstart', lightboxClick(e));
         container.addEventListener('mousemove', lightboxMove(e));
-        container.addEventListener('touchmove', lightboxMove(e));
 
         function lightboxClick(e) {
             img.classList.toggle("zoomed");
