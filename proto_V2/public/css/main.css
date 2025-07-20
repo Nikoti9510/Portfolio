@@ -352,6 +352,8 @@
 
         /* logo */
         & .logo {
+            font-family: Instrument;
+            
             & a {
                 text-decoration: none;
                 font-size: var(--font-size_h2);
