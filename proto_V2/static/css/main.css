@@ -353,7 +353,7 @@
         /* logo */
         & .logo {
             font-family: Instrument;
-            
+
             & a {
                 text-decoration: none;
                 font-size: var(--font-size_h2);
@@ -875,6 +875,24 @@
         }
     }
 
+    /* ------------- Info ------------- */
+    .info {
+        margin-block-start: 6rem;
+    }
+    
+    .info--right {
+        font-size: var(--font-size__small);
+        text-align: end;
+        display: flex;
+        align-items: end;
+    }
+
+    .info--intro {
+        --space: 1.5rem;
+        width: calc(var(--max-text-width) / 1.5);
+    }
+
+
     /* ------------- FOOTER ------------- */
     .footer {
         flex-shrink: 0;
@@ -957,10 +975,10 @@
         align-items: center;
         flex-wrap: wrap;
 
-        @media (width <  70rem) {
+        @media (width < 70rem) {
             display: block;
 
-            &> *:not(:first-child) {
+            &>*:not(:first-child) {
                 margin-block-start: .5rem;
             }
         }

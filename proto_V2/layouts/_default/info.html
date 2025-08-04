@@ -1,9 +1,23 @@
 {{ define "main" }}
 <main id="info" class="stack">
     {{ partial "header.html" . }}
-    <section class="content main-grid grow-1">
-        <div class="flex-end">
+    <section class="content main-grid grow-1 info">
+        <div class="flex-end info--left">
             <h1>soon<sup>tm</sup></h1>
+        </div>
+        <div class="info--right stack">
+            <div class="stack info--intro">
+                <div>
+                    <strong>Interessé par presque tout, expert en presque rien.</strong>
+                    <p>Je marmonne plus que je ne parle. Vous pouvez me contacter si le coeur vous en dit.</p>
+                </div>
+                <div>
+                    <p>Email - <a href="mailto:antoine9510@gmail.com">antoine9510@gmail.com</a></p>
+                    <p>Codepen - <a href="https://codepen.io/your-work">codepen.io</a></p>
+                    <p>Linkedin - <a href="">soon<sup>Tm</sup></a></p>
+                    <p>BlueSky - <a href="">soon<sup>Tm</sup></a></p>
+                </div>
+            </div>
         </div>
     </section>
     {{ partial "footer.html" . }}
