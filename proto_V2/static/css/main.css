@@ -888,7 +888,6 @@
     .info {
         margin-block-start: 6rem;
     }
-
     .info--right {
         font-size: var(--font-size__small);
         text-align: end;
@@ -899,7 +898,6 @@
         --space: 1.5rem;
         width: calc(var(--max-text-width) / 1.5);
     }
-
     .info--left {
         align-items: end;
         --space: 3rem;
@@ -915,7 +913,6 @@
         width: calc(var(--max-text-width) / 1.5);
         line-height: calc(var(--line-height__title) * 1.2);
     }
-
 
     /* ------------- FOOTER ------------- */
     .footer {

@@ -6,7 +6,11 @@
       <h1>404</h1>
       <p>Retour à la <a href="/">page d'accueil</a>.</p>
     </div>
+    <div>
+      {{ partial "portrait.html" . }}
+    </div>
   </section>
   {{ partial "footer.html" . }}
+  {{ partial "additionnalScripts.html" . }}
 </main>
 {{ end }}
