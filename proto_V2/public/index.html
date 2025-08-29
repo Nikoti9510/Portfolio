@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/css/syntax.css">
 <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
 <script type="text/javascript" src="/js/themeSwitcher.js"></script>
+<script defer type="text/javascript" src="/js/randomImg.js"></script>
 <script>
     const theme = localStorage.getItem("theme") || "light";
     document.documentElement.dataset.theme = theme;
@@ -91,8 +92,26 @@
     </nav>
 </section>
   <section class="main-grid grow-2">
-    <div>
-      <button>Clic 👀</button>
+    <div class="flex-end flex-column">
+      <button class="faces">
+        <span class="visibility-hidden">Cliquer pour découvrir un effet visuel</span>
+        <div class="faces--imgs">
+          <span class="visibility-hidden">Une collection de photo peu avantageuse</span>
+          <img src="/images/tete_1-64x.jpg" alt="" width="64" class="activeImg">
+          <img src="/images/tete_2-64x.jpg" alt="" width="64">
+          <img src="/images/tete_3-64x.jpg" alt="" width="64">
+          <img src="/images/tete_4-64x.jpg" alt="" width="64">
+          <img src="/images/tete_5-64x.jpg" alt="" width="64">
+          <img src="/images/tete_6-64x.jpg" alt="" width="64">
+          <img src="/images/tete_7-64x.jpg" alt="" width="64">
+          <img src="/images/tete_8-64x.jpg" alt="" width="64">
+          <img src="/images/tete_9-64x.jpg" alt="" width="64">
+          <img src="/images/tete_10-64x.jpg" alt="" width="64">
+          <img src="/images/tete_11-64x.jpg" alt="" width="64">
+          <img src="/images/tete_12-64x.jpg" alt="" width="64">
+        </div>
+        <span  class="faces--eyes">👀</span>
+      </button>
     </div>
     <div class="flex-end z1">
       <div class="stack">
