@@ -1,5 +1,8 @@
 switchColor();
 
+
+console.log("test")
+
 /* fonction pour récupérer l'état des paramètres du thème */
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
     if (localStorageTheme !== null) {
