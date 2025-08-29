@@ -1025,6 +1025,12 @@ body:has(*:popover-open) {
     align-items: end;
 }
 
+.info--right {
+    @media (width > 70rem) {
+        align-items: end;
+    }
+}
+
 .info--category {
     --space: 6rem;
     width: 100%;
