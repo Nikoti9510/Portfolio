@@ -2,6 +2,8 @@
 
 // });
 
+switchColor();
+
 /* fonction pour récupérer l'état des paramètres du thème */
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
     if (localStorageTheme !== null) {
@@ -59,4 +61,3 @@ function switchColor() {
         });
     }
 }
-switchColor();
