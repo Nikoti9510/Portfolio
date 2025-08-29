@@ -588,6 +588,10 @@
         position: relative;
         transition: ease .3s all;
 
+        @media (width < 70rem) {
+            display: none;
+        }
+
         &:hover {
             width: 48px;
             height: 48px;
