@@ -324,6 +324,9 @@
         background-color: var(--background-color);
         color: var(--texts-color);
         padding: 4vh 4vw;
+        width: min(100vw, 1920px);
+        margin: 0 auto;
+        overflow-x: hidden;
 
         @media (width < 70rem) {
             padding: 2em;
@@ -341,8 +344,7 @@
 
     main {
         min-height: 100%;
-        max-width: 1900px;
-        margin: 0 auto;
+        /* max-width: min(100vw, 1920px); */
     }
 
 
