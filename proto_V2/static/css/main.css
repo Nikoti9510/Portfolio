@@ -1031,6 +1031,10 @@ body:has(*:popover-open) {
 
 .info--group {
     --space: 1.5rem;
+
+    & .post__tags {
+        font-size: var(--font-size__body);
+    }
 }
 
 .info--group__title {
