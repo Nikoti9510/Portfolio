@@ -2,14 +2,14 @@
 <main id="home" class="stack">
   {{ partial "header.html" . }}
   {{ partial "navigation.html" . }}
-  <section class="main-grid">
+  <section class="main-grid grow-2">
     <div>
-
+      <button>Clic 👀</button>
     </div>
     <div class="flex-end z1">
       <div class="stack">
         {{ range ( where .Site.RegularPages "Type" "blog" | first 3 ) }}
-          {{ partial "articles.html" . }}
+        {{ partial "articles.html" . }}
         {{ end }}
       </div>
     </div>

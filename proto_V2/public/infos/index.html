@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="/css/syntax.css">
 <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
 <script type="text/javascript" src="/js/themeSwitcher.js"></script>
+<script>
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = theme;
+</script>
 <script defer type="text/javascript" src="/js/lightbox.js"></script>
 
 <script type="importmap">
@@ -69,6 +73,21 @@
     <div class="visibility-hidden">
         <script type="text/javascript" src="/js/clock.js"></script>
     </div>
+</section>
+    <section class="navigation main-grid z1">
+    <nav class="flex-end">
+        <ul class="nav__list">
+            
+            <li class="nav__item">
+                <a class="nav__item--link" href="/blog">Blog</a>
+            </li>
+            
+            <li class="nav__item">
+                <a class="nav__item--link" href="/infos">Infos</a>
+            </li>
+            
+        </ul>
+    </nav>
 </section>
     <section class="content main-grid grow-1 info">
         <div class="stack info--left">
@@ -159,14 +178,14 @@
             <div class="stack info--category">
                 <article class="info--group">
                     <div class="info--group__details small">
-                        <p>Vous avez remarqué que je liste n'importe quoi pour avoir du contenu à mettre en page ?</p>
+                        <p>Ça se voit que je liste n'importe quoi pour avoir du contenu à mettre en page ?</p>
                     </div>
                 </article>
             </div>
         </div>
         <div class="info--right stack">
             <div class="stack info--intro">
-                <div>
+                <div class="post">
                     <strong>Interessé par presque tout, expert en presque rien.</strong>
                     <p>Je marmonne plus que je ne parle. Vous pouvez me contacter si le coeur vous en dit.</p>
                 </div>
