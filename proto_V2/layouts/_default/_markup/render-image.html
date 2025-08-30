@@ -17,20 +17,20 @@
       </figure>
 
       <dialog popover class="image__lightbox" id="{{ $number }}">
-        <button class="image__lightbox--button" popovertarget="{{ $number }}" popovertargetaction="hide">
+        <!-- <button class="image__lightbox--button" popovertarget="{{ $number }}" popovertargetaction="hide">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             height="24px" width="24px">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
-        </button>
+        </button> -->
         <div class="image__lightbox--img">
           <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
             1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
         </div>
-        <div class="image__lightbox--desc">
+        <!-- <div class="image__lightbox--desc">
           <span class="visibility-hidden">Fermer la lightbox</span>
           {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-        </div>
+        </div> -->
       </dialog>
     </div>
   {{- else }}

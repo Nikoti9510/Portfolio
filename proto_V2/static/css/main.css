@@ -263,6 +263,36 @@
         position: relative;
         z-index: 1;
     }
+
+    /* MODALS */
+    /* enable transitions */
+    [popover],
+    dialog,
+    ::backdrop {
+        transition:
+            display ease .3s allow-discrete,
+            overlay ease .3s allow-discrete,
+            opacity ease .3s;
+        opacity: 0;
+    }
+
+    /* On Stage */
+    :popover-open,
+    :popover-open::backdrop,
+    [open],
+    [open]::backdrop {
+        opacity: 1;
+    }
+
+    /* Off Stage */
+    @starting-style {
+        :popover-open,
+        :popover-open::backdrop,
+        [open],
+        [open]::backdrop {
+            opacity: 0;
+        }
+    }
 }
 
 
@@ -857,7 +887,7 @@ body:has(*:popover-open) {
             padding: 0;
             background: transparent;
             border: none;
-            cursor: pointer;
+            cursor: zoom-in;
             width: 100%;
         }
     }
@@ -867,11 +897,9 @@ body:has(*:popover-open) {
         opacity: 0;
         pointer-events: all;
         position: fixed;
-        min-width: 50vw;
+        min-width: 60vw;
         min-height: 70vh;
         max-height: 90vh;
-        max-width: 90vw;
-        width: 100%;
         height: 100%;
         top: 50%;
         left: 50%;
@@ -905,18 +933,14 @@ body:has(*:popover-open) {
         }
 
         & .image__lightbox--img {
+            display: flex;
             overflow: auto;
             width: 100%;
             min-height: 60vh;
-            padding: 1rem;
-            border-radius: .2rem;
-            background-color:
-                color-mix(in srgb, var(--gray-01) 33%, currentColor);
 
             & img {
-                width: auto;
-                height: 100%;
-                object-fit: contain;
+                width: 100%;
+                height: auto;
                 margin: auto;
                 border-radius: .2rem;
                 background-color: transparent;
