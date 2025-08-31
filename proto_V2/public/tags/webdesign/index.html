@@ -1,0 +1,107 @@
+<html lang="fr-FR" data-theme="light">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Webdesign</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+<script type="text/javascript" src="/js/themeSwitcher.js"></script>
+<script defer type="text/javascript" src="/js/randomImg.js"></script>
+<script>
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = theme;
+</script>
+<script defer type="text/javascript" src="/js/lightbox.js"></script>
+
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.173.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.173.0/examples/jsm/"
+        }
+    }
+</script>  
+  </head>
+  <body>
+    
+<main class="stack">
+  <section class="header main-grid z1">
+    <div class="flex-between">
+         <div class="logo"> 
+            <a href="/" class="stack">
+                <div>
+                    <span class="logo__trait"></span>
+                    <span class="visibility-hidden">Page d'accueil du site d'</span>
+                    <span class="logo__accent">Antoine</span>
+                </div>
+                <div>
+                    <span>Moreau</span>
+                </div>
+            </a>
+         </div> 
+        <div id="clock" class="clock stack">
+            <div class="clock__loc monospace">Angoulême [FR]</div>
+            <div class="flex-end">
+                <span class="clock__time monospace">13:37</span>
+                <span class="clock__dot">
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="flex-end">
+        <button class="theme-switch" id="theme-switch" title="Passer du thème clair au thème sombre" aria-label="auto"
+            aria-live="polite">
+            <svg class="theme-switch__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="soleil" cx="12" cy="12" r="6" mask="url(#mask-lune)" fill="currentColor" />
+                <g class="rayons" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+                <mask class="lune" id="mask-lune">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+            </svg>
+            <span class="sr-only"></span>
+        </button>
+    </div>
+    <div class="visibility-hidden">
+        <script type="text/javascript" src="/js/clock.js"></script>
+    </div>
+</section>
+  <section class="taxonomies main-grid grow-1">
+    <div class="taxonomies__content stack">
+      <h1>Webdesign</h1>
+      
+      <div class="taxonomies__pages">
+      
+        <h2><a href="/blog/partie-1/">Créer un portfolio avec Hugo et Netlify - Partie 1</a></h2>
+      
+      </div>
+    </div>
+  </section>
+  <section class="footer main-grid z1">
+    <div class="flex-between">
+        <span class="version monospace">Portfolio - v2.0 - ©2025</span>
+        <div class="coords stack monospace">
+            <span>45.6703136</span>
+            <span>0.1612927</span>
+        </div>
+    </div>
+    <div class="flex-end">
+        <div class="contact stack">
+            <span>Dispo pour discuter</span>
+            <a href="mailto:antoine9510@gmail.com">antoine9510@gmail.com</a>
+        </div>
+    </div>
+</section>
+</main>
+
+  </body>
+</html>

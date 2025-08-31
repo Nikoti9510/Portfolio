@@ -5,6 +5,7 @@ description: Vous venez de rentrer dans un bâtiment en ruine, la horde de zombi
 type: blog
 tags:
 - JDR
+draft: true
 ---
 
 # 500 objets sans importances pour du post-apocalyptique

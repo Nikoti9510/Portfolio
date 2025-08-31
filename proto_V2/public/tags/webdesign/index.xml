@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webdesign on </title>
+    <link>//localhost:1313/tags/webdesign/</link>
+    <description>Recent content in Webdesign on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Jan 2025 13:21:35 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/webdesign/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Créer un portfolio avec Hugo et Netlify - Partie 1</title>
+      <link>//localhost:1313/blog/partie-1/</link>
+      <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
+      <guid>//localhost:1313/blog/partie-1/</guid>
+      <description>&lt;h1 id=&#34;créer-un-portfolio-avec-hugo-et-netlify&#34;&gt;&#xD;&#xA;      Créer un portfolio avec Hugo et Netlify&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;On parle de JamStack pour décrire un site ou une application créée en combinant différentes API et outils afin de servir un site statique, c&amp;rsquo;est-à-dire en HTML brut, sans calcul supplémentaire côté serveur ou client. Le but étant de garantir des performances et une expérience utilisateur optimales. Avec cette approche, les éléments dynamiques d&amp;rsquo;un site sont générés en amonts, puis mis à disposition sur un serveur.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

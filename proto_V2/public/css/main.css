@@ -732,6 +732,7 @@
     padding: 1em;
     border-radius: .2em;
     position: relative;
+    opacity: 1;
 
     &::before {
         content: "";
@@ -746,15 +747,19 @@
         z-index: 0;
     }
 
-
     &>* {
         z-index: 1;
         position: relative;
     }
 
-    &:has(.post__tags--tag.hide) {
+    &:has( .post__tags--tag.hide ) {
         opacity: 0;
         display: none;
+    }
+
+    &:has( .post__tags--tag:not(.hide) ) {
+        opacity: 1;
+        display: block;
     }
 
     &:hover .post__title {
@@ -1198,7 +1203,7 @@ body:has(*:popover-open) {
             background-image: radial-gradient(var(--midground-color) 1px, transparent 0);
             background-size: 12px 12px;
             background-repeat: repeat;
-            border-radius: 1rem;
+            border-radius: .5rem;
             border: solid 1px var(--midground-color);
             z-index: 0;
         }

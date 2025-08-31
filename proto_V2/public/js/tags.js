@@ -5,7 +5,7 @@ function tags(target, tagName) {
 
     tagsSelector.forEach(tag => tag.classList.remove("active"))
     if (!alreadyActive) {
-        target.classList.add("active")
+        target.classList.add("active");
     }
     
     articles.forEach(article => {

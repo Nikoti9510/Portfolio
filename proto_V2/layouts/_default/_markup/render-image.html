@@ -13,7 +13,7 @@
           <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
             1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
         </button>
-        {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+        {{- with .Title }}<figcaption>{{ $.Text }}</figcaption>{{ end -}}
       </figure>
 
       <dialog popover class="image__lightbox" id="{{ $number }}">

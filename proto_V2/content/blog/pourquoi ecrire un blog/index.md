@@ -5,6 +5,7 @@ description: C'est bien beau de faire un blog, mais pour quoi faire ? Eh bien c'
 type: blog
 tags:
 - Meta
+draft: true
 ---
 
 # Pourquoi écrire (un blog) ?

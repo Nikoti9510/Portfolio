@@ -5,6 +5,7 @@ description: Une ébauche de cadre de campagne pour Black Sword Hack de Kobayash
 type: blog
 tags:
 - JDR
+draft: true
 ---
 
 # Black Sword Hack - l'archipel d'or

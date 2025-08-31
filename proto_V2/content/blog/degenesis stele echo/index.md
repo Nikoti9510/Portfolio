@@ -5,6 +5,7 @@ description: "Expérimentation autour de l'article de Mindstorm : NESTED MONSTER
 type: blog
 tags:
 - JDR
+draft: true
 ---
 
 # Degenesis - Stèles d'échos

@@ -5,6 +5,7 @@ description: "Vous avez été engagé par Jack Delany, l’une de vos connaissan
 type: blog
 tags:
 - JDR
+draft: true
 ---
 
 # Enquête à New Elness - Un scénario dans l'univers Lovecraftien

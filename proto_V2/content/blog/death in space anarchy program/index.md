@@ -5,6 +5,7 @@ description: DEATH IN SPACE est un jeu de rôle de science-fiction et de survie 
 type: blog
 tags:
 - JDR
+draft: true
 ---
 
 # Death In Space #4N4RCHY PR06R4M
