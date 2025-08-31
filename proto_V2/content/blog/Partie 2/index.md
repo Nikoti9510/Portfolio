@@ -20,12 +20,12 @@ Regardons la structure généré par Hugo lors de la création du site d'un peu 
 
 ![Structure du projet dans VScode](structure-du-site.png "Structure du projet dans VScode")
 
-Pour le moment, il y a trois dossiers qui nous intéresses :
+Pour le moment, il y a trois dossiers qui nous intéresse :
 
 
 1. **static** : C'est ici que son stocké les ressources utiles au site qui ne changent jamais, tels que les images réutilisées dans toutes les pages, les fichiers CSS et Javascripts, etc.
 2. **content** : Dans ce dossier, on retrouve les pages de contenus, en format `.md` (pour [Markdown](https://www.markdownguide.org/cheat-sheet/))
-3. **layouts** : Où son stocké les pages de templates en format `.HTML`, ainsi que les fameuses *Partials*. 
+3. **layouts** : Où sont stockés les pages de templates en format `.HTML`, ainsi que les fameuses *Partials*. 
 
 
 > Pour plus de détails sur la structure de Hugo, consultez la documentation à ce sujet : [gohugo.io/getting-started/directory-structure/#directories](https://gohugo.io/getting-started/directory-structure/#directories)
@@ -80,11 +80,11 @@ Si vous lancez le serveur de test (`Hugo serve`), notre page s'affiche !
 Expliquons ce que l'on vient de faire : 
 
 
-Nous avons créé un fichier `home.html` qui correspond à notre page d'accueil, et nous l'avons ajouté dans le dossier `layouts > _default` afin que Hugo le trouve. Dans ce fichier, on défini un bloc que l'on nomme `main`, dans lequel on ajoute le contenu de la page, `Content`. Ce contenu est récupéré automatiquement par Hugo dans le fichier `_index.md`, si celui-ci existe dans le dossier content.
+Nous avons créé un fichier `home.html` qui correspond à notre page d'accueil, et nous l'avons ajouté dans le dossier `layouts > _default` afin que Hugo le trouve. Dans ce fichier, on définit un bloc que l'on nomme `main`, dans lequel on ajoute le contenu de la page, `Content`. Ce contenu est récupéré automatiquement par Hugo dans le fichier `_index.md`, si celui-ci existe dans le dossier content.
 
-Nous avons ensuite défini dans notre dossier `_defaut` le template de page pour toutes les pages du site, qui se nomme `baseof.html`. C'est cette page qui est toujours utilisé par Hugo pour assembler nos pages (il est possible d'en définir plusieurs en cas de besoin, voir [gohugo.io/templates/lookup-order](https://gohugo.io/templates/lookup-order/)). Pour le moment, notre fichier `baseof.html` est très simple, mais nous l'enrichirons plus tard. `home.html` se base sur ce template, et pour le moment ne fait rien de plus.  
+Nous avons ensuite défini dans notre dossier `_defaut` le template de page pour toutes les pages du site, qui se nomme `baseof.html`. C'est cette page qui est toujours utilisée par Hugo pour assembler nos pages (il est possible d'en définir plusieurs en cas de besoin, voir [gohugo.io/templates/lookup-order](https://gohugo.io/templates/lookup-order/)). Pour le moment, notre fichier `baseof.html` est très simple, mais nous l'enrichirons plus tard. `home.html` se base sur ce template, et pour le moment ne fait rien de plus.  
 
-Enfin, nous avons créé le fichier Markdown `_index.md`, c'est à dire le fichier de contenu, pour notre page d'accueil. Il est ajouté dans le dossier `content`, pour que Hugo puisse le retrouver et l'injecter dans la page. 
+Enfin, nous avons créé le fichier Markdown `_index.md`, c'est-à-dire le fichier de contenu, pour notre page d'accueil. Il est ajouté dans le dossier `content`, pour que Hugo puisse le retrouver et l'injecter dans la page. 
 
 
 Avant d'aller plus loin, sauvegardons notre travail sur Github. 
@@ -93,13 +93,13 @@ Avant d'aller plus loin, sauvegardons notre travail sur Github.
 
 ## Pousser des fichiers locaux sur Github
 
-Si nous nous rendons dans GitHub Desktop, plusieurs fichiers ont étés ajoutés dans la liste des modifications. Pour les envoyer sur votre répertoire Github, il faut donner un nom à notre *Commit*. Quelques choses comme "*Premier push*" fera l'affaire pour le moment. Vous pouvez également ajouter une description plus détaillé. Essayez d'être clair et précis dans vos noms de push, car vous pourrez les retrouver dans Github et revenir en arrière quand des bugs vont inévitablement apparaitre.  
+Si nous nous rendons dans GitHub Desktop, plusieurs fichiers ont été ajoutés dans la liste des modifications. Pour les envoyer sur votre répertoire Github, il faut donner un nom à notre *Commit*. Quelque chose comme "*Premier push*" fera l'affaire pour le moment. Vous pouvez également ajouter une description plus détaillée. Essayez d'être clair et précis dans vos noms de push, car vous pourrez les retrouver dans Github et revenir en arrière quand des bugs vont inévitablement apparaitre.  
 
 
 ![Le premier push sur notre répertoire GitHub](premier-push-github.png "Le premier push sur notre répertoire GitHub")
 
 
-Cliquez ensuite sur `Commit to main` en bas de la fenêtre. Il ne reste plus qu'a publier le *Commit* sur le projet, pour cela, cliquez sur `Publish branch`. 
+Cliquez ensuite sur `Commit to main` en bas de la fenêtre. Il ne reste plus qu'à publier le *Commit* sur le projet, pour cela, cliquez sur `Publish branch`. 
 
 
 ![Publier le commit en ligne](publier-la-branch-en-ligne.png "Publier le commit en ligne")
@@ -149,7 +149,7 @@ Il faut maintenant créer les fichiers pour que Hugo puisse les charger. Pour ce
 
 ![Le dossier des partials](dossier-partials.png "Le dossier des partials")
 
-Dans un partial, il faut uniquement inclure les éléments nécessaire à son fonctionnement. par exemple, créons un `footer` très simple : 
+Dans un partial, il faut uniquement inclure les éléments nécessaire à son fonctionnement. Par exemple, créons un `footer` très simple : 
 
 ```html
 <p>Le footer de mon site - 2025</p>
@@ -163,7 +163,7 @@ Pour notre `head`, ajoutons un tout petit peu plus de contenu :
 <link rel="stylesheet" href="/css/style.css">
 ```
 
-Dans la balise `title`, nous faisons référence au titre de la page active, en faisant appel au contexte (avec le symbole `.`) de la page. La valeur de ce titre est récupéré dans le fichier Markdown correspondant. (S'il n'y a pas de fichier .md qui correspond, Hugo récupère un [titre en fonction du type de page](https://gohugo.io/methods/page/title/#article)). Le titre changera donc en fonction de la page dans laquelle on se trouve. 
+Dans la balise `title`, nous faisons référence au titre de la page active, en faisant appel au contexte (avec le symbole `.`) de la page. La valeur de ce titre est récupérée dans le fichier Markdown correspondant. (S'il n'y a pas de fichier .md qui correspond, Hugo récupère un [titre en fonction du type de page](https://gohugo.io/methods/page/title/#article)). Le titre changera donc en fonction de la page dans laquelle on se trouve. 
 
 Nous avons également ajouté un lien vers un fichier CSS. Celui-ci doit être ajouté dans le dossier `static` de notre projet (dans cette exemple, on a donc `static > css > style.css`). 
 
@@ -184,7 +184,7 @@ Pour ajouter une nouvelle page dans notre site, nous allons créer un dossier da
 ![Ajout des dossiers pages](page-contact-structure.png "Ajout des dossiers pages")
 
 
-> Pour comprendre pourquoi il faut parfois un `_` devant les fichiers `index`, vous pouvez consulter la documentation d'[Hugo à propos de l'organisation des pages](https://gohugo.io/content-management/page-bundles/). Mais pour faire simple, si une page a des descendants, c'est une *branche* et il faut un `_` au fichier `_index.md`. Si la page n'a pas de descendant, alors c'est une *feuille* et elle ne prend pas d'underscore pour son fichier `index.md`.
+> Pour comprendre pourquoi il faut parfois un `_` devant les fichiers `index`, vous pouvez consulter la documentation d'[Hugo à propos de l'organisation des pages](https://gohugo.io/content-management/page-bundles/). Mais pour faire simple, si une page a des descendants, c'est une *branche* et il faut un `_` au fichier `_index.md`. Si la page n'a pas de descendants, alors c'est une *feuille* et elle ne prend pas d'underscore pour son fichier `index.md`.
 
 Créer cette page va nous permettre de définir un contenu différent de notre page d'accueil, mais elle est toujours construite à partir de notre template `baseof.html`. Nous pouvons également lui ajouter des éléments statiques différents et unique à cette page. Dans `contact.html`, ajoutez le code suivant :
 
@@ -220,7 +220,7 @@ C'est le bon moment pour introduire le fonctionnement des fichiers `Markdown`. V
 
 > Les émojis ne sont pas activés par défaut dans un site Hugo, il faut les définir dans le fichier de configuration `hugo.toml` ou `config.toml`. Plus d'infos ici : [gohugo.io/quick-reference/emojis/](https://gohugo.io/quick-reference/emojis/)
 
-Pour terminer, il faut que l'on ajoute un lien vers notre page *Contact* depuis la d'accueil afin de pouvoir l'atteindre. Nous pouvons le faire de deux façon : 
+Pour terminer, il faut que l'on ajoute un lien vers notre page *Contact* depuis la d'accueil afin de pouvoir l'atteindre. Nous pouvons le faire de deux façons : 
 
 * ajouter le lien dans le fichier `home.html` via une balise `a`, de la même manière que dans la page `contact.html` que nous venons de créer.
 * ajouter le lien dans le fichier `_index.md`, c'est à dire le contenu de notre page d'accueil. 
@@ -273,7 +273,7 @@ Il ne reste plus qu'a ajouter un peu de CSS, de relancer notre serveur local et 
 
 ## Créer le menu de navigation principal
 
-Maintenant que le site possède une structure, nous pouvons générer un menu de navigation. Pour cela, rendez-vous dans notre fichier de configuration `hugo.toml`(ou `config.toml`). C'est ici que l'on définit tout les paramètres communs à l'ensemble du site. La syntaxe est très simple et se présente comme suit : 
+Maintenant que le site possède une structure, nous pouvons générer un menu de navigation. Pour cela, rendez-vous dans notre fichier de configuration `hugo.toml`(ou `config.toml`). C'est ici que l'on définit tous les paramètres communs à l'ensemble du site. La syntaxe est très simple et se présente comme suit : 
 
 ```toml
 [menus]
@@ -287,7 +287,7 @@ Maintenant que le site possède une structure, nous pouvons générer un menu de
     weight = 20
 ```
 
-Le menu `header` est ajouté à la liste des `menus`, et deux éléments y sont ajoutés. `header` est un nom arbitraire, libre à vous de le nommer différemment (Les majuscules et caractères spéciaux ne fonctionnent pas !). Pour chaque onglet, nous avons :
+Le menu `header` est ajouté à la liste des `menus`, et deux éléments y sont ajoutés. `header` est un nom arbitraire, libre à vous de le nommer différemment (les majuscules et caractères spéciaux ne fonctionnent pas !). Pour chaque onglet, nous avons :
 1. **Name** : qui correspond au texte qui s'affiche sur le site,
 2. **url** : qui correspond au lien de la page,
 3. **weight** : qui correspond au poids de la page dans le menu. Plus un élément a un poids léger, plus il est affiché tôt dans le menu.  
@@ -330,7 +330,7 @@ Il ne nous reste plus qu'a appeler le partial dans le fichier `baseof.html` pour
 </html>
 ```
 
-Et voilà, votre menu apparait dans toutes les pages du site ! 
+Et voilà, votre menu apparaît dans toutes les pages du site ! 
 
 ![Notre menu de navigation fonctionne](menu-ok.png "Notre menu de navigation fonctionne")
 
@@ -338,6 +338,6 @@ Il est possible d'aller plus loin dans la création d'un menu, je vous invite à
 
 ---
 
-En résumé, dans cette deuxième partie, nous avons appris le fonctionnement de base d'un site Hugo, avec la structure des pages, des fichiers de template et des partials. Nous avons créé deux page, *Accueil* et *Contact* et leurs avons ajoutés du contenu. Enfin, nous avons ajouté un menu de navigation à notre site. 
+En résumé, dans cette deuxième partie, nous avons appris le fonctionnement de base d'un site Hugo, avec la structure des pages, des fichiers de template et des partials. Nous avons créé deux pages, *Accueil* et *Contact* et leurs avons ajoutés du contenu. Enfin, nous avons ajouté un menu de navigation à notre site. 
 
 Dans la [partie suivante]({{< ref "partie-3" >}}), nous allons préparer la structure de base de nos projets.
