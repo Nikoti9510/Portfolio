@@ -1274,7 +1274,6 @@ body:has(*:popover-open) {
 
         /* Quotes */
         & blockquote {
-            margin-block: var(--space, 1.5rem);
             border-radius: .2rem;
             margin-inline: 0;
             padding: 2rem;
