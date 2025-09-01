@@ -1,5 +1,5 @@
 ---
-title: "Tutoriel Hugo - Partie 4"
+title: "Tutoriel Hugo - Partie 4 - WIP"
 date: 2025-01-18T13:21:35.000Z
 description: ""
 type: blog

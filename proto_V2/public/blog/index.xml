@@ -30,7 +30,7 @@
       <description>&lt;h1 id=&#34;créer-un-portfolio-avec-hugo-et-netlify---partie-3&#34;&gt;&#xD;&#xA;      Créer un portfolio avec Hugo et Netlify - Partie 3&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Dans cette troisième partie, nous allons mettre en place des projets pour notre portfolio. Commençons par nous rendre dans le dossier &lt;code&gt;content&lt;/code&gt;, et ajoutons un dossier avec le nom de votre choix, pour le tutoriel, nous allons créer le dossier &lt;code&gt;projets&lt;/code&gt;. Ce nom sera celui utilisé par Hugo pour déterminer le &lt;code&gt;type&lt;/code&gt; de ces projets. On ajoute ici un fichier &lt;code&gt;_index.md&lt;/code&gt; afin de définir des informations générales. Pour le moment, il peut simplement contenir le titre de la page :&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Tutoriel Hugo - Partie 4</title>
+      <title>Tutoriel Hugo - Partie 4 - WIP</title>
       <link>//localhost:1313/blog/partie-4/</link>
       <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
       <guid>//localhost:1313/blog/partie-4/</guid>
