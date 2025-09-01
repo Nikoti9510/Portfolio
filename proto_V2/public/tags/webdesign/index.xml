@@ -13,7 +13,21 @@
       <link>//localhost:1313/blog/partie-1/</link>
       <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
       <guid>//localhost:1313/blog/partie-1/</guid>
-      <description>&lt;h1 id=&#34;créer-un-portfolio-avec-hugo-et-netlify&#34;&gt;&#xD;&#xA;      Créer un portfolio avec Hugo et Netlify&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;On parle de JamStack pour décrire un site ou une application créée en combinant différentes API et outils afin de servir un site statique, c&amp;rsquo;est-à-dire en HTML brut, sans calcul supplémentaire côté serveur ou client. Le but étant de garantir des performances et une expérience utilisateur optimales. Avec cette approche, les éléments dynamiques d&amp;rsquo;un site sont générés en amonts, puis mis à disposition sur un serveur.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;créer-un-portfolio-avec-hugo-et-netlify---partie-1&#34;&gt;&#xD;&#xA;      Créer un portfolio avec Hugo et Netlify - Partie 1&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Pour aider mes &lt;u&gt;&lt;em&gt;collègues&lt;/em&gt;&lt;/u&gt; à construire leurs portfolio, j&amp;rsquo;ai écris ce tutoriel afin de découvrir le concept de la JAMstack.&lt;/p&gt;&#xA;&lt;p&gt;On parle de JamStack pour décrire un site ou une application créée en combinant différentes API et outils afin de servir un site statique, c&amp;rsquo;est-à-dire en HTML brut, sans calcul supplémentaire côté serveur ou client. Le but étant de garantir des performances et une expérience utilisateur optimales. Avec cette approche, les éléments dynamiques d&amp;rsquo;un site sont générés en amonts, puis mis à disposition sur un serveur.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Créer un portfolio avec Hugo et Netlify - Partie 2</title>
+      <link>//localhost:1313/blog/partie-2/</link>
+      <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
+      <guid>//localhost:1313/blog/partie-2/</guid>
+      <description>&lt;h1 id=&#34;créer-un-portfolio-avec-hugo-et-netlify---partie-2&#34;&gt;&#xD;&#xA;      Créer un portfolio avec Hugo et Netlify - Partie 2&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Dans cette partie, nous allons créer la structure de base pour notre site. Nous allons commencer par créer une page d&amp;rsquo;accueil, avec un header, du contenu et un footer. Cela va nous permettre de prendre en main le fonctionnement de Hugo, en particulier le système de &lt;em&gt;Partials&lt;/em&gt;. Nous aborderons enfin la création et l&amp;rsquo;ajout d&amp;rsquo;un menu de navigation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Créer un portfolio avec Hugo et Netlify - Partie 3</title>
+      <link>//localhost:1313/blog/partie-3/</link>
+      <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
+      <guid>//localhost:1313/blog/partie-3/</guid>
+      <description>&lt;h1 id=&#34;créer-un-portfolio-avec-hugo-et-netlify---partie-3&#34;&gt;&#xD;&#xA;      Créer un portfolio avec Hugo et Netlify - Partie 3&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Dans cette troisième partie, nous allons mettre en place des projets pour notre portfolio. Commençons par nous rendre dans le dossier &lt;code&gt;content&lt;/code&gt;, et ajoutons un dossier avec le nom de votre choix, pour le tutoriel, nous allons créer le dossier &lt;code&gt;projets&lt;/code&gt;. Ce nom sera celui utilisé par Hugo pour déterminer le &lt;code&gt;type&lt;/code&gt; de ces projets. On ajoute ici un fichier &lt;code&gt;_index.md&lt;/code&gt; afin de définir des informations générales. Pour le moment, il peut simplement contenir le titre de la page :&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

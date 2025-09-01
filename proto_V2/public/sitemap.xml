@@ -11,16 +11,16 @@
     <loc>//localhost:1313/blog/partie-1/</loc>
     <lastmod>2025-01-18T13:21:35+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/hugo/</loc>
-    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/blog/partie-2/</loc>
     <lastmod>2025-01-18T13:21:35+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/partie-3/</loc>
+    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/hugo/</loc>
+    <lastmod>2025-01-18T13:21:35+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-01-18T13:21:35+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/blog/partie-4/</loc>

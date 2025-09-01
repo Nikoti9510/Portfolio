@@ -4,13 +4,13 @@
 {{ with $res }}
 
   {{ $original := .Resize (printf "%dx%d webp" .Width .Height) }}
-  {{ $optimized := $original.Resize "600x webp" }}
+  {{ $optimized := $original.Resize "900x webp" }}
 
   {{- if $.IsBlock }}
     <div class="image">
       <figure>
         <button class="image__button" popovertarget="{{ $number }}" popovertargetaction="show">
-          <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
+          <img srcset='{{ $optimized.RelPermalink | safeURL}} 900w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 900w,
             1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
         </button>
         {{- with .Title }}<figcaption>{{ $.Text }}</figcaption>{{ end -}}
@@ -24,7 +24,7 @@
           </svg>
         </button> -->
         <div class="image__lightbox--img">
-          <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
+          <img srcset='{{ $optimized.RelPermalink | safeURL}} 900w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 900w,
             1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
         </div>
         <!-- <div class="image__lightbox--desc">
@@ -35,7 +35,7 @@
     </div>
   {{- else }}
   <figure>
-    <img srcset='{{ $optimized.RelPermalink | safeURL}} 600w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 600w,
+    <img srcset='{{ $optimized.RelPermalink | safeURL}} 900w, {{ $original.RelPermalink | safeURL }} ' sizes="(width <= 60vw) 900w,
           1x" src="{{ $original.RelPermalink | safeURL }}" alt="{{ $.Text }}" />
   </figure>
   {{- end }}

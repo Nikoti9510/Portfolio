@@ -9,20 +9,6 @@
     <lastBuildDate>Sat, 18 Jan 2025 13:21:35 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tutoriel Hugo - Partie 2</title>
-      <link>//localhost:1313/blog/partie-2/</link>
-      <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
-      <guid>//localhost:1313/blog/partie-2/</guid>
-      <description>&lt;h1 id=&#34;configuration-du-site-sans-template&#34;&gt;&#xD;&#xA;      Configuration du site sans template&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Dans cette partie, nous allons créer la structure de base pour votre site. On va commencer par créer une page d&amp;rsquo;accueil, avec un header, du contenu et un footer. Cela va vous permettre de prendre en main le fonctionnement de Hugo, en particulier le système de partials de template. On prendra également le temps de voir comment créer un menu de navigation ainsi qu&amp;rsquo;une liste de projets dans notre page d&amp;rsquo;accueil.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tutoriel Hugo - Partie 3</title>
-      <link>//localhost:1313/blog/partie-3/</link>
-      <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>
-      <guid>//localhost:1313/blog/partie-3/</guid>
-      <description>&lt;h2 id=&#34;créer-une-liste-de-projet&#34;&gt;&#xD;&#xA;      &lt;a href=&#34;#cr%25C3%25A9er-une-liste-de-projet&#34;&gt;Créer une liste de projet&lt;/a&gt;&#xD;&#xA;    &lt;/h2&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Pour commencer, il faut créer les projets. Pour cela, allez dans le dossier &lt;code&gt;content&lt;/code&gt;, et ajoutez un dossier avec le nom de notre choix, pour le tutoriel, j&amp;rsquo;ai choisi &lt;code&gt;projets&lt;/code&gt;. Ce nom sera celui utilisé par Hugo pour déterminer le &lt;code&gt;type&lt;/code&gt; de ces projets. On ajoute dans ce dossier un fichier &lt;code&gt;_index.md&lt;/code&gt; afin de pouvoir passer des informations générales. Pour le moment, il peut simplement comprendre le titre de la page :&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Tutoriel Hugo - Partie 4</title>
       <link>//localhost:1313/blog/partie-4/</link>
       <pubDate>Sat, 18 Jan 2025 13:21:35 +0000</pubDate>

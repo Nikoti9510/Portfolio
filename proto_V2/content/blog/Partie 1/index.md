@@ -9,6 +9,8 @@ tags:
 
 # Créer un portfolio avec Hugo et Netlify - Partie 1
 
+Pour aider mes <u>*collègues*</u> à construire leurs portfolio, j'ai écris ce tutoriel afin de découvrir le concept de la JAMstack.
+
 On parle de JamStack pour décrire un site ou une application créée en combinant différentes API et outils afin de servir un site statique, c'est-à-dire en HTML brut, sans calcul supplémentaire côté serveur ou client. Le but étant de garantir des performances et une expérience utilisateur optimales. Avec cette approche, les éléments dynamiques d'un site sont générés en amonts, puis mis à disposition sur un serveur.
 
 Cela permet également de prendre avantage de divers outils et logiciels (gratuits, libres de droits, payants, avec abonnement, etc..) et de les assembler pour bénéficier de leurs avantages (et ne pas réinventer la roue à chaque contrainte). Par exemple, plutôt que de gérer manuellement l'hébergement de notre site, on utilise un outil comme Netlify qui le fait pour nous. L'idée, c'est de ne pas perdre de temps sur des fonctionnalités déjà existantes, et de se concentrer sur le design et le contenu de notre site.

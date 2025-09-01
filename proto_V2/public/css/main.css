@@ -286,6 +286,7 @@
 
     /* Off Stage */
     @starting-style {
+
         :popover-open,
         :popover-open::backdrop,
         [open],
@@ -752,12 +753,12 @@
         position: relative;
     }
 
-    &:has( .post__tags--tag.hide ) {
+    &:has(.post__tags--tag.hide) {
         opacity: 0;
         display: none;
     }
 
-    &:has( .post__tags--tag:not(.hide) ) {
+    &:has(.post__tags--tag:not(.hide)) {
         opacity: 1;
         display: block;
     }
@@ -889,8 +890,9 @@ body:has(*:popover-open) {
         display: grid;
 
         & .image__button {
-            padding: 0;
-            background: transparent;
+            background-color: var(--midground-color);
+            padding: 1rem;
+            border-radius: .25rem;
             border: none;
             cursor: zoom-in;
             width: 100%;
@@ -1290,7 +1292,8 @@ body:has(*:popover-open) {
                 margin-inline: 0;
 
                 & img {
-                    width: 100%;
+                    width: auto;
+                    margin: auto;
                     border-radius: 0.2rem;
                     border: solid 1px var(--border-color-light);
                 }
