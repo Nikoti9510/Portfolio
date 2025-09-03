@@ -26,7 +26,7 @@
     </div>
     <div class="flex-end z1">
       <div class="stack">
-        {{ range ( where .Site.RegularPages "Type" "blog" | first 3 ).Reverse }}
+        {{ range ( where .Site.RegularPages.Reverse "Type" "blog" | first 3 ) }}
         {{ partial "articles.html" . }}
         {{ end }}
       </div>

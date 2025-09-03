@@ -7,7 +7,7 @@
             <div class="flex-end">
                 <div class="all-posts">
                     <h1 class="visibility-hidden">Articles de blog</h1>
-                    {{ range where .Site.RegularPages "Type" "blog" }}
+                    {{ range (where .Site.RegularPages.Reverse "Type" "blog") }}
                     {{ partial "articles.html" . }}
                     {{ end }}
                 </div>
