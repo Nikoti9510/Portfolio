@@ -1121,6 +1121,7 @@ main:not(#home) .footer {
     & .coords,
     & .version {
         font-size: var(--font-size__small);
+        align-self: flex-end;
     }
 
     & .version {
