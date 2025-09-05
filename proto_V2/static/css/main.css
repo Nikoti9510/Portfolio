@@ -1124,10 +1124,6 @@ main:not(#home) .footer {
         align-self: flex-end;
     }
 
-    & .version {
-        align-self: flex-end;
-    }
-
     & .coords,
     & .contact {
         --space: .1rem;
