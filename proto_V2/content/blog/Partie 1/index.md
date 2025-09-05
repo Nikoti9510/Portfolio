@@ -30,7 +30,7 @@ Ce tutoriel va être découpé en plusieurs partie, dans lesquels nous allons ab
 
 ---
 
-## Mise en place le projet
+## Mise en place du projet
 
 Une fois Github Desktop et Visual Studio Code installé, nous allons pouvoir mettre en place le projet. Commençons par nous rendre dans notre [espace personnel sur GitHub](https://github.com/) et créons un nouveau répertoire, en cliquant sur le bouton `New` en haut à gauche.
 

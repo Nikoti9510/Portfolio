@@ -602,11 +602,11 @@
     }
 
     /* --------------- HOME --------------- */
-    @media (width > 70rem) {
+    /* @media (width > 70rem) {
         body:has(>#home) {
             overflow: hidden;
         }
-    }
+    } */
 
     #home {
         justify-content: space-between;
@@ -793,6 +793,7 @@
     line-height: var(--line-height__title);
     display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: .2rem;
 
     & .post-data__tags--tag,
@@ -894,7 +895,7 @@ body:has(*:popover-open) {
             padding: 1rem;
             border-radius: .25rem;
             border: none;
-            cursor: zoom-in;
+            cursor: pointer;
             width: 100%;
         }
     }
@@ -905,9 +906,8 @@ body:has(*:popover-open) {
         pointer-events: all;
         position: fixed;
         min-width: 60vw;
-        min-height: 70vh;
-        max-height: 90vh;
-        height: 100%;
+        max-width: 90vw;
+        height: fit-content;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -916,6 +916,10 @@ body:has(*:popover-open) {
         border: 0;
         background: transparent;
         overflow: visible;
+
+        @media (width < 70rem) {
+            min-width: 90vw;
+        }
 
         & .image__lightbox--button {
             height: fit-content;
@@ -943,7 +947,8 @@ body:has(*:popover-open) {
             display: flex;
             overflow: auto;
             width: 100%;
-            min-height: 60vh;
+            height: fit-content;
+            max-height: 90vh;
 
             & img {
                 width: 100%;
@@ -960,6 +965,7 @@ body:has(*:popover-open) {
 
         &:popover-open {
             display: grid;
+            align-content: center;
             gap: .5rem;
             opacity: 1;
             color: var(--white);
@@ -1106,9 +1112,11 @@ body:has(*:popover-open) {
 }
 
 /* ------------- FOOTER ------------- */
+main:not(#home) .footer {
+    margin-block-start: 6rem;
+}
 .footer {
     flex-shrink: 0;
-    margin-block-start: 6rem;
 
     & .coords,
     & .version {
