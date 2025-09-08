@@ -623,6 +623,9 @@
         transition: ease .3s all;
 
         &:hover {
+            width: 48px;
+            height: 48px;
+
             & .faces--imgs {
                 transform: rotate(-15deg);
                 top: -56px;
@@ -688,8 +691,11 @@
         @media (width < 70rem) {
             margin-block: 3rem;
             align-self: flex-end;
-
+            
             &:hover {
+                width: 72px;
+                height: 72px;
+
                 & .faces--imgs {
                     top: -48px;
                     right: 54px;
