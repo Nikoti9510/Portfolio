@@ -1289,6 +1289,10 @@ main:not(#home) .footer {
             }
         }
 
+        & .no-list li {
+            list-style: none;
+        }
+
         /* Quotes */
         & blockquote {
             border-radius: .2rem;
