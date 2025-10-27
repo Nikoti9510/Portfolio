@@ -11,7 +11,7 @@ draft: true
 # Black Sword Hack - l'archipel d'or
 Un premier cafouillage pour Dungeon 2024, pile un an en retard. Une ébauche de cadre de campagne pour Black Sword Hack de <a href="https://livresdelours.blogspot.com/" target="_blank">Kobayashi</a>
 
-* **Informations préliminaires :**
+**Informations préliminaires :**
   Antagoniste : Un messie aux pouvoirs Immense.
   Soldats : Golems d'ors, la légion d'Artus. 
   Une malédiction cause le niveau de la mer de monter toutes les nouvelles lunes. La cité interdite et l'archipel seront sous les eaux dans 6 lunes. ‍
