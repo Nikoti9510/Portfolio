@@ -139,7 +139,7 @@
     :root {
         /* fonts */
         --font-size__body: clamp(1rem, -0.875rem + 4cqi, 1.2rem);
-        --font-size_h1: clamp(3.5rem, -0.875rem + 6cqi, 6rem);
+        --font-size_h1: clamp(3.5rem, -0.875rem + 6cqi, 5rem);
         --font-size_h2: clamp(2.75rem, -0.875rem + 6cqi, 3.5rem);
         --font-size_h3: clamp(2rem, -0.875rem + 6cqi, 2.25rem);
         --font-size__small: clamp(.7rem, -0.875rem + 3cqi, .9rem);
@@ -1296,6 +1296,10 @@ main:not(#home) .footer {
             padding: 2rem;
             background-color: color-mix(in srgb, var(--midground-color) 33%, transparent);
             border-left: solid 0.2rem currentColor;
+        }
+
+        & video {
+            border-radius: .2rem;
         }
 
         /* Imgs */

@@ -3,7 +3,6 @@ title: "Créer un portfolio avec Hugo et Netlify - Partie 1"
 date: 2025-01-18T13:21:35.000Z
 type: blog
 tags:
-- Webdesign
 - Hugo
 ---
 

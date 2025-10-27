@@ -4,7 +4,6 @@ date: 2025-01-18T13:21:35.000Z
 description: ""
 type: blog
 tags:
-- Webdesign
 - Hugo
 - Netlify
 draft: true

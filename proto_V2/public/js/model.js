@@ -70,7 +70,7 @@ async function loadModelAsync() {
     const loadContainer = document.querySelector('#canvas .loading');
     const progressText = loadContainer.children[0];
     try {
-        const response = await fetch('3d_files/model_compressed.glb');
+        const response = await fetch('/3d_files/model_compressed.glb');
         const totalBytes = parseInt(response.headers.get('Content-Length') || '0');
         const reader = response.body.getReader();
         let received = 0;
