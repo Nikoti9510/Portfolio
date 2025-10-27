@@ -18,9 +18,9 @@
     <item>
       <title>Roadmap 2.0 portfolio</title>
       <link>//localhost:1313/blog/roadmap2.0/</link>
-      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/blog/roadmap2.0/</guid>
-      <description>&lt;h1 id=&#34;roadmap-et-to-do-liste-pour-mon-portfolio&#34;&gt;&#xD;&#xA;      Roadmap et to do liste pour mon portfolio&#xD;&#xA;    &lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;roadmap--to-do&#34;&gt;&#xD;&#xA;      Roadmap &amp;amp; to-do&#xD;&#xA;    &lt;/h1&gt;&#xD;&#xA;  &#xD;&#xA;&lt;p&gt;Liste non exhaustives des choses que je veux corriger. Je vais mettre la liste à jour au fur est à mesure que j&amp;rsquo;applique des correctifs ou que je découvre d&amp;rsquo;autres choses à ajuster.&lt;/p&gt;&#xA;&lt;span class=&#34;no-list&#34;&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Refactor CSS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unifier système d&amp;rsquo;espacement&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Simplifier nesting et layers&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Mieux utiliser la cascade pour supprimer les répétitions dans les layouts home/blog/article&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Refactor HTML&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Simplifier la structure&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Corriger les mauvaises pratiques sémantique&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ARIA label&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Popover lightbox&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Bouton 👀 de la home&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/span&gt;</description>
     </item>
   </channel>
 </rss>
