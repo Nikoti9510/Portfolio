@@ -1,5 +1,5 @@
 ---
-title: "Stopper scan agent IA"
+title: "Stopper le scrapping des agents IA"
 date: 2025-12-08
 description: ""
 type: blog
